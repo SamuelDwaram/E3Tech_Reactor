@@ -1,0 +1,22 @@
+﻿<Window x:Class="E3.Test.Shell.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uiHelpers="clr-namespace:E3.Test.Shell.Helpers"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        WindowStartupLocation="CenterOwner"
+        WindowState="Maximized"
+        WindowStyle="None"
+        uiHelpers:UiHelpers.WindowLoaded="{Binding LoadedCommand}">
+    <TabControl>
+        <TabItem Header="RolesAndModules">
+            <ContentControl prism:RegionManager.RegionName="RolesAndModulesConfiguration" />
+        </TabItem>
+        <TabItem Header="Selected View">
+            <ContentControl prism:RegionManager.RegionName="SelectedViewPane" />
+        </TabItem>
+        <TabItem Header="LiveTrends">
+            <ContentControl prism:RegionManager.RegionName="LiveTrends" />
+        </TabItem>
+    </TabControl>
+</Window>

@@ -1,0 +1,136 @@
+﻿<UserControl x:Class="E3.EquipmentUsageTracker.Views.EquipmentOccupancyContainerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:E3.EquipmentUsageTracker.Views"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:converters="clr-namespace:E3.EquipmentUsageTracker.Converters"
+             xmlns:AnimationUserControls="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding GetAvailableEquipmentsCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <UserControl.Resources>
+        <converters:ItemExtractorFromCollectionConverter x:Key="ItemExtractorCon"/>
+        <Style x:Key="HeaderLabelStyle" TargetType="Label">
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="#FF8E94A1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="SelectionComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="MinWidth" Value="200"/>
+            <Setter Property="MinHeight" Value="40"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+        <Style x:Key="DatePickerStyle" TargetType="DatePicker">
+            <Setter Property="MinHeight" Value="50"/>
+            <Setter Property="MinWidth" Value="200"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#272e3e">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#272e3e" VerticalAlignment="Top">
+            <Viewbox HorizontalAlignment="Left" VerticalAlignment="Top">
+                <AnimationUserControls:NavigateButtonType_1 Margin="2" ButtonCommand="{Binding NavigateCommand}" ButtonCommandParameter="Dashboard"/>
+            </Viewbox>
+        </Grid>
+        <Grid Grid.Column="1" Background="#1d2532">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="13*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0" HorizontalAlignment="Left">
+                <Label Content="Equipment Usage Tracker" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="40" Foreground="White"/>
+            </Viewbox>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Column="0">
+                    <StackPanel>
+                        <Label Content="Month Selection" Style="{StaticResource HeaderLabelStyle}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <ComboBox SelectedValue="{Binding SelectedMonth}" SelectedValuePath="Tag" Style="{StaticResource SelectionComboBoxStyle}">
+                                <ComboBoxItem Tag="01" Content="January(01)"/>
+                                <ComboBoxItem Tag="02" Content="February(02)"/>
+                                <ComboBoxItem Tag="03" Content="March(03)"/>
+                                <ComboBoxItem Tag="04" Content="April(04)"/>
+                                <ComboBoxItem Tag="05" Content="May(05)"/>
+                                <ComboBoxItem Tag="06" Content="June(06)"/>
+                                <ComboBoxItem Tag="07" Content="July(07)"/>
+                                <ComboBoxItem Tag="08" Content="August(08)"/>
+                                <ComboBoxItem Tag="09" Content="September(09)"/>
+                                <ComboBoxItem Tag="10" Content="October(10)"/>
+                                <ComboBoxItem Tag="11" Content="November(11)"/>
+                                <ComboBoxItem Tag="12" Content="December(12)"/>
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <i:InvokeCommandAction Command="{Binding UpdateEquipmentOccupancyCommand}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Column="1">
+                    <StackPanel>
+                        <Label Content="Occupancy Report Type" Style="{StaticResource HeaderLabelStyle}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <ComboBox SelectedValue="{Binding SelectedOccupancyReportTypeEnum}" ItemsSource="{Binding OccupancyReportTypeEnumValues}" Style="{StaticResource SelectionComboBoxStyle}">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <i:InvokeCommandAction Command="{Binding UpdateEquipmentOccupancyCommand}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                </Viewbox>
+                <Viewbox Grid.Column="2">
+
+                </Viewbox>
+                <Viewbox Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform">
+
+                </Viewbox>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="300"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <local:EquipmentOccupancyView Grid.Row="0" Grid.Column="0" DataContext="{Binding AvailableEquipments[0], Converter={StaticResource ItemExtractorCon}, ConverterParameter=1}"/>
+                <local:EquipmentOccupancyView Grid.Row="0" Grid.Column="1" DataContext="{Binding AvailableEquipments[0], Converter={StaticResource ItemExtractorCon}, ConverterParameter=2}"/>
+                <local:EquipmentOccupancyView Grid.Row="0" Grid.Column="2" DataContext="{Binding AvailableEquipments[0], Converter={StaticResource ItemExtractorCon}, ConverterParameter=3}"/>
+                <local:EquipmentOccupancyView Grid.Row="0" Grid.Column="3" DataContext="{Binding AvailableEquipments[0], Converter={StaticResource ItemExtractorCon}, ConverterParameter=4}"/>
+                <local:EquipmentOccupancyView Grid.Row="1" Grid.Column="0" DataContext="{Binding AvailableEquipments[1], Converter={StaticResource ItemExtractorCon}, ConverterParameter=1}"/>
+                <local:EquipmentOccupancyView Grid.Row="1" Grid.Column="1" DataContext="{Binding AvailableEquipments[1], Converter={StaticResource ItemExtractorCon}, ConverterParameter=2}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

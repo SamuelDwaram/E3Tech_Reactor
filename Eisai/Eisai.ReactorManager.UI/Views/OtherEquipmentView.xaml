@@ -1,0 +1,373 @@
+﻿<UserControl x:Class="Eisai.ReactorManager.UI.Views.OtherEquipmentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Eisai.ReactorManager.UI.Views"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:helpers="clr-namespace:Eisai.ReactorManager.UI.Helpers"
+             xmlns:AnimationUserControls="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <UserControl.Resources>
+        <Style x:Key="UnitsLabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="TextBoxValueStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="InputScope" Value="Number"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#FF272E3E"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Bottom"/>
+        </Style>
+        <Style x:Key="HeaderLabelStyle" TargetType="Label">
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="#FF8E94A1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#272e3e">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#272e3e" VerticalAlignment="Top">
+            <Viewbox HorizontalAlignment="Left" VerticalAlignment="Top">
+                <AnimationUserControls:NavigateButtonType_1 Margin="2" ButtonCommand="{Binding NavigateToOtherScreenCommand}" ButtonCommandParameter="Dashboard"/>
+            </Viewbox>
+        </Grid>
+        <Grid Grid.Column="1" Background="#1d2532">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.Row="0" HorizontalAlignment="Left">
+                <Label Content="Multiple Equipment" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="40" Foreground="White"/>
+            </Viewbox>
+            <Grid Grid.Row="1" Margin="15" Background="#FF1E2432">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Background="#272e3e" Margin="3">
+                            <Viewbox HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                    <Button Command="{Binding ChangeScrubber_1_StatusCommand}" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding Scrubber_1_StatusFeedback}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Label Content="Scrubber - 1" Style="{StaticResource HeaderLabelStyle}"/>
+                                </StackPanel>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Column="1" Background="#272e3e" Margin="3">
+                            <Viewbox HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                    <Button Command="{Binding ChangeScrubber_2_StatusCommand}" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding Scrubber_2_StatusFeedback}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Label Content="Scrubber - 2" Style="{StaticResource HeaderLabelStyle}"/>
+                                </StackPanel>
+                            </Viewbox>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Background="#272e3e" Margin="3">
+                            <Viewbox HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                    <Button Command="{Binding ChangeScrubber_3_StatusCommand}" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding Scrubber_3_StatusFeedback}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Label Content="Scrubber - 3" Style="{StaticResource HeaderLabelStyle}"/>
+                                </StackPanel>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Column="1" Background="#272e3e" Margin="3">
+                            <Viewbox HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                    <Button Command="{Binding ChangeAhuStatusCommand}" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding AhuStatusFeedback}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Label Content="Ahu" Style="{StaticResource HeaderLabelStyle}"/>
+                                </StackPanel>
+                            </Viewbox>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2" Margin="3" Background="#272e3e">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" VerticalAlignment="Center">
+                                <Label Content="ANFD" Style="{StaticResource HeaderLabelStyle}"/>
+                            </Viewbox>
+                            <Viewbox Grid.Row="1" VerticalAlignment="Center">
+                                <AnimationUserControls:StatusIndicatorAnimation Margin="10" HorizontalAlignment="Left" CurrentStatus="{Binding AnfdStatus}"/>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.3*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{Binding AnfdCurrentTemperature,UpdateSourceTrigger=PropertyChanged,TargetNullValue=0}" Style="{StaticResource UnitsLabelStyle}"/>
+                                    <Label Grid.Column="1" Content="&#186;C" Style="{StaticResource UnitsLabelStyle}"/>
+                                </Grid>
+                            </Viewbox>
+                            <Viewbox Grid.Row="1">
+                                <AnimationUserControls:ProgressBarAnimation Margin="10" CurrentValue="{Binding AnfdCurrentTemperature,Mode=TwoWay}"/>
+                            </Viewbox>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="3" Margin="3" Background="#272e3e">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" VerticalAlignment="Center">
+                                <Label Content="RCVD" Style="{StaticResource HeaderLabelStyle}"/>
+                            </Viewbox>
+                            <Viewbox Grid.Row="1" VerticalAlignment="Center">
+                                <AnimationUserControls:StatusIndicatorAnimation Margin="10" HorizontalAlignment="Left" CurrentStatus="{Binding RcvdStatus}"/>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.3*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Content="{Binding RcvdCurrentSpeed,UpdateSourceTrigger=PropertyChanged,TargetNullValue=0}" Style="{StaticResource UnitsLabelStyle}"/>
+                                    <Label Grid.Column="1" Content="rpm" Style="{StaticResource UnitsLabelStyle}"/>
+                                </Grid>
+                            </Viewbox>
+                            <Viewbox Grid.Row="1">
+                                <AnimationUserControls:StripedAnimation Margin="10" CurrentValue="{Binding RcvdCurrentSpeed,Mode=TwoWay}"/>
+                            </Viewbox>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Margin="3" Background="#272e3e">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" VerticalAlignment="Center">
+                                <Label Margin="10" Content="ROTA VAPOUR" Style="{StaticResource HeaderLabelStyle}"/>
+                            </Viewbox>
+                            <Viewbox Grid.Row="1" VerticalAlignment="Center">
+                                <AnimationUserControls:StatusIndicatorAnimation Margin="10" HorizontalAlignment="Left" CurrentStatus="{Binding RotavapourStatus}"/>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Column="1" Margin="3" Background="#272e3e">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" VerticalAlignment="Center">
+                                <Label Margin="10" Content="PIN MILL" Style="{StaticResource HeaderLabelStyle}"/>
+                            </Viewbox>
+                            <Viewbox Grid.Row="1" VerticalAlignment="Center">
+                                <AnimationUserControls:StatusIndicatorAnimation Margin="10" HorizontalAlignment="Left" CurrentStatus="{Binding PinmillStatus}"/>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Column="2" Margin="3" Background="#272e3e">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="0" VerticalAlignment="Center">
+                                <Label Margin="10" Content="JET MILL" Style="{StaticResource HeaderLabelStyle}"/>
+                            </Viewbox>
+                            <Viewbox Grid.Row="1" VerticalAlignment="Center">
+                                <AnimationUserControls:StatusIndicatorAnimation Margin="10" HorizontalAlignment="Left" CurrentStatus="{Binding JetmillStatus}"/>
+                            </Viewbox>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Background="#272e3e" Margin="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Viewbox HorizontalAlignment="Left">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Command="{Binding CentrifugeOnOffCommand}" Cursor="Hand">
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="Button">
+                                                    <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding CentrifugeStatusFeedback}"/>
+                                                </ControlTemplate>
+                                            </Button.Template>
+                                        </Button>
+                                        <Label Content="Centrifuge" Style="{StaticResource HeaderLabelStyle}"/>
+                                    </StackPanel>
+                                </Viewbox>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Viewbox Grid.Row="0" HorizontalAlignment="Left">
+                                    <Grid Margin="5">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBox Grid.Column="0" MinWidth="60" MaxLength="4" Text="{Binding CentrifugeSpeedSetPoint,UpdateSourceTrigger=PropertyChanged,TargetNullValue=0}" Style="{StaticResource TextBoxValueStyle}"
+                                                 helpers:UiHelpers.AllowedForUser="{Binding UserDetails}" Tag="OtherEquipment">
+                                            <TextBox.InputBindings>
+                                                <KeyBinding Key="Enter" Command="{Binding ChangeCentrifugeSpeedSetPointCommand}"/>
+                                            </TextBox.InputBindings>
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="GotFocus">
+                                                    <i:InvokeCommandAction Command="{Binding GotFocusCommandCentrifuge}" CommandParameter="{Binding CentrifugeSpeedSetPoint}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBox>
+                                        <Label Grid.Column="1" Content="rpm" Style="{StaticResource UnitsLabelStyle}"/>
+                                    </Grid>
+                                </Viewbox>
+                                <Viewbox Grid.Row="1" HorizontalAlignment="Left">
+                                    <AnimationUserControls:StripedAnimation Margin="5" CurrentValue="{Binding CentrifugeSpeedSetPoint,Mode=TwoWay}" MaximumValue="2000"/>
+                                </Viewbox>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1" Background="#272e3e" Margin="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="2*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Viewbox HorizontalAlignment="Left" Margin="15,0,0,0">
+                                    <Label Content="Centrifuge Current Speed" Style="{StaticResource HeaderLabelStyle}"/>
+                                </Viewbox>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <AnimationUserControls:CircularGuageAnimation DockPanel.Dock="Bottom" UnitsValue="rpm" CurrentValue="{Binding CentrifugeCurrentSpeed}" MaximumValue="2000"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Background="#272e3e" Margin="3">
+                            <Viewbox HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                    <Button Command="{Binding ChangeCameraStatusCommand}" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding CameraStatus}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Label Content="Camera" Style="{StaticResource HeaderLabelStyle}"/>
+                                </StackPanel>
+                            </Viewbox>
+                        </Grid>
+                        <Grid Grid.Column="1" Background="#272e3e" Margin="3">
+                            <Viewbox HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                                    <Button Command="{Binding ChangeLampStatusCommand}" Cursor="Hand">
+                                        <Button.Template>
+                                            <ControlTemplate TargetType="Button">
+                                                <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding LampStatus}"/>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                    <Label Content="Lamp" Style="{StaticResource HeaderLabelStyle}"/>
+                                </StackPanel>
+                            </Viewbox>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

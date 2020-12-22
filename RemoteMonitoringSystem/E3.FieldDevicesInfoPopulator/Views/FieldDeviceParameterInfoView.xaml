@@ -1,0 +1,353 @@
+﻿<UserControl x:Class="E3.FieldDevicesInfoPopulator.Views.FieldDeviceParameterInfoView"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:E3.FieldDevicesInfoPopulator.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:helpers="clr-namespace:E3.FieldDevicesInfoPopulator.Helpers"
+             xmlns:converters="clr-namespace:E3.FieldDevicesInfoPopulator.Converters"
+             xmlns:userControls="clr-namespace:E3.FieldDevicesInfoPopulator.UserControls"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding GetMaintenanceDateCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <UserControl.Resources>
+        <converters:FontSizeConverter x:Key="FontSizeCon"/>
+        <converters:DictionaryToParameterInfoConverter x:Key="ParameterInfoExtracter"/>
+        <converters:DictionaryToParameterAlarmStatusConverter x:Key="ParameterAlarmsInfoExtracter"/>
+        <Style TargetType="Button" x:Key="CommonButtonStyle">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#32ccdf"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Foreground" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#272e3e" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Margin="15" Grid.Column="1">
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Background" Value="#1a202c"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status}" Value="True">
+                                <Setter Property="Background" Value="Green"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding AlarmsRaised}" Value="true">
+                                <Setter Property="Background" Value="Red"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+                <Label Content="{Binding DeviceLabel}" FontSize="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid}, Path=ActualHeight, Converter={StaticResource FontSizeCon}}" Foreground="White" HorizontalAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <userControls:ParameterInfoViewUserControl Grid.Column="0" ParameterUnits="A" ParameterName="R" FieldPointId="Current_R" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Current_R}"
+                    ParameterAlarmStatus="{Binding ParametersAlarms, Converter={StaticResource ParameterAlarmsInfoExtracter}, ConverterParameter=Current_R}"/>
+            <userControls:ParameterInfoViewUserControl Grid.Column="1" ParameterUnits="V" ParameterName="R" FieldPointId="Voltage_1" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Voltage_1}"
+                    ParameterAlarmStatus="{Binding ParametersAlarms, Converter={StaticResource ParameterAlarmsInfoExtracter}, ConverterParameter=Voltage_1}"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <userControls:ParameterInfoViewUserControl Grid.Column="0" ParameterUnits="A" ParameterName="Y" FieldPointId="Current_Y" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Current_Y}"
+                    ParameterAlarmStatus="{Binding ParametersAlarms, Converter={StaticResource ParameterAlarmsInfoExtracter}, ConverterParameter=Current_Y}"/>
+            <userControls:ParameterInfoViewUserControl Grid.Column="1" ParameterUnits="V" ParameterName="Y" FieldPointId="Voltage_2" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Voltage_2}"
+                    ParameterAlarmStatus="{Binding ParametersAlarms, Converter={StaticResource ParameterAlarmsInfoExtracter}, ConverterParameter=Voltage_2}"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <userControls:ParameterInfoViewUserControl Grid.Column="0" ParameterUnits="A" ParameterName="B" FieldPointId="Current_B" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Current_B}"
+                    ParameterAlarmStatus="{Binding ParametersAlarms, Converter={StaticResource ParameterAlarmsInfoExtracter}, ConverterParameter=Current_B}"/>
+            <userControls:ParameterInfoViewUserControl Grid.Column="1" ParameterUnits="V" ParameterName="B" FieldPointId="Voltage_3" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Voltage_3}"
+                    ParameterAlarmStatus="{Binding ParametersAlarms, Converter={StaticResource ParameterAlarmsInfoExtracter}, ConverterParameter=Voltage_3}"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <userControls:ParameterInfoViewUserControl ParameterUnits="mm/s" ParameterName="Vib" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Vibration}">
+                    <!--<userControls:ParameterInfoViewUserControl.Style>
+                        <Style TargetType="userControls:ParameterInfoViewUserControl">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding DeviceId}" Value="Motor_10">
+                                    <Setter Property="Visibility" Value="Hidden" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </userControls:ParameterInfoViewUserControl.Style>-->
+                </userControls:ParameterInfoViewUserControl>
+
+                <!--#region For REF 1 & REF 2 -->
+                <!--<Grid>
+                    <Grid.Style>
+                        <Style TargetType="Grid">
+                            <Setter Property="Visibility" Value="Hidden" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding DeviceId}" Value="Motor_10">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Style>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.Resources>
+                        <Style x:Key="CommonLabelStyle" TargetType="Label">
+                            <Setter Property="Background" Value="#1a202c" />
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="FontSize" Value="20" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            <Setter Property="Margin" Value="3,5" />
+                        </Style>
+                    </Grid.Resources>
+                    <Label Content="REF 1" Grid.Column="0">
+                        <Label.Style>
+                            <Style TargetType="Label" BasedOn="{StaticResource CommonLabelStyle}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_1}" Value="True">
+                                        <Setter Property="Background" Value="Green" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    <Label Content="REF 2" Grid.Column="1">
+                        <Label.Style>
+                            <Style TargetType="Label" BasedOn="{StaticResource CommonLabelStyle}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_2}" Value="True">
+                                        <Setter Property="Background" Value="Green" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Label.Style>
+                    </Label>
+                    
+                    --><!--#region Vibration for All Devices && if REF 1 and REF 2 both are off --><!--
+                    <userControls:ParameterInfoViewUserControl Grid.Column="2" ParameterUnits="mm/s" ParameterName="VIB" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Vibration}">
+                        <userControls:ParameterInfoViewUserControl.Style>
+                            <Style TargetType="userControls:ParameterInfoViewUserControl">
+                                <Setter Property="Visibility" Value="Visible"/>
+                                <Style.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                            <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_1}" Value="true"/>
+                                            <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_2}" Value="false"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <MultiDataTrigger.Setters>
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </MultiDataTrigger.Setters>
+                                    </MultiDataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                            <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_1}" Value="false"/>
+                                            <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_2}" Value="true"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <MultiDataTrigger.Setters>
+                                            <Setter Property="Visibility" Value="Hidden" />
+                                        </MultiDataTrigger.Setters>
+                                    </MultiDataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </userControls:ParameterInfoViewUserControl.Style>
+                    </userControls:ParameterInfoViewUserControl>
+                    --><!--#endregion-->
+
+                    <!--#region Vibration for REF 1 --><!--
+                    <userControls:ParameterInfoViewUserControl Grid.Column="2" ParameterUnits="mm/s" ParameterName="VIB" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Vibration_1}">
+                        <userControls:ParameterInfoViewUserControl.Style>
+                            <Style TargetType="userControls:ParameterInfoViewUserControl">
+                                <Setter Property="Visibility" Value="Hidden" />
+                                <Style.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                            <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_1}" Value="true"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <MultiDataTrigger.Setters>
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </MultiDataTrigger.Setters>
+                                    </MultiDataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </userControls:ParameterInfoViewUserControl.Style>
+                    </userControls:ParameterInfoViewUserControl>
+                    --><!--#endregion-->
+
+                    <!--#region Vibration for REF 2 --><!--
+                    <userControls:ParameterInfoViewUserControl Grid.Column="2" ParameterUnits="mm/s" ParameterName="VIB" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Vibration_2}">
+                        <userControls:ParameterInfoViewUserControl.Style>
+                            <Style TargetType="userControls:ParameterInfoViewUserControl">
+                                <Setter Property="Visibility" Value="Hidden" />
+                                <Style.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                            <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_2}" Value="true"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <MultiDataTrigger.Setters>
+                                            <Setter Property="Visibility" Value="Visible" />
+                                        </MultiDataTrigger.Setters>
+                                    </MultiDataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </userControls:ParameterInfoViewUserControl.Style>
+                    </userControls:ParameterInfoViewUserControl>
+                    --><!--#endregion--><!--
+                </Grid>-->
+                <!--#endregion-->
+
+            </Grid>
+            <Grid Grid.Column="1" Visibility="Hidden">
+                <!--#region Temperature for All Devices && if REF 1 and REF 2 both are off -->
+                <userControls:ParameterInfoViewUserControl ParameterUnits="°C" ParameterName="Temp" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Temperature}">
+                    <userControls:ParameterInfoViewUserControl.Style>
+                        <Style TargetType="userControls:ParameterInfoViewUserControl">
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Style.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                        <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_1}" Value="True"/>
+                                        <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_2}" Value="False"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <MultiDataTrigger.Setters>
+                                        <Setter Property="Visibility" Value="Hidden" />
+                                    </MultiDataTrigger.Setters>
+                                </MultiDataTrigger>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                        <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_1}" Value="False"/>
+                                        <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_2}" Value="True"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <MultiDataTrigger.Setters>
+                                        <Setter Property="Visibility" Value="Hidden" />
+                                    </MultiDataTrigger.Setters>
+                                </MultiDataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </userControls:ParameterInfoViewUserControl.Style>
+                </userControls:ParameterInfoViewUserControl>
+                <!--#endregion-->
+
+                <!--#region Temperature for REF 1 -->
+                <userControls:ParameterInfoViewUserControl ParameterUnits="°C" ParameterName="Temp" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Temperature_1}">
+                    <userControls:ParameterInfoViewUserControl.Style>
+                        <Style TargetType="userControls:ParameterInfoViewUserControl">
+                            <Setter Property="Visibility" Value="Hidden" />
+                            <Style.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                        <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_1}" Value="True"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <MultiDataTrigger.Setters>
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </MultiDataTrigger.Setters>
+                                </MultiDataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </userControls:ParameterInfoViewUserControl.Style>
+                </userControls:ParameterInfoViewUserControl>
+                <!--#endregion-->
+
+                <!--#region Temperature for REF 2 -->
+                <userControls:ParameterInfoViewUserControl ParameterUnits="°C" ParameterName="Temp" DeviceId="{Binding DeviceId}" DeviceLabel="{Binding DeviceLabel}" ParameterValue="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Temperature_2}">
+                    <userControls:ParameterInfoViewUserControl.Style>
+                        <Style TargetType="userControls:ParameterInfoViewUserControl">
+                            <Setter Property="Visibility" Value="Hidden" />
+                            <Style.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding DeviceId}" Value="Motor_10"/>
+                                        <Condition Binding="{Binding ParametersData, Converter={StaticResource ParameterInfoExtracter}, ConverterParameter=Status_2}" Value="True"/>
+                                    </MultiDataTrigger.Conditions>
+                                    <MultiDataTrigger.Setters>
+                                        <Setter Property="Visibility" Value="Visible" />
+                                    </MultiDataTrigger.Setters>
+                                </MultiDataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </userControls:ParameterInfoViewUserControl.Style>
+                </userControls:ParameterInfoViewUserControl>
+                <!--#endregion-->
+            </Grid>
+            <Grid Grid.Column="4">
+                <local:DeviceRunningTimeView Margin="10" helpers:UiHelpers.DeviceId="{Binding Path=DataContext.DeviceId, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:FieldDeviceParameterInfoView}}"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="5" Margin="2" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="0">
+                <Label Content="Last Maintenance" Foreground="#8e94a1"/>
+            </Viewbox>
+            <Grid Grid.Column="1" Background="#1a202c">
+                <Viewbox>
+                    <Label Content="{Binding LastMaintenanceDate}" Foreground="White"/>
+                </Viewbox>
+            </Grid>
+            <Viewbox Grid.Column="2">
+                <Button Content="Update Maintenance Date" Style="{StaticResource CommonButtonStyle}" Command="{Binding UpdateMaintenanceDateCommand}"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</UserControl>

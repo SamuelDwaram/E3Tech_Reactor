@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83EE913C-D918-489F-AFCC-0B338369784B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>E3.RemoteMonitoringSystem.UI</RootNamespace>
+    <AssemblyName>E3.RemoteMonitoringSystem.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.2.0.4\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Core.7.1.0.431\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Unity.7.1.0.431\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Wpf.7.1.0.431\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Prism.Wpf.7.1.0.431\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=3.3.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Abstractions.3.3.1\lib\net45\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.8.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Container.5.8.11\lib\net45\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfBaseApp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rdParty\WpfBaseApp.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\CheckIfEqualValuesConverter.cs" />
+    <Compile Include="Converters\FontSizeConverter.cs" />
+    <Compile Include="Helpers\DoubleValidationRule.cs" />
+    <Compile Include="Models\DevicesReportHandler.cs" />
+    <Compile Include="UIModule.cs" />
+    <Compile Include="ViewModels\ConsolidatedReportViewModel.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\DataReportViewModel.cs" />
+    <Compile Include="ViewModels\DeviceSummaryReportViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\NavigationControlsViewModel.cs" />
+    <Compile Include="ViewModels\ReportsViewModel.cs" />
+    <Compile Include="ViewModels\TrendsViewModel.cs" />
+    <Compile Include="Views\ConsolidatedReportView.xaml.cs">
+      <DependentUpon>ConsolidatedReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataReportView.xaml.cs">
+      <DependentUpon>DataReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeviceSummaryReportView.xaml.cs">
+      <DependentUpon>DeviceSummaryReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationControlsView.xaml.cs">
+      <DependentUpon>NavigationControlsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportsView.xaml.cs">
+      <DependentUpon>ReportsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TrendsView.xaml.cs">
+      <DependentUpon>TrendsView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\E3.ReactorManager.Interfaces\E3.ReactorManager.Interfaces.csproj">
+      <Project>{620C94FE-D355-4801-92B0-F86D1B08FB02}</Project>
+      <Name>E3.ReactorManager.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\E3.ReactorManager.ReportsManager\E3.ReactorManager.ReportsManager.csproj">
+      <Project>{D7C4E8DC-BBEF-40D0-A852-434C3E843B45}</Project>
+      <Name>E3.ReactorManager.ReportsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\E3.SystemAlarmManager\E3.SystemAlarmManager.csproj">
+      <Project>{618238D6-9C16-4697-BAFE-1891F72027B1}</Project>
+      <Name>E3.SystemAlarmManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\E3.TrendsManager\E3.TrendsManager.csproj">
+      <Project>{32b42dcc-7ca0-4799-ba97-6b106557416e}</Project>
+      <Name>E3.TrendsManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RecipeModules\E3Tech.Navigation\E3Tech.Navigation.csproj">
+      <Project>{DC50D873-ADE1-45CA-9F70-D310709EC32B}</Project>
+      <Name>E3Tech.Navigation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\ConsolidatedReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DashboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DataReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DeviceSummaryReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NavigationControlsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReportsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TrendsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Sql Files\Nireekshak\AlarmParameters.sql" />
+    <Content Include="Sql Files\Nireekshak\AlarmPolicies.sql" />
+    <Content Include="Sql Files\Sharada\C R U D - Field Device Data.sql" />
+    <Content Include="Sql Files\Sharada\FieldDevices - ConnectedControllers.sql" />
+    <Content Include="Sql Files\Sharada\FieldPoints.sql" />
+    <Content Include="Sql Files\Sharada\Controllers-UsedMemoryAddresses.sql" />
+    <Content Include="Sql Files\Sharada\DataRecorderTables.sql" />
+    <Content Include="Sql Files\Sharada\SensorsDataSet.sql" />
+    <Content Include="Sql Files\StoredProcedures.sql" />
+    <Content Include="Sql Files\DataBackupOfDataRecorderTables.sql" />
+    <Content Include="Sql Files\DeleteDataFromDataRecorderTables.sql" />
+    <Content Include="Sql Files\Nireekshak\C R U D  - FieldDevice Data.sql" />
+    <Content Include="Sql Files\Nireekshak\Controllers and UsedMemoryAddressesInControllers.sql" />
+    <Content Include="Sql Files\Nireekshak\DataRecorderTables.sql" />
+    <Content Include="Sql Files\Nireekshak\FieldDevicesAndConnectedControllers.sql" />
+    <Content Include="Sql Files\Nireekshak\FieldPoints.sql" />
+    <Content Include="Sql Files\Nireekshak\SensorsDataSet.sql" />
+    <Content Include="Sql Files\Sagardhwani\C R U D - Field Device Data.sql" />
+    <Content Include="Sql Files\Sagardhwani\DataRecorderTables.sql" />
+    <Content Include="Sql Files\Sagardhwani\FieldDevicesAndConnectedControllers.sql" />
+    <Content Include="Sql Files\Sagardhwani\FieldPoints.sql" />
+    <Content Include="Sql Files\Sagardhwani\Insert Controllers and UsedMemoryAddressesInControllers.sql" />
+    <Content Include="Sql Files\Sagardhwani\SensorsDataSet.sql" />
+    <Content Include="Sql Files\Sunayna\C R U D - Field Device Data.sql" />
+    <Content Include="Sql Files\Sunayna\Controllers and UsedMemoryAddressesInControllers.sql" />
+    <Content Include="Sql Files\Sunayna\DataRecorderTables.sql" />
+    <Content Include="Sql Files\Sunayna\FieldDevices And ConnectedControllers.sql" />
+    <Content Include="Sql Files\Sunayna\FieldPoints.sql" />
+    <Content Include="Sql Files\Sunayna\SensorsDataSet.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

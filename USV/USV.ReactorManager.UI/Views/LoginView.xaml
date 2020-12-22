@@ -1,0 +1,352 @@
+﻿<UserControl x:Class="USV.ReactorManager.UI.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:USV.ReactorManager.UI.Views"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:behaviours="clr-namespace:E3.ReactorManager.Interfaces.UI.Behaviours;assembly=E3.ReactorManager.Interfaces"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <UserControl.Resources>
+        <Style x:Key="UnitsLabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="HeaderLabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="#FF8E94A1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="CommonPathStyle" TargetType="Path">
+            <Setter Property="Fill" Value="#646C7F"/>
+            <Setter Property="Stretch" Value="Fill"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Width" Value="100"/>
+        </Style>
+        <Style x:Key="ErrorLabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
+        <Style x:Key="CommonTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#1a2132"/>
+            <Setter Property="Foreground" Value="#646c7f"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="CommonPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="PasswordChar" Value="*"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#1a2132"/>
+            <Setter Property="Foreground" Value="#646c7f"/>
+        </Style>
+        <Style x:Key="LoginButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="IsDefault" Value="True"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Background" Value="#32d5d4"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="#FF1E2432">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <!--Logo-->
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1.5*"/>
+                    <!--User name-->
+                    <RowDefinition Height="1*"/>
+                    <!--user name error-->
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition Height="1.5*"/>
+                    <!--Password-->
+                    <RowDefinition Height="1*"/>
+                    <!--password error-->
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1*"/>
+                    <!--Login Button-->
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="1*"/>
+                    <!--Date Time string-->
+                </Grid.RowDefinitions>
+
+                <!--#region Logo-->
+                <Viewbox Grid.Row="0">
+                    <Path Style="{StaticResource CommonPathStyle}"
+                              Data="M-772,501.6l4.4-24.1l-7.6,3.4l-7.6-3.4l4.4,24.1c1-0.1,2.1-0.2,3.2-0.2C-774.1,501.3-773,501.3-772,501.6z
+                                    M-780.9,502.2l-7-23.5l-5.2,6.5l-8.4,0.4l14.9,19.5c0.9-0.6,1.8-1.2,2.7-1.7  C-782.9,502.9-781.9,502.4-780.9,502.2z
+                                    M-788.6,506.7l-16.9-17.7l-1.7,8.1l-7.3,4.2l22.1,10.6c0.5-1,1-1.8,1.7-2.7C-790,508.3-789.3,507.4-788.6,506.7  z
+                                    M-793.3,514.2l-23.2-8.1l2.2,8.1l-4.5,7l24.6-0.6c0-1,0.1-2.1,0.2-3.2C-793.8,516.4-793.6,515.3-793.3,514.2z
+                                    M-763.8,505.1l14.9-19.5l-8.4-0.4l-5.2-6.5l-7,23.5c1,0.3,2,0.7,3,1.2S-764.7,504.4-763.8,505.1z
+                                    M-758.1,512l22.1-10.6l-7.3-4.2l-1.7-8.1l-16.9,17.7c0.7,0.7,1.5,1.5,2.1,2.4S-758.6,510.9-758.1,512z
+                                    M-756.1,520.6l24.6,0.6l-4.5-7l2.2-8.1l-23.2,8.1c0.3,1,0.6,2.1,0.7,3.2C-756.2,518.4-756.1,519.5-756.1,520.6z  
+                                    M-766.7,542.5h-2.9l-0.5-3.3h-3.5l-0.5,3.3h-2.6l2.9-18.2h4.2L-766.7,542.5z M-773.2,536.9h2.8l-1.4-9.2   L-773.2,536.9z
+                                    M-761.5,524.2c2.8,0,4.2,1.7,4.2,4.5v0.6h-2.7v-0.7c0-1.3-0.5-1.8-1.4-1.8s-1.4,0.5-1.4,1.8   c0,3.7,5.6,4.5,5.6,9.6c0,2.9-1.5,4.5-4.3,4.5s-4.3-1.7-4.3-4.5v-1.1h2.7v1.3c0,1.3,0.6,1.8,1.5,1.8s1.5-0.4,1.5-1.8   c0-3.7-5.6-4.5-5.6-9.6C-765.8,525.9-764.3,524.2-761.5,524.2z
+                                    M-746.4,542.5h-2.9l-0.5-3.3h-3.5l-0.5,3.3h-2.6l2.9-18.2h4.2L-746.4,542.5z M-752.9,536.9h2.8l-1.4-9.2   L-752.9,536.9z
+                                    M-742.2,542.5h-2.9v-18.2h2.9v7.8h3.2v-7.8h2.9v18.2h-2.9v-7.8h-3.2V542.5z
+                                    M-734,524.4h2.9v18.1h-2.9V524.4z
+                                    M-800.1,532.7c0,0.3,0.1,0.6,0.1,0.8L-800.1,532.7L-800.1,532.7z
+                                    M-800.1,532.7c-0.4-4.8-4.5-8.6-9.4-8.6c-5.2,0-9.4,4.2-9.4,9.4c0,5.2,4.2,9.4,9.4,9.4c0.4,0,0.9,0,1.3-0.1v-5  c-0.4,0.1-0.9,0.2-1.3,0.2c-2.5,0-4.5-2.1-4.5-4.5c0-2.4,2.1-4.5,4.5-4.5s4.5,2.1,4.5,4.5v8.2v1.2h4.9v-9.4  C-800,533.3-800.1,533-800.1,532.7z
+                                    M-778.5,524.2c-4.9,0-8.9,3.7-9.4,8.6c0,0.3-0.1,0.6-0.1,0.8v9.4h4.9v-1.2v-8.2c0-2.5,2.1-4.5,4.5-4.5  c0.4,0,0.8,0.1,1.2,0.1v-5C-777.7,524.2-778.2,524.2-778.5,524.2z
+                                    M-789.7,533.5v-4.9h-4.3v-5.6h-4.9v5.6v4.9v4.6c0,0.3,0,0.6,0.1,0.8c0.4,4.7,4.3,8.4,9.2,8.6v-4.9  c-2.4-0.1-4.3-2.1-4.3-4.5v-4.6H-789.7z
+                                    M-758.1,520.2c0-9.4-7.6-17.1-17.1-17.1c-9.4,0-17.1,7.6-17.1,17.1c0,0.1,0,0.2,0,0.4h34.1  C-758.1,520.4-758.1,520.4-758.1,520.2z"/>
+                </Viewbox>
+                <!--#endregion-->
+
+                <!--#region Username Text box-->
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Grid.ColumnSpan="2">
+                        <Border.Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Style.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding UserNameError}" Value="True"/>
+                                            <Condition Binding="{Binding ElementName=UsernameTextBox,Path=IsKeyboardFocused}" Value="False"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <MultiDataTrigger.Setters>
+                                            <Setter Property="BorderThickness" Value="2"/>
+                                            <Setter Property="BorderBrush" Value="Red"/>
+                                            <Setter Property="Effect">
+                                                <Setter.Value>
+                                                    <BlurEffect Radius="0"/>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </MultiDataTrigger.Setters>
+                                    </MultiDataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=UsernameTextBox,Path=IsKeyboardFocused}" Value="True">
+                                        <Setter Property="BorderBrush" Value="#4cdcdc"/>
+                                        <Setter Property="BorderThickness" Value="10"/>
+                                        <Setter Property="Effect">
+                                            <Setter.Value>
+                                                <BlurEffect Radius="15"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=PasswordTextBox,Path=IsKeyboardFocused}" Value="True">
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="Effect">
+                                            <Setter.Value>
+                                                <BlurEffect Radius="0"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                    <Grid Grid.Column="0" Background="#1a2132">
+                        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path Style="{StaticResource CommonPathStyle}" Height="20" Width="20" Margin="20"
+                                Data="M-379.1,269.7c-1.9,0-3.5-1.6-3.5-3.5c0-1.9,1.6-3.5,3.5-3.5c1.9,0,3.5,1.6,3.5,3.5  C-375.6,268.1-377.2,269.7-379.1,269.7z M-379.1,263.9c-1.3,0-2.3,1-2.3,2.3c0,1.3,1,2.3,2.3,2.3c1.3,0,2.3-1,2.3-2.3  S-377.8,263.9-379.1,263.9z
+                                M-374.2,274.6c-0.3,0-0.6-0.3-0.6-0.6c0-2.4-1.9-4.3-4.3-4.3c-2.4,0-4.3,1.9-4.3,4.3c0,0.3-0.3,0.6-0.6,0.6  c-0.3,0-0.6-0.3-0.6-0.6c0-3,2.5-5.5,5.5-5.5c3,0,5.5,2.5,5.5,5.5C-373.6,274.3-373.8,274.6-374.2,274.6z"/>
+                        </Viewbox>
+                    </Grid>
+                    <TextBox Grid.Column="1" x:Name="UsernameTextBox" Text="{Binding Username,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource CommonTextBoxStyle}">
+                        <i:Interaction.Behaviors>
+                            <behaviours:TextBoxEnterKeyUpdateBehavior />
+                        </i:Interaction.Behaviors>
+                    </TextBox>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Username error box-->
+                <Grid Grid.Row="3" Background="#89373c">
+                    <Grid.Style>
+                        <Style TargetType="Grid">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding UserNameError}" Value="True">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding UserNameError}" Value="False">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=UsernameTextBox,Path=IsKeyboardFocused}" Value="True">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=PasswordTextBox,Path=IsKeyboardFocused}" Value="True">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Style>
+                    <Viewbox>
+                        <Label Content="Please Enter Valid UserName" Style="{StaticResource ErrorLabelStyle}"/>
+                    </Viewbox>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Password Text box-->
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Grid.ColumnSpan="2">
+                        <Border.Style>
+                            <Style TargetType="{x:Type Border}">
+                                <Style.Triggers>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding PasswordError}" Value="True"/>
+                                            <Condition Binding="{Binding ElementName=PasswordTextBox,Path=IsKeyboardFocused}" Value="False"/>
+                                        </MultiDataTrigger.Conditions>
+                                        <MultiDataTrigger.Setters>
+                                            <Setter Property="BorderThickness" Value="2"/>
+                                            <Setter Property="BorderBrush" Value="Red"/>
+                                            <Setter Property="Effect">
+                                                <Setter.Value>
+                                                    <BlurEffect Radius="0"/>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </MultiDataTrigger.Setters>
+                                    </MultiDataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=PasswordTextBox,Path=IsKeyboardFocused}" Value="True">
+                                        <Setter Property="BorderBrush" Value="#4cdcdc"/>
+                                        <Setter Property="BorderThickness" Value="10"/>
+                                        <Setter Property="Effect">
+                                            <Setter.Value>
+                                                <BlurEffect Radius="15"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding ElementName=UsernameTextBox,Path=IsKeyboardFocused}" Value="True">
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="Effect">
+                                            <Setter.Value>
+                                                <BlurEffect Radius="0"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                    </Border>
+                    <Grid Grid.Column="0" Background="#1a2132">
+                        <Viewbox Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path Style="{StaticResource CommonPathStyle}" Height="20" Width="20" Margin="20"
+                                Data="M-417.9,286.2c-1.2,0-2.1,0.8-2.4,1.8h4.9C-415.8,286.9-416.8,286.2-417.9,286.2z
+                                M-414.4,288.1c-0.1-0.3-0.1-0.6-0.2-0.8c-0.6-1.2-1.8-2.1-3.3-2.1c-1.7,0-3.2,1.2-3.5,2.9c0,0-0.1,0-0.1,0c-0.8,0.2-1.3,0.9-1.3,1.8v4.8c0,1,0.8,1.9,1.9,1.9h6.1c1,0,1.9-0.8,1.9-1.9v-4.8C-413,289-413.6,288.3-414.4,288.1z M-417.9,286.2c1.2,0,2.1,0.8,2.5,1.8h-4.9C-420.1,286.9-419.1,286.2-417.9,286.2z M-414,294.6c0,0.5-0.4,0.9-0.9,0.9h-6.1c-0.5,0-0.9-0.4-0.9-0.9v-4.8c0-0.2,0.1-0.4,0.2-0.6c0.2-0.2,0.4-0.3,0.6-0.3h0h0.4h5.7c0.5,0,0.9,0.4,0.9,0.9V294.6z
+                                M-417.9,290.9c-0.4,0-0.7,0.3-0.7,0.7v1.4c0,0.4,0.3,0.7,0.7,0.7s0.7-0.3,0.7-0.7v-1.4C-417.3,291.2-417.6,290.9-417.9,290.9z"/>
+                        </Viewbox>
+                    </Grid>
+                    <PasswordBox Grid.Column="1" x:Name="PasswordTextBox" PasswordChar="*" Style="{StaticResource CommonPasswordBoxStyle}">
+                        <i:Interaction.Behaviors>
+                            <behaviours:PasswordBoxEnterKeyUpdateBehavior />
+                        </i:Interaction.Behaviors>
+                    </PasswordBox>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Password Error box-->
+                <Grid Grid.Row="6" Background="#89373c">
+                    <Grid.Style>
+                        <Style TargetType="{x:Type Grid}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding PasswordError}" Value="True">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding PasswordError}" Value="False">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=PasswordTextBox,Path=IsKeyboardFocused}" Value="True">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=UsernameTextBox,Path=IsKeyboardFocused}" Value="True">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Style>
+                    <Viewbox>
+                        <Label Content="Please Enter Valid Password" Style="{StaticResource ErrorLabelStyle}"/>
+                    </Viewbox>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Login Button -->
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="1" Content="Login" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=PasswordTextBox}" Style="{StaticResource LoginButtonStyle}"/>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Date & Time area-->
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="8*"/>
+                    </Grid.ColumnDefinitions>
+                    <Viewbox Grid.Column="0">
+                        <Path Fill="#4bdcdf" Width="20" Height="20" Margin="10" Style="{StaticResource CommonPathStyle}"
+                                Data="M-379.1 1215.1c-3.6 0-6.5 2.9-6.5 6.5s2.9 6.5 6.5 6.5c3.6 0 6.5-2.9 6.5-6.5S-375.5 1215.1-379.1 1215.1z    M-379.1 1216.1c3 0 5.5 2.4 5.5 5.5c0 3-2.4 5.5-5.5 5.5s-5.5-2.4-5.5-5.5C-384.6 1218.5-382.1 1216.1-379.1 1216.1z    M-379.1 1216.9c-0.3 0-0.5 0.2-0.5 0.5v4.1c0 0.2 0.1 0.4 0.3 0.4l3.3 1.9c0.2 0.1 0.6 0.1 0.7-0.2c0.1-0.2 0.1-0.6-0.2-0.7   l-3-1.7v-3.8C-378.6 1217.2-378.8 1216.9-379.1 1216.9z"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1">
+                        <Label Content="Date &amp; Time : " Style="{StaticResource HeaderLabelStyle}"/>
+                    </Viewbox>
+                    <Viewbox Grid.Column="2" HorizontalAlignment="Left">
+                        <Label Content="{Binding DateTimeString}" Style="{StaticResource UnitsLabelStyle}"/>
+                    </Viewbox>
+                </Grid>
+                <!--#endregion-->
+
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>
