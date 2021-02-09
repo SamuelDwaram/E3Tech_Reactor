@@ -24,7 +24,7 @@ namespace E3.ReactorManager.Interfaces.UI.Behaviours
                 if (e.Key == Key.Return)
                 {
                     if (e.Key == Key.Enter)
-                    {
+                    { 
                         textBox.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
                     }
                 }
