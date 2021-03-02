@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+  <POU Name="RecipeModule_R6" Id="{b4f30f5d-bc8a-4bc4-80e9-2cfd072c9f5b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM RecipeModule_R6
+VAR
+	shutDownFB:Shutdown;
+	remainingTimeCalculator : RemainingTimeCalculator;
+	
+	DosingTick: INT;
+	AbortTrig:R_Trig;
+END_VAR
+VAR_INPUT
+	DosingTotalizerVolume: REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF R6.RecipeStep[0].Started AND R6.RecipeStep[0].StartedTime = '' THEN
+	//Update StartedTime
+	R6.RecipeStep[0].StartedTime := MAIN.concatenatedHourMinuteString;
+END_IF
+
+// Start Block and HC Mode Selection
+IF R6.RecipeStep[R6.R6STEPS].Started THEN
+  R6.R6STEPS:= R6.R6STEPS+1;
+ // R6.AbortRecipe:=FALSE;
+  R6.ClearRecipe:=FALSE;
+  R6.RecipeEnded:=FALSE;
+END_IF  
+ 
+// Check Process or JACKET SELECTION
+IF R6.RecipeStep[0].HeatCoolModeSelection THEN
+	R6.HeatCoolTemperatureControlType:=TRUE;
+	R6.TemperatureControl:=REAL_TO_DINT(R6.ReactorMassTemperature);
+ELSE
+	R6.HeatCoolTemperatureControlType:=FALSE;	
+	R6.TemperatureControl:=REAL_TO_DINT(R6.JacketOutletTemperature);
+END_IF
+
+ IF R6.RecipeStep[R6.R6STEPS].HeatcoolEnabled THEN
+	R6.HeatCoolSetPoint:=R6.RecipeStep[R6.R6STEPS].HeatCoolSetpointExpression;		
+	R6.RecipeStep[R6.R6STEPS].HeatCoolStarted :=TRUE;
+	IF R6.RecipeStep[R6.R6STEPS].HeatCoolStartedTime = '' THEN
+		R6.RecipeStep[R6.R6STEPS].HeatCoolStartedTime := Main.concatenatedHourMinuteString;
+	END_IF
+	R6.HeatCoolStatus:=TRUE;
+	
+		///Check for condition in step  
+	 IF ABS(R6.TemperatureControl-R6.RecipeStep[R6.R6STEPS].HeatCoolSetpointExpression )<0.5 THEN
+		R6.RecipeStep[R6.R6STEPS].HeatcoolEnded :=TRUE;	
+		IF R6.RecipeStep[R6.R6STEPS].HeatCoolEndedTime = '' THEN
+			R6.RecipeStep[R6.R6STEPS].HeatCoolEndedTime := Main.concatenatedHourMinuteString;
+		END_IF
+	 END_IF     	
+ END_IF
+	
+////Recipe block for stirrer
+IF R6.RecipeStep[R6.R6STEPS].StirrerEnabled THEN
+	R6.StirrerSetPoint:=R6.RecipeStep[R6.R6STEPS].StirrerSetPointExpression;
+	R6.StirrerStatus:=TRUE;	
+    R6.RecipeStep[R6.R6STEPS].StirrerStarted:=TRUE;
+	IF R6.RecipeStep[R6.R6STEPS].StirrerStartedTime = '' THEN
+		R6.RecipeStep[R6.R6STEPS].StirrerStartedTime := Main.concatenatedHourMinuteString;
+	END_IF
+	
+	///Check the Actual speed to end the step
+      IF ABS(R6.StirrerCurrentSpeed- R6.RecipeStep[R6.R6STEPS].StirrerSetPointExpression)<8 THEN
+		R6.RecipeStep[R6.R6STEPS].StirrerEnded:=TRUE;
+		IF R6.RecipeStep[R6.R6STEPS].StirrerEndedTime = '' THEN
+			R6.RecipeStep[R6.R6STEPS].StirrerEndedTime := Main.concatenatedHourMinuteString;
+		END_IF
+	  END_IF
+	//Check the rpm TO switch off the vfd
+	  IF R6.RecipeStep[R6.R6STEPS].StirrerSetPointExpression=0 THEN
+		R6.StirrerStatus:=FALSE;	
+	  END_IF///
+  END_IF 
+
+
+(*////Wait Block*)
+IF R6.RecipeStep[R6.R6STEPS].WaitEnabled AND NOT R6.RecipeStep[R6STEPS].WaitEnded THEN
+    R6.RecipeStep[R6.R6STEPS].WaitStarted:=TRUE;
+	IF R6.RecipeStep[R6.R6STEPS].WaitStartedTime = '' THEN
+		R6.RecipeStep[R6.R6STEPS].WaitStartedTime := Main.concatenatedHourMinuteString;
+	END_IF
+	R6.WaitTick:=R6.WaitTick+1;
+	IF R6.WaitTick=100  THEN
+		//Update the Second Tick
+		R6.WaitSecondTick:=R6.WaitSecondTick+1;
+		R6.WaitTick:=0;
+	END_IF
+		
+	IF  R6.WaitSecondTick=60  THEN
+		//Update the Minute Tick
+		R6.WaitMinuteTick:=R6.WaitMinuteTick+1;
+		R6.WaitSecondTick:=0;
+	END_IF	
+
+	//Update the Remaining Time
+	remainingTimeCalculator(elapsedSeconds:= R6.WaitSecondTick, elapsedMinutes:= R6.WaitMinuteTick, givenDuration:= DINT_TO_INT(R6.RecipeStep[R6.R6STEPS].WaitDuration), 
+							leftOverSeconds=> R6.RecipeStep[R6.R6STEPS].WaitRemainingSeconds, leftOverMinutes=> R6.RecipeStep[R6.R6STEPS].WaitRemainingMinutes);
+	R6.RecipeStep[R6.R6STEPS].WaitRemainingTime := INT_TO_STRING(R6.RecipeStep[R6.R6STEPS].WaitRemainingMinutes);
+	R6.RecipeStep[R6.R6STEPS].WaitRemainingTime := CONCAT(STR1:= R6.RecipeStep[R6.R6STEPS].WaitRemainingTime, STR2:= ':');
+	R6.RecipeStep[R6.R6STEPS].WaitRemainingTime := CONCAT(STR1:= R6.RecipeStep[R6.R6STEPS].WaitRemainingTime, STR2:= INT_TO_STRING(R6.RecipeStep[R6.R6STEPS].WaitRemainingSeconds));
+	
+	(*///To write ended time*)
+	IF ABS(R6.WaitMinuteTick -R6.RecipeStep[R6.R6STEPS].WaitDuration)=0 THEN
+		R6.RecipeStep[R6.R6STEPS].WaitEnded:=TRUE;
+		IF R6.RecipeStep[R6.R6STEPS].WaitEndedTime = '' THEN
+			R6.RecipeStep[R6.R6STEPS].WaitEndedTime := Main.concatenatedHourMinuteString;
+		END_IF
+		R6.WaitTick:=0;
+		R6.WaitSecondTick:=0;
+		R6.WaitMinuteTick:=0;
+	END_IF
+END_IF
+	
+IF R6.RecipeStep[R6STEPS].DosingEnabled AND NOT R6.RecipeStep[R6STEPS].DosingEnded THEN
+	R6.RecipeStep[R6STEPS].DosingStarted := TRUE;
+	IF R6.RecipeStep[R6.R6STEPS].DosingStartedTime = '' THEN
+		R6.RecipeStep[R6.R6STEPS].DosingStartedTime := Main.concatenatedHourMinuteString;
+	END_IF
+	//Update Totalized Volume
+		IF  R6.DosingPumpStatus_1 THEN
+			DosingTick:=DosingTick+1;
+		END_IF
+		   
+	  IF DosingTick=100 THEN
+		  DosingTotalizerVolume:=DosingTotalizerVolume+(R6.RecipeStep[R6STEPS].DosingRateSetpointExpression/2.7 * 0.045);	  
+	  END_IF
+	  
+	  IF DosingTick>100 THEN
+		  DosingTick:=0;
+	  END_IF
+	  
+	IF DosingTotalizerVolume < R6.RecipeStep[R6STEPS].DosingMaxAmount THEN
+		IF R6.DosingPumpStatus_1 THEN
+			IF R6.TemperatureControl < R6.RecipeStep[R6STEPS].DosingStopTemp THEN
+				R6.DosingPumpStatus_1 := TRUE;
+				R6.DosingPumpSetPoint_1 := R6.RecipeStep[R6STEPS].DosingRateSetpointExpression;
+			ELSE
+				R6.DosingPumpStatus_1 := FALSE;
+				R6.DosingPumpSetPoint_1 := 0;
+			END_IF
+		ELSE
+			IF DosingTotalizerVolume = 0 AND R6.TemperatureControl > R6.RecipeStep[R6STEPS].DosingResumeTemp AND R6.TemperatureControl < R6.RecipeStep[R6STEPS].DosingStopTemp THEN
+				//Logic for starting Dosing Pump First Time in a Recipe Step
+				R6.DosingPumpStatus_1 := TRUE;
+				R6.DosingPumpSetPoint_1 := R6.RecipeStep[R6STEPS].DosingRateSetpointExpression;
+			END_IF
+			
+			IF R6.TemperatureControl < R6.RecipeStep[R6STEPS].DosingResumeTemp THEN
+				R6.DosingPumpStatus_1 := TRUE;
+				R6.DosingPumpSetPoint_1 := R6.RecipeStep[R6STEPS].DosingRateSetpointExpression;
+			END_IF
+		END_IF
+	ELSE
+		R6.DosingPumpStatus_1 := FALSE;
+		R6.DosingPumpSetPoint_1 := 0;
+		R6.RecipeStep[R6STEPS].DosingEnded := TRUE;
+		IF R6.RecipeStep[R6.R6STEPS].DosingEndedTime = '' THEN
+			R6.RecipeStep[R6.R6STEPS].DosingEndedTime := Main.concatenatedHourMinuteString;
+		END_IF
+		DosingTick := 0;
+		DosingTotalizerVolume:=0;
+	END_IF
+END_IF
+
+IF R6.R6STEPS>0 THEN 
+
+(*//Step control block To increment to next step*)
+ R6.TotalEnabledValue:=BOOL_TO_INT(R6.RecipeStep[R6.R6STEPS].HeatcoolEnabled)+BOOL_TO_INT(R6.RecipeStep[R6.R6STEPS].StirrerEnabled)+BOOL_TO_INT(R6.RecipeStep[R6.R6STEPS].WaitEnabled)+BOOL_TO_INT( R6.RecipeStep[R6.R6STEPS].DosingEnabled);
+ R6.TotalEndedValue:=BOOL_TO_INT(R6.RecipeStep[R6.R6STEPS].HeatCoolEnded)+BOOL_TO_INT(R6.RecipeStep[R6.R6STEPS].StirrerEnded)+BOOL_TO_INT(R6.RecipeStep[R6.R6STEPS].WaitEnded)+BOOL_TO_INT( R6.RecipeStep[R6.R6STEPS].DosingEnded);
+
+    IF (R6.TotalEnabledValue - R6.TotalEndedValue)=0 THEN 
+		R6.R6STEPS:=R6.R6STEPS+1;
+    END_IF
+END_IF
+  
+ (* ///To End the Recipe**)
+ IF  R6.NumberOfRecipeSteps = R6.R6STEPS THEN
+	 R6.StirrerStatus:=FALSE;
+	 R6.StirrerSetPoint:=0;
+	 R6.HeatCoolStatus:=FALSE;
+	 R6.HeatCoolSetPoint:=0;	
+     R6.StepCompleted:=FALSE;	 
+	 R6.RecipeEnded:=TRUE;
+	 R6.RecipeStatus:=FALSE;
+ END_IF
+  
+(* //TO ABORT RECIPE*)
+AbortTrig(CLK:=R6.AbortRecipe,Q=>);
+IF AbortTrig.Q THEN
+	shutDownFB(GvlIdentifier := 'R6');
+	AbortTrig.CLK := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="RecipeModule_R6">
+      <LineId Id="17" Count="177" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

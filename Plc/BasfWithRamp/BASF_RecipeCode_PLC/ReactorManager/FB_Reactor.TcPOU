@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="FB_Reactor" Id="{01eb9222-d0df-4042-80f5-55988a498657}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Reactor
+VAR_INPUT
+	
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	simulator : Simulator;
+	random_value : REAL;
+	timeCounter : INT;
+	updateAllParameters : BOOL;
+	simulationMode : BOOL;
+	
+	ipMotorControl		: I_MotorControl;
+	ipAnalogScaling		: I_AnalogScaling;
+	nMassTemp AT %I*	: INT;
+	nVentTemp AT %I*	: INT;
+	nVapourTemp	AT %I*	: INT;
+	nPressure AT %I*	: INT;
+	nReactorpH AT %I*	: INT;
+	nScrubberpH AT %I*	: INT;
+	nLoadcell AT %I*	: INT;
+	nStirrerSpeed AT %I*: INT;
+	nLocalTemp			: REAL;
+	nLocalTemp1			: REAL;
+	nLocalTemp2			: REAL;
+	nLocalTemp3 		: REAL;
+	nLocalTemp4 		: REAL;
+	nLocalTemp5 		: REAL;
+	nLocalTemp6 		: REAL;
+	nLocalTemp7 		: REAL;	
+	nSpeedSetpoint 		: INT;
+	nLocalSpeed			: REAL;
+	fbScaling			: FB_Scaling;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF simulationMode THEN
+	IF updateAllParameters THEN
+		random_value := 0;
+		//Update parameters for R1 using Simulator logic
+		random_value := 0;
+		simulator(CurrentValue := R1.JacketOutletTemperature, TargetValue := DINT_TO_REAL(R1.HeatCoolSetPoint), SimulatedValue => random_value);
+		R1.JacketOutletTemperature := REAL_TO_INT(random_value);
+		
+		simulator(CurrentValue := R1.ReactorMassTemperature, TargetValue := R1.JacketOutletTemperature, SimulatedValue => random_value);
+		R1.ReactorMassTemperature := random_value;
+		
+		random_value := 0;
+		simulator(CurrentValue := R1.StirrerCurrentSpeed, TargetValue := DINT_TO_REAL(R1.StirrerSetPoint), SimulatedValue => random_value);
+		R1.StirrerCurrentSpeed := REAL_TO_INT(random_value);
+		
+		//Reset timeCounter
+		updateAllParameters := FALSE;
+		timeCounter := 0;
+	ELSE
+		timeCounter := timeCounter + 1;
+		IF timeCounter >= 5 THEN
+			updateAllParameters := TRUE;
+		END_IF
+	END_IF
+ELSE
+	//To Start Motor or Stop Motor
+	(*Motor can be controlled from SCADA only if the Remote button is switched on from panel*)
+	IF ipMotorControl.RemoteLocalStatus THEN //To check the panel remote status button
+		IF R1.StirrerStatus THEN	
+			//TO set the speed of the motor
+			nLocalSpeed := R1.StirrerSetPoint*70.45;
+			nSpeedSetpoint := TO_INT(nLocalSpeed)+6553;
+			ipMotorControl.SetSpeed(nSpeedSetpoint);
+		ELSE	
+			ipMotorControl.SetSpeed(0);
+		END_IF
+	ELSE
+		R1.StirrerStatus := FALSE;
+	END_IF
+	//========================================================================================================================================================================================================	
+	//To call the Huber instance
+	HC_HUBER_1();
+	
+	//Mass Temperature
+	nLocalTemp	:= ipAnalogScaling.Temperature(nMassTemp,0,32767,-90,200);
+	
+	//Vent temp
+	nLocalTemp1	:= ipAnalogScaling.Temperature(nVentTemp,0,32767,0,200);
+	
+	//Vapour temp
+	nLocalTemp2	:= ipAnalogScaling.Temperature(nVapourTemp,0,32767,0,200);
+	
+	//Reactor pressure
+	nLocalTemp3	:= ipAnalogScaling.Pressure(nPressure,0,32767,-1,1.5);
+	
+	//Reactor pH
+	nLocalTemp4	:= ipAnalogScaling.pH(nReactorpH,0,32767,0,14);
+	
+	//Scrubber pH
+	nLocalTemp5	:= ipAnalogScaling.pH(nScrubberpH,0,32767,0,14);
+	
+	//Load cell
+	nLocalTemp6	:= ipAnalogScaling.LoadCell(nLoadcell,0,32767,0,150);
+	
+	//Stirrer actual speed
+	nLocalTemp7	:= ipAnalogScaling.ActualSpeed(nLoadcell,0,32767,0,200);
+	
+		
+	R1.ReactorMassTemperature	:= nLocalTemp ;
+	R1.VentTemperature			:= nLocalTemp1 ;
+	R1.VapourTemperature		:= nLocalTemp2 ;
+	R1.Pressure					:= nLocalTemp3 ;
+	R1.PHvalue					:= nLocalTemp4 ;
+	R1.StirrerCurrentSpeed		:= TO_INT(nLocalTemp7);
+	R1.ScrubberpH		:= nLocalTemp5;
+	R1.ReactorMass				:= nLocalTemp6;
+END_IF
+
+
+
+
+]]></ST>
+    </Implementation>
+    <Method Name="FB_init" Id="{2c567cd2-41c0-4445-9428-d4a5ed58a172}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains	: BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode		: BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	ipMotorControl	: I_MotorControl;
+	ipAnalogScaling	: I_AnalogScaling;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF ipMotorControl <> 0 THEN
+	THIS^.ipMotorControl := ipMotorControl;
+END_IF
+
+IF ipAnalogScaling <> 0 THEN
+	THIS^.ipAnalogScaling := ipAnalogScaling;
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Reactor">
+      <LineId Id="302" Count="0" />
+      <LineId Id="438" Count="21" />
+      <LineId Id="303" Count="0" />
+      <LineId Id="355" Count="0" />
+      <LineId Id="358" Count="49" />
+      <LineId Id="357" Count="0" />
+      <LineId Id="304" Count="0" />
+      <LineId Id="213" Count="0" />
+      <LineId Id="245" Count="1" />
+      <LineId Id="244" Count="0" />
+      <LineId Id="212" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Reactor.FB_init">
+      <LineId Id="7" Count="0" />
+      <LineId Id="10" Count="1" />
+      <LineId Id="13" Count="2" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

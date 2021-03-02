@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="Simulator" Id="{012acbd2-5493-4ec3-a430-c288a4386b5e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Simulator
+VAR_INPUT
+	CurrentValue : REAL;
+	TargetValue : REAL;
+END_VAR
+VAR_OUTPUT
+	SimulatedValue : REAL;
+END_VAR
+VAR
+	random_value : LREAL;
+	fb_ran : DRAND;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fb_ran(Seed := 0, Num => random_value);
+IF CurrentValue <= TargetValue THEN
+	CurrentValue := CurrentValue + LREAL_TO_REAL(STRING_TO_LREAL(LREAL_TO_FMTSTR(random_value, 2, TRUE)));
+ELSE
+	CurrentValue := CurrentValue - LREAL_TO_REAL(STRING_TO_LREAL(LREAL_TO_FMTSTR(random_value, 2, TRUE)));
+END_IF
+SimulatedValue := STRING_TO_LREAL(LREAL_TO_FMTSTR(CurrentValue, 2, TRUE)); //Rounding again here to clear any errors above]]></ST>
+    </Implementation>
+    <LineIds Name="Simulator">
+      <LineId Id="10" Count="5" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

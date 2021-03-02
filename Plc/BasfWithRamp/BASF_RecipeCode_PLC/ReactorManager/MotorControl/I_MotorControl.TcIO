@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <Itf Name="I_MotorControl" Id="{00246e69-092b-4f13-aa0e-aa240ec05aee}">
+    <Declaration><![CDATA[INTERFACE I_MotorControl
+]]></Declaration>
+    <Method Name="GetActualSpeed" Id="{7060f2c1-bf03-4dae-b16d-7ecf37b72c60}">
+      <Declaration><![CDATA[METHOD GetActualSpeed : INT
+]]></Declaration>
+    </Method>
+    <Property Name="RemoteLocalStatus" Id="{d66a6511-d60d-4cae-bd69-eafbd24061c0}">
+      <Declaration><![CDATA[PROPERTY RemoteLocalStatus : bool]]></Declaration>
+      <Get Name="Get" Id="{162cefcc-4ad9-41cb-8a7c-b4cb2d066adb}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+    <Method Name="SetSpeed" Id="{0e8b0826-04e5-4db3-b2c3-fd799dee1c6e}">
+      <Declaration><![CDATA[METHOD SetSpeed : BOOL
+VAR_INPUT
+	nSetSpeed: INT;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="StartMotor" Id="{f090f8da-72e2-4947-b461-1a25b85bdf19}">
+      <Declaration><![CDATA[METHOD StartMotor : BOOL
+VAR_INPUT
+	bStart: BOOL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="StopMotor" Id="{6bc74f6d-1d85-4170-bb81-b7815def02ed}">
+      <Declaration><![CDATA[METHOD StopMotor : BOOL
+VAR_INPUT
+	bStop: BOOL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <DUT Name="ST_FieldPoint" Id="{a1dc3445-23a5-4be2-b1d5-873643323ecf}">
+    <Declaration><![CDATA[TYPE ST_FieldPoint :
+STRUCT
+	sName			: STRING;
+	sLabel			: STRING;
+	sDescription	: STRING;
+	sAddress		: STRING;
+	sType			: STRING;
+	sDataType		: STRING;	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="AlarmHandler" Id="{fd3bdc28-bdf3-4a51-8377-915f39982da9}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM AlarmHandler
+VAR
+	alarmLogic : AlarmLogic;
+	disableAlarms : DisableMaxAndMinAlarms;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF R1.AlarmsEnabled AND R1.RunningBatchStatus THEN
+	alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R1.ReactorMassTemperature, MaxParameterLimit := R1.HCTempMaxLimit, MinParameterLimit := R1.HCTempMinLimit),
+			   MaxLimitExceeded =>	R1.HCTempMaxLimitExceeded, MinLimitExceeded => R1.HCTempMinLimitExceeded);
+		
+    alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R1.JacketOutletTemperature, MaxParameterLimit := R1.JacketTempMaxLimit, MinParameterLimit := R1.JacketTempMinLimit),
+			   MaxLimitExceeded =>	R1.JacketTempMaxLimitExceeded, MinLimitExceeded => R1.jacketTempMinLimitExceeded);	   
+ELSE
+	(* Disable alarms *)
+	disableAlarms(MaxAlarmStatus => R1.HCTempMaxLimitExceeded, MinAlarmStatus => R1.HCTempMinLimitExceeded);
+	disableAlarms(MaxAlarmStatus => R1.JacketTempMaxLimitExceeded, MinAlarmStatus => R1.JacketTempMinLimitExceeded);
+END_IF
+
+
+///Reactor-2
+IF R2.AlarmsEnabled AND R2.RunningBatchStatus THEN
+	alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R2.ReactorMassTemperature, MaxParameterLimit := R2.HCTempMaxLimit, MinParameterLimit := R2.HCTempMinLimit),
+			   MaxLimitExceeded =>	R2.HCTempMaxLimitExceeded, MinLimitExceeded => R2.HCTempMinLimitExceeded);
+			   
+    alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R2.JacketOutletTemperature, MaxParameterLimit := R2.JacketTempMaxLimit, MinParameterLimit := R2.JacketTempMinLimit),
+			   MaxLimitExceeded =>	R2.JacketTempMaxLimitExceeded, MinLimitExceeded => R2.JacketTempMinLimitExceeded);			   
+ELSE
+	(* Disable alarms *)
+	disableAlarms(MaxAlarmStatus => R2.HCTempMaxLimitExceeded, MinAlarmStatus => R2.HCTempMinLimitExceeded);
+	disableAlarms(MaxAlarmStatus => R2.JacketTempMaxLimitExceeded, MinAlarmStatus => R2.JacketTempMinLimitExceeded);
+END_IF
+
+
+
+///Reactor-3
+IF R3.AlarmsEnabled AND R3.RunningBatchStatus THEN
+	alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R3.ReactorMassTemperature, MaxParameterLimit := R3.HCTempMaxLimit, MinParameterLimit := R3.HCTempMinLimit),
+			   MaxLimitExceeded =>	R3.HCTempMaxLimitExceeded, MinLimitExceeded => R3.HCTempMinLimitExceeded);
+			   
+    alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R3.JacketOutletTemperature, MaxParameterLimit := R3.JacketTempMaxLimit, MinParameterLimit := R3.JacketTempMinLimit),
+			   MaxLimitExceeded =>	R3.JacketTempMaxLimitExceeded, MinLimitExceeded => R3.JacketTempMinLimitExceeded);			   
+ELSE
+	(* Disable alarms *)
+	disableAlarms(MaxAlarmStatus => R3.HCTempMaxLimitExceeded, MinAlarmStatus => R3.HCTempMinLimitExceeded);
+	disableAlarms(MaxAlarmStatus => R3.JacketTempMaxLimitExceeded, MinAlarmStatus => R3.JacketTempMinLimitExceeded);
+END_IF
+
+
+
+///Reactor-4
+IF R4.AlarmsEnabled AND R4.RunningBatchStatus THEN
+	alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R4.ReactorMassTemperature, MaxParameterLimit := R4.HCTempMaxLimit, MinParameterLimit := R4.HCTempMinLimit),
+			   MaxLimitExceeded =>	R4.HCTempMaxLimitExceeded, MinLimitExceeded => R4.HCTempMinLimitExceeded);
+			   
+    alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R4.JacketOutletTemperature, MaxParameterLimit := R4.JacketTempMaxLimit, MinParameterLimit := R4.JacketTempMinLimit),
+			   MaxLimitExceeded =>	R4.JacketTempMaxLimitExceeded, MinLimitExceeded => R4.JacketTempMinLimitExceeded);			   
+ELSE
+	(* Disable alarms *)
+	disableAlarms(MaxAlarmStatus => R4.HCTempMaxLimitExceeded, MinAlarmStatus => R4.HCTempMinLimitExceeded);
+	disableAlarms(MaxAlarmStatus => R4.JacketTempMaxLimitExceeded, MinAlarmStatus => R4.JacketTempMinLimitExceeded);
+END_IF
+
+
+
+
+///Reactor-5
+IF R5.AlarmsEnabled AND R5.RunningBatchStatus THEN
+	alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R5.ReactorMassTemperature, MaxParameterLimit := R5.HCTempMaxLimit, MinParameterLimit := R5.HCTempMinLimit),
+			   MaxLimitExceeded =>	R5.HCTempMaxLimitExceeded, MinLimitExceeded => R5.HCTempMinLimitExceeded);
+			   
+    alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R5.JacketOutletTemperature, MaxParameterLimit := R5.JacketTempMaxLimit, MinParameterLimit := R5.JacketTempMinLimit),
+			   MaxLimitExceeded =>	R5.JacketTempMaxLimitExceeded, MinLimitExceeded => R5.JacketTempMinLimitExceeded);			   
+ELSE
+	(* Disable alarms *)
+	disableAlarms(MaxAlarmStatus => R5.HCTempMaxLimitExceeded, MinAlarmStatus => R5.HCTempMinLimitExceeded);
+	disableAlarms(MaxAlarmStatus => R5.JacketTempMaxLimitExceeded, MinAlarmStatus => R5.JacketTempMinLimitExceeded);
+END_IF
+
+
+
+
+///Reactor-6
+IF R6.AlarmsEnabled AND R6.RunningBatchStatus THEN
+	alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R6.ReactorMassTemperature, MaxParameterLimit := R6.HCTempMaxLimit, MinParameterLimit := R6.HCTempMinLimit),
+			   MaxLimitExceeded =>	R6.HCTempMaxLimitExceeded, MinLimitExceeded => R6.HCTempMinLimitExceeded);
+			   
+    alarmLogic(GivenParameterArray := AlarmParametersProvider(CurrentParameterValue := R6.JacketOutletTemperature, MaxParameterLimit := R6.JacketTempMaxLimit, MinParameterLimit := R6.JacketTempMinLimit),
+			   MaxLimitExceeded =>	R6.JacketTempMaxLimitExceeded, MinLimitExceeded => R6.JacketTempMinLimitExceeded);			   
+ELSE
+	(* Disable alarms *)
+	disableAlarms(MaxAlarmStatus => R6.HCTempMaxLimitExceeded, MinAlarmStatus => R6.HCTempMinLimitExceeded);
+	disableAlarms(MaxAlarmStatus => R6.JacketTempMaxLimitExceeded, MinAlarmStatus => R6.JacketTempMinLimitExceeded);
+END_IF
+
+
+
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="AlarmHandler">
+      <LineId Id="20" Count="2" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="26" Count="1" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="46" Count="1" />
+      <LineId Id="31" Count="3" />
+      <LineId Id="48" Count="2" />
+      <LineId Id="35" Count="2" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="53" Count="13" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="68" Count="13" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="83" Count="14" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="99" Count="0" />
+      <LineId Id="103" Count="17" />
+      <LineId Id="100" Count="2" />
+      <LineId Id="98" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <Itf Name="I_AnalogScaling" Id="{63de38fc-5e32-445e-a88a-c58abffef286}">
+    <Declaration><![CDATA[INTERFACE I_AnalogScaling
+]]></Declaration>
+    <Method Name="ActualSpeed" Id="{c83698d1-9c2a-4e52-80cc-df5ef474a7d5}">
+      <Declaration><![CDATA[METHOD ActualSpeed : REAL
+VAR_INPUT
+	nRawSensorValue		: REAL;
+	nLowerScaleValue	: REAL;
+	nHigherScaleValue	: REAL;
+	nOutputLowerLimit	: REAL;
+	nOutPutHigherLimit	: REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="LoadCell" Id="{1f7a8125-5dd8-4d73-883f-f00652a6d647}">
+      <Declaration><![CDATA[METHOD LoadCell : real
+VAR_INPUT
+	nRawSensorValue		: REAL;
+	nLowerScaleValue	: REAL;
+	nHigherScaleValue	: REAL;
+	nOutputLowerLimit	: REAL;
+	nOutPutHigherLimit	: REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="pH" Id="{db36a8e1-e8aa-436b-a5a9-a0bb23eed926}">
+      <Declaration><![CDATA[METHOD pH : real
+VAR_INPUT
+	nRawSensorValue		: REAL;
+	nLowerScaleValue	: REAL;
+	nHigherScaleValue	: REAL;
+	nOutputLowerLimit	: REAL;
+	nOutPutHigherLimit	: REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="Pressure" Id="{a4dfdf70-f91d-4949-be01-99ccfd81162e}">
+      <Declaration><![CDATA[METHOD Pressure : REAL
+VAR_INPUT
+	nRawSensorValue		: REAL;
+	nLowerScaleValue	: REAL;
+	nHigherScaleValue	: REAL;
+	nOutputLowerLimit	: REAL;
+	nOutPutHigherLimit	: REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="Temperature" Id="{3dba0d6c-6118-4bbe-bfc1-9f32f2714301}">
+      <Declaration><![CDATA[METHOD Temperature : REAL
+VAR_INPUT
+	nRawSensorValue		: REAL;
+	nLowerScaleValue	: REAL;
+	nHigherScaleValue	: REAL;
+	nOutputLowerLimit	: REAL;
+	nOutPutHigherLimit	: REAL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

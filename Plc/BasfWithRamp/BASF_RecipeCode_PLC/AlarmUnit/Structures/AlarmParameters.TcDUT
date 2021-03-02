@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <DUT Name="AlarmParameters" Id="{429989b4-eb38-4093-9e0f-535e862d4a1e}">
+    <Declaration><![CDATA[TYPE AlarmParameters :
+STRUCT
+	CurrentParameterValue : REAL;
+	MaxParameterLimit : REAL;
+	MinParameterLimit : REAL;
+	MaxLimitAlarm : BOOL;
+	MinLimitAlarm : BOOL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

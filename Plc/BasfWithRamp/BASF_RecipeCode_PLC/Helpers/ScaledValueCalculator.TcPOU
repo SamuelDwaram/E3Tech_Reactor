@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+  <POU Name="ScaledValueCalculator" Id="{9d98f2c2-045a-45d7-a8db-68b4e460594c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ScaledValueCalculator
+VAR_INPUT
+	nRawInputValue			: INT;
+	nInputLowerLimit		: REAL;
+	nInputHigherLimit		: REAL;
+	nOutputLowerLimit		: REAL;
+	nOutputHigherLimit		: REAL;
+END_VAR
+VAR_OUTPUT
+		nScaledValueF		: REAL;
+	    nScaledValueD		: INT;
+END_VAR
+VAR
+	 nGain		: REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Scaling Calculations //
+
+	IF	nRawInputValue	<	0	THEN
+		nRawInputValue	:=	0;
+	END_IF
+
+
+	IF	 ((nInputHigherLimit - nInputLowerLimit)	<= 0)	OR
+		 ((nOutputHigherLimit  - nOutputLowerLimit)	<= 0)	THEN
+		nGain	:=	0;
+	ELSE
+		nGain:=(((nRawInputValue - nInputLowerLimit) / (nInputHigherLimit - nInputLowerLimit)) * (nOutputHigherLimit  - nOutputLowerLimit)) + nOutputLowerLimit;
+	END_IF
+
+
+		nScaledValueF	:=	nGain;
+		nScaledValueD	:=	REAL_TO_INT(nGain);]]></ST>
+    </Implementation>
+    <LineIds Name="ScaledValueCalculator">
+      <LineId Id="3" Count="15" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

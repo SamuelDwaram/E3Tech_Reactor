@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="AlarmParametersProvider" Id="{8ba4abda-c032-4f0e-b698-86b788877820}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION AlarmParametersProvider : AlarmParameters
+VAR_INPUT
+	CurrentParameterValue : REAL;
+	MaxParameterLimit : REAL;
+	MinParameterLimit : REAL;
+END_VAR
+VAR
+	alarmParameters : AlarmParameters;
+END_VAR
+
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[alarmParameters.CurrentParameterValue := CurrentParameterValue;
+alarmParameters.MaxParameterLimit := MaxParameterLimit;
+alarmParameters.MinParameterLimit := MinParameterLimit;
+
+AlarmParametersProvider := alarmParameters;]]></ST>
+    </Implementation>
+    <LineIds Name="AlarmParametersProvider">
+      <LineId Id="19" Count="3" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

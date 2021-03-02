@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <GVL Name="Coupler" Id="{b0a02fcb-33dd-459f-9365-98a53f4408ce}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	CouplerConnectionState 	AT %I*	: INT;
+	couplerConnectionStatus			: BOOL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

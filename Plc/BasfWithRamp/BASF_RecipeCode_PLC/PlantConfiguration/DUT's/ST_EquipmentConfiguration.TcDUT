@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <DUT Name="ST_EquipmentConfiguration" Id="{cd6da6b3-d129-4e25-96f1-8f8204a66ec6}">
+    <Declaration><![CDATA[TYPE ST_EquipmentConfiguration :
+STRUCT
+	sReadFrom		: STRING;
+	sName			: STRING;
+	sDescription	: STRING;
+	sType			: STRING;
+	stSensorDataSet	: ARRAY [1..MAX_NO_OF_SENSOR_DATA_SET] OF ST_SensorDataSets;
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

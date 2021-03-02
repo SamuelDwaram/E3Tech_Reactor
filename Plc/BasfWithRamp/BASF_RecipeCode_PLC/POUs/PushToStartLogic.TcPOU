@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+  <POU Name="PushToStartLogic" Id="{44988478-a266-4239-8cc6-41d513efc741}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PushToStartLogic
+VAR_INPUT
+	StartEquipment:BOOL;
+END_VAR
+VAR_OUTPUT
+	RelayCommandToStart:BOOL;
+	RelayCommandToStop:BOOL;
+END_VAR
+VAR
+     StartTrig:R_Trig;
+	 Stoptrig:F_Trig;
+	
+	 StartCounter:INT;
+	 StopCounter:INT;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[///Logic for the push button
+
+///Start logic 
+StartTrig(CLK:=StartEquipment,q=>);
+
+IF StartTrig.Q THEN
+   RelayCommandToStart:=TRUE;
+END_IF
+
+IF RelayCommandToStart THEN
+   StartCounter:=StartCounter+1;
+IF StartCounter=50 THEN
+   RelayCommandToSTart:=FALSE;	
+   StartCounter:=0;
+END_IF
+END_IF
+   
+ ///Stop logic
+ StopTrig(CLK:=StartEquipmenT,Q=>);
+ IF StopTrig.Q THEN
+	RelayCommandToStop:=TRUE;
+ END_IF
+ 
+ IF RelayCommandToStop THEN
+	StopCounter:=StopCounter+1;
+    IF StopCounter=50 THEN
+	   RelayCommandToStop:=FALSE;
+	   StopCounter:=0;
+    END_IF
+ END_IF
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="PushToStartLogic">
+      <LineId Id="16" Count="0" />
+      <LineId Id="67" Count="0" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="41" Count="1" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="62" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="59" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="71" Count="3" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="78" Count="1" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="48" Count="1" />
+      <LineId Id="38" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -340,3 +340,5 @@ ASALocalRun/
 healthchecksdb
 /Binaries
 /Binaries
+/Plc/BasfWithRamp/BASF_RecipeCode_PLC/_CompileInfo
+/Plc/BasfWithRamp/TrialLicense.tclrs

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+  <POU Name="StringSwapperForJumoRecorder" Id="{66c153cc-d9c0-49b3-9e2b-730c6bcfca2b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION StringSwapperForJumoRecorder : STRING
+VAR_INPUT
+	GivenString : STRING;
+END_VAR
+VAR
+	i : INT;
+	tempString : STRING;
+	finalSwappedString : STRING;
+	lengthOfGivenString : INT := Len(GivenString);
+	tempChar : STRING(255);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF (lengthOfGivenString MOD 2) <> 0 THEN
+	GivenString := concat(GivenString, ' ');
+END_IF
+
+FOR i:=1 TO Len(GivenString) BY 2 DO
+    IF mid(GivenString, 1, i) = ' ' THEN
+		tempString := replace(tempString, ' ', 1, i);
+	ELSE
+		tempString := replace(tempString, mid(GivenString, 1, i), 1, i);
+	END_IF
+	
+	IF mid(GivenString, 1, i + 1) = ' ' THEN
+		tempString := replace(tempString, ' ', 1, i + 1);
+	ELSE
+		tempString := replace(tempString, mid(GivenString, 1, i + 1), 1, i + 1);
+	END_IF
+	
+	tempChar := mid(tempString, 1, i);
+	tempString := replace(tempString, mid(tempString, 1, i + 1), 1, i);
+	tempString := replace(tempString, tempChar, 1, i + 1);
+	
+	finalSwappedString := concat(finalSwappedString, mid(tempString, 1, i));
+	finalSwappedString := concat(finalSwappedString, mid(tempString, 1, i + 1));
+END_FOR;
+
+StringSwapperForJumoRecorder := finalSwappedString;]]></ST>
+    </Implementation>
+    <LineIds Name="StringSwapperForJumoRecorder">
+      <LineId Id="17" Count="24" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

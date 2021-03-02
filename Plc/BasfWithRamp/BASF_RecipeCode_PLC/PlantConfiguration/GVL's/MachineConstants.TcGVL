@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <GVL Name="MachineConstants" Id="{ad80c716-e51a-4c1a-836b-806123d4750c}">
+    <Declaration><![CDATA[VAR_GLOBAL CONSTANT
+	MAX_NO_OF_FIELD_POINT		: UINT	:= 10;
+	MAX_NO_OF_EQUIPMENTS		: UINT	:= 10;
+	MAX_NO_OF_SENSOR_DATA_SET	: UINT	:= 10;
+	MAX_NO_OF_PLC_CONFIGURATION	: UINT	:= 2;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

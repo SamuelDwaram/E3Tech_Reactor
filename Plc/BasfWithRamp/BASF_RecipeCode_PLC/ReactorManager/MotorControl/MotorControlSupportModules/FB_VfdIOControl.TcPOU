@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <POU Name="FB_VfdIOControl" Id="{250181c0-7f7c-4abb-aa48-a0818c359bac}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_VfdIOControl
+VAR_INPUT
+	bStartMotor			AT %Q*: BOOL;
+	bStopMotor			AT %Q*: BOOL;
+	nSetSpeed 			AT %Q*: INT;
+	nActualSpeed		AT %I*: INT;
+	bRemoteLocalStatus  AT %I* : BOOL;
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="FB_VfdIOControl">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

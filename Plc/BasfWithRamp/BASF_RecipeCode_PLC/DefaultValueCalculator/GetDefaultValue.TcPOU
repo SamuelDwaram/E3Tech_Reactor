@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="GetDefaultValue" Id="{1998dbda-6347-45ba-8a8e-8489af7dd1bd}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION GetDefaultValue : string
+VAR_INPUT
+	DataType : STRING;
+END_VAR
+VAR
+	defaultValue : STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF DataType = 'string' THEN
+	defaultValue := '';
+END_IF
+
+GetDefaultValue := defaultValue;]]></ST>
+    </Implementation>
+    <LineIds Name="GetDefaultValue">
+      <LineId Id="24" Count="3" />
+      <LineId Id="15" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

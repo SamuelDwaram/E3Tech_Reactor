@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <DUT Name="ST_PlcConfiguration" Id="{0b18ddfe-fd4f-4178-8e4f-e1ee7ab9d63b}">
+    <Declaration><![CDATA[TYPE ST_PlcConfiguration :
+STRUCT
+	sName			: STRING;
+	sDescription	: STRING;
+	sIpAddress		: STRING;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
