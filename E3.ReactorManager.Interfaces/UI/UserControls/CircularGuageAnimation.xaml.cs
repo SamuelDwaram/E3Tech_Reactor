@@ -26,51 +26,18 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
         }
 
         public static readonly DependencyProperty MaximumValueProperty =
-           DependencyProperty.Register("MaximumValue", typeof(int), typeof(CircularGuageAnimation), new
-              PropertyMetadata(200, new PropertyChangedCallback(OnMaximumValueChanged)));
+           DependencyProperty.Register("MaximumValue", typeof(string), typeof(CircularGuageAnimation), new
+              PropertyMetadata("200", new PropertyChangedCallback(OnValueChanged)));
 
-        public int MaximumValue
+        public string MaximumValue
         {
-            get { return (int)GetValue(MaximumValueProperty); }
+            get { return (string)GetValue(MaximumValueProperty); }
             set { SetValue(MaximumValueProperty, value); }
-        }
-
-        private static void OnMaximumValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            CircularGuageAnimation toggleButtonUserControl = d as CircularGuageAnimation;
-            toggleButtonUserControl.OnMaximumValueChanged(e);
-        }
-
-        private void OnMaximumValueChanged(DependencyPropertyChangedEventArgs e)
-        {
-            if (CurrentValue != null && CurrentValue.Length > 0)
-            {
-                CurrentValueLabel.Content = CurrentValue;
-
-                //Do something when this property changed
-                var currentValue = float.Parse(CurrentValue);
-                if (currentValue == 0)
-                {
-                    ColouredArc.EndAngle = -135;
-                }
-                else if ((currentValue / MaximumValue) > 0.5)
-                {
-                    ColouredArc.EndAngle = (currentValue / (MaximumValue / 2) - 1) * 135;
-                }
-                else if ((currentValue / MaximumValue) < 0.5)
-                {
-                    ColouredArc.EndAngle = currentValue / (MaximumValue / 2) * 135 - 135;
-                }
-                else if ((currentValue / MaximumValue) == 0.5)
-                {
-                    ColouredArc.EndAngle = 0;
-                }
-            }
         }
 
         public static readonly DependencyProperty CurrentValueProperty =
            DependencyProperty.Register("CurrentValue", typeof(string), typeof(CircularGuageAnimation), new
-              PropertyMetadata("0", new PropertyChangedCallback(OnCurrentValueChanged)));
+              PropertyMetadata("0", new PropertyChangedCallback(OnValueChanged)));
 
         public string CurrentValue
         {
@@ -78,36 +45,33 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
             set { SetValue(CurrentValueProperty, value); }
         }
 
-        private static void OnCurrentValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             CircularGuageAnimation toggleButtonUserControl = d as CircularGuageAnimation;
-            toggleButtonUserControl.OnCurrentValueChanged(e);
+            toggleButtonUserControl.OnValueChanged();
         }
 
-        private void OnCurrentValueChanged(DependencyPropertyChangedEventArgs e)
+        private void OnValueChanged()
         {
-            if (CurrentValue != null && CurrentValue.Length > 0)
+            float currentValue = Convert.ToSingle(string.IsNullOrWhiteSpace(CurrentValue) ? "0" : CurrentValue);
+            float maxValue = Convert.ToSingle(MaximumValue);
+            CurrentValueLabel.Content = currentValue.ToString();
+            //Do something when this property changed
+            if (currentValue == 0)
             {
-                CurrentValueLabel.Content = CurrentValue;
-
-                //Do something when this property changed
-                var currentValue = float.Parse(CurrentValue);
-                if (currentValue == 0)
-                {
-                    ColouredArc.EndAngle = -135;
-                }
-                else if ((currentValue / MaximumValue) > 0.5)
-                {
-                    ColouredArc.EndAngle = (currentValue / (MaximumValue / 2) - 1) * 135;
-                }
-                else if ((currentValue / MaximumValue) < 0.5)
-                {
-                    ColouredArc.EndAngle = currentValue / (MaximumValue / 2) * 135 - 135;
-                }
-                else if ((currentValue / MaximumValue) == 0.5)
-                {
-                    ColouredArc.EndAngle = 0;
-                }
+                ColouredArc.EndAngle = -135;
+            }
+            else if ((currentValue / maxValue) > 0.5)
+            {
+                ColouredArc.EndAngle = (currentValue / (maxValue / 2) - 1) * 135;
+            }
+            else if ((currentValue / maxValue) < 0.5)
+            {
+                ColouredArc.EndAngle = currentValue / (maxValue / 2) * 135 - 135;
+            }
+            else if ((currentValue / maxValue) == 0.5)
+            {
+                ColouredArc.EndAngle = 0;
             }
         }
 
@@ -132,6 +96,7 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
             if (UnitsValue != null)
             {
                 UnitsLabel.Content = UnitsValue;
+                OnValueChanged();
             }
         }
     }

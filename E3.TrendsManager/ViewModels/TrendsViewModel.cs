@@ -170,18 +170,45 @@ namespace E3.TrendsManager.ViewModels
         }
 
         #region Commands
+        public ICommand GetLastWeekTrendsCommand
+        {
+            get => new DelegateCommand(() => {
+                DateTime start = DateTime.Now.Subtract(TimeSpan.FromDays(7));
+                Start.Date = start.Date;
+                Start.Hour = start.Hour;
+                Start.Minute = start.Minute;
+
+                DateTime end = DateTime.Now;
+                End.Date = end.Date;
+                End.Hour = end.Hour;
+                End.Minute = end.Minute;
+                GenerateTrendsCommand.Execute(default);
+            });
+        }
+
+        public ICommand Get24HoursTrendsCommand
+        {
+            get => new DelegateCommand(() => {
+                DateTime start = DateTime.Now.Subtract(TimeSpan.FromDays(1));
+                Start.Date = start.Date;
+                Start.Hour = start.Hour;
+                Start.Minute = start.Minute;
+
+                DateTime end = DateTime.Now;
+                End.Date = end.Date;
+                End.Hour = end.Hour;
+                End.Minute = end.Minute;
+                GenerateTrendsCommand.Execute(default);
+            });
+        }
+
         public ICommand GenerateTrendsCommand
         {
             get => new DelegateCommand(() =>
             {
-                //clear the StartDate and EndDate timestamps and add the StartHourMinute and EndHourMinute newly
-                SelectedStartDate = SelectedStartDate.Date;
-                SelectedEndDate = SelectedEndDate.Date;
-
-                //Add the StartHourMinute to SelectedStartDate
-                SelectedStartDate = SelectedStartDate.AddHours(StartHourMinute.Hour).AddMinutes(StartHourMinute.Minute);
-                //Add the EndHourMinute to SelectedEndDate
-                SelectedEndDate = SelectedEndDate.AddHours(EndHourMinute.Hour).AddMinutes(EndHourMinute.Minute);
+                //Generate SelectedStartDate and SelectedEndDate from Start and End Objects
+                SelectedStartDate = Start.Date.AddHours(Start.Hour).AddMinutes(Start.Minute);
+                SelectedEndDate = End.Date.AddHours(End.Hour).AddMinutes(End.Minute);
 
                 Task.Factory.StartNew(new Func<SeriesCollection>(() => trendsManager.GetTrendsCollection(AvailableDevices.First(d => d.DeviceId == SelectedDevice), SelectedTrendParameters, SelectedStartDate, SelectedEndDate)), CancellationToken.None, TaskCreationOptions.None, taskScheduler)
                     .ContinueWith(new Func<Task<SeriesCollection>, SeriesCollection>(t =>
@@ -342,14 +369,21 @@ namespace E3.TrendsManager.ViewModels
             }
         }
 
-        public HourMinute StartHourMinute { get; set; } = new HourMinute();
-        public HourMinute EndHourMinute { get; set; } = new HourMinute();
+        public Time Start { get; set; } = new Time();
+        public Time End { get; set; } = new Time();
         #endregion
     }
 
-    public class HourMinute : BindableBase
+    public class Time : BindableBase
     {
-        private int _hour = 0;
+        private DateTime _date = DateTime.Now.Date;
+        public DateTime Date
+        {
+            get { return _date; }
+            set { SetProperty(ref _date, value); }
+        }
+
+        private int _hour = DateTime.Now.Hour;
         public int Hour
         {
             get => _hour;
@@ -362,7 +396,7 @@ namespace E3.TrendsManager.ViewModels
                 }
                 else
                 {
-                    DateTime userInput = DateTime.Now.Date;
+                    DateTime userInput = Date;
                     userInput = userInput.AddHours(value).AddMinutes(_minute);
                     if (userInput > DateTime.Now)
                     {
@@ -376,7 +410,7 @@ namespace E3.TrendsManager.ViewModels
             }
         }
 
-        private int _minute = 0;
+        private int _minute = DateTime.Now.Minute;
         public int Minute
         {
             get => _minute;
@@ -389,7 +423,7 @@ namespace E3.TrendsManager.ViewModels
                 }
                 else
                 {
-                    DateTime userInput = DateTime.Now.Date;
+                    DateTime userInput = Date;
                     userInput = userInput.AddHours(_hour).AddMinutes(value);
                     if (userInput > DateTime.Now)
                     {

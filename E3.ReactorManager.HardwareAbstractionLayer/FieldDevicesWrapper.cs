@@ -16,9 +16,9 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
     /// </summary>
     public class FieldDevicesWrapper
     {
-        IDatabaseReader databaseReader;
-        IDatabaseWriter databaseWriter;
-        ILogger logger;
+        private readonly IDatabaseReader databaseReader;
+        private readonly IDatabaseWriter databaseWriter;
+        private readonly ILogger logger;
 
         public FieldDevicesWrapper(IDatabaseWriter databaseWriter, IDatabaseReader databaseReader, ILogger logger)
         {
@@ -28,18 +28,25 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
         }
 
         public event EventHandler<FieldPointDataReceivedArgs> FieldPointDataReceived;
+        public IList<FieldDevice> FieldDevices { get; set; } = new List<FieldDevice>();
 
-        #region Properties
-        /// <summary>
-        /// Field Devices
-        /// </summary>
-        private IList<FieldDevice> _fieldDevices;
-        public IList<FieldDevice> FieldDevices
+        public void CreateVariableHandles(string deviceId, IList<FieldPoint> fieldPoints)
         {
-            get => _fieldDevices ?? (_fieldDevices = new List<FieldDevice>());
-            set => _fieldDevices = value;
+            FieldDevices.Where(fd => fd.Identifier == deviceId).ToList().ForEach(fd => {
+                fieldPoints.ToList().ForEach(fp => {
+                    fd.RelatedPlc.CreateVariableHandle(fp.MemoryAddress);
+                });
+            });
         }
-        #endregion
+
+        public void DeleteVariableHandles(string deviceId, IList<int> variableHandles)
+        {
+            FieldDevices.Where(fd => fd.Identifier == deviceId).ToList().ForEach(fd => {
+                variableHandles.ToList().ForEach(handle => {
+                    fd.RelatedPlc.DeleteVariableHandle(handle);
+                });
+            });
+        }
 
         #region Initialize Field Devices
         internal Task<IList<FieldDevice>> Initialize(TaskScheduler taskScheduler)
@@ -90,8 +97,7 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
                             //Create Variable Handles for field Points in the Field Device
                             try
                             {
-                                fieldPoint.PLCHandle =
-                                    fieldDevice.RelatedPlc.TwinCATClient.CreateVariableHandle(fieldPoint.MemoryAddress);
+                                fieldPoint.PLCHandle = fieldDevice.RelatedPlc.CreateVariableHandle(fieldPoint.MemoryAddress);
                             }
                             catch (Exception variableHanldeCreationFailureException)
                             {
@@ -495,6 +501,8 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
                     return typeof(string);
                 case "float":
                     return typeof(float);
+                case "double":
+                    return typeof(double);
             }
             return typeof(Nullable);
         }

@@ -23,46 +23,22 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
         public StripedAnimation()
         {
             InitializeComponent();
-            BlackColourPoint.Point = new Point(77.5, 0);
+            BlackColourPoint.Point = new Point(0, 0);
         }
 
         public static readonly DependencyProperty MaximumValueProperty =
-           DependencyProperty.Register("MaximumValue", typeof(int), typeof(StripedAnimation), new
-              PropertyMetadata(200, new PropertyChangedCallback(OnMaximumValueChanged)));
+           DependencyProperty.Register("MaximumValue", typeof(string), typeof(StripedAnimation), new
+              PropertyMetadata("200", new PropertyChangedCallback(OnValueChanged)));
 
-        public int MaximumValue
+        public string MaximumValue
         {
-            get { return (int)GetValue(MaximumValueProperty); }
+            get { return (string)GetValue(MaximumValueProperty); }
             set { SetValue(MaximumValueProperty, value); }
-        }
-
-        private static void OnMaximumValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            StripedAnimation toggleButtonUserControl = d as StripedAnimation;
-            toggleButtonUserControl.OnMaximumValueChanged(e);
-        }
-
-        private void OnMaximumValueChanged(DependencyPropertyChangedEventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(CurrentValue))
-            {
-                /*
-                 * If Current Value is null or Empty then make it zero
-                 */
-                CurrentValue = "0";
-            }
-            else if(float.Parse(CurrentValue) <= MaximumValue && float.Parse(CurrentValue) >= 0)
-            {
-                /*
-                 * Update the BlackColourPoint.Point value only if the Current Value is in between 0 and Maximum Value
-                 */
-                BlackColourPoint.Point = new Point((float.Parse(CurrentValue) / MaximumValue) * 77.5, 0);
-            }
         }
 
         public static readonly DependencyProperty CurrentValueProperty =
            DependencyProperty.Register("CurrentValue", typeof(string), typeof(StripedAnimation), new
-              PropertyMetadata("0", new PropertyChangedCallback(OnCurrentValueChanged)));
+              PropertyMetadata("0", new PropertyChangedCallback(OnValueChanged)));
 
         public string CurrentValue
         {
@@ -70,27 +46,26 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
             set { SetValue(CurrentValueProperty, value); }
         }
 
-        private static void OnCurrentValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             StripedAnimation toggleButtonUserControl = d as StripedAnimation;
-            toggleButtonUserControl.OnCurrentValueChanged(e);
+            toggleButtonUserControl.OnValueChanged(e);
         }
 
-        private void OnCurrentValueChanged(DependencyPropertyChangedEventArgs e)
+        private void OnValueChanged(DependencyPropertyChangedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(CurrentValue))
-            {
-                /*
-                 * If Current Value is null or Empty then make it zero
-                 */
-                CurrentValue = "0";
-            }
-            else if (float.Parse(CurrentValue) <= MaximumValue && float.Parse(CurrentValue) >= 0)
+            float cur = Convert.ToSingle(string.IsNullOrWhiteSpace(CurrentValue) ? "0" : CurrentValue);
+            float max = Convert.ToSingle(MaximumValue);
+            if (cur <= max && cur >= 0)
             {
                 /*
                  * Update the BlackColourPoint.Point value only if the Current Value is in between 0 and Maximum Value
                  */
-                BlackColourPoint.Point = new Point((float.Parse(CurrentValue) / MaximumValue) * 77.5, 0);
+                BlackColourPoint.Point = new Point(cur / max * 77.5, 0);
+            }
+            else
+            {
+                BlackColourPoint.Point = new Point(0, 0);
             }
         }
     }

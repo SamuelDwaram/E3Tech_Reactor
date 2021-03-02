@@ -123,7 +123,8 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
@@ -197,7 +198,7 @@
                         <Label Content="Start" Style="{StaticResource HeaderLabelStyle}"/>
                     </Viewbox>
                     <Viewbox Grid.Column="1">
-                        <DatePicker SelectedDate="{Binding SelectedStartDate}" DisplayDateEnd="{Binding SelectedStartDate}" Style="{StaticResource DatePickerStyle}">
+                        <DatePicker SelectedDate="{Binding Start.Date}" DisplayDateEnd="{Binding Start.Date}" Style="{StaticResource DatePickerStyle}">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="SelectedDateChanged">
                                     <i:InvokeCommandAction Command="{Binding ClearTrendsCollectionCommand}"/>
@@ -205,7 +206,7 @@
                             </i:Interaction.Triggers>
                         </DatePicker>
                     </Viewbox>
-                    <TextBox Grid.Column="2" Text="{Binding StartHourMinute.Hour, UpdateSourceTrigger=PropertyChanged}"
+                    <TextBox Grid.Column="2" Text="{Binding Start.Hour, UpdateSourceTrigger=PropertyChanged}"
                              helpers:UiHelpers.CheckIfTextContainsOnlyNumber="{Binding}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="TextChanged">
@@ -213,7 +214,7 @@
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </TextBox>
-                    <TextBox Grid.Column="3" Text="{Binding StartHourMinute.Minute, UpdateSourceTrigger=PropertyChanged}"
+                    <TextBox Grid.Column="3" Text="{Binding Start.Minute, UpdateSourceTrigger=PropertyChanged}"
                              helpers:UiHelpers.CheckIfTextContainsOnlyNumber="{Binding}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="TextChanged">
@@ -245,7 +246,7 @@
                         <Label Content="End" Style="{StaticResource HeaderLabelStyle}"/>
                     </Viewbox>
                     <Viewbox Grid.Column="1">
-                        <DatePicker SelectedDate="{Binding SelectedEndDate}" DisplayDateEnd="{Binding SelectedEndDate}" Style="{StaticResource DatePickerStyle}">
+                        <DatePicker SelectedDate="{Binding End.Date}" DisplayDateEnd="{Binding End.Date}" Style="{StaticResource DatePickerStyle}">
                             <i:Interaction.Triggers>
                                 <i:EventTrigger EventName="SelectedDateChanged">
                                     <i:InvokeCommandAction Command="{Binding ClearTrendsCollectionCommand}"/>
@@ -253,7 +254,7 @@
                             </i:Interaction.Triggers>
                         </DatePicker>
                     </Viewbox>
-                    <TextBox Grid.Column="2" Text="{Binding EndHourMinute.Hour, UpdateSourceTrigger=PropertyChanged}"
+                    <TextBox Grid.Column="2" Text="{Binding End.Hour, UpdateSourceTrigger=PropertyChanged}"
                              helpers:UiHelpers.CheckIfTextContainsOnlyNumber="{Binding}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="TextChanged">
@@ -261,7 +262,7 @@
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </TextBox>
-                    <TextBox Grid.Column="3" Text="{Binding EndHourMinute.Minute, UpdateSourceTrigger=PropertyChanged}"
+                    <TextBox Grid.Column="3" Text="{Binding End.Minute, UpdateSourceTrigger=PropertyChanged}"
                              helpers:UiHelpers.CheckIfTextContainsOnlyNumber="{Binding}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="TextChanged">
@@ -271,6 +272,24 @@
                     </TextBox>
                 </Grid>
                 <Viewbox Grid.Column="4" HorizontalAlignment="Center">
+                    <Button Content="Last Week" Command="{Binding GetLastWeekTrendsCommand}" Style="{StaticResource CommandButtonStyle}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding ClearTrendsCollectionCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </Viewbox>
+                <Viewbox Grid.Column="5" HorizontalAlignment="Center">
+                    <Button Content="24 Hours" Command="{Binding Get24HoursTrendsCommand}" Style="{StaticResource CommandButtonStyle}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding ClearTrendsCollectionCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </Viewbox>
+                <Viewbox Grid.Column="6" HorizontalAlignment="Center">
                     <Button Content="Generate Trends" Command="{Binding GenerateTrendsCommand}" Style="{StaticResource CommandButtonStyle}">
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
@@ -279,46 +298,47 @@
                         </i:Interaction.Triggers>
                     </Button>
                 </Viewbox>
+                
             </Grid>
             <Grid Grid.Row="1">
                 <ItemsControl ItemsSource="{Binding TooltipContent.Content, Mode=TwoWay}" ItemTemplate="{StaticResource TooltipParameterAndValueTemplate}" ItemsPanel="{StaticResource TooltipContentTemplate}"/>
             </Grid>
             <Grid Grid.Row="2">
                 <lvc:CartesianChart x:Name="cartesianChart" Zoom="X" AxisY="{Binding AxisY}" Series="{Binding TrendsCollection}" DataTooltip="{x:Null}" Background="#272e3e" LegendLocation="Top" Foreground="White" DisableAnimations="True" Hoverable="False">
-                        <lvc:CartesianChart.Style>
-                            <Style TargetType="lvc:CartesianChart">
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding IsTouchDevice}" Value="true">
-                                        <Setter Property="helpers:TouchMoveBehaviour.TouchMoveCommand" Value="{Binding UpdateTouchMoveToolTipCommand}" />
-                                    </DataTrigger>
-                                    <DataTrigger Binding="{Binding IsTouchDevice}" Value="false">
-                                        <Setter Property="helpers:MouseMoveBehaviour.MouseMoveCommand" Value="{Binding UpdateMouseMoveToolTipCommand}" />
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </lvc:CartesianChart.Style>
-                        <lvc:CartesianChart.Resources>
-                            <Style TargetType="lvc:Separator">
-                                <Setter Property="StrokeThickness" Value="0"/>
-                            </Style>
-                            <Style TargetType="geared:GLineSeries">
-                                <Setter Property="PointGeometrySize" Value="5"/>
-                                <Setter Property="LineSmoothness" Value="0"/>
-                                <Setter Property="Fill" Value="Transparent"/>
-                            </Style>
-                            <Style TargetType="lvc:Axis">
-                                <Setter Property="FontSize" Value="15"/>
-                            </Style>
-                        </lvc:CartesianChart.Resources>
-                        <lvc:CartesianChart.AxisX>
+                    <lvc:CartesianChart.Style>
+                        <Style TargetType="lvc:CartesianChart">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsTouchDevice}" Value="true">
+                                    <Setter Property="helpers:TouchMoveBehaviour.TouchMoveCommand" Value="{Binding UpdateTouchMoveToolTipCommand}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsTouchDevice}" Value="false">
+                                    <Setter Property="helpers:MouseMoveBehaviour.MouseMoveCommand" Value="{Binding UpdateMouseMoveToolTipCommand}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </lvc:CartesianChart.Style>
+                    <lvc:CartesianChart.Resources>
+                        <Style TargetType="lvc:Separator">
+                            <Setter Property="StrokeThickness" Value="0"/>
+                        </Style>
+                        <Style TargetType="geared:GLineSeries">
+                            <Setter Property="PointGeometrySize" Value="5"/>
+                            <Setter Property="LineSmoothness" Value="0"/>
+                            <Setter Property="Fill" Value="Transparent"/>
+                        </Style>
+                        <Style TargetType="lvc:Axis">
+                            <Setter Property="FontSize" Value="15"/>
+                        </Style>
+                    </lvc:CartesianChart.Resources>
+                    <lvc:CartesianChart.AxisX>
                         <lvc:Axis Title="t (min)" ShowLabels="True" MinValue="0" MaxValue="{Binding MaxValueAxisX}">
-                                <lvc:Axis.Sections>
-                                    <lvc:AxisSection Stroke="White" Value="0" StrokeThickness="1"/>
-                                    <lvc:AxisSection Value="{Binding XPointer}" StrokeThickness="1" Stroke="#ff5722" DisableAnimations="True"/>
-                                </lvc:Axis.Sections>
-                            </lvc:Axis>
-                        </lvc:CartesianChart.AxisX>
-                    </lvc:CartesianChart>
+                            <lvc:Axis.Sections>
+                                <lvc:AxisSection Stroke="White" Value="0" StrokeThickness="1"/>
+                                <lvc:AxisSection Value="{Binding XPointer}" StrokeThickness="1" Stroke="#ff5722" DisableAnimations="True"/>
+                            </lvc:Axis.Sections>
+                        </lvc:Axis>
+                    </lvc:CartesianChart.AxisX>
+                </lvc:CartesianChart>
             </Grid>
         </Grid>
     </Grid>

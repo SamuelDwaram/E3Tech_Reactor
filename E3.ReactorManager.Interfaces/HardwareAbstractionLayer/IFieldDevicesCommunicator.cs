@@ -99,4 +99,11 @@ namespace E3.ReactorManager.Interfaces.HardwareAbstractionLayer
 
         void UpdateFieldDevicesDataForMobileDevicesInitialization(Task<IList<FieldDevice>> task);
     }
+
+    public interface IFdcForPlc : IFieldDevicesCommunicator
+    {
+        void CreateVariableHandles(string deviceId, IList<FieldPoint> fieldPoints);
+
+        void DeleteVariableHandles(string deviceId, IList<int> variableHandles);
+    }
 }

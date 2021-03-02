@@ -61,6 +61,7 @@ namespace E3.AuditTrailManager.ViewModels
             if (task.IsCompleted)
             {
                 AuditTrail = task.Result;
+                RaisePropertyChanged(nameof(AuditTrail));
             }
         }
 
@@ -76,6 +77,30 @@ namespace E3.AuditTrailManager.ViewModels
         }
 
         #region Commands
+        public ICommand GetLastWeekAuditTrailCommand
+        {
+            get => new DelegateCommand(() => {
+                SelectedStartDate = DateTime.Now.Subtract(TimeSpan.FromDays(7));
+                SelectedEndDate = DateTime.Now;
+                RaisePropertyChanged(nameof(SelectedStartDate));
+                RaisePropertyChanged(nameof(SelectedEndDate));
+                Task.Factory.StartNew(new Func<IList<AuditEvent>>(() => auditTrailManager.GetAuditTrail(SelectedStartDate, SelectedEndDate)))
+                    .ContinueWith(new Action<Task<IList<AuditEvent>>>(UpdateAuditTrail));
+            });
+        }
+
+        public ICommand Get24HoursAuditTrailCommand
+        {
+            get => new DelegateCommand(() => {
+                SelectedStartDate = DateTime.Now.Subtract(TimeSpan.FromDays(1));
+                SelectedEndDate = DateTime.Now;
+                RaisePropertyChanged(nameof(SelectedStartDate));
+                RaisePropertyChanged(nameof(SelectedEndDate));
+                Task.Factory.StartNew(new Func<IList<AuditEvent>>(() => auditTrailManager.GetAuditTrail(SelectedStartDate, SelectedEndDate)))
+                    .ContinueWith(new Action<Task<IList<AuditEvent>>>(UpdateAuditTrail));
+            });
+        }
+
         public ICommand PrintReportCommand
         {
             get => new DelegateCommand(() => {

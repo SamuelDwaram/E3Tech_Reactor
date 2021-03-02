@@ -115,79 +115,100 @@ namespace E3.TrendsManager.Services
             }
         }
 
-        public string PrepareTrendsImageForGivenData(DataTable dataTable, Dictionary<string, string> parametersInfo)
+        public string PrepareTrendsImageForGivenData(string deviceId, DataTable dataTable, IEnumerable<string> parameterList)
         {
-            SeriesCollection totalSeriesCollection = new SeriesCollection();
-            AxesCollection axisY = new AxesCollection();
-            foreach (KeyValuePair<string, string> parameter in parametersInfo)
-            {
-                if (dataTable.Columns.Contains(parameter.Key))
+            Dictionary<string, string> parametersInfo = new Dictionary<string, string>();
+            parameterList.ToList().ForEach(p => {
+                TrendParameter tp = TrendDevices.First(td => td.DeviceId == deviceId).Parameters.FirstOrDefault(tp => tp.Label == p);
+                if (tp == null)
                 {
-                    Axis axis = new Axis
-                    {
-                        Title = parameter.Key,
-                        Foreground = Brushes.Black,
-                        MinValue = GetMinValue(parameter.Value),
-                        MaxValue = GetMaxValue(parameter.Value),
-                        Separator = new LiveCharts.Wpf.Separator
-                        {
-                            StrokeThickness = 0
-                        },
-                        LabelFormatter = val => Math.Round(val, 1).ToString()
-                    };
-                    axisY.Add(axis);
-                    int index = totalSeriesCollection.Count;
-                    totalSeriesCollection.Add(new GLineSeries
-                    {
-                        Title = parameter.Key,
-                        Values = new GearedValues<DateTimePoint>(),
-                        ScalesYAt = index,
-                        PointGeometrySize = 0
-                    });
-                    totalSeriesCollection[index].Values.AddRange(new GearedValues<DateTimePoint>(dataTable.AsEnumerable().Select(row => new DateTimePoint
-                    {
-                        Value = row.Field<double>(parameter.Key),
-                        DateTime = row.Field<DateTime>("TimeStamp")
-                    })));
+                    // skip.
                 }
-            }
-            string tempFilePath = Path.Combine(Path.GetTempPath(), Path.GetTempFileName());
-
-            CartesianChart cartesianChart = new CartesianChart
-            {
-                DisableAnimations = true,
-                LegendLocation = LegendLocation.Top,
-                Height = 480,
-                Width = 650,
-                AxisY = axisY,
-                AxisX = new AxesCollection
+                else
                 {
-                    new Axis
-                    {
-                        Title = "t/min",
-                        FontSize = 12,
-                        Foreground = Brushes.Black,
-                        LabelFormatter = val => new DateTime((long)val).ToString("dd/MMM HH:mm:ss"),
-                        Separator = new LiveCharts.Wpf.Separator
-                        {
-                            StrokeThickness = 0
-                        }
-                    }
-                },
-                Series = totalSeriesCollection
-            };
+                    parametersInfo.Add($"{p}({tp.Units})", tp.Limits);
+                }
+            });
 
-            Viewbox viewBox = new Viewbox
+            if (parametersInfo.Count > 0)
             {
-                Child = cartesianChart
-            };
-            viewBox.Measure(cartesianChart.RenderSize);
-            viewBox.Arrange(new Rect(new Point(0, 0), cartesianChart.RenderSize));
-            cartesianChart.Update(true, true);
-            viewBox.UpdateLayout();
+                SeriesCollection totalSeriesCollection = new SeriesCollection();
+                AxesCollection axisY = new AxesCollection();
+                foreach (KeyValuePair<string, string> parameter in parametersInfo)
+                {
+                    if (dataTable.Columns.Contains(parameter.Key))
+                    {
+                        Axis axis = new Axis
+                        {
+                            Title = parameter.Key,
+                            Foreground = Brushes.Black,
+                            MinValue = GetMinValue(parameter.Value),
+                            MaxValue = GetMaxValue(parameter.Value),
+                            Separator = new LiveCharts.Wpf.Separator
+                            {
+                                StrokeThickness = 0
+                            },
+                            LabelFormatter = val => Math.Round(val, 1).ToString()
+                        };
+                        axisY.Add(axis);
+                        int index = totalSeriesCollection.Count;
+                        totalSeriesCollection.Add(new GLineSeries
+                        {
+                            Title = parameter.Key,
+                            Values = new GearedValues<DateTimePoint>(),
+                            ScalesYAt = index,
+                            PointGeometrySize = 0
+                        });
+                        totalSeriesCollection[index].Values.AddRange(new GearedValues<DateTimePoint>(dataTable.AsEnumerable().Select(row => new DateTimePoint
+                        {
+                            Value = row.Field<double>(parameter.Key),
+                            DateTime = row.Field<DateTime>("TimeStamp")
+                        })));
+                    }
+                }
+                string tempFilePath = Path.Combine(Path.GetTempPath(), Path.GetTempFileName());
 
-            SaveToPng(cartesianChart, tempFilePath);
-            return tempFilePath;
+                CartesianChart cartesianChart = new CartesianChart
+                {
+                    DisableAnimations = true,
+                    LegendLocation = LegendLocation.Top,
+                    Height = 480,
+                    Width = 650,
+                    AxisY = axisY,
+                    AxisX = new AxesCollection
+                    {
+                        new Axis
+                        {
+                            Title = "t/min",
+                            FontSize = 12,
+                            Foreground = Brushes.Black,
+                            LabelFormatter = val => new DateTime((long)val).ToString("dd/MMM HH:mm:ss"),
+                            Separator = new LiveCharts.Wpf.Separator
+                            {
+                                StrokeThickness = 0
+                            }
+                        }
+                    },
+                    Series = totalSeriesCollection
+                };
+
+                Viewbox viewBox = new Viewbox
+                {
+                    Child = cartesianChart
+                };
+                viewBox.Measure(cartesianChart.RenderSize);
+                viewBox.Arrange(new Rect(new Point(0, 0), cartesianChart.RenderSize));
+                cartesianChart.Update(true, true);
+                viewBox.UpdateLayout();
+
+                SaveToPng(cartesianChart, tempFilePath);
+                return tempFilePath;
+            }
+            else
+            {
+                //no trends available for given parameters
+                return string.Empty;
+            }
         }
 
         private double GetMaxValue(string value)

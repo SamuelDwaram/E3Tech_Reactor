@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace E3.ReactorManager.Interfaces.UI.UserControls
 {
     /// <summary>
-    /// Interaction logic for ProgressBarAnimation.xaml
+    /// stringeraction logic for ProgressBarAnimation.xaml
     /// </summary>
     public partial class ProgressBarAnimation : UserControl
     {
@@ -25,53 +25,40 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
             InitializeComponent();
         }
 
-        #region Positive Maximum
+        #region Positive Maximum & Negative Maximum
         public static readonly DependencyProperty PositiveMaximumValueProperty =
-           DependencyProperty.Register("PositiveMaximumValue", typeof(int), typeof(ProgressBarAnimation), new
-              PropertyMetadata(200, new PropertyChangedCallback(OnPositiveMaximumValueChanged)));
+           DependencyProperty.Register("PositiveMaximumValue", typeof(string), typeof(ProgressBarAnimation), new
+              PropertyMetadata("200", new PropertyChangedCallback(OnMaximumValueChanged)));
 
-        public int PositiveMaximumValue
+        public string PositiveMaximumValue
         {
-            get { return (int)GetValue(PositiveMaximumValueProperty); }
+            get { return (string)GetValue(PositiveMaximumValueProperty); }
             set { SetValue(PositiveMaximumValueProperty, value); }
         }
 
-        private static void OnPositiveMaximumValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            ProgressBarAnimation toggleButtonUserControl = d as ProgressBarAnimation;
-            toggleButtonUserControl.OnPositiveMaximumValueChanged(e);
-        }
-
-        private void OnPositiveMaximumValueChanged(DependencyPropertyChangedEventArgs e)
-        {
-            //Do something when this property changed
-            NegativeProgressBarArea.Width = (float)NegativeMaximumValue / (NegativeMaximumValue + PositiveMaximumValue) * 117;
-            PositiveProgressBarArea.Width = (float)PositiveMaximumValue / (NegativeMaximumValue + PositiveMaximumValue) * 117;
-        }
-        #endregion
-
-        #region Negative Maximum
         public static readonly DependencyProperty NegativeMaximumValueProperty =
-           DependencyProperty.Register("NegativeMaximumValue", typeof(int), typeof(ProgressBarAnimation), new
-              PropertyMetadata(90, new PropertyChangedCallback(OnNegativeMaximumValueChanged)));
+           DependencyProperty.Register("NegativeMaximumValue", typeof(string), typeof(ProgressBarAnimation), new
+              PropertyMetadata("90", new PropertyChangedCallback(OnMaximumValueChanged)));
 
-        public int NegativeMaximumValue
+        public string NegativeMaximumValue
         {
-            get { return (int)GetValue(NegativeMaximumValueProperty); }
+            get { return (string)GetValue(NegativeMaximumValueProperty); }
             set { SetValue(NegativeMaximumValueProperty, value); }
         }
 
-        private static void OnNegativeMaximumValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnMaximumValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ProgressBarAnimation toggleButtonUserControl = d as ProgressBarAnimation;
-            toggleButtonUserControl.OnNegativeMaximumValueChanged(e);
+            toggleButtonUserControl.OnMaximumValueChanged(e);
         }
 
-        private void OnNegativeMaximumValueChanged(DependencyPropertyChangedEventArgs e)
+        private void OnMaximumValueChanged(DependencyPropertyChangedEventArgs e)
         {
             //Do something when this property changed
-            NegativeProgressBarArea.Width = (float)NegativeMaximumValue / (NegativeMaximumValue + PositiveMaximumValue) * 117;
-            PositiveProgressBarArea.Width = (float)PositiveMaximumValue / (NegativeMaximumValue + PositiveMaximumValue) * 117;
+            float neg = Convert.ToSingle(NegativeMaximumValue);
+            float pos = Convert.ToSingle(PositiveMaximumValue);
+            NegativeProgressBarArea.Width = (float)neg / (neg + pos) * 117;
+            PositiveProgressBarArea.Width = (float)pos / (neg + pos) * 117;
         }
         #endregion
 
@@ -89,37 +76,40 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
         private static void OnCurrentValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ProgressBarAnimation toggleButtonUserControl = d as ProgressBarAnimation;
-            toggleButtonUserControl.OnCurrentValueChanged(e);
+            toggleButtonUserControl.OnCurrentValueChanged();
         }
 
-        private void OnCurrentValueChanged(DependencyPropertyChangedEventArgs e)
+        private void OnCurrentValueChanged()
         {
-            //Do something when this property changed
-            if (string.IsNullOrWhiteSpace(CurrentValue))
-            {
-                CurrentValue = "0";
-            }
-            else if((float.Parse(CurrentValue) <= PositiveMaximumValue && float.Parse(CurrentValue) >= 0)
-                    || (Math.Abs(float.Parse(CurrentValue)) >= 0 && Math.Abs(float.Parse(CurrentValue)) <= NegativeMaximumValue))
+            float cur = Convert.ToSingle(string.IsNullOrWhiteSpace(CurrentValue) ? "0" : CurrentValue);
+            float neg = Convert.ToSingle(NegativeMaximumValue);
+            float pos = Convert.ToSingle(PositiveMaximumValue);
+            
+            if(cur >= -1 * neg && cur <= pos)
             {
                 /*
                  * Update the Current Value only if the value is in between Positive Maximum and Negative maximum
                  */
-                if (float.Parse(CurrentValue) < 0)
+                if (cur < 0)
                 {
                     ProgressBarPositiveGraphic.Width = PositiveProgressBarArea.Width;
-                    ProgressBarNegativeGraphic.Width = Math.Abs((float.Parse(CurrentValue) / NegativeMaximumValue) * NegativeProgressBarArea.Width);
+                    ProgressBarNegativeGraphic.Width = Math.Abs(cur / neg) * NegativeProgressBarArea.Width;
                 }
-                else if (float.Parse(CurrentValue) > 0)
+                else if (cur > 0)
                 {
-                    ProgressBarPositiveGraphic.Width = Math.Abs(PositiveProgressBarArea.Width - ((float.Parse(CurrentValue) / PositiveMaximumValue) * PositiveProgressBarArea.Width));
+                    ProgressBarPositiveGraphic.Width = Math.Abs(PositiveProgressBarArea.Width - (cur / pos * PositiveProgressBarArea.Width));
                     ProgressBarNegativeGraphic.Width = 0;
                 }
-                else if (float.Parse(CurrentValue) == 0)
+                else if (cur == 0)
                 {
                     ProgressBarPositiveGraphic.Width = PositiveProgressBarArea.Width;
                     ProgressBarNegativeGraphic.Width = 0;
                 }
+            }
+            else
+            {
+                ProgressBarPositiveGraphic.Width = PositiveProgressBarArea.Width;
+                ProgressBarNegativeGraphic.Width = 0;
             }
         }
         #endregion

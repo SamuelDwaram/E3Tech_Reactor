@@ -25,6 +25,36 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
             InitializeComponent();
         }
 
+        public string Label
+        {
+            get { return (string)GetValue(LabelProperty); }
+            set { SetValue(LabelProperty, value); }
+        }
+
+        public static readonly DependencyProperty LabelProperty =
+            DependencyProperty.Register("Label", typeof(string), typeof(ButtonOnOffAnimation), new PropertyMetadata(LabelChanged));
+
+        private static void LabelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ButtonOnOffAnimation buttonOnOffAnimation = d as ButtonOnOffAnimation;
+            buttonOnOffAnimation.LabelChanged(e.NewValue.ToString());
+        }
+
+        public void LabelChanged(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                PathControl.Visibility = Visibility.Visible;
+                buttonLabel.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                PathControl.Visibility = Visibility.Hidden;
+                buttonLabel.Visibility = Visibility.Visible;
+                buttonLabel.Content = value;
+            }
+        }
+
         public static readonly DependencyProperty CurrentStatusProperty =
            DependencyProperty.Register("CurrentStatus", typeof(string), typeof(ButtonOnOffAnimation), new
               PropertyMetadata(bool.FalseString, new PropertyChangedCallback(OnCurrentStatusChanged)));

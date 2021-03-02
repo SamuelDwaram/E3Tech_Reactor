@@ -13,5 +13,10 @@ namespace E3.DialogServices.DialogTypes
             InitializeComponent();
             DataContext = alertWindowDataContext;
         }
+
+        private void Ok_Clicked(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

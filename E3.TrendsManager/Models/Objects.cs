@@ -20,9 +20,9 @@ namespace E3.TrendsManager.Models
         /// If there is not '|' character present string 
         /// then we will take Min-Limit=0 and Max-limit=(value in the string)
         /// </summary>
-        public string Limits { get; set; }
+        public string Limits { get; set; } = string.Empty;
 
-        public string Units { get; set; }
+        public string Units { get; set; } = string.Empty;
 
         public TrendParameterType ParameterType { get; set; } = TrendParameterType.Individual;
         public bool IsLiveTrendParameter { get; set; }

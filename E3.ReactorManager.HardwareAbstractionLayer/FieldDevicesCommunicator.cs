@@ -1,35 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using E3.ReactorManager.Interfaces.DataAbstractionLayer;
 using E3.ReactorManager.Interfaces.Framework.Logging;
 using E3.ReactorManager.Interfaces.HardwareAbstractionLayer;
 using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
-using Unity;
 using Timer = System.Timers.Timer;
 
 namespace E3.ReactorManager.HardwareAbstractionLayer
 {
-    public class FieldDevicesCommunicator : IFieldDevicesCommunicator
+    public class FieldDevicesCommunicator : IFdcForPlc
     {
-        FieldDevicesWrapper fieldDeviceWrapper;
-        ILogger logger;
-        Timer timer;
-        Timer cyclicPollDevicesTimer;
-        IDatabaseWriter databaseWriter;
-        IDatabaseReader databaseReader;
+        private readonly FieldDevicesWrapper fieldDeviceWrapper;
+        private readonly ILogger logger;
+        private readonly Timer timer;
+        private readonly Timer cyclicPollDevicesTimer = new Timer(TimeSpan.FromMilliseconds(500).TotalMilliseconds);
+        private readonly IDatabaseWriter databaseWriter;
+        private readonly IDatabaseReader databaseReader;
 
-        public FieldDevicesCommunicator(IUnityContainer containerProvider, IDatabaseWriter databaseWriter, IDatabaseReader databaseReader, ILogger logger)
+        public FieldDevicesCommunicator(IDatabaseWriter databaseWriter, IDatabaseReader databaseReader, ILogger logger)
         {
             this.databaseWriter = databaseWriter;
             this.databaseReader = databaseReader;
             this.logger = logger;
-
+            timer = new Timer(GetLoggingIntervalDetails().TotalMilliseconds);
+            timer.Elapsed += Timer_Tick;
+            cyclicPollDevicesTimer.Elapsed += CyclicPollDevicesTimer_Tick;
             fieldDeviceWrapper = new FieldDevicesWrapper(databaseWriter, databaseReader, logger);
             fieldDeviceWrapper.FieldPointDataReceived += OnFieldPointDataReceived;
         }
+
+        public void CreateVariableHandles(string deviceId, IList<FieldPoint> fieldPoints) => fieldDeviceWrapper.CreateVariableHandles(deviceId, fieldPoints);
+
+        public void DeleteVariableHandles(string deviceId, IList<int> variableHandles) => fieldDeviceWrapper.DeleteVariableHandles(deviceId, variableHandles);
 
         #region Cyclic Poll field devices
         public void StartCyclicPollingOfFieldDevices(Action<Task> callback, TaskScheduler taskScheduler)
@@ -39,8 +45,6 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
             var task1 = fieldDeviceWrapper.Initialize(taskScheduler);
             task1.ContinueWith((t) =>
             {
-                cyclicPollDevicesTimer = new Timer(TimeSpan.FromMilliseconds(500).TotalMilliseconds);
-                cyclicPollDevicesTimer.Elapsed += CyclicPollDevicesTimer_Tick;
                 cyclicPollDevicesTimer.Start();
             }).ContinueWith((t) => StartDataLogging()).ContinueWith(callback, taskScheduler);
         }
@@ -93,12 +97,7 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
 
         #region Data Logging
 
-        public void StartDataLogging()
-        {
-            timer = new Timer(GetLoggingIntervalDetails().TotalMilliseconds);
-            timer.Elapsed += Timer_Tick;
-            timer.Start();
-        }
+        public void StartDataLogging() => timer.Start();
 
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -108,13 +107,44 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
 
         private void LogLiveData()
         {
-            databaseWriter.LogLiveData(fieldDeviceWrapper.FieldDevices);
+            foreach (FieldDevice fieldDevice in fieldDeviceWrapper.FieldDevices)
+            {
+                try
+                {
+                    string queryPart_1 = $"insert into dbo.{fieldDevice.Identifier}(";
+                    string queryPart_2 = $"values(";
+                    Dictionary<string, string> fpList = new Dictionary<string, string>();
+                    foreach (SensorsDataSet sensorDataSet in fieldDevice.SensorsData)
+                    {
+                        foreach (FieldPoint fieldPoint in sensorDataSet.SensorsFieldPoints.Where(fp => fp.ToBeLogged))
+                        {
+                            var fpParsedValue = fieldDeviceWrapper.TryParse(fieldDeviceWrapper.GetFieldPointDataType(fieldPoint.FieldPointDataType),
+                                (fieldPoint.Value.Contains("NC") || string.IsNullOrWhiteSpace(fieldPoint.Value)) ? "0" : fieldPoint.Value);
+                            fpList.Add(fieldPoint.Label, fieldPoint.FieldPointDataType.Contains("bool") ? Convert.ToInt32(fpParsedValue).ToString() : fpParsedValue.ToString());
+                        }
+                    }
+
+                    if (fpList.Count > 0)
+                    {
+                        queryPart_1 = queryPart_1 + string.Join(",", fpList.Keys) + ", TimeStamp)";
+                        queryPart_2 = queryPart_2 + string.Join(",", fpList.Values) + $", '{DateTime.Now:yyyy-MM-dd HH:mm:ss}')";
+
+                        databaseWriter.ExecuteWriteCommand($"{queryPart_1} {queryPart_2}", CommandType.Text);
+                        logger.Log(LogType.Information, $"Data Logged for {fieldDevice.Label}");
+                    }
+                    else
+                    {
+                        logger.Log(LogType.Information, $"No parameters available to Log Data for {fieldDevice.Label}");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    logger.Log(LogType.Error, $"Data Logging failed for {fieldDevice.Label}", ex);
+                }
+            }
         }
 
-        private void NotifyDataLoggedEventToAllModules(Task task)
-        {
-            NewDataLoggedIntoDatabase?.Invoke(this, EventArgs.Empty);
-        }
+        private void NotifyDataLoggedEventToAllModules(Task task) => NewDataLoggedIntoDatabase?.Invoke(this, EventArgs.Empty);
 
         public TimeSpan GetLoggingIntervalDetails()
         {

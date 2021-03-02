@@ -73,7 +73,6 @@
       <HintPath>..\packages\Unity.Container.5.8.11\lib\net45\Unity.Container.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
-    <Reference Include="WpfBaseApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\FontSizeConverter.cs" />
@@ -81,11 +80,14 @@
     <Compile Include="Helpers\UiHelpers.cs" />
     <Compile Include="Model\Data\Document.cs" />
     <Compile Include="Model\Data\ImageInfo.cs" />
+    <Compile Include="Model\Data\Objects.cs" />
     <Compile Include="Model\Data\PdfDetails.cs" />
     <Compile Include="Model\Data\ReportSection.cs" />
+    <Compile Include="Model\Implementations\CsvReportPrinter.cs" />
     <Compile Include="Model\Implementations\DocumentHandler.cs" />
     <Compile Include="Model\Implementations\HeaderFooter.cs" />
     <Compile Include="Model\Implementations\ReportsPrinter.cs" />
+    <Compile Include="Model\Interfaces\ICsvReportPrinter.cs" />
     <Compile Include="Model\Interfaces\IDocumentHandler.cs" />
     <Compile Include="Model\Interfaces\IReportPrinter.cs" />
     <Compile Include="ReportsManagerModule.cs" />
@@ -100,7 +102,7 @@
       <Project>{620c94fe-d355-4801-92b0-f86d1b08fb02}</Project>
       <Name>E3.ReactorManager.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RecipeModules\E3Tech.IO.FileAccess\E3Tech.IO.FileAccess.csproj">
+    <ProjectReference Include="..\E3Tech.IO.FileAccess\E3Tech.IO.FileAccess.csproj">
       <Project>{038c353e-942a-4863-a0b3-6cec7dba0a56}</Project>
       <Name>E3Tech.IO.FileAccess</Name>
     </ProjectReference>

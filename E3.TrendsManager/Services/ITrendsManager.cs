@@ -12,6 +12,6 @@ namespace E3.TrendsManager.Services
 
         SeriesCollection GetTrendsCollection(TrendDevice trendDevice, IList<string> selectedParameters, DateTime startTime, DateTime endTime);
 
-        string PrepareTrendsImageForGivenData(DataTable dataTable, Dictionary<string, string> parametersInfo);
+        string PrepareTrendsImageForGivenData(string deviceId, DataTable dataTable, IEnumerable<string> parameterList);
     }
 }

@@ -143,8 +143,8 @@
       <Project>{754823f2-12f8-4720-80e6-2f2cfcd6de44}</Project>
       <Name>E3.SystemHealthManager</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RecipeModules\E3Tech.Navigation\E3Tech.Navigation.csproj">
-      <Project>{DC50D873-ADE1-45CA-9F70-D310709EC32B}</Project>
+    <ProjectReference Include="..\E3Tech.Navigation\E3Tech.Navigation.csproj">
+      <Project>{dc50d873-ade1-45ca-9f70-d310709ec32b}</Project>
       <Name>E3Tech.Navigation</Name>
     </ProjectReference>
   </ItemGroup>

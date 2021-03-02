@@ -16,7 +16,7 @@ namespace E3.ReactorManager.DataAbstractionLayer
     public class DatabaseWriter : IDatabaseWriter
     {
         private readonly DBManager _dbManager;
-        ILogger logger;
+        private readonly ILogger logger;
 
         public DatabaseWriter(IUnityContainer containerProvider)
         {

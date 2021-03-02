@@ -91,7 +91,7 @@ namespace E3.UserManager.ViewModels
                         //check if user is Admin. If yes login immediately
                         if (user.Roles.Any(r => r.Name == "Admin"))
                         {
-                            userManager.UpdateUserLoginStatus(user.UserID, true);
+                            //userManager.UpdateUserLoginStatus(user.UserID, true);
                             CheckForPasswordExpiryAndLogin(user);
                         }
                         //check for password expiry
@@ -103,7 +103,7 @@ namespace E3.UserManager.ViewModels
                         //check for User Active status
                         else if (CheckIfUserIsActive(user.CurrentStatus))
                         {
-                            userManager.UpdateUserLoginStatus(user.UserID, true);
+                            //userManager.UpdateUserLoginStatus(user.UserID, true);
                             CheckForPasswordExpiryAndLogin(user);
                         }
                         else
@@ -191,11 +191,9 @@ namespace E3.UserManager.ViewModels
         }
         #endregion
 
-        private ICommand _loginCommand;
         public ICommand LoginCommand
         {
-            get => _loginCommand ?? (_loginCommand = new DelegateCommand<PasswordBox>(Login));
-            set { _loginCommand = value; }
+            get => new DelegateCommand<PasswordBox>(Login);
         }
 
         #region Properties

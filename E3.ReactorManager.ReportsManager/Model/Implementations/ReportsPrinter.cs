@@ -102,6 +102,7 @@ namespace E3.ReactorManager.ReportsManager.Model.Implementations
             //file is not locked
             return false;
         }
+
         public iTextSharp.text.Document CreatePDF(string fileName, string reportHeader = null, string reportLogoPath = null)
         {
             iTextSharp.text.Document document = new iTextSharp.text.Document(PageSize.A4, 50, 50, 70, 50);
@@ -235,10 +236,13 @@ namespace E3.ReactorManager.ReportsManager.Model.Implementations
 
                 //Add Image to the pdf
                 string imagePath = Convert.ToString(objArray[0]);
-                Image image = Image.GetInstance(imagePath);
-                image.Rotation = (float)Math.PI / 2;
-                image.Alignment = Element.ALIGN_CENTER;
-                pdf.Add(image);
+                if (!string.IsNullOrWhiteSpace(imagePath))
+                {
+                    Image image = Image.GetInstance(imagePath);
+                    image.Rotation = (float)Math.PI / 2;
+                    image.Alignment = Element.ALIGN_CENTER;
+                    pdf.Add(image);
+                }
             }
             else if (dataType == typeof(ImageInfo))
             {

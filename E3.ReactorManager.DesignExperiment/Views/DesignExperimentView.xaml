@@ -250,8 +250,8 @@
                             </Viewbox>
                             <Grid Grid.Row="1" HorizontalAlignment="Stretch">
                                 <ComboBox SelectedValue="{Binding NewBatchDetails.StirrerIdentifier}" SelectedValuePath="Content">
-                                    <ComboBoxItem>Anchor</ComboBoxItem>
-                                    <ComboBoxItem>Blade</ComboBoxItem>
+                                    <!--<ComboBoxItem>Anchor</ComboBoxItem>
+                                    <ComboBoxItem>Blade</ComboBoxItem>-->
                                     <ComboBoxItem>PBT</ComboBoxItem>
                                 </ComboBox>
                             </Grid>
@@ -440,7 +440,7 @@
                                 </TextBox.Style>
                             </TextBox>
                             <Viewbox Grid.Column="2">
-                                <Label Content=" Stage " Style="{StaticResource HeaderLabelStyle}"/>
+                                <Label Content=" Steps " Style="{StaticResource HeaderLabelStyle}"/>
                             </Viewbox>
                             <TextBox Grid.Column="3" Text="{Binding NewBatchDetails.Stage, UpdateSourceTrigger=PropertyChanged}" MaxLength="10">
                                 <TextBox.Style>

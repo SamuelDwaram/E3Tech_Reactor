@@ -6,6 +6,7 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:helpers="clr-namespace:E3.AuditTrailManager.Helpers"
              xmlns:AnimationUserControls="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
              xmlns:converters="clr-namespace:E3.ReactorManager.Interfaces.UI.Converters;assembly=E3.ReactorManager.Interfaces"
              mc:Ignorable="d" 
@@ -97,6 +98,12 @@
                 </Viewbox>
                 <Label />
                 <Label />
+                <Button Content="Last Week" Command="{Binding GetLastWeekAuditTrailCommand}" Style="{StaticResource CommandButtonStyle}"/>
+                <Label />
+                <Label />
+                <Button Content="24 Hours" Command="{Binding Get24HoursAuditTrailCommand}" Style="{StaticResource CommandButtonStyle}"/>
+                <Label />
+                <Label />
                 <Button Content="Print Report" Command="{Binding PrintReportCommand}" Style="{StaticResource CommandButtonStyle}"/>
             </DockPanel>
             <Grid Grid.Row="1">
@@ -146,7 +153,7 @@
                                     </Style>
                                 </Grid.Resources>
                                 <Viewbox Grid.Column="0">
-                                    <Label Content="{Binding TimeStamp}" Foreground="White"/>
+                                    <Label helpers:UiHelpers.TimeStamp="{Binding TimeStamp}" Foreground="White"/>
                                 </Viewbox>
                                 <Viewbox Grid.Column="1">
                                     <Label Content="{Binding EventCategory}" Foreground="White"/>

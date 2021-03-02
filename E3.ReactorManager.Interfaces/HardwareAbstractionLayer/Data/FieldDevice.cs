@@ -1,11 +1,5 @@
-﻿using E3.ReactorManager.ControllerProvider.Model.Interfaces;
-using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
-using System;
+﻿using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
 using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace E3.ReactorManager.Interfaces.HardwareAbstractionLayer
 {
@@ -44,11 +38,6 @@ namespace E3.ReactorManager.Interfaces.HardwareAbstractionLayer
         public Plc RelatedPlc { set; get; }
 
         /// <summary>
-        /// List of the controllers connected to this field device
-        /// </summary>
-        public IList<IController> ConnectedControllers { get; set; }
-
-        /// <summary>
         /// Parameters Data 
         /// </summary>
         public IList<SensorsDataSet> SensorsData
@@ -62,7 +51,7 @@ namespace E3.ReactorManager.Interfaces.HardwareAbstractionLayer
         public IList<FieldPoint> CommandPoints
         {
             set; get;
-        }
+        } = new List<FieldPoint>();
 
         /// <summary>
         /// Get Status of field Points

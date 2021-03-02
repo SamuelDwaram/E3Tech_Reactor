@@ -34,6 +34,20 @@ namespace E3.AuditTrailManager.Model
             });
         }
 
+        public IList<AuditEvent> GetAuditTrail(DateTime start, DateTime end)
+        {
+            string query = $"select * from dbo.AuditTrail where TimeStamp between '{start:yyyy-MM-dd HH:mm:ss}' and '{end:yyyy-MM-dd HH:mm:ss}' order by TimeStamp desc";
+
+            return (from DataRow row in databaseReader.ExecuteReadCommand(query, CommandType.Text).AsEnumerable()
+                    select new AuditEvent
+                    {
+                        NameOfUser = row["ScientistName"].ToString(),
+                        TimeStamp = DateTime.Parse(row["TimeStamp"].ToString()),
+                        EventCategory = (EventTypeEnum)Enum.Parse(typeof(EventTypeEnum), row["Category"].ToString()),
+                        Message = row["AuditMessage"].ToString()
+                    }).ToList();
+        }
+
         public IList<AuditEvent> GetAuditTrail(bool prevSet=false, bool nextSet = false, DateTime dateTimePoint = default)
         {
             string query = string.Empty;

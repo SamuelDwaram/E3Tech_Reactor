@@ -29,7 +29,7 @@ namespace E3.ReactorManager.DataAbstractionLayer
             //fetch the plc list first to give them to corresponding field device
             List<Plc> plcList = new List<Plc>();
             IDbConnection connection = null;
-            var dataReader = _dbManager.GetDataReader("GetAllPlc", CommandType.StoredProcedure, null, out connection);
+            var dataReader = _dbManager.GetDataReader("select * from dbo.PlcList", CommandType.Text, null, out connection);
             try
             {
                 while (dataReader.Read())
@@ -79,7 +79,7 @@ namespace E3.ReactorManager.DataAbstractionLayer
             List<FieldDevice> fieldDevices = new List<FieldDevice>();
             //fetch the field devices data
             IDbConnection connection = null;
-            var dataReader = _dbManager.GetDataReader("GetAllFieldDevices", CommandType.StoredProcedure, null, out connection);
+            var dataReader = _dbManager.GetDataReader("select * from dbo.FieldDevices join dbo.PlcList on FieldDevices.PlcIdentifier = PlcList.Identifier", CommandType.Text, null, out connection);
             try
             {
                 while (dataReader.Read())
@@ -108,7 +108,15 @@ namespace E3.ReactorManager.DataAbstractionLayer
                 //update each field device's command points
                 foreach (var fieldDevice in fieldDevices)
                 {
-                    fieldDevice.CommandPoints = fieldDevice.SensorsData[0].SensorsFieldPoints;
+                    IList<string> fpLabels = ExecuteReadCommand($"select Label from dbo.CommandPoints where FieldDeviceIdentifier='{fieldDevice.Identifier}'", CommandType.Text)
+                                                    .AsEnumerable().Select(r => Convert.ToString(r.Field<string>(0))).ToList();
+                    foreach (SensorsDataSet sensorsDataSet in fieldDevice.SensorsData)
+                    {
+                        foreach (FieldPoint fieldPoint in sensorsDataSet.SensorsFieldPoints.Where(fp => fpLabels.Any(fpLabel => fpLabel == fp.Label)))
+                        {
+                            fieldDevice.CommandPoints.Add(fieldPoint);
+                        }
+                    }
                 }
             }
             catch (Exception)
@@ -127,14 +135,7 @@ namespace E3.ReactorManager.DataAbstractionLayer
         public IList<SensorsDataSet> FetchSensorDataSets(string fieldDeviceIdentifier)
         {
             List<SensorsDataSet> sensorsDataSets = new List<SensorsDataSet>();
-            
-            var parameters = new List<IDbDataParameter>
-            {
-                _dbManager.CreateParameter("@FieldDeviceIdentifier", fieldDeviceIdentifier, DbType.String),
-            };
-
-            IDbConnection connection = null;
-            var dataReader = _dbManager.GetDataReader("SelectSensorDataSet", CommandType.StoredProcedure, parameters.ToArray(), out connection);
+            var dataReader = _dbManager.GetDataReader($"select * from dbo.SensorsDataSet where FieldDeviceIdentifier='{fieldDeviceIdentifier}'", CommandType.Text, null, out IDbConnection connection);
             try
             {
                 while (dataReader.Read())
@@ -177,8 +178,7 @@ namespace E3.ReactorManager.DataAbstractionLayer
                 _dbManager.CreateParameter("@SensorDataSetIdentifier", sensorDataSetIdentifier, DbType.String),
             };
 
-            IDbConnection connection = null;
-            var dataReader = _dbManager.GetDataReader("SelectFieldPoints", CommandType.StoredProcedure, parameters.ToArray(), out connection);
+            var dataReader = _dbManager.GetDataReader($"select * from dbo.FieldPoints where SensorDataSetIdentifier='{sensorDataSetIdentifier}'", CommandType.Text, null, out IDbConnection connection);
             try
             {
                 while (dataReader.Read())

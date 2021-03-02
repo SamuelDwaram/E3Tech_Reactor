@@ -20,6 +20,8 @@ namespace E3.AuditTrailManager.Model
 
         Task RecordEventSync(string eventMessage, string nameOfUser, EventTypeEnum auditCategory);
 
+        IList<AuditEvent> GetAuditTrail(DateTime start, DateTime end);
+
         IList<AuditEvent> GetAuditTrail(bool prevSet = false, bool nextSet = false, DateTime dateTimePoint = default);
     }
 }

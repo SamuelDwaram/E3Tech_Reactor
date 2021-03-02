@@ -26,6 +26,7 @@ namespace E3.ReactorManager.ReportsManager
         {
             containerRegistry.RegisterSingleton<ReportPreviewViewModel>();
             containerRegistry.RegisterSingleton<IReportPrinter, ReportsPrinter>();
+            containerRegistry.RegisterSingleton<ICsvReportPrinter, CsvReportPrinter>();
             containerRegistry.Register<IDocumentHandler, DocumentHandler>();
             regionManager.RegisterViewWithRegion("ReportPreview", typeof(ReportPreview));
         }

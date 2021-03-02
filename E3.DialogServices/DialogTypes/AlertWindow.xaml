@@ -20,12 +20,6 @@
 
         <ContentPresenter Content="{Binding Content}" Margin="10,10,10,10" Grid.Row="0"/>
         <Button Content="OK" Width="75" Height="23" HorizontalAlignment="Right" Margin="5" 
-                Grid.Row="1" Command="{Binding AcknowledgeCommand}">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="Click">
-                    <ei:CallMethodAction TargetObject="{Binding ElementName=alertWindow}" MethodName="Close"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </Button>
+                Grid.Row="1" Command="{Binding AcknowledgeCommand}" x:Name="Ok" Click="Ok_Clicked"/>
     </Grid>
 </Window>

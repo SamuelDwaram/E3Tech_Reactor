@@ -1,0 +1,1 @@
+insert into dbo.FieldDevices values('Reactor_1','ATR-30L', 'Reactor', '192.168.1.100.1.1')

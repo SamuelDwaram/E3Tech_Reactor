@@ -22,6 +22,7 @@
                     </Style>
                 </Path.Style>
             </Path>
+            <Label Name="buttonLabel" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White"/>
         </Grid>
     </Viewbox>
 </UserControl>

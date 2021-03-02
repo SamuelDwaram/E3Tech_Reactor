@@ -13,5 +13,16 @@ namespace E3.DialogServices.DialogTypes
             InitializeComponent();
             DataContext = confirmationWindowDataContext;
         }
+
+        private void Cancel_Clicked(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Ok_Clicked(object sender, RoutedEventArgs e)
+        {
+            (DataContext as Confirmation).Confirmed = true;
+            Close();
+        }
     }
 }

@@ -58,10 +58,9 @@ namespace E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data
         /// Create Variable Handle using FieldPoint's MemoryAddress
         /// </summary>
         /// <param name="MemoryAddress"></param>
-        public void CreateVariableHandle(string MemoryAddress)
-        {
-            TwinCATClient.CreateVariableHandle(MemoryAddress);
-        }
+        public int CreateVariableHandle(string MemoryAddress) => TwinCATClient.CreateVariableHandle(MemoryAddress);
+
+        public void DeleteVariableHandle(int variableHandle) => TwinCATClient.DeleteVariableHandle(variableHandle);
 
         /// <summary>
         /// Read From the Plc

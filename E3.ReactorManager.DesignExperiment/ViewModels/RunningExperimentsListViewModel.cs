@@ -33,7 +33,7 @@ namespace E3.ReactorManager.DesignExperiment.ViewModels
                     RunningExperiments = task.Result;
                     RaisePropertyChanged(nameof(RunningExperiments));
                 }).ContinueWith(t => {
-                    Thread.Sleep(5000);
+                    Thread.Sleep(3000);
                     Task.Factory.StartNew(GetRunningExperiments);
                 });
         }
