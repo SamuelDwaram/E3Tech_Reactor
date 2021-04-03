@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:converters="clr-namespace:E3.ReactorManager.Interfaces.UI.Converters;assembly=E3.ReactorManager.Interfaces"
-             xmlns:helpers="clr-namespace:Basf.Ui.Helpers"
+             xmlns:uiHelpers="clr-namespace:Basf.Ui.Helpers"
              xmlns:userControls="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
              xmlns:AnimationUserControls="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
@@ -16,7 +16,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
         <converters:FontSizeConverter x:Key="FontSizeCon"/>
-        <helpers:ParameterExtractorConverter x:Key="ParameterExtractorCon"/>
+        <uiHelpers:ParameterExtractorConverter x:Key="ParameterExtractorCon"/>
         <Style TargetType="Label">
             <Setter Property="Foreground" Value="#8e94a1" />
             <Setter Property="FontSize" Value="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}, Converter={StaticResource FontSizeCon}}" />
@@ -249,9 +249,14 @@
                             <ContentControl prism:RegionManager.RegionName="ActionComments"/>
                         </Grid>
                     </TabItem>
-                    <TabItem Header="Ramp">
+                    <TabItem Header="Ramp HC">
                         <Grid Background="#272e3e" Margin="1.5">
-                            <ContentControl prism:RegionManager.RegionName="Ramp"/>
+                            <ContentControl prism:RegionManager.RegionName="RampHc" uiHelpers:RampHelpers.FieldPointId="HeatCool"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Ramp Stirrer">
+                        <Grid Background="#272e3e" Margin="1.5">
+                            <ContentControl prism:RegionManager.RegionName="RampStirrer" uiHelpers:RampHelpers.FieldPointId="Stirrer"/>
                         </Grid>
                     </TabItem>
                 </TabControl>
@@ -290,7 +295,7 @@
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=HeatCoolStatusFeedback}"
-                                                                                     helpers:UiHelpers.ParameterInfo="HeatCoolStatus|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                                                                     uiHelpers:UiHelpers.ParameterInfo="HeatCoolStatus|bool" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
@@ -305,7 +310,7 @@
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=EmergencyStatus}"
-                                                                                     helpers:UiHelpers.ParameterInfo="EmergencyStatus|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                                                                     uiHelpers:UiHelpers.ParameterInfo="EmergencyStatus|bool" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
@@ -320,7 +325,7 @@
                                 <Button.Template>
                                     <ControlTemplate TargetType="Button">
                                         <AnimationUserControls:ButtonOnOffAnimation CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=StirrerStatusFeedback}"
-                                                                                     helpers:UiHelpers.ParameterInfo="StirrerStatus|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                                                                     uiHelpers:UiHelpers.ParameterInfo="StirrerStatus|bool" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
                                     </ControlTemplate>
                                 </Button.Template>
                             </Button>
@@ -509,7 +514,7 @@
                                         <ColumnDefinition Width="1*"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBox Grid.Column="0" Text="{Binding HeatCoolSetPoint, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxValueStyle}"
-                                             Tag="ReactorControl" helpers:UiHelpers.AllowedForUser="{Binding UserDetails}">
+                                             Tag="ReactorControl" uiHelpers:UiHelpers.AllowedForUser="{Binding UserDetails}">
                                         <i:Interaction.Triggers>
                                             <i:EventTrigger EventName="GotFocus">
                                                 <i:InvokeCommandAction Command="{Binding SaveOldHcSetPointCommand}" CommandParameter="{Binding HeatCoolSetPoint}"/>
@@ -557,7 +562,7 @@
                                         <ColumnDefinition Width="1*"/>
                                     </Grid.ColumnDefinitions>
                                     <TextBox Grid.Column="0" Text="{Binding StirrerSpeedSetPoint, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBoxValueStyle}"
-                                             Tag="ReactorControl" helpers:UiHelpers.AllowedForUser="{Binding UserDetails}">
+                                             Tag="ReactorControl" uiHelpers:UiHelpers.AllowedForUser="{Binding UserDetails}">
                                         <i:Interaction.Triggers>
                                             <i:EventTrigger EventName="GotFocus">
                                                 <i:InvokeCommandAction Command="{Binding SaveOldStirrerSpeedSetPointCommand}" CommandParameter="{Binding StirrerSpeedSetPoint}"/>
@@ -721,10 +726,10 @@
                         <Grid Grid.Row="2">
                             <Viewbox Stretch="Fill">
                                 <StackPanel Margin="15,0,5,0">
-                                    <AnimationUserControls:ProgressBarAnimation Margin="0,20,0,0" HorizontalAlignment="Left" CurrentValue="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=ScrubberpH}" NegativeMaximumValue="0" PositiveMaximumValue="15"/>
+                                    <AnimationUserControls:ProgressBarAnimation Margin="0,20,0,0" HorizontalAlignment="Left" CurrentValue="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=ScrubberpH}" NegativeMaximumValue="0" PositiveMaximumValue="14"/>
                                     <Grid>
                                         <Label Content="0" Foreground="White" FontSize="15" HorizontalAlignment="Left"/>
-                                        <Label Content="15" Foreground="White" FontSize="15" HorizontalAlignment="Right"/>
+                                        <Label Content="14" Foreground="White" FontSize="15" HorizontalAlignment="Right"/>
                                     </Grid>
                                 </StackPanel>
                             </Viewbox>

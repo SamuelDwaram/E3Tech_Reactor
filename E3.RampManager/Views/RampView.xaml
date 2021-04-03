@@ -86,7 +86,7 @@
                 </Style>
             </Grid.Resources>
             <Label Content="S.No" Grid.Column="0" />
-            <Label Content="Stirrer Sv" Grid.Column="1" />
+            <Label Content="{Binding FieldPointId}" ContentStringFormat=" {0} Sv" Grid.Column="1" />
             <Label Content="Time(min)" Grid.Column="2" />
             <Label Content="Start" Grid.Column="3" />
             <Label Content="End" Grid.Column="4" />

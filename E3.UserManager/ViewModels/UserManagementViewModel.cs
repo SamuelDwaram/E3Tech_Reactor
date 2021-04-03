@@ -158,8 +158,8 @@ namespace E3.UserManager.ViewModels
         #region Modify User
         private bool CanModifyUser(User selectedUser)
         {
-            //A user can't modify his own details
-            return selectedUser.UserID != UserDetails.UserID;
+            //A user can modify only his details
+            return selectedUser.UserID == UserDetails.UserID;
         }
 
         public void ModifyUser(User selectedUser)
@@ -173,7 +173,7 @@ namespace E3.UserManager.ViewModels
         #region Change User Status
         private bool CanChangeUserStatus(User selectedUser)
         {
-            return selectedUser.UserID != UserDetails.UserID;
+            return selectedUser.UserID != UserDetails.UserID && roleManager.CanAccessModule(UserDetails.Roles, "UserManagement");
         }
 
         public void ChangeUserStatus(User selectedUser)

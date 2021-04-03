@@ -28,7 +28,7 @@
             <Setter Property="Width" Value="100" />
             <Setter Property="Background" Value="#1d2532" />
             <Setter Property="FontSize" Value="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}, Converter={StaticResource FontSizeCon}, ConverterParameter=0.4}"/>
-            <Setter Property="Content" Value="{Binding FieldDeviceIdentifier, Converter={StaticResource DeviceIdToShortLabelCon}}" />
+            <Setter Property="Content" Value="{Binding Number}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">

@@ -54,7 +54,7 @@
             <Setter Property="Foreground" Value="#FF8E94A1"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
-        <Style x:Key="CommonTextBoxStyle" TargetType="TextBox">
+        <Style x:Key="UserInputStyle" TargetType="Control">
             <Setter Property="FontSize" Value="{Binding RelativeSource={RelativeSource Self}, Path=ActualHeight, Converter={StaticResource FontSizeCon}}"/>
             <Setter Property="Background" Value="#1a202c"/>
             <Setter Property="Foreground" Value="White"/>
@@ -106,7 +106,7 @@
                             <Label Content="Name" Style="{StaticResource HeaderLabelStyle}"/>
                         </Viewbox>
                         <Grid Grid.Row="1">
-                            <TextBox Text="{Binding NewUser.Name, UpdateSourceTrigger=PropertyChanged}" MaxLength="15" Style="{StaticResource CommonTextBoxStyle}"/>
+                            <TextBox Text="{Binding NewUser.Name, UpdateSourceTrigger=PropertyChanged}" MaxLength="15" Style="{StaticResource UserInputStyle}"/>
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="1">
@@ -118,7 +118,7 @@
                             <Label Content="Password" Style="{StaticResource HeaderLabelStyle}"/>
                         </Viewbox>
                         <Grid Grid.Row="1">
-                            <TextBox Text="{Binding NewCredentials.PasswordHash, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource CommonTextBoxStyle}"/>
+                            <PasswordBox uiHelpers:UiHelpers.Password="{Binding NewCredentials, UpdateSourceTrigger=PropertyChanged}" Tag="PasswordHash" Style="{StaticResource UserInputStyle}"/>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -137,7 +137,7 @@
                             <Label Content="Username" Style="{StaticResource HeaderLabelStyle}"/>
                         </Viewbox>
                         <Grid Grid.Row="1">
-                            <TextBox Text="{Binding NewCredentials.Username, UpdateSourceTrigger=PropertyChanged}" MaxLength="15" Style="{StaticResource CommonTextBoxStyle}"/>
+                            <TextBox Text="{Binding NewCredentials.Username, UpdateSourceTrigger=PropertyChanged}" MaxLength="15" Style="{StaticResource UserInputStyle}"/>
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="1">
@@ -149,7 +149,7 @@
                             <Label Content="Confirm Password" Style="{StaticResource HeaderLabelStyle}"/>
                         </Viewbox>
                         <Grid Grid.Row="1">
-                            <TextBox Text="{Binding ConfirmPasswordText, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource CommonTextBoxStyle}"/>
+                            <PasswordBox uiHelpers:UiHelpers.Password="{Binding ., UpdateSourceTrigger=PropertyChanged}" Tag="ConfirmPasswordText" Style="{StaticResource UserInputStyle}"/>
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="2">

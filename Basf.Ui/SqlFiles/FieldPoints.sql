@@ -20,7 +20,7 @@ INSERT [dbo].[FieldPoints] VALUES (N'ReactorMass', N'ReactorMass', N'FieldPoint'
 INSERT [dbo].[FieldPoints] VALUES (N'ReactorMassTemperature', N'ReactorMassTemperature', N'FieldPoint', N'R1.ReactorMassTemperature', N'float', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
 INSERT [dbo].[FieldPoints] VALUES (N'RPM', N'RPM', N'FieldPoint', N'R1.StirrerCurrentSpeed', N'int', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
 INSERT [dbo].[FieldPoints] VALUES (N'RunningBatchStatus', N'RunningBatchStatus', N'FieldPoint', N'R1.RunningBatchStatus', N'bool', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
-INSERT [dbo].[FieldPoints] VALUES (N'ScrubberpH', N'ScrubberpH', N'FieldPoint', N'R1.ScrubberPh', N'float', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
+INSERT [dbo].[FieldPoints] VALUES (N'ScrubberpH', N'ScrubberpH', N'FieldPoint', N'R1.ScrubberPh', N'float', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
 INSERT [dbo].[FieldPoints] VALUES (N'StirrerCurrentSpeed', N'StirrerCurrentSpeed', N'FieldPoint', N'R1.StirrerCurrentSpeed', N'int', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
 INSERT [dbo].[FieldPoints] VALUES (N'StirrerFailure', N'StirrerFailure', N'FieldPoint', N'R1.StirrerFailure', N'bool', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
 INSERT [dbo].[FieldPoints] VALUES (N'StirrerSpeedSetPoint', N'StirrerSpeedSetPoint', N'FieldPoint', N'R1.StirrerSetPoint', N'int', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
@@ -32,3 +32,4 @@ INSERT [dbo].[FieldPoints] VALUES (N'VentTemperature', N'VentTemperature', N'Fie
 
 insert into dbo.CommandPoints select Label, SensorDataSetIdentifier, FieldDeviceIdentifier from dbo.FieldPoints where Label in ('HeatCoolStatus', 'StirrerStatus', 'EmergencyStatus')
 
+select * from dbo.Reactor_1

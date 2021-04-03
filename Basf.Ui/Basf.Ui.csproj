@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\Converters.cs" />
+    <Compile Include="Helpers\RampHelpers.cs" />
     <Compile Include="Helpers\UiHelpers.cs" />
     <Compile Include="Models\DevicesReportHandler.cs" />
     <Compile Include="UiModule.cs" />
@@ -141,6 +142,10 @@
     <ProjectReference Include="..\E3.Mediator\E3.Mediator.csproj">
       <Project>{72adf709-4940-46a3-9121-1b7a7abaa2c1}</Project>
       <Name>E3.Mediator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\E3.RampManager\E3.RampManager.csproj">
+      <Project>{756c22fe-f129-4009-b1a9-f7cd2aa01b65}</Project>
+      <Name>E3.RampManager</Name>
     </ProjectReference>
     <ProjectReference Include="..\E3.ReactorManager.DesignExperiment\E3.ReactorManager.DesignExperiment.csproj">
       <Project>{9079b332-6e6e-412c-9153-895a4db989d3}</Project>

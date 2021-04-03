@@ -26,8 +26,18 @@ namespace E3.RampManager.ViewModels
             this.rampManager.UpdateRamp += RampManager_UpdateRamp;
             this.mediatorService.Register(InMemoryMediatorMessageContainer.UpdateSelectedDeviceId, d => {
                 Device = d as Device;
-                LoadRampIfExists(Device.Id, FieldPointId);
             });
+        }
+
+        public void SetFieldPointId(string fpId)
+        {
+            FieldPointId = fpId;
+            RaisePropertyChanged(nameof(FieldPointId));
+        }
+
+        public void LoadRampIfExists()
+        {
+            LoadRampIfExists(Device.Id, FieldPointId);
         }
 
         private void RampManager_UpdateRamp(string deviceId, string fieldPointId, string propertyName, object value)
@@ -76,16 +86,17 @@ namespace E3.RampManager.ViewModels
                 if (Convert.ToInt32(stepsCount) < 7)
                 {
                     Steps.Add(new RampStep { StepIndex = Convert.ToInt32(stepsCount) });
+                    RaisePropertyChanged(nameof(Steps));
                 }
             });
         }
         public ICommand StartRampCommand
         {
-            get => new DelegateCommand(() => rampManager.StartRamp(Device.Id, "Stirrer", Steps.ToList()));
+            get => new DelegateCommand(() => rampManager.StartRamp(Device.Id, FieldPointId, Steps.ToList()));
         }
         public ICommand EndRampCommand
         {
-            get => new DelegateCommand(() => rampManager.EndRamp(Device.Id, "Stirrer"));
+            get => new DelegateCommand(() => rampManager.EndRamp(Device.Id, FieldPointId));
         }
         public ICommand ClearRampCommand
         {
@@ -94,7 +105,7 @@ namespace E3.RampManager.ViewModels
         #endregion
 
         #region Properties
-        public string FieldPointId { get; } = "Stirrer";
+        public string FieldPointId { get; private set; }
         public ObservableCollection<RampStep> Steps { get; set; } = new ObservableCollection<RampStep>();
         public Ramp Ramp { get; set; } = new Ramp();
         public Device Device { get; set; } = new Device();

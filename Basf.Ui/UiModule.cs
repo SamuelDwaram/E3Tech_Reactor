@@ -1,4 +1,5 @@
 ﻿using Basf.Ui.Views;
+using E3.RampManager.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
@@ -21,6 +22,8 @@ namespace Basf.Ui
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            regionManager.RegisterViewWithRegion("RampHc", typeof(RampView));
+            regionManager.RegisterViewWithRegion("RampStirrer", typeof(RampView));
             regionManager.RegisterViewWithRegion("Logo", typeof(Logo));
             containerRegistry.RegisterForNavigation(typeof(InitializeView), "Initialize");
             containerRegistry.RegisterForNavigation(typeof(DashboardView), "Dashboard");

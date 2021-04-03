@@ -63,5 +63,35 @@ namespace E3.UserManager.Helpers
             };
         }
         #endregion
+
+        #region Password
+        public static object GetPassword(DependencyObject obj)
+        {
+            return obj.GetValue(PasswordProperty);
+        }
+
+        public static void SetPassword(DependencyObject obj, object value)
+        {
+            obj.SetValue(PasswordProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for Password.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty PasswordProperty =
+            DependencyProperty.RegisterAttached("Password", typeof(object), typeof(UiHelpers), new PropertyMetadata(PasswordChanged));
+
+        private static void PasswordChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (!(d is PasswordBox))
+            {
+                return;
+            }
+
+            (d as PasswordBox).PasswordChanged += (sender, args) => {
+                PasswordBox passwordBox = sender as PasswordBox;
+                object baseObject = GetPassword(passwordBox);
+                baseObject.GetType().GetProperty(passwordBox.Tag.ToString()).SetValue(baseObject, passwordBox.Password);
+            };
+        }
+        #endregion
     }
 }

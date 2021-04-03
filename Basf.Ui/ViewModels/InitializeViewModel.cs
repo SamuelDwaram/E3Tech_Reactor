@@ -85,6 +85,15 @@ namespace Basf.Ui.ViewModels
                         SensorDataSetId = "sensorDataSet_1",
                         Units = "°C",
                         IsLiveTrendParameter = true
+                    },
+                    new TrendParameter
+                    {
+                        Label = "Vapour Temperature",
+                        Limits = "0|200",
+                        FieldPointId = "VapourTemperature",
+                        SensorDataSetId = "sensorDataSet_1",
+                        Units = "°C",
+                        IsLiveTrendParameter = true
                     }
                 }
             };
