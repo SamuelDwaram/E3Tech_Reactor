@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Anathem.Ui.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <Grid Background="#1a202c">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="0" Background="#272e3e" Margin="5">
+            <DockPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="DockPanel.Dock" Value="Top" />
+                    <Setter Property="VerticalAlignment" Value="Top" />
+                    <Setter Property="Command" Value="{Binding NavigateCommand}" />
+                </Style>
+            </DockPanel.Resources>
+            <Button Content="Reactor Control" CommandParameter="ReactorControl"/>
+            <Button Content="Recipe Designer" CommandParameter="RecipeDesigner"/>
+        </DockPanel>
+    </Grid>
+</UserControl>
