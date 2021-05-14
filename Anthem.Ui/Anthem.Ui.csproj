@@ -68,8 +68,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserControls\Parameter.xaml.cs">
+      <DependentUpon>Parameter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\InitializeViewModel.cs" />
+    <Compile Include="ViewModels\ParametersHostViewModel.cs" />
     <Compile Include="ViewModels\ReactorControlViewModel.cs" />
     <Compile Include="ViewModels\RecipeBuilderViewModel.cs" />
     <Compile Include="Views\DashboardView.xaml.cs">
@@ -77,6 +81,9 @@
     </Compile>
     <Compile Include="Views\InitializeView.xaml.cs">
       <DependentUpon>InitializeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ParametersHostView.xaml.cs">
+      <DependentUpon>ParametersHostView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ReactorControlView.xaml.cs">
       <DependentUpon>ReactorControlView.xaml</DependentUpon>
@@ -100,11 +107,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UserControls\Parameter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\DashboardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\InitializeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ParametersHostView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,7 +165,7 @@
     <Resource Include="Images\rv.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Content Include="SqlFiles\FieldDevicesInitialization.sql" />
+    <Content Include="SqlFiles\FieldDevices-Plc-SensorsDataSet.sql" />
     <Content Include="SqlFiles\FieldPoints.sql" />
     <Content Include="SqlFiles\LogLiveData.sql" />
     <Content Include="SqlFiles\ReadFieldDeviceData.sql" />

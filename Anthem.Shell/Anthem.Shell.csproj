@@ -21,7 +21,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Binaries\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,7 +30,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Binaries\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -52,10 +52,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -152,6 +152,10 @@
     <ProjectReference Include="..\E3Tech.IO.FileAccess\E3Tech.IO.FileAccess.csproj">
       <Project>{038c353e-942a-4863-a0b3-6cec7dba0a56}</Project>
       <Name>E3Tech.IO.FileAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\E3Tech.Navigation\E3Tech.Navigation.csproj">
+      <Project>{dc50d873-ade1-45ca-9f70-d310709ec32b}</Project>
+      <Name>E3Tech.Navigation</Name>
     </ProjectReference>
     <ProjectReference Include="..\E3Tech.RecipeBuilding\E3Tech.RecipeBuilding.csproj">
       <Project>{d38f63a2-4a12-4564-8130-a17a85693a56}</Project>

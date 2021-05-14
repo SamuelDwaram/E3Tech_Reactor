@@ -1,4 +1,5 @@
 /* Tags for Field Points of Equipments connected to Reactor */
+delete from dbo.CommandPoints
 delete from dbo.FieldPoints
 
 /*insert into dbo.FieldPoints values('', '', '', '', '', '', '', '', '')*/
@@ -14,7 +15,8 @@ delete from dbo.FieldPoints
 	insert into dbo.FieldPoints values('BatchStatus', 'BatchStatus', 'FieldPoint', 'R1.BatchText_4', 'string', 'false', 'true', 'sensorDataSet_1', 'Reactor_1')
 	insert into dbo.FieldPoints values('BatchScientistName', 'BatchScientistName', 'FieldPoint', 'R1.BatchText_5', 'string', 'false', 'true', 'sensorDataSet_1', 'Reactor_1')
 	
-	insert into dbo.FieldPoints values('Valve_1', 'Valve_1', 'FieldPoint', 'R1.Valve_1', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
+	insert into dbo.FieldPoints values('Valve_1', 'Valve_1', 'FieldPoint', 'Coupler.couplerConnectionStatus', 'bool', 'true', 'false', 'sensorDataSet_1', 'Reactor_1')
+	/*
 	insert into dbo.FieldPoints values('Valve_2', 'Valve_2', 'FieldPoint', 'R1.Valve_2', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
 	insert into dbo.FieldPoints values('Valve_3', 'Valve_3', 'FieldPoint', 'R1.Valve_3', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
 	insert into dbo.FieldPoints values('Valve_4', 'Valve_4', 'FieldPoint', 'R1.Valve_4', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
@@ -74,6 +76,9 @@ delete from dbo.FieldPoints
 	insert into dbo.FieldPoints values('Pump_8', 'Pump_8', 'FieldPoint', 'R1.Pump_8', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
 	insert into dbo.FieldPoints values('Pump_9', 'Pump_9', 'FieldPoint', 'R1.Pump_9', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
 	insert into dbo.FieldPoints values('Pump_10', 'Pump_10', 'FieldPoint', 'R1.Pump_10', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
+	*/
+
+	insert into dbo.CommandPoints select Label, SensorDataSetIdentifier, FieldDeviceIdentifier from dbo.FieldPoints where CHARINDEX('Valve_', Label) > 0 
 
 	/*
 	insert into dbo.FieldPoints values('Tls', 'Top Level Sensor', 'FieldPoint', 'R1.Tls', 'bool', 'false', 'true', 'sensorDataSet_1', 'Reactor_1')
