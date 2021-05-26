@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefaultFileBrowser.cs" />
+    <Compile Include="FileAccessModule.cs" />
     <Compile Include="IFileBrowser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

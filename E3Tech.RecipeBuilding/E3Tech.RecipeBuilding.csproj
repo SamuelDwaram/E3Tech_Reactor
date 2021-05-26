@@ -51,8 +51,8 @@
     <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.4\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Prism, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.7.1.0.431\lib\net45\Prism.dll</HintPath>
@@ -100,6 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\RecipesView.xaml.cs">
+      <DependentUpon>RecipesView.xaml</DependentUpon>
+    </Compile>
     <Page Include="ParameterProviders\BlockParameterProviderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -199,6 +202,7 @@
       <DependentUpon>ToggleButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\MultiRecipeBuilderViewModel.cs" />
+    <Compile Include="ViewModels\RecipesViewModel.cs" />
     <Compile Include="ViewModels\RecipeStepViewModel.cs" />
     <Compile Include="ViewModels\RecipeBuilderViewModel.cs" />
     <Compile Include="ViewModels\BlockParameterProviderViewModel.cs" />
@@ -208,6 +212,10 @@
     <Compile Include="Views\RecipeBuilderView.xaml.cs">
       <DependentUpon>RecipeBuilderView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\RecipesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -241,6 +249,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\E3.Mediator\E3.Mediator.csproj">
+      <Project>{72adf709-4940-46a3-9121-1b7a7abaa2c1}</Project>
+      <Name>E3.Mediator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\E3.ReactorManager.Interfaces\E3.ReactorManager.Interfaces.csproj">
       <Project>{620C94FE-D355-4801-92B0-F86D1B08FB02}</Project>
       <Name>E3.ReactorManager.Interfaces</Name>

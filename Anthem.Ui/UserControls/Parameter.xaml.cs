@@ -1,7 +1,9 @@
-﻿using Prism.Commands;
+﻿using Anathem.Ui.Helpers;
+using Prism.Commands;
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -15,6 +17,17 @@ namespace Anathem.Ui.UserControls
         public Parameter()
         {
             InitializeComponent();
+            Loaded += Parameter_Loaded;
+        }
+
+        private void Parameter_Loaded(object sender, RoutedEventArgs e)
+        {
+            BindingOperations.SetBinding(this, LiveDataProperty, new Binding("Parameters") { 
+                Source = DataContext,
+                Mode = BindingMode.OneWay,
+                Converter = new ParameterExtractorConverter(),
+                ConverterParameter = Tag.ToString()
+            });
         }
 
         #region Live Data

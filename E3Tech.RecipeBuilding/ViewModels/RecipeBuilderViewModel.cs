@@ -165,8 +165,8 @@ namespace E3Tech.RecipeBuilding.ViewModels
 
         public void UpdateRecipeParameters()
         {
-            RecipeStatus = fieldDevicesCommunicator.ReadFieldPointValue<string>(DeviceId, "RecipeStatus");
-            RecipeEnded = fieldDevicesCommunicator.ReadFieldPointValue<string>(DeviceId, "RecipeEnded");
+            RecipeStatus = fieldDevicesCommunicator.ReadFieldPointValue<bool>(DeviceId, "RecipeStatus").ToString();
+            RecipeEnded = fieldDevicesCommunicator.ReadFieldPointValue<bool>(DeviceId, "RecipeEnded").ToString();
         }
 
         public void UpdateNavigationParameters(NavigationParameters NavigationParameters)
@@ -319,7 +319,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
             return recipeStatus || recipeEndedStatus;
         }
 
-        private bool IsRecipeEnded() => !bool.Parse(RecipeEnded);
+        private bool IsRecipeEnded() => !bool.Parse(RecipeStatus);
 
         private void ShowErrorNotificationToUser() => MessageBox.Show("You are allowed to give only 'Clear Recipe' Command", "Invalid Command", MessageBoxButton.OK, MessageBoxImage.Error);
 

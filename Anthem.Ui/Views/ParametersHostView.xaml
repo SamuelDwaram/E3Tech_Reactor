@@ -11,34 +11,175 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
-        <helpers:ParameterExtractorConverter x:Key="ParameterExtractor"/>
+        <Style TargetType="uc_1:Parameter">
+            <Setter Property="BorderBrush" Value="#1d2532" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="OnClick" Value="{Binding SendCommandToDevice}" />
+        </Style>
+        <Style TargetType="Label" x:Key="HeaderLabel">
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="#1d2532" />
+            <Setter Property="FontSize" Value="8" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
     </UserControl.Resources>
     <Grid Background="#272e3e">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="9*"/>
         </Grid.ColumnDefinitions>
-        <Grid.Resources>
-            <Style TargetType="uc_1:Parameter">
-                <Setter Property="OnClick" Value="{Binding SendCommandToDevice}" />
-            </Style>
-        </Grid.Resources>
-        <uc_2:NavigateButtonType_1 Grid.Row="0" Grid.Column="0" ButtonCommand="{Binding NavigateCommand}" ButtonCommandParameter="Dashboard"/>
-        <uc_1:Parameter Grid.Row="1" Grid.Column="1" ParamLabel="V1" Tag="Valve_1" LiveData="{Binding Parameters, Converter={StaticResource ParameterExtractor}, ConverterParameter=Valve_1}"/>
+        <uc_2:NavigateButtonType_1 VerticalAlignment="Top" Grid.Column="0" ButtonCommand="{Binding NavigateCommand}" ButtonCommandParameter="Dashboard"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+            </Grid.Resources>
+            <Label Grid.Row="0" Grid.Column="0" Content="EQUIPMENTS" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="VENT&#xA;VALVES" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="N2 PURGING" Style="{StaticResource HeaderLabel}"/>
+            <Grid Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Content="FILL FROM MAIN TANK" Style="{StaticResource HeaderLabel}"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="FILL IN PUMP" Style="{StaticResource HeaderLabel}"/>
+                <Label Grid.Row="1" Grid.Column="1" Content="FILL IN VALVES" Style="{StaticResource HeaderLabel}"/>
+            </Grid>
+            <Label Grid.Row="0" Grid.Column="5" Content="FILL IN FROM&#xA;HEADER" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="0" Grid.Column="6" Content="TRASFER PUMPS" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="0" Grid.Column="7" Content="TRANSFER&#xA;VALVES" Style="{StaticResource HeaderLabel}"/>
+            
+            <!--#region Column 0-->
+            <Label Grid.Row="1" Grid.Column="0" Content="R1" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="R2" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="R3" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="R4" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="R5" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="6" Grid.RowSpan="3" Grid.Column="0" Content="AA1" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="9" Grid.RowSpan="3" Grid.Column="0" Content="AA2" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="12" Grid.RowSpan="2" Grid.Column="0" Content="MVA" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="14" Grid.RowSpan="2" Grid.Column="0" Content="MVB" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="16" Grid.RowSpan="2" Grid.Column="0" Content="DCM" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="18" Grid.RowSpan="2" Grid.Column="0" Content="RV" Style="{StaticResource HeaderLabel}"/>
+            <Label Grid.Row="20" Grid.RowSpan="2" Grid.Column="0" Content="SS TANK" Style="{StaticResource HeaderLabel}"/>
+            <!--#endregion-->
+
+            <!--#region Column 1 -->
+            <uc_1:Parameter Grid.Row="1" Grid.Column="1" ParamLabel="V1" Tag="Valve_1"/>
+            <uc_1:Parameter Grid.Row="2" Grid.Column="1" ParamLabel="V4" Tag="Valve_4"/>
+            <uc_1:Parameter Grid.Row="3" Grid.Column="1" ParamLabel="V8" Tag="Valve_8"/>
+            <uc_1:Parameter Grid.Row="4" Grid.Column="1" ParamLabel="V12" Tag="Valve_12"/>
+            <uc_1:Parameter Grid.Row="5" Grid.Column="1" ParamLabel="V50" Tag="Valve_50"/>
+            <uc_1:Parameter Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" ParamLabel="V19" Tag="Valve_19"/>
+            <uc_1:Parameter Grid.Row="9" Grid.RowSpan="3" Grid.Column="1" ParamLabel="V21" Tag="Valve_21"/>
+            <uc_1:Parameter Grid.Row="12" Grid.RowSpan="2" Grid.Column="1" ParamLabel="V28" Tag="Valve_28"/>
+            <uc_1:Parameter Grid.Row="14" Grid.RowSpan="2" Grid.Column="1" ParamLabel="V46" Tag="Valve_46"/>
+            <uc_1:Parameter Grid.Row="16" Grid.RowSpan="2" Grid.Column="1" ParamLabel="V33" Tag="Valve_33"/>
+            <!--#endregion-->
+
+            <!--#region Column 2 -->
+            <uc_1:Parameter Grid.Row="1" Grid.Column="2" ParamLabel="V2" Tag="Valve_2"/>
+            <uc_1:Parameter Grid.Row="2" Grid.Column="2" ParamLabel="V5" Tag="Valve_5"/>
+            <uc_1:Parameter Grid.Row="3" Grid.Column="2" ParamLabel="V9" Tag="Valve_9"/>
+            <uc_1:Parameter Grid.Row="4" Grid.Column="2" ParamLabel="V13" Tag="Valve_13"/>
+            <uc_1:Parameter Grid.Row="5" Grid.Column="2" ParamLabel="V49" Tag="Valve_49"/>
+            <uc_1:Parameter Grid.Row="6" Grid.RowSpan="3" Grid.Column="2" ParamLabel="V16" Tag="Valve_16"/>
+            <uc_1:Parameter Grid.Row="9" Grid.RowSpan="3" Grid.Column="2" ParamLabel="V24" Tag="Valve_24"/>
+            <uc_1:Parameter Grid.Row="12" Grid.RowSpan="2" Grid.Column="2" ParamLabel="V51" Tag="Valve_51"/>
+            <uc_1:Parameter Grid.Row="14" Grid.RowSpan="2" Grid.Column="2" ParamLabel="V45" Tag="Valve_45"/>
+            <uc_1:Parameter Grid.Row="16" Grid.RowSpan="2" Grid.Column="2" ParamLabel="V34" Tag="Valve_34"/>
+            <uc_1:Parameter Grid.Row="18" Grid.RowSpan="2" Grid.Column="2" ParamLabel="V52" Tag="Valve_52"/>
+            <!--#endregion-->
+
+            <!--#region Column 3 -->
+            <uc_1:Parameter Grid.Row="1" Grid.Column="3" ParamLabel="P10" Tag="Pump_10"/>
+            <uc_1:Parameter Grid.Row="2" Grid.Column="3" ParamLabel="P16" Tag="Pump_16"/>
+            <uc_1:Parameter Grid.Row="3" Grid.Column="3" ParamLabel="P11" Tag="Pump_11"/>
+            <uc_1:Parameter Grid.Row="4" Grid.Column="3" ParamLabel="P12" Tag="Pump_12"/>
+            <uc_1:Parameter Grid.Row="5" Grid.Column="3" ParamLabel="P17" Tag="Pump_17"/>
+            <uc_1:Parameter Grid.Row="6" Grid.RowSpan="3" Grid.Column="3" ParamLabel="P13" Tag="Pump_13"/>
+            <uc_1:Parameter Grid.Row="9" Grid.RowSpan="3" Grid.Column="3" ParamLabel="P14" Tag="Pump_14"/>
+            <uc_1:Parameter Grid.Row="16" Grid.RowSpan="2" Grid.Column="3" ParamLabel="P15" Tag="Pump_15"/>
+            <!--#endregion-->
+
+            <!--#region Column 4 -->
+            <uc_1:Parameter Grid.Row="1" Grid.Column="4" ParamLabel="V53" Tag="Valve_53"/>
+            <uc_1:Parameter Grid.Row="2" Grid.Column="4" ParamLabel="V6" Tag="Valve_6"/>
+            <uc_1:Parameter Grid.Row="3" Grid.Column="4" ParamLabel="V54" Tag="Valve_54"/>
+            <uc_1:Parameter Grid.Row="4" Grid.Column="4" ParamLabel="V55" Tag="Valve_55"/>
+            <uc_1:Parameter Grid.Row="5" Grid.Column="4" ParamLabel="V58" Tag="Valve_58"/>
+            <uc_1:Parameter Grid.Row="6" Grid.RowSpan="3" Grid.Column="4" ParamLabel="V17" Tag="Valve_17"/>
+            <uc_1:Parameter Grid.Row="9" Grid.RowSpan="3" Grid.Column="4" ParamLabel="V23" Tag="Valve_23"/>
+            <uc_1:Parameter Grid.Row="16" Grid.RowSpan="2" Grid.Column="4" ParamLabel="V32" Tag="Valve_32"/>
+            <!--#endregion-->
+
+            <!--#region Column 5 -->
+            <uc_1:Parameter Grid.Row="3" Grid.Column="5" ParamLabel="V10" Tag="Valve_10"/>
+            <uc_1:Parameter Grid.Row="4" Grid.Column="5" ParamLabel="V14" Tag="Valve_14"/>
+            <uc_1:Parameter Grid.Row="5" Grid.Column="5" ParamLabel="V48" Tag="Valve_48"/>
+            <uc_1:Parameter Grid.Row="6" Grid.RowSpan="3" Grid.Column="5" ParamLabel="V18" Tag="Valve_18"/>
+            <uc_1:Parameter Grid.Row="9" Grid.RowSpan="3" Grid.Column="5" ParamLabel="V22" Tag="Valve_22"/>
+            <uc_1:Parameter Grid.Row="12" Grid.Column="5" ParamLabel="V26" Tag="Valve_26"/>
+            <uc_1:Parameter Grid.Row="13" Grid.Column="5" ParamLabel="V27" Tag="Valve_27"/>
+            <uc_1:Parameter Grid.Row="14" Grid.RowSpan="2" Grid.Column="5" ParamLabel="V44" Tag="Valve_44"/>
+            <uc_1:Parameter Grid.Row="18" Grid.Column="5" ParamLabel="V37" Tag="Valve_37"/>
+            <uc_1:Parameter Grid.Row="19" Grid.Column="5" ParamLabel="V38" Tag="Valve_38"/>
+            <!--#endregion-->
+
+            <!--#region Column 6 -->
+            <uc_1:Parameter Grid.Row="1" Grid.Column="6" ParamLabel="P1" Tag="Pump_10"/>
+            <uc_1:Parameter Grid.Row="2" Grid.Column="6" ParamLabel="P2" Tag="Pump_14"/>
+            <uc_1:Parameter Grid.Row="3" Grid.Column="6" ParamLabel="P3" Tag="Pump_48"/>
+            <uc_1:Parameter Grid.Row="4" Grid.Column="6" ParamLabel="P4" Tag="Pump_48"/>
+            <uc_1:Parameter Grid.Row="5" Grid.Column="6" ParamLabel="P4" Tag="Pump_48"/>
+            <uc_1:Parameter Grid.Row="6" Grid.RowSpan="3" Grid.Column="6" ParamLabel="V18" Tag="Pump_18"/>
+            <uc_1:Parameter Grid.Row="9" Grid.RowSpan="3" Grid.Column="6" ParamLabel="V22" Tag="Pump_22"/>
+            <uc_1:Parameter Grid.Row="12" Grid.Column="6" ParamLabel="V26" Tag="Pump_26"/>
+            <uc_1:Parameter Grid.Row="13" Grid.Column="6" ParamLabel="V27" Tag="Pump_27"/>
+            <uc_1:Parameter Grid.Row="14" Grid.RowSpan="2" Grid.Column="6" ParamLabel="V44" Tag="Pump_44"/>
+            <uc_1:Parameter Grid.Row="18" Grid.Column="6" ParamLabel="V37" Tag="Pump_37"/>
+            <uc_1:Parameter Grid.Row="19" Grid.Column="5" ParamLabel="V38" Tag="Pump_38"/>
+            <!--#endregion-->
+        </Grid>
     </Grid>
 </UserControl>

@@ -7,6 +7,7 @@ using System.Linq;
 using System;
 using Prism.Mvvm;
 using Prism.Regions;
+using System.Windows;
 
 namespace E3Tech.RecipeBuilding.ViewModels
 {
@@ -51,7 +52,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
 
         public void UpdateNavigationParameters()
         {
-            NavigationParameters = (NavigationParameters)regionManager.Regions["RecipeBuilderView"].Context;
+            NavigationParameters = new NavigationParameters();
         }
 
         private void RemoveExtraRecipesInMultiRecipeBuilder()

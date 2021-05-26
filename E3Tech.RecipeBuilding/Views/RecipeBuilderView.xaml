@@ -139,18 +139,20 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <DataGrid x:Name="dataGrid" Background="#1d2532" BorderBrush="#1d2532"
-                        ScrollViewer.VerticalScrollBarVisibility="Visible" 
-                        SelectionMode="Single" 
-                        CanUserSortColumns="False" 
-                        CanUserReorderColumns="False" 
-                        AutoGenerateColumns="False" 
-                        SelectedItem ="{Binding SelectedStep}"
-                        Grid.Column="1" IsReadOnly="True" 
-                        Margin="5"                     
-                        ItemsSource="{Binding RecipeSteps}"     
-                        helpers:DataGridDropBehavior.DropCommand="{Binding DropCommand}"
-                        helpers:DataGridScrollBehavior.SelectingItemIndex="{Binding ElementName=dataGrid,Path=SelectedIndex}"
-                        AllowDrop="True" CanUserResizeColumns="False" GridLinesVisibility="None" HeadersVisibility="None">
+                      EnableRowVirtualization="False"
+                      VirtualizingStackPanel.VirtualizationMode="Standard"
+                    ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                    SelectionMode="Single" 
+                    CanUserSortColumns="False" 
+                    CanUserReorderColumns="False" 
+                    AutoGenerateColumns="False" 
+                    SelectedItem ="{Binding SelectedStep}"
+                    Grid.Column="1" IsReadOnly="True" 
+                    Margin="5"                     
+                    ItemsSource="{Binding RecipeSteps}"     
+                    helpers:DataGridDropBehavior.DropCommand="{Binding DropCommand}"
+                    helpers:DataGridScrollBehavior.SelectingItemIndex="{Binding ElementName=dataGrid,Path=SelectedIndex}"
+                    AllowDrop="True" CanUserResizeColumns="False" GridLinesVisibility="None" HeadersVisibility="None">
                 <DataGrid.CellStyle>
                     <Style TargetType="DataGridCell">
                         <Style.Triggers>

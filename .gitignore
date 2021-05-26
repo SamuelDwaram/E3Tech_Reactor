@@ -339,6 +339,9 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /Binaries
-/Binaries
-/Plc/BasfWithRamp/BASF_RecipeCode_PLC/_CompileInfo
-/Plc/BasfWithRamp/TrialLicense.tclrs
+/Plc/Anthem/Anthem/_CompileInfo
+/Plc/Anthem/TrialLicense.tclrs
+/Plc/Anthem/Anthem/_Boot
+/Plc/Anthem/Anthem/Simulator/_CompileInfo
+/Plc/Anthem/Anthem/TrialLicense.tclrs
+/Plc/Anthem/Anthem.project.~u

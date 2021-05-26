@@ -20,8 +20,8 @@
                     <Setter Property="Command" Value="{Binding NavigateCommand}" />
                 </Style>
             </DockPanel.Resources>
-            <!--<Button Content="Reactor Control" CommandParameter="ReactorControl"/>
-            <Button Content="Recipe Designer" CommandParameter="RecipeDesigner"/>-->
+            <Button Content="Reactor Control" CommandParameter="ReactorControl"/>
+            <Button Content="Recipes View" CommandParameter="Recipes"/>
             <Button Content="Parameters Host" CommandParameter="ParametersHost"/>
         </DockPanel>
     </Grid>

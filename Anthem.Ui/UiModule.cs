@@ -16,7 +16,6 @@ namespace Anathem.Ui
             containerRegistry.RegisterForNavigation(typeof(DashboardView), "Dashboard");
             containerRegistry.RegisterForNavigation(typeof(ReactorControlView), "ReactorControl");
             containerRegistry.RegisterForNavigation(typeof(InitializeView), "Initialize");
-            containerRegistry.RegisterForNavigation(typeof(RecipeBuilderView), "RecipeDesigner");
             containerRegistry.RegisterForNavigation(typeof(ParametersHostView), "ParametersHost");
         }
     }

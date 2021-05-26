@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <GVL Name="R1" Id="{0082af93-79e7-4ec9-9629-40ee8d1d2137}">
+    <Declaration><![CDATA[VAR_GLOBAL
+
+//****** VALVES *****//
+	Valve_1 : BOOL;
+	Valve_2 : BOOL;
+	Valve_3 : BOOL;
+	Valve_4 : BOOL;
+	Valve_5 : BOOL;
+	Valve_6 : BOOL;
+	Valve_7 : BOOL;
+	Valve_8 : BOOL;
+	Valve_9 : BOOL;
+	Valve_10 : BOOL;
+	Valve_11 : BOOL;
+	Valve_12 : BOOL;
+	Valve_13 : BOOL;
+	Valve_14 : BOOL;
+	Valve_15 : BOOL;
+	Valve_16 : BOOL;
+	Valve_17 : BOOL;
+	Valve_18 : BOOL;
+	Valve_19 : BOOL;
+	Valve_20 : BOOL;
+	Valve_21 : BOOL;
+	Valve_22 : BOOL;
+	Valve_23 : BOOL;
+	Valve_24 : BOOL;
+	Valve_25 : BOOL;
+	Valve_26 : BOOL;
+	Valve_27 : BOOL;
+	Valve_28 : BOOL;
+	Valve_29 : BOOL;
+	Valve_30 : BOOL;
+	Valve_31 : BOOL;
+	Valve_32 : BOOL;
+	Valve_33 : BOOL;
+	Valve_34 : BOOL;
+	Valve_35 : BOOL;
+	Valve_36 : BOOL;
+	Valve_37 : BOOL;
+	Valve_38 : BOOL;
+	Valve_39 : BOOL;
+	Valve_40 : BOOL;
+	Valve_41 : BOOL;
+	Valve_42 : BOOL;
+	Valve_43 : BOOL;
+	Valve_44 : BOOL;
+	Valve_45 : BOOL;
+	Valve_46 : BOOL;
+	Valve_47 : BOOL;
+	Valve_48 : BOOL;
+	Valve_49 : BOOL;
+	Valve_50 : BOOL;
+
+
+
+//****** PUMPS *****//
+	Pump_1 : BOOL;
+	Pump_2 : BOOL;
+	Pump_3 : BOOL;
+	Pump_4 : BOOL;
+	Pump_5 : BOOL;
+	Pump_6 : BOOL;
+	Pump_7 : BOOL;
+	Pump_8 : BOOL;
+	Pump_9 : BOOL;
+	Pump_10 : BOOL;
+
+	
+//***** TAGS FOR HC ******//
+	HeatCoolStatus : BOOL;
+	HeatCoolSetPoint : DINT := 0;
+	HeatCoolTemperatureControlType : BOOL; (* 0 - Jacket , 1 - Process *)
+	HeatCoolStatusFeedback : BOOL;
+	ReactorMassTemperature : REAL;
+	JacketOutletTemperature : REAL;
+	
+// ***** TAGS FOR STIRRER *****//
+	StirrerStatus : BOOL;
+	StirrerStatusFeedback : BOOL;
+	StirrerSetPoint : DINT;
+	StirrerRPM : DINT;  (* Rotations Per Minute *)
+	
+// ***** TAGS FOR DOSING PUMP ******//
+	DosingPumpStatus : BOOL;
+	DosingPumpFlowSetPoint : REAL;
+	DosingPumpFPM : REAL; (* Flow Per Minute *)
+	DosingPumpStatusFeedback : BOOL;
+	
+
+//***** COMPULSORY UI TAGS *****//
+	UsedNow : BOOL :=FALSE;
+	EmergencyStatus :BOOL:=0;
+	BatchText_1:STRING;
+	BatchText_2:STRING;
+	BatchText_3:STRING;
+	BatchText_4:STRING;
+	BatchText_5:STRING;
+
+
+//****** TAGS FOR RECIPE ******//
+	StepCount:INT:=0;
+	TotalEnabledValue:INT:=0;
+	TotalEndedValue:INT:=0;
+	StepCompleted:BOOL:=0;
+	NumberOfRecipeSteps : DINT := 0;
+	RecipeStep: ARRAY[0..100] OF EachRecipeStep;
+	RecipeStatus:BOOL:=0;
+	ClearRecipe:BOOL:=0;
+	AbortRecipe : BOOL := 0;
+	RecipeEnded:BOOL;
+	StartWaitTimer: BOOL; 
+	DosingControlModeEmergency : BOOL;
+	WaitTick:INT:=0;
+	WaitSecondTick:INT:=0;
+	WaitMinuteTick:INT:=0;
+	ClearRecipeTrig:BOOL;
+	 
+END_VAR
+
+]]></Declaration>
+  </GVL>
+</TcPlcObject>
