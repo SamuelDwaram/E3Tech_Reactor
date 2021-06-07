@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+  <DUT Name="Vessel" Id="{bd272d08-88e2-4cd5-872e-6421638a2e1c}">
+    <Declaration><![CDATA[TYPE Vessel :
+STRUCT
+	LLS AT %I* : BOOL;	
+	ULS AT %I* : BOOL;	
+	
+	VentValve AT %Q* : BOOL := FALSE;
+	N2PurgeValve AT %Q* : BOOL := FALSE;
+	TransferValve AT %Q* : BOOL := FALSE;
+	FillInValve AT %Q* : BOOL := FALSE;
+	FillInPump AT %Q* : BOOL := FALSE;
+	TransferPump AT %Q* : BOOL := FALSE;
+	FillInHeaderValve AT %Q* : BOOL := FALSE;
+
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>
