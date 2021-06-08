@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace Anathem.Ui.Helpers
@@ -61,31 +62,28 @@ namespace Anathem.Ui.Helpers
             {
                 return;
             }
-
             if (uiElement.GetType() == typeof(ButtonOnOffAnimation))
             {
-                (uiElement as ButtonOnOffAnimation).MouseLeftButtonDown += (sender, args) => {
+                ButtonOnOffAnimation ba = uiElement as ButtonOnOffAnimation;
+                if (!ba.IsLoaded)
+                {
+                    ba.Loaded += (sender, args) => {
+                        ButtonOnOffAnimation button = sender as ButtonOnOffAnimation;
+                        button.SetBinding(ButtonOnOffAnimation.StatusProperty, new Binding("ParameterDictionary")
+                        {
+                            Source = button.DataContext,
+                            Converter = new ParameterExtractorConverter(),
+                            ConverterParameter = button.Tag.ToString()
+                        });
+                    };
+                }
+
+                ba.MouseLeftButtonDown += (sender, args) => {
                     ButtonOnOffAnimation button = sender as ButtonOnOffAnimation;
-                    string parameterInfo = GetParameterInfo(button);
-                    GetCommandToDevice(button).Execute(parameterInfo + '|' + !Convert.ToBoolean(button.CurrentStatus));
+                    GetCommandToDevice(button).Execute($"{button.Tag}|bool|{!Convert.ToBoolean(ButtonOnOffAnimation.GetStatus(button) ?? bool.FalseString)}");
                 };
             }
         }
-        #endregion
-
-        #region Parameter Info
-        public static string GetParameterInfo(DependencyObject obj)
-        {
-            return (string)obj.GetValue(ParameterInfoProperty);
-        }
-
-        public static void SetParameterInfo(DependencyObject obj, string value)
-        {
-            obj.SetValue(ParameterInfoProperty, value);
-        }
-
-        public static readonly DependencyProperty ParameterInfoProperty =
-            DependencyProperty.RegisterAttached("ParameterInfo", typeof(string), typeof(UiHelpers), new PropertyMetadata(string.Empty));
         #endregion
     }
 }

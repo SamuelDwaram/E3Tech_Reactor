@@ -12,9 +12,9 @@ namespace Anathem.Ui.UserControls
     /// <summary>
     /// Interaction logic for Parameter.xaml
     /// </summary>
-    public partial class Parameter : UserControl
+    public partial class BoolParameter : UserControl
     {
-        public Parameter()
+        public BoolParameter()
         {
             InitializeComponent();
             Loaded += Parameter_Loaded;
@@ -32,8 +32,8 @@ namespace Anathem.Ui.UserControls
 
         #region Live Data
         public static readonly DependencyProperty LiveDataProperty =
-           DependencyProperty.Register("LiveData", typeof(string), typeof(Parameter), 
-               new PropertyMetadata("NC", new PropertyChangedCallback((dp, args) => (dp as Parameter).OnLiveDataReceived(args.NewValue.ToString()))));
+           DependencyProperty.Register("LiveData", typeof(string), typeof(BoolParameter), 
+               new PropertyMetadata("NC", new PropertyChangedCallback((dp, args) => (dp as BoolParameter).OnLiveDataReceived(args.NewValue.ToString()))));
 
         public string LiveData
         {
@@ -61,8 +61,8 @@ namespace Anathem.Ui.UserControls
 
         #region Param Label
         public static readonly DependencyProperty ParamLabelProperty =
-           DependencyProperty.Register("ParamLabel", typeof(string), typeof(Parameter), new
-              PropertyMetadata(string.Empty, new PropertyChangedCallback((dp, args) => (dp as Parameter).paramLabel.Content = args.NewValue.ToString())));
+           DependencyProperty.Register("ParamLabel", typeof(string), typeof(BoolParameter), new
+              PropertyMetadata(string.Empty, new PropertyChangedCallback((dp, args) => (dp as BoolParameter).paramLabel.Content = args.NewValue.ToString())));
 
         public string ParamLabel
         {
@@ -84,17 +84,17 @@ namespace Anathem.Ui.UserControls
 
         // Using a DependencyProperty as the backing store for OnClick.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty OnClickProperty =
-            DependencyProperty.RegisterAttached("OnClick", typeof(ICommand), typeof(Parameter), new PropertyMetadata(new DelegateCommand(() => { }), OnClickChanged));
+            DependencyProperty.RegisterAttached("OnClick", typeof(ICommand), typeof(BoolParameter), new PropertyMetadata(new DelegateCommand(() => { }), OnClickChanged));
 
         private static void OnClickChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            if (!(d is Parameter))
+            if (!(d is BoolParameter))
             {
                 return;
             }
 
-            (d as Parameter).PreviewMouseDown += (sender, args) => {
-                Parameter parameter = sender as Parameter;
+            (d as BoolParameter).PreviewMouseDown += (sender, args) => {
+                BoolParameter parameter = sender as BoolParameter;
                 GetOnClick(parameter).Execute($"{parameter.Tag}|{parameter.LiveData}");
             };
         }
