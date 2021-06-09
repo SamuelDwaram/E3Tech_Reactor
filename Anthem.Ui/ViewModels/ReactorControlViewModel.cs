@@ -2,6 +2,7 @@
 using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
 using Prism.Commands;
 using Prism.Mvvm;
+using Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -10,15 +11,17 @@ using System.Windows.Input;
 
 namespace Anathem.Ui.ViewModels
 {
-    public class ReactorControlViewModel : BindableBase
+    public class ReactorControlViewModel : BindableBase, IRegionMemberLifetime
     {
         private readonly IFieldDevicesCommunicator fieldDevicesCommunicator;
+        private readonly IRegionManager regionManager;
         private readonly TaskScheduler taskScheduler;
 
-        public ReactorControlViewModel(IFieldDevicesCommunicator fieldDevicesCommunicator)
+        public ReactorControlViewModel(IFieldDevicesCommunicator fieldDevicesCommunicator, IRegionManager regionManager)
         {
             taskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
             this.fieldDevicesCommunicator = fieldDevicesCommunicator;
+            this.regionManager = regionManager;
             this.fieldDevicesCommunicator.FieldPointDataReceived += FieldDevicesCommunicator_FieldPointDataReceived;
             Task.Factory.StartNew(new Action(LoadDeviceParametersFromHardwareLayer))
                 .ContinueWith(t => UpdateUi());
@@ -67,6 +70,12 @@ namespace Anathem.Ui.ViewModels
             });
         }
 
+        public ICommand NavigateCommand
+        {
+            get => new DelegateCommand<string>(str => regionManager.RequestNavigate("SelectedViewPane", str));
+        }
+
+        public bool KeepAlive { get; set; } = false;
         public string DeviceId => "Reactor_1";
         public Dictionary<string, string> ParameterDictionary { get; set; } = new Dictionary<string, string>();
     }

@@ -51,9 +51,6 @@
   <ItemGroup>
     <Compile Include="Helpers\Converters.cs" />
     <Compile Include="Helpers\UiHelpers.cs" />
-    <Compile Include="References\ReactorControlView.xaml.cs">
-      <DependentUpon>ReactorControlView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UiModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -68,8 +65,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UserControls\Parameter.xaml.cs">
-      <DependentUpon>Parameter.xaml</DependentUpon>
+    <Compile Include="UserControls\BoolParameter.xaml.cs">
+      <DependentUpon>BoolParameter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GraphicalParameter.xaml.cs">
+      <DependentUpon>GraphicalParameter.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\InitializeViewModel.cs" />
@@ -99,11 +99,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Page Include="References\ReactorControlView.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="UserControls\BoolParameter.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\Parameter.xaml">
+    <Page Include="UserControls\GraphicalParameter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,7 +121,7 @@
     </Page>
     <Page Include="Views\ReactorControlView.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

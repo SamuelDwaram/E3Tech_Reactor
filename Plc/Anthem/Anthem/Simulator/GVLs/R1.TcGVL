@@ -3,6 +3,7 @@
   <GVL Name="R1" Id="{0082af93-79e7-4ec9-9629-40ee8d1d2137}">
     <Declaration><![CDATA[VAR_GLOBAL
 
+Test : DINT;
 //****** VALVES *****//
 	Valve_1 : BOOL;
 	Valve_2 : BOOL;

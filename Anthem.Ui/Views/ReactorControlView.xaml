@@ -3,102 +3,131 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:helpers="clr-namespace:Anathem.Ui.Helpers"
-             xmlns:userControls="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
+             xmlns:uc_1="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
+             xmlns:uc_2="clr-namespace:Anathem.Ui.UserControls"
+             xmlns:converters="clr-namespace:E3.ReactorManager.Interfaces.UI.Converters;assembly=E3.ReactorManager.Interfaces"
+             xmlns:uiHelpers="clr-namespace:Anathem.Ui.Helpers"
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920"
              Background="#1a202c"
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <UserControl.Resources>
-        <helpers:TabHeaderSizeConverter x:Key="TabHeaderWidthCon"/>
-        <helpers:ParameterExtractorConverter x:Key="ParameterExtractorCon"/>
-        <Style TargetType="userControls:ButtonOnOffAnimation">
+        <converters:FontSizeConverter x:Key="FontSizeCon"/>
+        <uiHelpers:ParameterExtractorConverter x:Key="ParameterExtractorCon"/>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="#8e94a1" />
+            <Setter Property="FontSize" Value="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}, Converter={StaticResource FontSizeCon}}" />
+        </Style>
+        <Style TargetType="uc_1:ButtonOnOffAnimation">
             <Setter Property="Width" Value="60" />
             <Setter Property="Height" Value="60" />
             <Setter Property="Cursor" Value="Hand" />
         </Style>
+        <Style x:Key="ActionButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Background" Value="#32d5d4"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="Red"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="UnitsLabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="TextBoxValueStyle" TargetType="TextBox">
+            <Setter Property="MinWidth" Value="50"/>
+            <Setter Property="InputScope" Value="Number"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#FF272E3E"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="HeaderLabelStyle" TargetType="Label">
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="#FF8E94A1"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
     </UserControl.Resources>
-    <TabControl Background="#1a202c">
-        <TabControl.Resources>
-            <Style TargetType="TabItem">
-                <Setter Property="Width">
-                    <Setter.Value>
-                        <MultiBinding Converter="{StaticResource TabHeaderWidthCon}">
-                            <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}" />
-                            <Binding RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}" Path="ActualWidth" />
-                        </MultiBinding>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="FontSize" Value="15"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="TabItem">
-                            <Border Name="BackgroundPanel" Margin="2" Cursor="Hand">
-                                <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="5"/>
-                            </Border>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsSelected" Value="True">
-                                    <Setter TargetName="BackgroundPanel" Property="BorderBrush" Value="#4CDCDC"/>
-                                    <Setter TargetName="BackgroundPanel" Property="BorderThickness" Value="1"/>
-                                    <Setter TargetName="BackgroundPanel" Property="Background" Value="#2F515D" />
-                                </Trigger>
-                                <Trigger Property="IsSelected" Value="False">
-                                    <Setter TargetName="BackgroundPanel" Property="BorderBrush" Value="#1e2432"/>
-                                    <Setter TargetName="BackgroundPanel" Property="BorderThickness" Value="1"/>
-                                    <Setter TargetName="BackgroundPanel" Property="Background" Value="#1e2432" />
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </TabControl.Resources>
-        <TabItem Header="25L MVA">
-            <Grid>
-                <Image x:Name="_25LMA" Source="/Images/25Lma.png"/>
-                <userControls:ButtonOnOffAnimation Label="P5" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Pump_5}"
-                        helpers:UiHelpers.ParameterInfo="Pump_5|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="1009,896,845,80"/>
-                <userControls:ButtonOnOffAnimation Label="V30" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_30}"
-                        helpers:UiHelpers.ParameterInfo="Valve_30|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="943,806,911,170"/>
-                <userControls:ButtonOnOffAnimation Label="V31" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_31}"
-                        helpers:UiHelpers.ParameterInfo="Valve_31|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="1060,806,794,170"/>
-                <userControls:ButtonOnOffAnimation Label="V28" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_28}"
-                        helpers:UiHelpers.ParameterInfo="Valve_28|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="1007,431,847,545"/>
-                <userControls:ButtonOnOffAnimation Label="V29" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_29}"
-                        helpers:UiHelpers.ParameterInfo="Valve_29|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="836,725,1018,251"/>
-            </Grid>
-        </TabItem>
-        <TabItem Header="DCM">
-            <Grid>
-                <Image x:Name="dcm" Source="/Images/dcm.png"/>
-                <userControls:ButtonOnOffAnimation Label="P6" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Pump_6}"
-                        helpers:UiHelpers.ParameterInfo="Pump_6|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="845,900,1009,76"/>
-                <userControls:ButtonOnOffAnimation Label="V33" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_33}"
-                        helpers:UiHelpers.ParameterInfo="Valve_33|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="782,262,1072,714"/>
-                <userControls:ButtonOnOffAnimation Label="V34" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_34}"
-                        helpers:UiHelpers.ParameterInfo="Valve_34|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="1080,7,774,969"/>
-                <userControls:ButtonOnOffAnimation Label="V35" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_35}"
-                        helpers:UiHelpers.ParameterInfo="Valve_35|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="947,826,907,150"/>
-                <userControls:ButtonOnOffAnimation Label="V36" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_36}"
-                        helpers:UiHelpers.ParameterInfo="Valve_36|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="947,678,907,298"/>
-            </Grid>
-        </TabItem>
-        <TabItem Header="RV">
-            <Grid>
-                <Image x:Name="rv" Source="/Images/rv.png"/>
-                <userControls:ButtonOnOffAnimation Label="P7" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Pump_7}"
-                        helpers:UiHelpers.ParameterInfo="Pump_7|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="969,881,885,95"/>
-                <userControls:ButtonOnOffAnimation Label="V39" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_39}"
-                        helpers:UiHelpers.ParameterInfo="Valve_33|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="953,546,901,430"/>
-                <userControls:ButtonOnOffAnimation Label="V52" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_52}"
-                        helpers:UiHelpers.ParameterInfo="Valve_34|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="1096,0,758,976"/>
-                <userControls:ButtonOnOffAnimation Label="V41" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_41}"
-                        helpers:UiHelpers.ParameterInfo="Valve_35|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="1072,715,782,261"/>
-                <userControls:ButtonOnOffAnimation Label="V40" CurrentStatus="{Binding ParameterDictionary, Converter={StaticResource ParameterExtractorCon}, ConverterParameter=Valve_40}"
-                        helpers:UiHelpers.ParameterInfo="Valve_36|bool" helpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}" Margin="901,648,953,328"/>
-            </Grid>
-        </TabItem>
-    </TabControl>
+    <Grid Background="#1d2532">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="#555c6e"/>
+        <uc_1:NavigateButtonType_1 VerticalAlignment="Top" Grid.Column="0" ButtonCommand="{Binding NavigateCommand}" ButtonCommandParameter="Dashboard"/>
+        <ContentControl prism:RegionManager.RegionName="ParametersHost" Grid.Column="1"/>
+        <Grid Grid.Column="2" Background="#272e3e">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Reactor 1" Background="#1d2532"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="Reactor 2" Background="#1d2532"/>
+            <Border Grid.Row="1" Grid.Column="0">
+                <Viewbox HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                        <Button Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <uc_1:ButtonOnOffAnimation Tag="Valve_1" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Label Content="VFD" Style="{StaticResource HeaderLabelStyle}"/>
+                    </StackPanel>
+                </Viewbox>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1">
+                <Viewbox HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                        <Button Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <uc_1:ButtonOnOffAnimation Tag="Valve_2" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Label Content="VFD" Style="{StaticResource HeaderLabelStyle}"/>
+                    </StackPanel>
+                </Viewbox>
+            </Border>
+            <Label Grid.Row="2" Grid.ColumnSpan="2" Content="Reactor Parameters" HorizontalContentAlignment="Center" Background="#1d2532"/>
+            <uc_2:GraphicalParameter Grid.Row="3" Grid.Column="0" Tag="Test" ParamLabel="Reactor&#xa;Temperature" Units="°C" Limits="10|100"/>
+            <uc_2:GraphicalParameter Grid.Row="3" Grid.Column="1" Tag="Test" IsEditable="True" ParamDataType="int" Command="{Binding SendCommandToDevice}" ParamLabel="Reactor&#xa;Temperature" Units="°C" Limits="10|100"/>
+        </Grid>
+    </Grid>
 </UserControl>
