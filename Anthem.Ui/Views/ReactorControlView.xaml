@@ -132,8 +132,8 @@
             <uc_2:GraphicalParameter Grid.Row="4" Grid.Column="1" Tag="Pressure_2" ParamLabel="Reactor&#xa;Pressure" Units="mmHg" Limits="0|760"/>
             <uc_2:GraphicalParameter Grid.Row="5" Grid.Column="0" Tag="PH_1" ParamLabel="Reactor&#xa;PH" Units="" Limits="0|14"/>
             <uc_2:GraphicalParameter Grid.Row="5" Grid.Column="1" Tag="PH_2" ParamLabel="Reactor&#xa;PH" Units="" Limits="0|14"/>
-            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="0" Tag="StirrerSetpoint_1" IsEditable="True" ParamDataType="float" Command="{Binding SendCommandToDevice}" ParamLabel="Stirrer RPM&#xa;Setpoint" Units="RPM" Limits="0|200"/>
-            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="1" Tag="StirrerSetpoint_2" IsEditable="True" ParamDataType="float" Command="{Binding SendCommandToDevice}" ParamLabel="Stirrer RPM&#xa;Setpoint" Units="RPM" Limits="0|200"/>
+            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="0" Tag="StirrerSetpoint_1" IsEditable="True" ParamDataType="double" Command="{Binding SendCommandToDevice}" ParamLabel="Stirrer RPM&#xa;Setpoint" Units="RPM" Limits="0|200"/>
+            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="1" Tag="StirrerSetpoint_2" IsEditable="True" ParamDataType="double" Command="{Binding SendCommandToDevice}" ParamLabel="Stirrer RPM&#xa;Setpoint" Units="RPM" Limits="0|200"/>
         </Grid>
     </Grid>
 </UserControl>

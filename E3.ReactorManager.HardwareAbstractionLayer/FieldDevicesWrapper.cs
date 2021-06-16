@@ -407,27 +407,11 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
                             //Write to PLC
                             if (command.DataType.Equals("string"))
                             {
-                                if (fieldDevice.RelatedPlc.WriteString(fieldPoint.PLCHandle,
-                                                                       ParseCommandData(command.DataType, command.WriteValue).ToString()))
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    return false;
-                                }
+                                return fieldDevice.RelatedPlc.WriteString(fieldPoint.PLCHandle, TryParse(GetFieldPointDataType(command.DataType), command.WriteValue));
                             }
                             else
                             {
-                                if (fieldDevice.RelatedPlc.Write(fieldPoint.PLCHandle,
-                                                                 ParseCommandData(command.DataType, command.WriteValue)))
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    return false;
-                                }
+                                return fieldDevice.RelatedPlc.Write(fieldPoint.PLCHandle, TryParse(GetFieldPointDataType(command.DataType), command.WriteValue));
                             }
                         }
                     }
@@ -458,29 +442,6 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
                     return float.Parse(fieldPointValue);
             }
             return null;
-        }
-
-        /// <summary>
-        /// converts the command.writevalue 
-        ///     into required format
-        /// </summary>
-        /// <param name="commandDataType"></param>
-        /// <param name="writeValue"></param>
-        /// <returns></returns>
-        private object ParseCommandData(string commandDataType, string writeValue)
-        {
-            switch (commandDataType)
-            {
-                case "bool":
-                    return bool.Parse(writeValue);
-                case "int":
-                    return int.Parse(writeValue);
-                case "float":
-                    return float.Parse(writeValue);
-                case "string":
-                    return writeValue;
-            }
-            return string.Empty;
         }
 
         /// <summary>

@@ -33,7 +33,7 @@ namespace Anathem.Ui.UserControls
         #region Live Data
         public static readonly DependencyProperty LiveDataProperty =
            DependencyProperty.Register("LiveData", typeof(string), typeof(BoolParameter), 
-               new PropertyMetadata("NC", new PropertyChangedCallback((dp, args) => (dp as BoolParameter).OnLiveDataReceived(args.NewValue.ToString()))));
+               new PropertyMetadata("NC", new PropertyChangedCallback((dp, args) => (dp as BoolParameter).OnLiveDataReceived(args.NewValue))));
 
         public string LiveData
         {
@@ -41,8 +41,9 @@ namespace Anathem.Ui.UserControls
             set { SetValue(LiveDataProperty, value); }
         }
 
-        private void OnLiveDataReceived(string newValue)
+        private void OnLiveDataReceived(object obj)
         {
+            string newValue = obj == null ? bool.FalseString : obj.ToString();
             if (bool.TryParse(newValue, out bool parseResult))
             {
                 if (parseResult)
