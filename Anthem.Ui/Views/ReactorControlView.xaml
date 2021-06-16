@@ -103,7 +103,7 @@
                         <Button Cursor="Hand">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
-                                    <uc_1:ButtonOnOffAnimation Tag="Valve_1" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                    <uc_1:ButtonOnOffAnimation Tag="StirrerCommand_1" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
@@ -117,7 +117,7 @@
                         <Button Cursor="Hand">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
-                                    <uc_1:ButtonOnOffAnimation Tag="Valve_2" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                    <uc_1:ButtonOnOffAnimation Tag="StirrerCommand_2" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
@@ -126,8 +126,14 @@
                 </Viewbox>
             </Border>
             <Label Grid.Row="2" Grid.ColumnSpan="2" Content="Reactor Parameters" HorizontalContentAlignment="Center" Background="#1d2532"/>
-            <uc_2:GraphicalParameter Grid.Row="3" Grid.Column="0" Tag="Test" ParamLabel="Reactor&#xa;Temperature" Units="°C" Limits="10|100"/>
-            <uc_2:GraphicalParameter Grid.Row="3" Grid.Column="1" Tag="Test" IsEditable="True" ParamDataType="int" Command="{Binding SendCommandToDevice}" ParamLabel="Reactor&#xa;Temperature" Units="°C" Limits="10|100"/>
+            <uc_2:GraphicalParameter Grid.Row="3" Grid.Column="0" Tag="Temperature_1" ParamLabel="Reactor&#xa;Temperature" Units="°C" Limits="10|100"/>
+            <uc_2:GraphicalParameter Grid.Row="3" Grid.Column="1" Tag="Temperature_2" ParamLabel="Reactor&#xa;Temperature" Units="°C" Limits="10|100"/>
+            <uc_2:GraphicalParameter Grid.Row="4" Grid.Column="0" Tag="Pressure_1" ParamLabel="Reactor&#xa;Pressure" Units="mmHg" Limits="0|760"/>
+            <uc_2:GraphicalParameter Grid.Row="4" Grid.Column="1" Tag="Pressure_2" ParamLabel="Reactor&#xa;Pressure" Units="mmHg" Limits="0|760"/>
+            <uc_2:GraphicalParameter Grid.Row="5" Grid.Column="0" Tag="PH_1" ParamLabel="Reactor&#xa;PH" Units="" Limits="0|14"/>
+            <uc_2:GraphicalParameter Grid.Row="5" Grid.Column="1" Tag="PH_2" ParamLabel="Reactor&#xa;PH" Units="" Limits="0|14"/>
+            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="0" Tag="StirrerSetpoint_1" IsEditable="True" ParamDataType="float" Command="{Binding SendCommandToDevice}" ParamLabel="Stirrer RPM&#xa;Setpoint" Units="RPM" Limits="0|200"/>
+            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="1" Tag="StirrerSetpoint_2" IsEditable="True" ParamDataType="float" Command="{Binding SendCommandToDevice}" ParamLabel="Stirrer RPM&#xa;Setpoint" Units="RPM" Limits="0|200"/>
         </Grid>
     </Grid>
 </UserControl>

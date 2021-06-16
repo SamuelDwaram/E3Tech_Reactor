@@ -159,7 +159,7 @@
     </Resource>
     <Content Include="SqlFiles\FieldDevices-Plc-SensorsDataSet-1.sql" />
     <Content Include="SqlFiles\FieldPoints-2.sql" />
-    <Content Include="SqlFiles\R1.RecipeTags-3.sql" />
+    <Content Include="SqlFiles\RecipeFieldPoints-3.sql" />
     <Content Include="SqlFiles\RolesWithModules-4.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,6 +20,7 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
         private readonly Timer cyclicPollDevicesTimer = new Timer(TimeSpan.FromMilliseconds(500).TotalMilliseconds);
         private readonly IDatabaseWriter databaseWriter;
         private readonly IDatabaseReader databaseReader;
+        private bool cyclicPollInProgress = false;
 
         public FieldDevicesCommunicator(IDatabaseWriter databaseWriter, IDatabaseReader databaseReader, ILogger logger)
         {
@@ -51,8 +52,18 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
 
         private void CyclicPollDevicesTimer_Tick(object sender, EventArgs e)
         {
-            Task<IList<FieldDevice>>.Factory.StartNew(new Func<IList<FieldDevice>>(ReadAllSensorsLiveData))
-                .ContinueWith(new Action<Task<IList<FieldDevice>>>(UpdateFieldDevicesWithLiveData));
+            if (cyclicPollInProgress)
+            {
+                return;
+            }
+            else
+            {
+                cyclicPollInProgress = true;
+                //Turn off cyclicPollInProgress after the task is completed
+                Task<IList<FieldDevice>>.Factory.StartNew(new Func<IList<FieldDevice>>(ReadAllSensorsLiveData))
+                    .ContinueWith(new Action<Task<IList<FieldDevice>>>(UpdateFieldDevicesWithLiveData))
+                    .ContinueWith(t => cyclicPollInProgress = false);
+            }
         }
 
         private void UpdateFieldDevicesWithLiveData(Task<IList<FieldDevice>> task)
