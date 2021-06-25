@@ -28,7 +28,8 @@ namespace E3Tech.RecipeBuilding
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            containerProvider.Resolve<PLCRecipeRefresherAdapter>();
+            containerProvider.Resolve<IRecipeExecutor>();
+            container.Resolve<PLCRecipeRefresherAdapter>();
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
@@ -43,7 +44,11 @@ namespace E3Tech.RecipeBuilding
             containerRegistry.Register<IRecipeExecutionInfoHandler, RecipeExecutionInfoHandler>();
             containerRegistry.Register<IRecipeExecutionInfoProvider, RecipeExecutionInfoProvider>();
             RegisterBlocks(containerRegistry);
-            
+
+            containerRegistry.RegisterSingleton<IRecipeExecutor, PLCRecipeExecutor>();
+            containerRegistry.Register<IRecipeReloader, PLCRecipeReloader>();
+            containerRegistry.RegisterInstance<IRecipesManager>(RecipesManager.Instance);
+
             regionManager.RegisterViewWithRegion("RecipeBuilder", typeof(MultiRecipeBuilderView));
             containerRegistry.RegisterForNavigation(typeof(RecipesView), "Recipes");
             viewManager.AddView("RecipeBuilderView");
@@ -54,12 +59,11 @@ namespace E3Tech.RecipeBuilding
             containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<StartBlockParameters>>("StartBlock");
             containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<StirrerBlockParameters>>("StirrerBlock");
             containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<HeatCoolBlockParameters>>("Heat/Cool");
-            containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<DosingBlockParameters>>("Dosing");
             containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<WaitBlockParameters>>("Wait");
-            containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<FillBlockParameters>>("UserComments");
-            containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<FillBlockParameters>>("TakeManualSample");
-            containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<FillBlockParameters>>("Fill");
             containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<TransferBlockParameters>>("Transfer");
+            containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<DrainBlockParameters>>("Drain");
+            containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<FlushBlockParameters>>("Flush");
+            containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<N2PurgeBlockParameters>>("N2Purge");
             containerRegistry.Register<IRecipeBlock, ParameterizedRecipeBlock<EndBlockParameters>>("End");
             containerRegistry.Register<IRecipeBlock, RecipeBlock>();
         }

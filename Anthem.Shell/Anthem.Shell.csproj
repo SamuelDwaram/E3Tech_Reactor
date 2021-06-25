@@ -133,10 +133,6 @@
       <Project>{620c94fe-d355-4801-92b0-f86d1b08fb02}</Project>
       <Name>E3.ReactorManager.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\E3.ReactorManager.Recipe.PLCIntegrator\E3.ReactorManager.Recipe.PLCIntegrator.csproj">
-      <Project>{1c0662a9-35f7-44b7-bb1b-88aabe5d9471}</Project>
-      <Name>E3.ReactorManager.Recipe.PLCIntegrator</Name>
-    </ProjectReference>
     <ProjectReference Include="..\E3.ReactorManager.ReportsManager\E3.ReactorManager.ReportsManager.csproj">
       <Project>{d7c4e8dc-bbef-40d0-a852-434c3e843b45}</Project>
       <Name>E3.ReactorManager.ReportsManager</Name>

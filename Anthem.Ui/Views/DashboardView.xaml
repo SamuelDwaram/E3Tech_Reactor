@@ -7,22 +7,84 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
+    <UserControl.Resources>
+        <Style x:Key="NavigateToOtherScreenButtonStyle" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#272e3e"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="Red"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="Gray"/>
+                                <Setter Property="Background" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Key="fieldDeviceTemplate">
+
+        </DataTemplate>
+    </UserControl.Resources>
     <Grid Background="#1a202c">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="9*"/>
         </Grid.ColumnDefinitions>
         <DockPanel Grid.Column="0" Background="#272e3e" Margin="5">
             <DockPanel.Resources>
                 <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand" />
                     <Setter Property="DockPanel.Dock" Value="Top" />
+                    <Setter Property="Padding" Value="30,0,0,0" />
+                    <Setter Property="HorizontalContentAlignment" Value="Left" />
                     <Setter Property="VerticalAlignment" Value="Top" />
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Foreground" Value="White" />
+                    <Setter Property="MinHeight" Value="80" />
+                    <Setter Property="FontSize" Value="25" />
                     <Setter Property="Command" Value="{Binding NavigateCommand}" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                                    <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsDefaulted" Value="true">
+                                        <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="Red" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
                 </Style>
             </DockPanel.Resources>
-            <Button Content="Reactor Control" CommandParameter="ReactorControl"/>
             <Button Content="Recipes View" CommandParameter="Recipes"/>
-            <Button Content="Parameters Host" CommandParameter="ParametersHost"/>
+            <Button Content="Parameters Host" CommandParameter="ReactorControl"/>
+            <Button Content="Reports" CommandParameter="Reports"/>
+            <Button Content="Trends" CommandParameter="Trends"/>
+            <Button Content="Alarms" CommandParameter="Alarms"/>
+            <Button Content="Audit Trail" CommandParameter="AuditTrail"/>
+            <Button Content="User Management" CommandParameter="UserManagement"/>
         </DockPanel>
     </Grid>
 </UserControl>

@@ -98,12 +98,11 @@ namespace E3.ReactorManager.Interfaces.HardwareAbstractionLayer
         void ShareLiveDataToAllModules(FieldPointDataReceivedArgs fieldPointDataReceivedArgs);
 
         void UpdateFieldDevicesDataForMobileDevicesInitialization(Task<IList<FieldDevice>> task);
-    }
+        IEnumerable<int> CreateVariableHandles(string deviceId, IEnumerable<string> memoryAddresses);
 
-    public interface IFdcForPlc : IFieldDevicesCommunicator
-    {
-        void CreateVariableHandles(string deviceId, IList<FieldPoint> fieldPoints);
+        void DeleteVariableHandles(string deviceId, IEnumerable<int> variableHandles);
 
-        void DeleteVariableHandles(string deviceId, IList<int> variableHandles);
+        T ReadAny<T>(string deviceId, int plcHandle);
+        void WriteAny<T>(string deviceId, int plcHandle, T data);
     }
 }

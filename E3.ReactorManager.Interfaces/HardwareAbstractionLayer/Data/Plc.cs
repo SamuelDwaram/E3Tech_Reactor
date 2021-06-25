@@ -146,7 +146,7 @@ namespace E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data
         {
             try
             {
-                TwinCATClient.WriteAny(PlcHandle, writeStringValue, new int[] { 80 });
+                TwinCATClient.WriteAny(PlcHandle, writeStringValue, new int[] { writeStringValue.Length });
             }
             catch (Exception ex)
             {

@@ -16,15 +16,24 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[fb_ran(Seed := 0, Num => random_value);
-IF CurrentValue <= TargetValue THEN
-	CurrentValue := CurrentValue + LREAL_TO_REAL(STRING_TO_LREAL(LREAL_TO_FMTSTR(random_value, 2, TRUE)));
-ELSE
-	CurrentValue := CurrentValue - LREAL_TO_REAL(STRING_TO_LREAL(LREAL_TO_FMTSTR(random_value, 2, TRUE)));
+random_value := 0.5 * STRING_TO_REAL(LREAL_TO_FMTSTR(random_value, 2, TRUE));
+IF ABS(CurrentValue-TargetValue)>0.5 THEN
+	IF CurrentValue < TargetValue THEN
+		CurrentValue := CurrentValue + random_value;
+	ELSE
+		CurrentValue := CurrentValue - random_value;
+	END_IF
 END_IF
 SimulatedValue := STRING_TO_REAL(LREAL_TO_FMTSTR(CurrentValue, 2, TRUE)); //Rounding again here to clear any errors above]]></ST>
     </Implementation>
     <LineIds Name="Simulator">
-      <LineId Id="60" Count="4" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="61" Count="0" />
+      <LineId Id="77" Count="1" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="79" Count="0" />
       <LineId Id="49" Count="0" />
       <LineId Id="28" Count="0" />
     </LineIds>

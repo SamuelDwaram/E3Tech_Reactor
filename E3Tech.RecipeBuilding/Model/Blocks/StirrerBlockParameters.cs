@@ -3,17 +3,17 @@ using System;
 
 namespace E3Tech.RecipeBuilding.Model.Blocks
 {
-    public class FillBlockParameters : BindableBase, ICloneable
+    public class StirrerBlockParameters : BindableBase, ICloneable
     {
         public string Name
         {
-            get => "Fill";
+            get => "Stirrer";
         }
 
         private string _uiLabel;
         public string UiLabel
         {
-            get => _uiLabel ?? "Fill";
+            get => _uiLabel ?? "Stir";
             set
             {
                 _uiLabel = value;
@@ -76,31 +76,27 @@ namespace E3Tech.RecipeBuilding.Model.Blocks
             }
         }
 
-        private string _volume;
-        public string Volume
+        private string _setPoint;
+        public string SetPoint
         {
-            get => _volume;
+            get { return _setPoint; }
             set
             {
-                _volume = value;
+                _setPoint = value;
                 RaisePropertyChanged();
             }
         }
 
-        private string _targetItemIndex;
-        public string TargetItemIndex
+        private string destination;
+        public string Destination
         {
-            get => _targetItemIndex;
-            set
-            {
-                _targetItemIndex = value;
-                RaisePropertyChanged();
-            }
+            get { return destination; }
+            set { SetProperty(ref destination, value); }
         }
 
         public object Clone()
         {
-            return new FillBlockParameters()
+            return new StirrerBlockParameters()
             {
                 UiLabel = this.UiLabel?.Clone().ToString(),
                 Started = this.Started?.Clone().ToString(),
@@ -109,8 +105,8 @@ namespace E3Tech.RecipeBuilding.Model.Blocks
                 EndedTime = this.EndedTime?.Clone().ToString(),
                 Enabled = this.Enabled?.Clone().ToString(),
 
-                TargetItemIndex = this.TargetItemIndex?.Clone().ToString(),
-                Volume = this.Volume?.Clone().ToString(),
+                SetPoint = this.SetPoint?.Clone().ToString(),
+                Destination = this.Destination?.Clone().ToString()
             };
         }
     }

@@ -1,26 +1,9 @@
 ﻿using Prism.Mvvm;
-using System;
 
 namespace E3Tech.RecipeBuilding.Model.Blocks
 {
-    public class StirrerBlockParameters : BindableBase, ICloneable
+    public class BaseDrainBlockParameters : BindableBase
     {
-        public string Name
-        {
-            get => "Stirrer";
-        }
-
-        private string _uiLabel;
-        public string UiLabel
-        {
-            get => _uiLabel ?? "Stir";
-            set
-            {
-                _uiLabel = value;
-                RaisePropertyChanged();
-            }
-        }
-
         private string _started;
         public string Started
         {
@@ -76,30 +59,29 @@ namespace E3Tech.RecipeBuilding.Model.Blocks
             }
         }
 
-        private string _setPoint;
-        public string SetPoint
+        private string source;
+        public string Source
         {
-            get { return _setPoint; }
+            get => source;
             set
             {
-                _setPoint = value;
+                source = value;
                 RaisePropertyChanged();
             }
         }
-       
-        public object Clone()
-        {
-            return new StirrerBlockParameters()
-            {
-                UiLabel = this.UiLabel?.Clone().ToString(),
-                Started = this.Started?.Clone().ToString(),
-                StartedTime = this.StartedTime?.Clone().ToString(),
-                Ended = this.Ended?.Clone().ToString(),
-                EndedTime = this.EndedTime?.Clone().ToString(),
-                Enabled = this.Enabled?.Clone().ToString(),
 
-                SetPoint = this.SetPoint?.Clone().ToString(),
-            };
+        private string timeInterval;
+        public string TimeInterval
+        {
+            get { return timeInterval; }
+            set { SetProperty(ref timeInterval, value); }
+        }
+
+        private string intervalType;
+        public string IntervalType
+        {
+            get { return intervalType; }
+            set { SetProperty(ref intervalType, value); }
         }
     }
 }

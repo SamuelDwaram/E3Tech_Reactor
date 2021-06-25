@@ -21,40 +21,29 @@ namespace E3Tech.RecipeBuilding.ViewModels
 {
     public class RecipeBuilderViewModel : BindableBase
     {
-        private IRecipeBuilder recipeBuilder;
-        private IRecipeReloader recipeReloader;
-        private readonly IRecipeExecutor recipeExecuter;
+        private readonly IRecipeBuilder recipeBuilder;
+        private readonly IRecipeReloader recipeReloader;
+        private readonly IRecipeExecutor recipeExecutor;
         private readonly IUnityContainer containerProvider;
         private RecipeStepViewModel selectedStep;
-        private IFieldDevicesCommunicator fieldDevicesCommunicator;
-        private List<PropertyInfo> existingProperties;
-        TaskScheduler taskScheduler;
-        IRecipeExecutionInfoProvider recipeExecutionInfoProvider;
+        private readonly IFieldDevicesCommunicator fieldDevicesCommunicator;
+        private readonly List<PropertyInfo> existingProperties = new List<PropertyInfo>(typeof(RecipeBuilderViewModel).GetProperties());
+        private readonly TaskScheduler taskScheduler;
+        private readonly IRecipeExecutionInfoProvider recipeExecutionInfoProvider;
 
-        public RecipeBuilderViewModel(IUnityContainer containerProvider, IRecipeBuilder recipeBuilder, IRecipeReloader recipeReloader)
+        public RecipeBuilderViewModel(IUnityContainer containerProvider, IRecipeExecutor recipeExecutor, IFieldDevicesCommunicator fieldDevicesCommunicator, IRecipeBuilder recipeBuilder, IRecipeReloader recipeReloader)
         {
             taskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
-
-            if (containerProvider.IsRegistered<IRecipeExecutor>())
-            {
-                this.recipeExecuter = containerProvider.Resolve<IRecipeExecutor>();
-            }
-
-            if (containerProvider.IsRegistered<IFieldDevicesCommunicator>())
-            {
-                this.fieldDevicesCommunicator = containerProvider.Resolve<IFieldDevicesCommunicator>();
-                fieldDevicesCommunicator.FieldPointDataReceived += OnLiveDataReceived;
-            }
-
-            this.recipeExecutionInfoProvider = containerProvider.Resolve<IRecipeExecutionInfoProvider>();
+            this.recipeExecutor = recipeExecutor;
+            this.fieldDevicesCommunicator = fieldDevicesCommunicator;
+            fieldDevicesCommunicator.FieldPointDataReceived += OnLiveDataReceived;
+            recipeExecutionInfoProvider = containerProvider.Resolve<IRecipeExecutionInfoProvider>();
             this.containerProvider = containerProvider;
             this.recipeBuilder = recipeBuilder;
             this.recipeReloader = recipeReloader;
             LoadRegisteredBlocks(containerProvider);
             RecipeSteps = new ObservableCollection<RecipeStepViewModel>();
             LoadSteps();
-            /* Update the Existing Properties */
-            existingProperties = new List<PropertyInfo>(GetType().GetProperties());
         }
 
         #region Initialization of Recipe Steps and Registered Recipe Blocks
@@ -74,7 +63,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
         {
             AvailableBlocks = new List<IRecipeBlock>();
             //Get all the recipe blocks from the container except Fill and Transfer blocks
-            IEnumerable<IRecipeBlock> blocks = containerProvider.ResolveAll<IRecipeBlock>().Where(i => !i.Name.Contains("Fill") && !i.Name.Contains("Transfer") && !string.IsNullOrWhiteSpace(i.Name));
+            IEnumerable<IRecipeBlock> blocks = containerProvider.ResolveAll<IRecipeBlock>();
 
             if (blocks.Count() > 0)
             {
@@ -84,40 +73,6 @@ namespace E3Tech.RecipeBuilding.ViewModels
                  */
                 AvailableBlocks = new List<IRecipeBlock>(blocks);
             }
-
-            #region Add Fill and Transfer recipe blocks to Available blocks
-            //Add fill block with target item index 1
-            IRecipeBlock recipeBlock = new ParameterizedRecipeBlock<FillBlockParameters>();
-            recipeBlock.UpdateParameterValue("TargetItemIndex", "1");
-            recipeBlock.UpdateParameterValue("UiLabel", "Fill Volume V1");
-            AvailableBlocks.Add(recipeBlock);
-
-            //Add fill block with target item index 2
-            recipeBlock = new ParameterizedRecipeBlock<FillBlockParameters>();
-            recipeBlock.UpdateParameterValue("TargetItemIndex", "2");
-            recipeBlock.UpdateParameterValue("UiLabel", "Fill Volume V2");
-            AvailableBlocks.Add(recipeBlock);
-
-            //Add Transfer block with item index 1
-            recipeBlock = new ParameterizedRecipeBlock<TransferBlockParameters>();
-            recipeBlock.UpdateParameterValue("SourceItemIndex", "1");
-            recipeBlock.UpdateParameterValue("TargetItemIndex", "1");
-            recipeBlock.UpdateParameterValue("UiLabel", "Transfer A to RV");
-            AvailableBlocks.Add(recipeBlock);
-
-            recipeBlock = new ParameterizedRecipeBlock<TransferBlockParameters>();
-            recipeBlock.UpdateParameterValue("SourceItemIndex", "2");
-            recipeBlock.UpdateParameterValue("TargetItemIndex", "1");
-            recipeBlock.UpdateParameterValue("UiLabel", "Transfer B to RV");
-            AvailableBlocks.Add(recipeBlock);
-
-            recipeBlock = new ParameterizedRecipeBlock<TransferBlockParameters>();
-            recipeBlock.UpdateParameterValue("SourceItemIndex", "3");
-            recipeBlock.UpdateParameterValue("TargetItemIndex", "2");
-            recipeBlock.UpdateParameterValue("UiLabel", "Transfer RV to Drain");
-            AvailableBlocks.Add(recipeBlock);
-            #endregion
-
         }
         #endregion
 
@@ -205,7 +160,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
         {
             if (recipeBuilder.CheckEndBlockInRecipe(recipeBuilder.RecipeSteps))
             {
-                recipeExecuter.Execute(DeviceId, recipeBuilder.RecipeSteps);
+                recipeExecutor.Execute(DeviceId, recipeBuilder.RecipeSteps);
             }
             else
             {
@@ -218,7 +173,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
 
         private bool CanStartRecipe()
         {
-            return recipeExecuter != null;
+            return recipeExecutor != null;
         }
         #endregion
 
@@ -227,18 +182,18 @@ namespace E3Tech.RecipeBuilding.ViewModels
         {
             recipeBuilder.Clear();
             RecipeSteps.Clear();
-            recipeExecuter.ClearRecipe(DeviceId);
+            recipeExecutor.ClearRecipe(DeviceId);
         }
 
         private bool CanClearRecipe()
         {
-            return recipeExecuter != null;
+            return recipeExecutor != null;
         }
         #endregion
 
         private void UpdateBlockExecution(IRecipeBlock block)
         {
-            recipeExecuter.UpdateBlock(RecipeSteps.IndexOf(SelectedStep), block, DeviceId);
+            recipeExecutor.UpdateBlock(RecipeSteps.IndexOf(SelectedStep), block, DeviceId);
         }
 
         private void HandleDeleteStep(RecipeStepViewModel stepViewModel)
@@ -265,13 +220,13 @@ namespace E3Tech.RecipeBuilding.ViewModels
         {
             if (block != null && SelectedStep != null)
             {
-                recipeExecuter.AbortBlockExecution(RecipeSteps.IndexOf(SelectedStep), block, DeviceId);
+                recipeExecutor.AbortBlockExecution(RecipeSteps.IndexOf(SelectedStep), block, DeviceId);
             }
         }
 
         public void AbortRecipeExecution()
         {
-            recipeExecuter.AbortRecipeExecution(DeviceId);
+            recipeExecutor.AbortRecipeExecution(DeviceId);
         }
 
         private bool CanAbortRecipeExecution()
@@ -333,28 +288,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
         #region Drag & Drop
         private IRecipeBlock GetBlockInstance(IDataObject dropData)
         {
-            IRecipeBlock block = null;
-            IRecipeBlock droppedBlock = null;
-            string blockName = dropData.GetData("Text").ToString();
-            switch (blockName)
-            {
-                case "Fill":
-                    droppedBlock = dropData.GetData("PersistentObject") as ParameterizedRecipeBlock<FillBlockParameters>;
-                    block = containerProvider.Resolve<ParameterizedRecipeBlock<FillBlockParameters>>() as IRecipeBlock;
-                    block.UpdateParameterValue("TargetItemIndex", droppedBlock.GetParameterValue("TargetItemIndex"));
-                    block.UpdateParameterValue("UiLabel", droppedBlock.GetParameterValue("UiLabel"));
-                    break;
-                case "Transfer":
-                    droppedBlock = dropData.GetData("PersistentObject") as ParameterizedRecipeBlock<TransferBlockParameters>;
-                    block = containerProvider.Resolve<ParameterizedRecipeBlock<TransferBlockParameters>>() as IRecipeBlock;
-                    block.UpdateParameterValue("TargetItemIndex", droppedBlock.GetParameterValue("TargetItemIndex"));
-                    block.UpdateParameterValue("SourceItemIndex", droppedBlock.GetParameterValue("SourceItemIndex"));
-                    block.UpdateParameterValue("UiLabel", droppedBlock.GetParameterValue("UiLabel"));
-                    break;
-                default:
-                    block = containerProvider.Resolve((dropData.GetData("PersistentObject").GetType())) as IRecipeBlock;
-                    break;
-            }
+            IRecipeBlock block = containerProvider.Resolve(dropData.GetData("PersistentObject").GetType()) as IRecipeBlock;
             block.Name = dropData.GetData("Text").ToString();
             return block;
         }
@@ -397,7 +331,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
 
         private void UpdateRecipeToExecuter(IRecipeBlock block, int recipeStepIndex)
         {
-            recipeExecuter.UpdateBlock(recipeStepIndex, block, DeviceId);
+            recipeExecutor.UpdateBlock(recipeStepIndex, block, DeviceId);
         }
 
         private bool GetRecipeStepEditPermission(int newlyAddedBlockRecipeStepIndex)

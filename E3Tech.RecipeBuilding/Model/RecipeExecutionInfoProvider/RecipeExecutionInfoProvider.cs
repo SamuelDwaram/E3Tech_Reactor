@@ -38,14 +38,8 @@ namespace E3Tech.RecipeBuilding.Model.RecipeExecutionInfoProvider
                 case "Stirrer":
                     AddStirrerBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<StirrerBlockParameters>, deviceId);
                     break;
-                case "Dosing":
-                    AddDosingBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<DosingBlockParameters>, deviceId);
-                    break;
                 case "Wait":
                     AddWaitBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<WaitBlockParameters>, deviceId);
-                    break;
-                case "Fill":
-                    AddFillBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<FillBlockParameters>, deviceId);
                     break;
                 case "Transfer":
                     AddTransferBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<TransferBlockParameters>, deviceId);
@@ -72,29 +66,12 @@ namespace E3Tech.RecipeBuilding.Model.RecipeExecutionInfoProvider
                 .AddRecipeExecutionInfo(deviceId, transferRecipeBlock.Parameters.StartedTime, transferRecipeBlock.Parameters.EndedTime, duration, message);
         }
 
-        private void AddFillBlockExecutionInfo(ParameterizedRecipeBlock<FillBlockParameters> fillRecipeBlock, string deviceId)
-        {
-            string message = fillRecipeBlock.UiLabel + " started with set point " + fillRecipeBlock.Parameters.Volume + "mL";
-            string duration = DateTime.Parse(fillRecipeBlock.Parameters.EndedTime).Subtract(DateTime.Parse(fillRecipeBlock.Parameters.StartedTime)).TotalMinutes.ToString();
-            recipeExecutionInfoHandler
-                .AddRecipeExecutionInfo(deviceId, fillRecipeBlock.Parameters.StartedTime, fillRecipeBlock.Parameters.EndedTime, duration, message);
-        }
-
         private void AddWaitBlockExecutionInfo(ParameterizedRecipeBlock<WaitBlockParameters> waitRecipeBlock, string deviceId)
         {
             string message = "Wait started for duration " + waitRecipeBlock.Parameters.Duration + " minutes";
             string duration = DateTime.Parse(waitRecipeBlock.Parameters.EndedTime).Subtract(DateTime.Parse(waitRecipeBlock.Parameters.StartedTime)).TotalMinutes.ToString();
             recipeExecutionInfoHandler
                 .AddRecipeExecutionInfo(deviceId, waitRecipeBlock.Parameters.StartedTime, waitRecipeBlock.Parameters.EndedTime, duration, message);
-        }
-
-        private void AddDosingBlockExecutionInfo(ParameterizedRecipeBlock<DosingBlockParameters> dosingRecipeBlock, string deviceId)
-        {
-            string message = "Dosing started with Max Volume limit " + dosingRecipeBlock.Parameters.MaxAmount
-                + " lpm between " + dosingRecipeBlock.Parameters.StopTemperature + "°C and " + dosingRecipeBlock.Parameters.ResumeTemperature + "°C";
-            string duration = DateTime.Parse(dosingRecipeBlock.Parameters.EndedTime).Subtract(DateTime.Parse(dosingRecipeBlock.Parameters.StartedTime)).TotalMinutes.ToString();
-            recipeExecutionInfoHandler
-                .AddRecipeExecutionInfo(deviceId, dosingRecipeBlock.Parameters.StartedTime, dosingRecipeBlock.Parameters.EndedTime, duration, message);
         }
 
         private void AddStirrerBlockExecutionInfo(ParameterizedRecipeBlock<StirrerBlockParameters> stirrerRecipeBlock, string deviceId)

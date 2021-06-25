@@ -12,7 +12,7 @@ using Timer = System.Timers.Timer;
 
 namespace E3.ReactorManager.HardwareAbstractionLayer
 {
-    public class FieldDevicesCommunicator : IFdcForPlc
+    public class FieldDevicesCommunicator : IFieldDevicesCommunicator
     {
         private readonly FieldDevicesWrapper fieldDeviceWrapper;
         private readonly ILogger logger;
@@ -34,9 +34,9 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
             fieldDeviceWrapper.FieldPointDataReceived += OnFieldPointDataReceived;
         }
 
-        public void CreateVariableHandles(string deviceId, IList<FieldPoint> fieldPoints) => fieldDeviceWrapper.CreateVariableHandles(deviceId, fieldPoints);
+        public IEnumerable<int> CreateVariableHandles(string deviceId, IEnumerable<string> memoryAddresses) => fieldDeviceWrapper.CreateVariableHandles(deviceId, memoryAddresses);
 
-        public void DeleteVariableHandles(string deviceId, IList<int> variableHandles) => fieldDeviceWrapper.DeleteVariableHandles(deviceId, variableHandles);
+        public void DeleteVariableHandles(string deviceId, IEnumerable<int> variableHandles) => fieldDeviceWrapper.DeleteVariableHandles(deviceId, variableHandles);
 
         #region Cyclic Poll field devices
         public void StartCyclicPollingOfFieldDevices(Action<Task> callback, TaskScheduler taskScheduler)
@@ -452,5 +452,12 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
                 Type = fieldDevice.Type,
             };
         }
+
+        public T ReadAny<T>(string deviceId, int plcHandle)
+        {
+            return fieldDeviceWrapper.ReadAny<T>(deviceId, plcHandle);
+        }
+
+        public void WriteAny<T>(string deviceId, int plcHandle, T data) => fieldDeviceWrapper.WriteAny<T>(deviceId, plcHandle, data);
     }
 }

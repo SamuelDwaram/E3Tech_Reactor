@@ -20,7 +20,22 @@
     <Compile Include="DUTs\EachRecipeStep.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DUTs\PhysicalIO.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Pump.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Reactor.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\Valve.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\Vessel.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\VFD.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GVLs\IO.TcGVL">

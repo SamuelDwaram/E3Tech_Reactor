@@ -73,6 +73,9 @@
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.7.1.0.431\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -100,6 +103,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Blocks\BaseDrainBlockParameters.cs" />
+    <Compile Include="Model\Blocks\DrainBlockParameters.cs" />
+    <Compile Include="Model\Blocks\FlushBlockParameters.cs" />
+    <Compile Include="Model\Blocks\N2PurgeBlockParameters.cs" />
+    <Compile Include="Model\PlcObjects.cs" />
+    <Compile Include="Model\PLCRecipeExecutor.cs" />
+    <Compile Include="Model\PLCRecipeReloader.cs" />
+    <Compile Include="Model\RecipesManager.cs" />
     <Compile Include="Views\RecipesView.xaml.cs">
       <DependentUpon>RecipesView.xaml</DependentUpon>
     </Compile>
@@ -146,13 +157,9 @@
     <Compile Include="Helpers\BlockCreationConverter.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="Helpers\VisualTreeHelperExtensions.cs" />
-    <Compile Include="Model\Blocks\DosingBlockParameters.cs" />
     <Compile Include="Model\Blocks\EndBlockParameters.cs" />
-    <Compile Include="Model\Blocks\FillBlockParameters.cs" />
     <Compile Include="Model\Blocks\HeatCoolBlockParameters.cs" />
-    <Compile Include="Model\Blocks\TakeManualSampleBlockParameters.cs" />
     <Compile Include="Model\Blocks\TransferBlockParameters.cs" />
-    <Compile Include="Model\Blocks\UserCommentsBlockParameters.cs" />
     <Compile Include="Model\Blocks\WaitBlockParameters.cs" />
     <Compile Include="Model\IMultiRecipeBuilder.cs" />
     <Compile Include="Model\IRecipeExecutor.cs" />
@@ -177,7 +184,7 @@
     <Compile Include="ParameterProviders\BlockParameterProviderView.xaml.cs">
       <DependentUpon>BlockParameterProviderView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Blocks\StirBlockParameters.cs" />
+    <Compile Include="Model\Blocks\StirrerBlockParameters.cs" />
     <Compile Include="Model\ParameterizedRecipeBlock.cs" />
     <Compile Include="Model\Blocks\StartBlockParameters.cs" />
     <Compile Include="Model\IParameterizedRecipeBlock.cs" />

@@ -1,4 +1,5 @@
-﻿using Anathem.Ui.Views;
+﻿using Anathem.Ui.Helpers;
+using Anathem.Ui.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
@@ -9,14 +10,14 @@ namespace Anathem.Ui
     {
         private readonly IRegionManager regionManager;
 
-        public UiModule(IRegionManager iregionmanager)
+        public UiModule(IRegionManager regionManager)
         {
-            this.regionManager = iregionmanager;
+            this.regionManager = regionManager;
         }
 
         public void OnInitialized(IContainerProvider containerProvider)
         {
- 
+            
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
@@ -24,7 +25,6 @@ namespace Anathem.Ui
             containerRegistry.RegisterForNavigation(typeof(DashboardView), "Dashboard");
             containerRegistry.RegisterForNavigation(typeof(ReactorControlView), "ReactorControl");
             containerRegistry.RegisterForNavigation(typeof(InitializeView), "Initialize");
-            //containerRegistry.RegisterForNavigation(typeof(ParametersHostView), "ParametersHost");
             regionManager.RegisterViewWithRegion("ParametersHost", typeof(ParametersHostView));
         }
     }

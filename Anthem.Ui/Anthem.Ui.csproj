@@ -134,6 +134,10 @@
     <PackageReference Include="Prism.Wpf" Version="7.1.0.431" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\E3.AuditTrailManager\E3.AuditTrailManager.csproj">
+      <Project>{6A75F5A4-114D-4763-BF18-C81ABC3D7FE5}</Project>
+      <Name>E3.AuditTrailManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\E3.ReactorManager.Interfaces\E3.ReactorManager.Interfaces.csproj">
       <Project>{620c94fe-d355-4801-92b0-f86d1b08fb02}</Project>
       <Name>E3.ReactorManager.Interfaces</Name>
@@ -160,6 +164,7 @@
     <Content Include="SqlFiles\FieldDevices-Plc-SensorsDataSet-1.sql" />
     <Content Include="SqlFiles\FieldPoints-2.sql" />
     <Content Include="SqlFiles\RecipeFieldPoints-3.sql" />
+    <Content Include="SqlFiles\Users-5.sql" />
     <Content Include="SqlFiles\RolesWithModules-4.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

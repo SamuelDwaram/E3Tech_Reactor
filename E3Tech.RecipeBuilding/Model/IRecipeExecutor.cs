@@ -12,8 +12,6 @@ namespace E3Tech.RecipeBuilding.Model
 
         void Execute(string deviceId, IList<RecipeStep> recipeSteps);
 
-        void UpdateRecipeStepsFromGivenIndex(int toBeUpdatedFromIndex, string deviceId, IList<RecipeStep> recipeSteps);
-
         void UpdateBlock(int stepIndex, IRecipeBlock block, string deviceId);
 
         void AbortBlockExecution(int stepIndex, IRecipeBlock block, string deviceId);
@@ -21,5 +19,9 @@ namespace E3Tech.RecipeBuilding.Model
         void ClearRecipe(string deviceId);
 
         void AbortRecipeExecution(string deviceId);
+
+        event UpdateRecipe UpdateRecipe;
     }
+
+    public delegate void UpdateRecipe(string deviceId, int stepIndex, RecipeStep recipeStep);
 }

@@ -1,5 +1,8 @@
-﻿using E3.ReactorManager.Interfaces.HardwareAbstractionLayer;
+﻿using E3.AuditTrailManager.Model;
+using E3.AuditTrailManager.Model.Enums;
+using E3.ReactorManager.Interfaces.HardwareAbstractionLayer;
 using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
+using E3.UserManager.Model.Data;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;
@@ -8,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Anathem.Ui.ViewModels
@@ -16,13 +20,16 @@ namespace Anathem.Ui.ViewModels
     {
         private readonly IFieldDevicesCommunicator fieldDevicesCommunicator;
         private readonly IRegionManager regionManager;
+        private readonly IAuditTrailManager auditTrailManager;
         private readonly TaskScheduler taskScheduler;
+        private readonly User user;
 
-        public ParametersHostViewModel(IFieldDevicesCommunicator fieldDevicesCommunicator, IRegionManager regionManager)
+        public ParametersHostViewModel(IFieldDevicesCommunicator fieldDevicesCommunicator, IRegionManager regionManager, IAuditTrailManager auditTrailManager)
         {
             taskScheduler = TaskScheduler.FromCurrentSynchronizationContext();
             this.fieldDevicesCommunicator = fieldDevicesCommunicator;
             this.regionManager = regionManager;
+            this.auditTrailManager = auditTrailManager;
             Task.Factory.StartNew(new Func<Dictionary<string, string>>(() => {
                 return (from SensorsDataSet s in fieldDevicesCommunicator.GetFieldDeviceData(DeviceId).SensorsData
                 from FieldPoint fp in s.SensorsFieldPoints
@@ -33,6 +40,7 @@ namespace Anathem.Ui.ViewModels
                     AddToParameters(item.Key, item.Value);
                 }
             }).ContinueWith(t => this.fieldDevicesCommunicator.FieldPointDataReceived += FieldDevicesCommunicator_FieldPointDataReceived);
+            user = (User)Application.Current.Resources["LoggedInUser"];
         }
 
         private void FieldDevicesCommunicator_FieldPointDataReceived(object sender, FieldPointDataReceivedArgs args)
@@ -70,6 +78,7 @@ namespace Anathem.Ui.ViewModels
             get => new DelegateCommand<string>(param => {
                 string[] paramInfo = param.Split('|');
                 fieldDevicesCommunicator.SendCommandToDevice(DeviceId, paramInfo[0], "bool", bool.TryParse(paramInfo[1], out bool parseResult) ? (!parseResult).ToString() : bool.FalseString);
+                auditTrailManager.RecordEventAsync($"Changed {paramInfo[0]} in {DeviceId} from {parseResult} to {!parseResult}", user.Name, EventTypeEnum.ChangedSetPoint);
             });
         }
 

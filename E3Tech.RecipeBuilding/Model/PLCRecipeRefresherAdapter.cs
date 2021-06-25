@@ -1,39 +1,52 @@
 ﻿using E3.ReactorManager.Interfaces.HardwareAbstractionLayer;
-using E3Tech.RecipeBuilding.Model;
+using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
 using System;
-using Unity;
+using System.Collections.Generic;
 
 namespace E3Tech.RecipeBuilding.Model
 {
     public class PLCRecipeRefresherAdapter
     {
-        IUnityContainer containerProvider;
+        private readonly IRecipeExecutor recipeExecutor;
         private readonly IRecipeRefresher recipeRefresher;
-        IFieldDevicesCommunicator fieldDevicesCommunicator;
+        private readonly IFieldDevicesCommunicator fieldDevicesCommunicator;
 
-        public PLCRecipeRefresherAdapter(IUnityContainer containerProvider)
+        public PLCRecipeRefresherAdapter(IFieldDevicesCommunicator fieldDevicesCommunicator, IRecipeExecutor recipeExecutor, IRecipeRefresher recipeRefresher)
         {
-            this.containerProvider = containerProvider;
-            if (containerProvider.IsRegistered<IRecipeRefresher>())
-            {
-                this.recipeRefresher = containerProvider.Resolve<IRecipeRefresher>();
-            }
+            this.recipeExecutor = recipeExecutor;
+            this.recipeExecutor.UpdateRecipe += RecipeExecutor_UpdateRecipe;
+            this.recipeRefresher = recipeRefresher;
+            this.fieldDevicesCommunicator = fieldDevicesCommunicator;
+            this.fieldDevicesCommunicator.FieldPointDataReceived += CommunicatorInstance_FieldPointDataReceived;
+        }
 
-            if (containerProvider.IsRegistered<IFieldDevicesCommunicator>())
-            {
-                this.fieldDevicesCommunicator = containerProvider.Resolve<IFieldDevicesCommunicator>();
+        private void RecipeExecutor_UpdateRecipe(string deviceId, int stepIndex, RecipeStep recipeStep)
+        {
+            UpdateRecipeBlock(deviceId, stepIndex, recipeStep.BlockOne);
+        }
 
-                fieldDevicesCommunicator.FieldPointDataReceived += CommunicatorInstance_FieldPointDataReceived;
+        private void UpdateRecipeBlock(string deviceId, int stepIndex, IRecipeBlock recipeBlock)
+        {
+            Dictionary<string, string> toBeUpdatedParameters = new Dictionary<string, string>();
+            toBeUpdatedParameters.Add("Started", recipeBlock.GetParameterValue("Started"));
+            toBeUpdatedParameters.Add("Ended", recipeBlock.GetParameterValue("Ended"));
+            toBeUpdatedParameters.Add("StartedTime", recipeBlock.GetParameterValue("StartedTime"));
+            toBeUpdatedParameters.Add("EndedTime", recipeBlock.GetParameterValue("EndedTime"));
+            toBeUpdatedParameters.Add("Enabled", bool.TrueString);
+
+            foreach (KeyValuePair<string, string> kv in toBeUpdatedParameters)
+            {
+                recipeRefresher.RefreshBlock(deviceId, stepIndex, recipeBlock.Name, kv.Key, kv.Value);
             }
         }
 
-        private void CommunicatorInstance_FieldPointDataReceived(object sender, E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data.FieldPointDataReceivedArgs e)
+        private void CommunicatorInstance_FieldPointDataReceived(object sender, FieldPointDataReceivedArgs args)
         {
             if (recipeRefresher != null)
             {
                 try
                 {
-                    string blocParameterName = e.FieldPointDescription;
+                    string blocParameterName = args.FieldPointDescription;
                     if (blocParameterName.Contains("Recipe"))
                     {
                         blocParameterName = blocParameterName.Substring(blocParameterName.IndexOf("_") + 1);
@@ -47,7 +60,7 @@ namespace E3Tech.RecipeBuilding.Model
                                 int stepIndex = Convert.ToInt32(parameterNameWithStepNumber.Substring(parameterNameWithStepNumber.IndexOf("_") + 1));
                                 if (!string.IsNullOrEmpty(blockName))
                                 {
-                                    recipeRefresher.RefreshBlock(e.FieldDeviceIdentifier, stepIndex, blockName, parameterName, e.NewFieldPointData);
+                                    recipeRefresher.RefreshBlock(args.FieldDeviceIdentifier, stepIndex, blockName, parameterName, args.NewFieldPointData);
                                 }
                             }
                         }

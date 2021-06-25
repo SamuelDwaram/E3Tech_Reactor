@@ -87,26 +87,47 @@ namespace E3Tech.RecipeBuilding.Model.Blocks
             }
         }
 
-        private string _sourceItemIndex;
-        public string SourceItemIndex
+        private string source;
+        public string Source
         {
-            get => _sourceItemIndex;
+            get => source;
             set
             {
-                _sourceItemIndex = value;
+                source = value;
                 RaisePropertyChanged();
             }
         }
 
-        private string _targetItemIndex;
-        public string TargetItemIndex
+        private string destination;
+        public string Destination
         {
-            get => _targetItemIndex;
+            get => destination;
             set
             {
-                _targetItemIndex = value;
+                destination = value;
                 RaisePropertyChanged();
             }
+        }
+
+        private string transferMode;
+        public string TransferMode
+        {
+            get => transferMode ?? bool.FalseString;
+            set { SetProperty(ref transferMode, value); }
+        }
+
+        private string timeInterval;
+        public string TimeInterval
+        {
+            get { return timeInterval; }
+            set { SetProperty(ref timeInterval, value); }
+        }
+
+        private string intervalType;
+        public string IntervalType
+        {
+            get { return intervalType; }
+            set { SetProperty(ref intervalType, value); }
         }
 
         public object Clone()
@@ -120,9 +141,12 @@ namespace E3Tech.RecipeBuilding.Model.Blocks
                 EndedTime = this.EndedTime?.Clone().ToString(),
                 Enabled = this.Enabled?.Clone().ToString(),
 
-                SourceItemIndex = this.SourceItemIndex?.Clone().ToString(),
-                TargetItemIndex = this.TargetItemIndex?.Clone().ToString(),
+                Source = this.Source?.Clone().ToString(),
+                Destination = this.Destination?.Clone().ToString(),
                 Volume = this.Volume?.Clone().ToString(),
+                TransferMode = this.TransferMode?.Clone().ToString(),
+                TimeInterval = this.TimeInterval?.Clone().ToString(),
+                IntervalType = this.IntervalType?.Clone().ToString(),
             };
         }
     }

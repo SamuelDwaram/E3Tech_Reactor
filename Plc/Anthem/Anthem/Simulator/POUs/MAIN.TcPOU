@@ -27,11 +27,8 @@ END_VAR
       <ST><![CDATA[IF updateAllParameters THEN
 	//Update parameters for R1 using Simulator logic
 	random_value := 0;
-	simulator(CurrentValue := R1.JacketOutletTemperature, TargetValue := DINT_TO_REAL(R1.HeatCoolSetPoint), SimulatedValue => random_value);
-	R1.JacketOutletTemperature := REAL_TO_INT(random_value);
-	
-	simulator(CurrentValue := R1.ReactorMassTemperature, TargetValue := R1.JacketOutletTemperature, SimulatedValue => random_value);
-	R1.ReactorMassTemperature := random_value;
+	simulator(CurrentValue := R1.JacketOutletTemperature, TargetValue := DINT_TO_REAL(R1.HeatCoolSetPoint), SimulatedValue => R1.JacketOutletTemperature);
+	simulator(CurrentValue := R1.ReactorMassTemperature, TargetValue := R1.JacketOutletTemperature, SimulatedValue => R1.ReactorMassTemperature);
 	
 	random_value := 0;
 	simulator(CurrentValue := DINT_TO_REAL(R1.StirrerRPM), TargetValue := DINT_TO_REAL(R1.StirrerSetPoint), SimulatedValue => random_value);
@@ -53,7 +50,9 @@ recipeInitializer(GvlIdentifier := 1, ClearRecipe := R1.ClearRecipe);
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="278" Count="0" />
-      <LineId Id="280" Count="16" />
+      <LineId Id="280" Count="2" />
+      <LineId Id="285" Count="0" />
+      <LineId Id="287" Count="9" />
       <LineId Id="337" Count="2" />
       <LineId Id="31" Count="0" />
       <LineId Id="356" Count="0" />

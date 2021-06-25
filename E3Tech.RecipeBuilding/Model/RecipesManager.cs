@@ -1,7 +1,7 @@
 ﻿using E3Tech.RecipeBuilding.Model;
 using System.Collections.Generic;
 
-namespace E3.ReactorManager.Recipe.PLCIntegrator
+namespace E3Tech.RecipeBuilding
 {
     public class RecipesManager : IRecipesManager
     {
@@ -30,7 +30,6 @@ namespace E3.ReactorManager.Recipe.PLCIntegrator
         {
             devicesRunningRecipe.RemoveAt(devicesRunningRecipe.IndexOf(deviceId));
         }
-
 
         public static RecipesManager Instance
         {

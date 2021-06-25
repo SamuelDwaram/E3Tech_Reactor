@@ -30,16 +30,14 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
         public event EventHandler<FieldPointDataReceivedArgs> FieldPointDataReceived;
         public IList<FieldDevice> FieldDevices { get; set; } = new List<FieldDevice>();
 
-        public void CreateVariableHandles(string deviceId, IList<FieldPoint> fieldPoints)
+        public IEnumerable<int> CreateVariableHandles(string deviceId, IEnumerable<string> memoryAddresses)
         {
-            FieldDevices.Where(fd => fd.Identifier == deviceId).ToList().ForEach(fd => {
-                fieldPoints.ToList().ForEach(fp => {
-                    fd.RelatedPlc.CreateVariableHandle(fp.MemoryAddress);
-                });
-            });
+            return from FieldDevice fd in FieldDevices.Where(fd => fd.Identifier == deviceId)
+                   from string memoryAddress in memoryAddresses
+                   select fd.RelatedPlc.CreateVariableHandle(memoryAddress);
         }
 
-        public void DeleteVariableHandles(string deviceId, IList<int> variableHandles)
+        public void DeleteVariableHandles(string deviceId, IEnumerable<int> variableHandles)
         {
             FieldDevices.Where(fd => fd.Identifier == deviceId).ToList().ForEach(fd => {
                 variableHandles.ToList().ForEach(handle => {
@@ -423,6 +421,15 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
             return false;
         }
 
+        internal T ReadAny<T>(string deviceId, int plcHandle)
+        {
+            return (T)FieldDevices.First(fd => fd.Identifier == deviceId).RelatedPlc.TwinCATClient.ReadAny(plcHandle, typeof(T));
+        }
+
+        internal void WriteAny<T>(string deviceId, int plcHandle, T data)
+        {
+            FieldDevices.First(fd => fd.Identifier == deviceId).RelatedPlc.TwinCATClient.WriteAny(plcHandle, data);
+        }
         #endregion
 
         #region Data parsing Functions

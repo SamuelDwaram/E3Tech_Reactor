@@ -109,7 +109,7 @@
     <Compile Include="HardwareAbstractionLayer\Data\SensorsDataSet.cs" />
     <Compile Include="HardwareAbstractionLayer\Data\FieldPoint.cs" />
     <Compile Include="Helpers\CommandManagerHelper.cs" />
-    <Compile Include="Helpers\JsonImporter.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Helpers\SingleInstance.cs" />
     <Compile Include="Helpers\UiHelpers.cs" />
     <Compile Include="Helpers\WebBrowserHelper.cs" />

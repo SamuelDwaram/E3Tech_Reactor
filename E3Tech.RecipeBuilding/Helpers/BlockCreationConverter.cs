@@ -38,14 +38,10 @@ namespace E3Tech.RecipeBuilding.Helpers
                     return item.ToObject<ParameterizedRecipeBlock<StartBlockParameters>>();
                 case "Stirrer":
                     return item.ToObject<ParameterizedRecipeBlock<StirrerBlockParameters>>();
-                case "Dosing":
-                    return item.ToObject<ParameterizedRecipeBlock<DosingBlockParameters>>();
                 case "HeatCool":
                     return item.ToObject<ParameterizedRecipeBlock<HeatCoolBlockParameters>>();
                 case "Wait":
                     return item.ToObject<ParameterizedRecipeBlock<WaitBlockParameters>>();
-                case "Fill":
-                    return item.ToObject<ParameterizedRecipeBlock<FillBlockParameters>>();
                 case "Transfer":
                     return item.ToObject<ParameterizedRecipeBlock<TransferBlockParameters>>();
                 case "End":

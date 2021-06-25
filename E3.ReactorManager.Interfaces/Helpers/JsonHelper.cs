@@ -4,7 +4,7 @@ using System.IO;
 
 namespace E3.ReactorManager.Interfaces.Helpers
 {
-    public class JsonImporter
+    public class JsonHelper
     {
         public static T ImportJson<T>(string jsonPath)
         {
@@ -23,6 +23,11 @@ namespace E3.ReactorManager.Interfaces.Helpers
 
                 return JsonConvert.DeserializeObject<T>(json, settings);
             }
+        }
+
+        public static string SerializeObject<T>(T obj)
+        {
+            return JsonConvert.SerializeObject(obj);
         }
     }
 }

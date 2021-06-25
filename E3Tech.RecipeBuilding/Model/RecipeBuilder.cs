@@ -285,14 +285,8 @@ namespace E3Tech.RecipeBuilding.Model
                 case "Stirrer":
                     blockEndedStatus = (block as ParameterizedRecipeBlock<StirrerBlockParameters>).Parameters.Ended;
                     break;
-                case "Dosing":
-                    blockEndedStatus = (block as ParameterizedRecipeBlock<DosingBlockParameters>).Parameters.Ended;
-                    break;
                 case "Wait":
                     blockEndedStatus = (block as ParameterizedRecipeBlock<WaitBlockParameters>).Parameters.Ended;
-                    break;
-                case "Fill":
-                    blockEndedStatus = (block as ParameterizedRecipeBlock<FillBlockParameters>).Parameters.Ended;
                     break;
                 case "Transfer":
                     blockEndedStatus = (block as ParameterizedRecipeBlock<TransferBlockParameters>).Parameters.Ended;

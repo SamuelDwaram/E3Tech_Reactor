@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Unity;
 
-namespace E3.ReactorManager.Recipe.PLCIntegrator
+namespace E3Tech.RecipeBuilding
 {
     public class PLCRecipeReloader : IRecipeReloader
     {
@@ -65,12 +65,8 @@ namespace E3.ReactorManager.Recipe.PLCIntegrator
                     return GetHeatCoolBlockInstance(deviceId, stepIndex);
                 case "Stirrer":
                     return GetStirrerBlockInstance(deviceId, stepIndex);
-                case "Dosing":
-                    return GetDosingBlockInstance(deviceId, stepIndex);
                 case "Wait":
                     return GetWaitBlockInstance(deviceId, stepIndex);
-                case "Fill":
-                    return GetFillBlockInstance(deviceId, stepIndex);
                 case "Transfer":
                     return GetTransferBlockInstance(deviceId, stepIndex);
                 default:
@@ -94,19 +90,6 @@ namespace E3.ReactorManager.Recipe.PLCIntegrator
             return transferRecipeBlock;
         }
 
-        private IRecipeBlock GetFillBlockInstance(string deviceId, int stepIndex)
-        {
-            IRecipeBlock fillRecipeBlock = new ParameterizedRecipeBlock<FillBlockParameters>();
-
-            fillRecipeBlock.UpdateParameterValue("Started", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "FillStarted_" + stepIndex));
-            fillRecipeBlock.UpdateParameterValue("StartedTime", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "FillStartedTime_" + stepIndex));
-            fillRecipeBlock.UpdateParameterValue("Ended", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "FillEnded_" + stepIndex));
-            fillRecipeBlock.UpdateParameterValue("EndedTime", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "FillEndedTime_" + stepIndex));
-            fillRecipeBlock.UpdateParameterValue("TargetItemIndex", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "FillTargetItemIndex_" + stepIndex));
-            fillRecipeBlock.UpdateParameterValue("Volume", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "FillVolume_" + stepIndex));
-
-            return fillRecipeBlock;
-        }
         private IRecipeBlock GetStartBlockInstance(string deviceId, int stepIndex)
         {
             IRecipeBlock startRecipeBlock = new ParameterizedRecipeBlock<StartBlockParameters>();
@@ -147,30 +130,6 @@ namespace E3.ReactorManager.Recipe.PLCIntegrator
             stirrerRecipeBlock.UpdateParameterValue("SetPoint", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "StirrerSetPoint_" + stepIndex));
 
             return stirrerRecipeBlock;
-        }
-
-        private IRecipeBlock GetDosingBlockInstance(string deviceId, int stepIndex)
-        {
-            IRecipeBlock dosingRecipeBlock = new ParameterizedRecipeBlock<DosingBlockParameters>();
-
-            dosingRecipeBlock.UpdateParameterValue("Started", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingStarted_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("StartedTime", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingStartedTime_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("Ended", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingEnded_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("EndedTime", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingEndedTime_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("MaxAmount", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingMaxAmount_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("RemainingDosableAmount", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingRemainingDosableAmount_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("StopTemperature", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingStopTemperature_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("ResumeTemperature", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingResumeTemperature_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("RateSetPointExpression", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingRateSetPointExpression_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("ResumeTemperature", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingResumeTemperature_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("MinRate", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingMinRate_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("MaxRate", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingMaxRate_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("SettlingTime", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingSettlingTime_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("MinPh", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingMinPh_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("MaxPh", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingMaxPh_" + stepIndex));
-            dosingRecipeBlock.UpdateParameterValue("OperatingMode", fieldDevicesCommunicator.ReadFieldPointValue<string>(deviceId, "DosingOperatingMode_" + stepIndex));
-
-            return dosingRecipeBlock;
         }
 
         private IRecipeBlock GetWaitBlockInstance(string deviceId, int stepIndex)
