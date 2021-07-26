@@ -35,9 +35,9 @@ namespace E3.ReactorManager.Recipe.PLCIntegrator.Models
         public string sStartedTime;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
         public string sEndedTime;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 21)]
         public string sSource;
-        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 11)]
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 21)]
         public string sDestination;
         public double lrSetPoint;
         [MarshalAs(UnmanagedType.I1)]

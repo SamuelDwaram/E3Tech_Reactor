@@ -111,6 +111,10 @@
     <Compile Include="Model\PLCRecipeExecutor.cs" />
     <Compile Include="Model\PLCRecipeReloader.cs" />
     <Compile Include="Model\RecipesManager.cs" />
+    <Compile Include="ViewModels\DesignExperimentViewModel.cs" />
+    <Compile Include="Views\DesignExperimentView.xaml.cs">
+      <DependentUpon>DesignExperimentView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RecipesView.xaml.cs">
       <DependentUpon>RecipesView.xaml</DependentUpon>
     </Compile>
@@ -127,6 +131,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\ToggleButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DesignExperimentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

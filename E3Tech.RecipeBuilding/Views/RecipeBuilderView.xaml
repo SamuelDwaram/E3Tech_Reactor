@@ -227,6 +227,8 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Content="Save Recipe Execution" Command="{Binding SaveRecipeExecutionCommand}">
                     <Button.Style>
@@ -279,16 +281,32 @@
                 <Button Grid.Column="4">
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
-                            <Setter Property="Content" Value="Start"/>
-                            <Setter Property="Command" Value="{Binding StartRecipeCommand}"/>
+                            <Setter Property="Content" Value="Pause"/>
+                            <!--<Setter Property="Command" Value="{Binding StartRecipeCommand}"/>-->
+                            <!--
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
                                     <Setter Property="Content" Value="Stop"/>
                                     <Setter Property="Command" Value="{Binding AbortRecipeExecutionCommand}"/>
                                 </DataTrigger>
-                            </Style.Triggers>
+                            <-->
+                            <!--/Style.Triggers>-->
                         </Style>
                     </Button.Style>
+                </Button>
+                <Button Grid.Column="5">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
+                                <Setter Property="Content" Value="Start/Stop"/>
+                                <Setter Property="Command" Value="{Binding StartRecipeCommand}"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
+                                        <Setter Property="Content" Value="Stop"/>
+                                        <Setter Property="Command" Value="{Binding AbortRecipeExecutionCommand}"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
                 </Button>
             </Grid>
         </Grid>

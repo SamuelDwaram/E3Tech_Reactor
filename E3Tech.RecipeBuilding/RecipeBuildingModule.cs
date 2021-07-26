@@ -52,6 +52,8 @@ namespace E3Tech.RecipeBuilding
             regionManager.RegisterViewWithRegion("RecipeBuilder", typeof(MultiRecipeBuilderView));
             containerRegistry.RegisterForNavigation(typeof(RecipesView), "Recipes");
             viewManager.AddView("RecipeBuilderView");
+            containerRegistry.RegisterForNavigation(typeof(DesignExperimentView), "DesignExperiment");
+
         }
 
         private static void RegisterBlocks(IContainerRegistry containerRegistry)

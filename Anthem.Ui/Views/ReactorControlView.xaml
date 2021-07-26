@@ -7,6 +7,8 @@
              xmlns:uc_2="clr-namespace:Anathem.Ui.UserControls"
              xmlns:converters="clr-namespace:E3.ReactorManager.Interfaces.UI.Converters;assembly=E3.ReactorManager.Interfaces"
              xmlns:uiHelpers="clr-namespace:Anathem.Ui.Helpers"
+             xmlns:AnimationUserControls="clr-namespace:E3.ReactorManager.Interfaces.UI.UserControls;assembly=E3.ReactorManager.Interfaces"
+             
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920"
              Background="#1a202c"
@@ -75,17 +77,18 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.2*"/>
             <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2.5*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Background="#555c6e"/>
+        <Grid Grid.Column="0" Background="#555c6e" Height="1080" VerticalAlignment="Bottom"/>
         <uc_1:NavigateButtonType_1 VerticalAlignment="Top" Grid.Column="0" ButtonCommand="{Binding NavigateCommand}" ButtonCommandParameter="Dashboard"/>
         <ContentControl prism:RegionManager.RegionName="ParametersHost" Grid.Column="1"/>
         <Grid Grid.Column="2" Background="#272e3e">
             <Grid.RowDefinitions>
                 <RowDefinition Height="45*"/>
-                <RowDefinition Height="71*"/>
+                <RowDefinition Height="100*"/>
                 <RowDefinition Height="19*"/>
                 <RowDefinition Height="45*"/>
+                <RowDefinition Height="180*"/>
                 <RowDefinition Height="180*"/>
                 <RowDefinition Height="180*"/>
                 <RowDefinition Height="180*"/>
@@ -95,9 +98,11 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Content="MVA" Background="#1d2532" HorizontalContentAlignment="Center"/>
             <Label Grid.Row="0" Grid.Column="1" Content="RV" Background="#1d2532" HorizontalContentAlignment="Center"/>
+            <Label Grid.Row="0" Grid.Column="2" Content="RV SPARE" Background="#1d2532" HorizontalContentAlignment="Center"/>
             <Border Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
                 <Viewbox HorizontalAlignment="Left">
                     <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
@@ -126,15 +131,74 @@
                     </StackPanel>
                 </Viewbox>
             </Border>
-            <Label Grid.Row="3" Grid.ColumnSpan="2" Content="Reactor Parameters" HorizontalContentAlignment="Center" Background="#1d2532"/>
+            <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+                <Viewbox HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                        <Button Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <uc_1:ButtonOnOffAnimation Tag="StirrerCommand_3" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Label Content="Stirrer 3" Style="{StaticResource HeaderLabelStyle}"/>
+                    </StackPanel>
+                </Viewbox>
+            </Border>
+            <Border HorizontalAlignment="Center" Grid.Row="9" Grid.Column="0" >
+                <Viewbox HorizontalAlignment="Left">
+                    <StackPanel Orientation="Vertical" Margin="20,20,0,0">
+                        <Button Cursor="Hand">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <uc_1:ButtonOnOffAnimation Tag="StirrerCommand_3" uiHelpers:UiHelpers.CommandToDevice="{Binding SendCommandToDevice}"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                        <Label Content="Chiller" Style="{StaticResource HeaderLabelStyle}"/>
+                    </StackPanel>
+                </Viewbox>
+            </Border>
+            <Label Grid.Row="3" Grid.ColumnSpan="3" Content="Reactor Parameters" HorizontalContentAlignment="Center" Background="#1d2532"/>
             <uc_2:GraphicalParameter Grid.Row="4" Grid.Column="0" Tag="Temperature_1" ParamLabel="MVA Mass&#xa;Temperature" Units="°C" Limits="-90|200"/>
             <uc_2:GraphicalParameter Grid.Row="4" Grid.Column="1" Tag="Temperature_2" ParamLabel="Reactor Mass&#xa;Temperature" Units="°C" Limits="-90|200"/>
+            <uc_2:GraphicalParameter Grid.Row="4" Grid.Column="2" Tag="Temperature_3" ParamLabel="Spare RV Mass&#xa;Temperature" Units="°C" Limits="-90|200"/>
             <uc_2:GraphicalParameter Grid.Row="5" Grid.Column="0" Tag="Pressure_1" ParamLabel="MVA&#xa;Pressure" Units="mmHg" Limits="0|760"/>
             <uc_2:GraphicalParameter Grid.Row="5" Grid.Column="1" Tag="Pressure_2" ParamLabel="Reactor Mass&#xa;Pressure" Units="mmHg" Limits="0|760"/>
-            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="0" Tag="ReactoLevel_1" ParamLabel="MVA&#xa;Level" Units="Lts" Limits="0|25"/>
+            <uc_2:GraphicalParameter Grid.Row="5" Grid.Column="2" Tag="Pressure_3" ParamLabel="Spare RV Mass&#xa;Pressure" Units="mmHg" Limits="0|760"/>
+            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="0" Tag="ReactorLevel_1" ParamLabel="MVA&#xa;Level" Units="Lts" Limits="0|25"/>
             <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="1" Tag="ReactorLevel_2" ParamLabel="Reactor Vessel&#xa;Level" Units="Lts" Limits="0|50"/>
+            <uc_2:GraphicalParameter Grid.Row="6" Grid.Column="2" Tag="ReactorLevel_3" ParamLabel="Spare RV Vessel&#xa;Level" Units="Lts" Limits="0|50"/>
             <uc_2:GraphicalParameter Grid.Row="7" Grid.Column="0" Tag="StirrerSetpoint_1" IsEditable="True" ParamDataType="double" Command="{Binding SendCommandToDevice}" ParamLabel="MVA Stirrer&#xa;Setpoint" Units="RPM" Limits="0|200"/>
             <uc_2:GraphicalParameter Grid.Row="7" Grid.Column="1" Tag="StirrerSetpoint_2" IsEditable="True" ParamDataType="double" Command="{Binding SendCommandToDevice}" ParamLabel="RV Stirrer&#xa;Setpoint" Units="RPM" Limits="0|200"/>
+            <uc_2:GraphicalParameter Grid.Row="7" Grid.Column="2" Tag="StirrerSetpoint_3" IsEditable="True" ParamDataType="double" Command="{Binding SendCommandToDevice}" ParamLabel="Spare RV Stirrer&#xa;Setpoint" Units="RPM" Limits="0|200"/>
+            <uc_2:GraphicalParameter Grid.Row="9" Grid.Column="1" Tag="ChillerLevel_1" ParamLabel="Chiller&#xa;Temperature SP"  Units="°C" Limits="-90|200"/>
+
+            <Viewbox Grid.Row="8" Grid.Column="0"
+                             Stretch="Fill">
+                <Border BorderBrush="#FF1E2432" BorderThickness="2">
+                    <DockPanel>
+                        <Label Content="MVA Stirrer&#xa;Feedback" DockPanel.Dock="Top" Style="{StaticResource HeaderLabelStyle}"/>
+                        <AnimationUserControls:CircularGuageAnimation Margin="20,0,20,0" DockPanel.Dock="Bottom" UnitsValue="rpm" CurrentValue="{Binding StirrerCurrentSpeed_1}" MaximumValue="200"/>
+                    </DockPanel>
+                </Border>
+            </Viewbox>
+            <Viewbox Grid.Row="8" Grid.Column="1" Stretch="Fill">
+                <Border BorderBrush="#FF1E2432" BorderThickness="2">
+                    <DockPanel>
+                        <Label Content="RV Stirrer&#xa;Feedback" DockPanel.Dock="Top" Style="{StaticResource HeaderLabelStyle}"/>
+                        <AnimationUserControls:CircularGuageAnimation Margin="20,0,20,0" DockPanel.Dock="Bottom" UnitsValue="rpm" CurrentValue="{Binding StirrerCurrentSpeed}" MaximumValue="200"/>
+                    </DockPanel>
+                </Border>
+            </Viewbox>
+            <Viewbox Grid.Row="8" Grid.Column="2" Stretch="Fill">
+                <Border BorderBrush="#FF1E2432" BorderThickness="2">
+                    <DockPanel>
+                        <Label Content="Spare RV Stirrer&#xa;Feedback" DockPanel.Dock="Top" Style="{StaticResource HeaderLabelStyle}"/>
+                        <AnimationUserControls:CircularGuageAnimation Margin="20,0,20,0" DockPanel.Dock="Bottom" UnitsValue="rpm" CurrentValue="{Binding StirrerCurrentSpeed_2}" MaximumValue="200"/>
+                    </DockPanel>
+                </Border>
+            </Viewbox>
         </Grid>
     </Grid>
 </UserControl>

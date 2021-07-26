@@ -48,13 +48,15 @@ namespace Anathem.Ui.UserControls
             {
                 if (parseResult)
                 {
-                    paramLabel.Background = new SolidColorBrush(Color.FromRgb(91, 201, 208));
+                    //paramLabel.Background = new SolidColorBrush(Color.FromRgb(91, 201, 208));
+                    paramLabel.Background = new SolidColorBrush(Color.FromRgb(0, 154, 23));
                     paramLabel.Foreground = Brushes.White;
                 }
                 else
                 {
-                    paramLabel.Background = new SolidColorBrush(Color.FromRgb(30, 36, 50));
-                    paramLabel.Foreground = new SolidColorBrush(Color.FromRgb(142, 148, 161));
+                    paramLabel.Background = Brushes.Transparent;
+                    //paramLabel.Background = new SolidColorBrush(Color.FromRgb(30, 36, 50));
+                    //paramLabel.Foreground = new SolidColorBrush(Color.FromRgb(142, 148, 161));
                 }
             }
         }

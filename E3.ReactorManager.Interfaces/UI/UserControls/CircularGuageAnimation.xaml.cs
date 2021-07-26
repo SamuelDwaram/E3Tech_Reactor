@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace E3.ReactorManager.Interfaces.UI.UserControls
 {
     /// <summary>
@@ -24,6 +26,7 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
         {
             InitializeComponent();
         }
+
 
         public static readonly DependencyProperty MaximumValueProperty =
            DependencyProperty.Register("MaximumValue", typeof(string), typeof(CircularGuageAnimation), new

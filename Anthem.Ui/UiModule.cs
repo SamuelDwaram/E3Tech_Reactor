@@ -26,6 +26,15 @@ namespace Anathem.Ui
             containerRegistry.RegisterForNavigation(typeof(ReactorControlView), "ReactorControl");
             containerRegistry.RegisterForNavigation(typeof(InitializeView), "Initialize");
             regionManager.RegisterViewWithRegion("ParametersHost", typeof(ParametersHostView));
+            containerRegistry.RegisterForNavigation(typeof(ReportView), "Reports");
+            containerRegistry.RegisterForNavigation(typeof(ProcessFlowView), "ProcessFlow");
+            containerRegistry.RegisterForNavigation(typeof(ConfigurationView), "Configuration");
+            //containerRegistry.RegisterForNavigation(typeof(FirstView), "First");
+            //containerRegistry.RegisterForNavigation(typeof(SecondView), "Second");
+            regionManager.RegisterViewWithRegion("First", typeof(FirstView));
+            regionManager.RegisterViewWithRegion("Second", typeof(SecondView));
+
+
         }
     }
 }

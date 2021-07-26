@@ -86,7 +86,9 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding Parameters.Name}" Value="End"/>
-                                <Condition Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}, Path=DataContext.RecipeEnded}" Value="True"/>
+                                <Condition Binding="{Binding Parameters.Ended}" Value="True"/>
+                                
+                                <!--<Condition Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid}, Path=DataContext.RecipeEnded}" Value="True"/>-->
                             </MultiDataTrigger.Conditions>
                             <MultiDataTrigger.Setters>
                                 <Setter Property="Background" Value="Red"/>

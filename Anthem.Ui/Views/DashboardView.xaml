@@ -80,6 +80,8 @@
             </DockPanel.Resources>
             <Button Content="Recipes View" CommandParameter="Recipes"/>
             <Button Content="Parameters Host" CommandParameter="ReactorControl"/>
+            <Button Content="Process Diagram " CommandParameter="ProcessFlow"/>
+            <Button Content="Configuration Page"  CommandParameter="Configuration"/>
             <Button Content="Reports" CommandParameter="Reports"/>
             <Button Content="Trends" CommandParameter="Trends"/>
             <Button Content="Alarms" CommandParameter="Alarms"/>

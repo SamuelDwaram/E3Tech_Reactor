@@ -90,6 +90,8 @@ delete from dbo.FieldPoints where TypeOfAddress='FieldPoint'
 	INSERT [dbo].[FieldPoints] VALUES (N'Valve_8', N'Valve_8', N'FieldPoint', N'IO.Vessels[2].Valves[0].bStart', N'bool', N'false', N'false', N'sensorDataSet_1', N'Reactor_1')
 	INSERT [dbo].[FieldPoints] VALUES (N'Valve_9', N'Valve_9', N'FieldPoint', N'IO.Vessels[2].Valves[1].bStart', N'bool', N'false', N'false', N'sensorDataSet_1', N'Reactor_1')
 
+	INSERT [dbo].[FieldPoints] VALUES (N'StirrerFeedback_1', N'StirrerFeedback_1', N'FieldPoint', N'IO.Reactors[0].VFD.nRPMFeedBackScaled', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'StirrerFeedback_2', N'StirrerFeedback_2', N'FieldPoint', N'IO.Reactors[0].VFD.nRPMFeedBackScaled', N'single', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
 
 	INSERT [dbo].[FieldPoints] VALUES (N'StirrerCommand_1', N'StirrerCommand_1', N'FieldPoint', N'IO.StirrerCommand_1', N'bool', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
 	INSERT [dbo].[FieldPoints] VALUES (N'StirrerCommand_2', N'StirrerCommand_2', N'FieldPoint', N'IO.StirrerCommand_2', N'bool', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
@@ -97,10 +99,10 @@ delete from dbo.FieldPoints where TypeOfAddress='FieldPoint'
 	INSERT [dbo].[FieldPoints] VALUES (N'Pressure_2', N'Pressure_2', N'FieldPoint', N'IO.Pressure_2', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
 	INSERT [dbo].[FieldPoints] VALUES (N'Temperature_1', N'Temperature_1', N'FieldPoint', N'IO.Temperature_1', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
 	INSERT [dbo].[FieldPoints] VALUES (N'Temperature_2', N'Temperature_2', N'FieldPoint', N'IO.Temperature_2', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
-	INSERT [dbo].[FieldPoints] VALUES (N'PH_1', N'PH_1', N'FieldPoint', N'IO.PH_1', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
-	INSERT [dbo].[FieldPoints] VALUES (N'PH_2', N'PH_2', N'FieldPoint', N'IO.PH_2', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
-	INSERT [dbo].[FieldPoints] VALUES (N'StirrerSetpoint_1', N'StirrerSetpoint_1', N'FieldPoint', N'IO.StirrerSetpoint_1', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
-	INSERT [dbo].[FieldPoints] VALUES (N'StirrerSetpoint_2', N'StirrerSetpoint_2', N'FieldPoint', N'IO.StirrerSetpoint_2', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'ReactorLevel_1', N'ReactorLevel_1', N'FieldPoint', N'IO.ReactorLevel_1', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'ReactorLevel_2', N'ReactorLevel_2', N'FieldPoint', N'IO.ReactorLevel_2', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'StirrerSetpoint_1', N'StirrerSetpoint_1', N'FieldPoint', N'IO.Reactors[1].VFD.nRPMSetPointScaled', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'StirrerSetpoint_2', N'StirrerSetpoint_2', N'FieldPoint', N'IO.Reactors[0].VFD.nRPMSetPointScaled', N'double', N'false', N'true', N'sensorDataSet_1', N'Reactor_1')
 
 	insert into dbo.CommandPoints select Label, SensorDataSetIdentifier, FieldDeviceIdentifier from dbo.FieldPoints
 	where CHARINDEX('Valve_', Label) > 0 or CHARINDEX('Pump_', Label) > 0 or CHARINDEX('StirrerCommand_', Label) > 0 or CHARINDEX('StirrerSetpoint_', Label) > 0

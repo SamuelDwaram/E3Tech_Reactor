@@ -1,6 +1,7 @@
 ﻿using E3.ReactorManager.Interfaces.HardwareAbstractionLayer;
 using E3Tech.RecipeBuilding.Model;
 using E3Tech.RecipeBuilding.Model.Blocks;
+using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,14 @@ namespace E3Tech.RecipeBuilding
             this.fieldDevicesCommunicator = fieldDevicesCommunicator;
             this.recipesManager = recipesManager;
             Initialize();
-        }
+            this.fieldDevicesCommunicator.FieldPointDataReceived += FieldDevicesCommunicator_FieldPointDataReceived;
 
+
+        }
+        private void FieldDevicesCommunicator_FieldPointDataReceived(object sender, FieldPointDataReceivedArgs args)
+        {
+            Sample();
+        }
         private void Initialize()
         {
             pollRecipeTimer.Elapsed += (sender, args) => {
@@ -42,6 +49,34 @@ namespace E3Tech.RecipeBuilding
                 }
             };
             pollRecipeTimer.Start();
+        }
+
+        private void Sample()
+        {
+            foreach (string deviceId in recipesManager.DevicesRunningRecipe)
+            {
+                int plcHandle = plcVarHandles.ContainsKey(deviceId) ? plcVarHandles[deviceId] : default;
+                if (plcHandle == default)
+                {
+                    plcHandle = fieldDevicesCommunicator.CreateVariableHandles(deviceId, new List<string> { "RecipeTags.Recipe" }).First();
+                    plcVarHandles.Add(deviceId, plcHandle);
+                }
+                else
+                {
+                    Recipe recipe = fieldDevicesCommunicator.ReadAny<Recipe>(deviceId, plcHandle);
+                    foreach (Block block in recipe.Blocks)
+                    {
+                        if (block.Name == string.Empty)
+                        {
+                            // This is an empty block => Recipe ended with previous block.
+                            // No need to read further steps. It will be time consuming operation.
+                            break;
+                        }
+                        IRecipeBlock recipeBlock = GetRecipeBlock(block);
+                        UpdateRecipe?.BeginInvoke(deviceId, block.StepNo, new RecipeStep { BlockOne = recipeBlock }, null, null);
+                    }
+                }
+            }
         }
 
         private async void PollRecipe()
@@ -83,6 +118,8 @@ namespace E3Tech.RecipeBuilding
                     return GetStartBlock(block);
                 case "Stirrer":
                     return GetStirrerBlock(block);
+                case "Wait":
+                    return GetWaitBlock(block);
                 case "Transfer":
                     return GetTransferBlock(block);
                 case "Flush":
@@ -108,6 +145,19 @@ namespace E3Tech.RecipeBuilding
             startBlock.Parameters.EndedTime = block.Properties.sEndedTime;
             startBlock.Parameters.HeatCoolModeSelection = block.Properties.bModeSelection.ToString();
             return startBlock;
+        }
+        private IRecipeBlock GetWaitBlock(Block block)
+        {
+            ParameterizedRecipeBlock<WaitBlockParameters> waitBlock = Activator.CreateInstance<ParameterizedRecipeBlock<WaitBlockParameters>>();
+            waitBlock.Parameters.Started = block.Properties.bBlockStarted.ToString();
+            //waitBlock.Parameters.Started = "True";
+            //waitBlock.Parameters.Ended = "True";
+            waitBlock.Parameters.Ended = block.Properties.bBlockEnded.ToString();
+            waitBlock.Parameters.StartedTime = block.Properties.sStartedTime;
+            //waitBlock.Parameters.StartedTime = "00:05";
+            waitBlock.Parameters.EndedTime = block.Properties.sEndedTime;
+            waitBlock.Parameters.Duration = block.Properties.nInterval.ToString();
+            return waitBlock;
         }
 
         private IRecipeBlock GetStirrerBlock(Block block)
@@ -184,8 +234,10 @@ namespace E3Tech.RecipeBuilding
         private IRecipeBlock GetEndBlock(Block block)
         {
             ParameterizedRecipeBlock<EndBlockParameters> endBlock = Activator.CreateInstance<ParameterizedRecipeBlock<EndBlockParameters>>();
-            endBlock.Parameters.Started = block.Properties.bBlockStarted.ToString();
+            //endBlock.Parameters.Started = block.Properties.bBlockStarted.ToString();
+            //endBlock.Parameters.Started = "True";
             endBlock.Parameters.Ended = block.Properties.bBlockEnded.ToString();
+            //endBlock.Parameters.Ended = "True";
             endBlock.Parameters.StartedTime = block.Properties.sStartedTime;
             endBlock.Parameters.EndedTime = block.Properties.sEndedTime;
 
@@ -197,8 +249,11 @@ namespace E3Tech.RecipeBuilding
 
         public void Execute(string deviceId, IList<RecipeStep> recipeSteps)
         {
-            // dispose the polling task
+            // stop the polling timer and dispose the polling task
+            pollRecipeTimer.Stop();
+            pollingInProgress = false;
             cancellationTokenSource.Cancel();
+
             Recipe recipe = new Recipe();
             IList<Block> blocks = new List<Block>();
             foreach ((RecipeStep recipeStep, int stepIndex) in recipeSteps.Select((recipeStep, stepIndex) => (recipeStep, stepIndex)))
@@ -230,6 +285,10 @@ namespace E3Tech.RecipeBuilding
             {
                 case "Start":
                     block.Properties.bModeSelection = Convert.ToBoolean(blockOne.GetParameterValue(nameof(StartBlockParameters.HeatCoolModeSelection)));
+                    break;
+                case "Wait":
+                    ParameterizedRecipeBlock<WaitBlockParameters> waitBlock = blockOne as ParameterizedRecipeBlock<WaitBlockParameters>;
+                    block.Properties.nInterval = Convert.ToInt32(waitBlock.Parameters.Duration);
                     break;
                 case "Stirrer":
                     ParameterizedRecipeBlock<StirrerBlockParameters> stirBlock = blockOne as ParameterizedRecipeBlock<StirrerBlockParameters>;

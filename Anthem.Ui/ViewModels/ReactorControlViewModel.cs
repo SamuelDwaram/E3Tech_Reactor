@@ -50,12 +50,15 @@ namespace Anathem.Ui.ViewModels
 
         private void FieldDevicesCommunicator_FieldPointDataReceived(object sender, FieldPointDataReceivedArgs liveData)
         {
+            StirrerCurrentSpeed = Convert.ToString(Convert.ToSingle(ParameterDictionary["StirrerFeedback_1"]));
             if (ParameterDictionary.ContainsKey(liveData.FieldPointIdentifier))
             {
                 ParameterDictionary[liveData.FieldPointIdentifier] = liveData.NewFieldPointData;
                 UpdateUi();
             }
+            
         }
+
 
         private void UpdateUi()
         {
@@ -78,5 +81,17 @@ namespace Anathem.Ui.ViewModels
         public bool KeepAlive { get; set; } = false;
         public string DeviceId => "Reactor_1";
         public Dictionary<string, string> ParameterDictionary { get; set; } = new Dictionary<string, string>();
+
+        private string _stirrerCurrentSpeed;
+        public string StirrerCurrentSpeed
+        {
+            get { return _stirrerCurrentSpeed ; }
+            set
+            {
+                _stirrerCurrentSpeed = value;
+                RaisePropertyChanged();
+            }
+        }
+
     }
 }

@@ -55,9 +55,10 @@
             <TextBox x:Name="stirrerSetPointExpressionTextBox" Width="120" VerticalAlignment="Center" Text="{Binding SetPoint, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Height="23" HorizontalAlignment="Left"/>
             <Label Content="RPM" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
         </StackPanel>
-        <Label Content="Set Point" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
+        <Label Content="Reactor" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
         <ComboBox Grid.Row="1" Grid.Column="1" SelectedValue="{Binding Destination}" SelectedValuePath="Content">
             <ComboBoxItem>RV</ComboBoxItem>
+            <ComboBoxItem>RV SPARE</ComboBoxItem>
             <ComboBoxItem>MVA</ComboBoxItem>
         </ComboBox>
     </Grid>
