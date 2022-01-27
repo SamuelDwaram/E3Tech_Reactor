@@ -68,6 +68,12 @@
     <Compile Include="UserControls\BoolParameter.xaml.cs">
       <DependentUpon>BoolParameter.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\BoolParameterProcessFlow.xaml.cs">
+      <DependentUpon>BoolParameterProcessFlow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CircleProcessFlow.xaml.cs">
+      <DependentUpon>CircleProcessFlow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GraphicalParameter.xaml.cs">
       <DependentUpon>GraphicalParameter.xaml</DependentUpon>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <Compile Include="Views\InitializeView.xaml.cs">
       <DependentUpon>InitializeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Logo.xaml.cs">
+      <DependentUpon>Logo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ParametersHostView.xaml.cs">
       <DependentUpon>ParametersHostView.xaml</DependentUpon>
@@ -123,6 +132,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\BoolParameterProcessFlow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CircleProcessFlow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\GraphicalParameter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\InitializeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Logo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,6 +198,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\E3.ActivityMonitor\E3.ActivityMonitor.csproj">
+      <Project>{d5d8e076-e10b-45df-b7db-e229fd323687}</Project>
+      <Name>E3.ActivityMonitor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\E3.AuditTrailManager\E3.AuditTrailManager.csproj">
       <Project>{6A75F5A4-114D-4763-BF18-C81ABC3D7FE5}</Project>
       <Name>E3.AuditTrailManager</Name>
@@ -204,23 +229,26 @@
     <Resource Include="Images\rv.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\ConfigurationPage.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\PID_1.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\PID_2.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\PID_3.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\PID_Final.bmp" />
     <Resource Include="Images\PID_0.bmp">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\PID_4.bmp" />
+    <Resource Include="Images\Recipe Control.png" />
+    <Resource Include="Images\Process flow diagram.png" />
+    <Resource Include="Images\Parameter_Host.png" />
+    <Resource Include="Images\Alarmicon.png" />
+    <Resource Include="Images\reports icon.png" />
+    <Resource Include="Images\trends-icon.png" />
+    <Resource Include="Images\audit.png" />
+    <Resource Include="Images\user.png" />
+    <Resource Include="Images\PID_5.bmp" />
+    <Resource Include="Images\PID_7.png" />
     <Content Include="SqlFiles\FieldDevices-Plc-SensorsDataSet-1.sql" />
     <Content Include="SqlFiles\FieldPoints-2.sql" />
     <Content Include="SqlFiles\RecipeFieldPoints-3.sql" />

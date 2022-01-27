@@ -22,7 +22,8 @@ namespace E3Tech.RecipeBuilding.ParameterProviders
             view.ViewModel.Parameters = ((ICloneable)Parameters).Clone() as T;
 
             //Don't show BlockParameterProviderView for End Recipe block
-            if (view.ViewModel.Parameters.GetType().GetProperty("Name").GetValue(view.ViewModel.Parameters, null).ToString() == "End")
+            if ((view.ViewModel.Parameters.GetType().GetProperty("Name").GetValue(view.ViewModel.Parameters, null).ToString() == "End")
+                || (view.ViewModel.Parameters.GetType().GetProperty("Name").GetValue(view.ViewModel.Parameters, null).ToString() == "Start"))
             {
                 return true;
             }

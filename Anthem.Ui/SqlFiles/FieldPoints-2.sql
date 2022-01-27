@@ -109,3 +109,12 @@ delete from dbo.FieldPoints where TypeOfAddress='FieldPoint'
 
 
 
+
+	INSERT [dbo].[FieldPoints] VALUES (N'HeatCoolSetPoint', N'HeatCoolSetPoint', N'FieldPoint', N'IO.Temperature_1', N'double', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'JacketOutletTemperature', N'JacketOutletTemperature', N'FieldPoint', N'IO.Temperature_1', N'double', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'ReactorPressure', N'ReactorPressure', N'FieldPoint', N'IO.Temperature_1', N'double', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'ReactorTemperature', N'ReactorTemperature', N'FieldPoint', N'IO.Temperature_1', N'double', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'VapourTemperature', N'VapourTemperature', N'FieldPoint', N'IO.Temperature_1', N'double', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
+	INSERT [dbo].[FieldPoints] VALUES (N'VentTemperature', N'VentTemperature', N'FieldPoint', N'IO.Temperature_1', N'double', N'true', N'true', N'sensorDataSet_1', N'Reactor_1')
+
+

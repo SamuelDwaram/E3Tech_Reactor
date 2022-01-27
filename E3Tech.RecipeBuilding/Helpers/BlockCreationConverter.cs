@@ -44,6 +44,10 @@ namespace E3Tech.RecipeBuilding.Helpers
                     return item.ToObject<ParameterizedRecipeBlock<WaitBlockParameters>>();
                 case "Transfer":
                     return item.ToObject<ParameterizedRecipeBlock<TransferBlockParameters>>();
+                case "N2Purge":
+                    return item.ToObject<ParameterizedRecipeBlock<N2PurgeBlockParameters>>();
+                case "Drain":
+                    return item.ToObject<ParameterizedRecipeBlock<DrainBlockParameters>>();
                 case "End":
                     return item.ToObject<ParameterizedRecipeBlock<EndBlockParameters>>();
                 default:

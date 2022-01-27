@@ -3,8 +3,9 @@ delete from dbo.FieldPoints where TypeOfAddress='RecipeTag'
 
 insert into dbo.FieldPoints values('RecipeStatus', 'RecipeStatus', 'RecipeTag', 'RecipeTags.bRecipeStatus', 'bool', 'false', 'true', 'sensorDataSet_1', 'Reactor_1')
 insert into dbo.FieldPoints values('RecipeEnded', 'RecipeEnded', 'RecipeTag', 'RecipeTags.bRecipeEnded', 'bool', 'false', 'true', 'sensorDataSet_1', 'Reactor_1')
---insert into dbo.FieldPoints values('ClearRecipeStatus', 'ClearRecipeStatus', 'RecipeTag', 'RecipeTags.ClearRecipe', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
---insert into dbo.FieldPoints values('AbortRecipeStatus', 'AbortRecipeStatus', 'RecipeTag', 'RecipeTags.AbortRecipe', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
+insert into dbo.FieldPoints values('PauseRecipe', 'PauseRecipe', 'RecipeTag', 'RecipeTags.PauseRecipe', 'bool', 'false', 'true', 'sensorDataSet_1', 'Reactor_1')
+insert into dbo.FieldPoints values('ClearRecipe', 'ClearRecipeStatus', 'RecipeTag', 'RecipeTags.bClearRecipe', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
+insert into dbo.FieldPoints values('AbortRecipeStatus', 'AbortRecipeStatus', 'RecipeTag', 'RecipeTags.bAbortRecipe', 'bool', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
 --insert into dbo.FieldPoints values('NumberOfRecipeSteps', 'NumberOfRecipeSteps','RecipeTag', 'RecipeTags.NumberOfRecipeSteps', 'int', 'false', 'false', 'sensorDataSet_1', 'Reactor_1')
 
 declare @counter int

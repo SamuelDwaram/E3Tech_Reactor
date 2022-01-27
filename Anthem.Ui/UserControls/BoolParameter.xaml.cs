@@ -55,6 +55,9 @@ namespace Anathem.Ui.UserControls
                 else
                 {
                     paramLabel.Background = Brushes.Transparent;
+                    //paramLabel.Background = new SolidColorBrush(Color.FromRgb(255, 147, 68)); 
+
+                    //paramLabel.Background = new SolidColorBrush(Color.FromRgb(91, 201, 208)); Blue
                     //paramLabel.Background = new SolidColorBrush(Color.FromRgb(30, 36, 50));
                     //paramLabel.Foreground = new SolidColorBrush(Color.FromRgb(142, 148, 161));
                 }

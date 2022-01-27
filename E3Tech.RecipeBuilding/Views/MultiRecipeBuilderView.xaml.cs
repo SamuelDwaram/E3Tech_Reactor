@@ -24,5 +24,10 @@ namespace E3Tech.RecipeBuilding.Views
         {
             InitializeComponent();
         }
+
+        private void MultiRecipeBuilderTabView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

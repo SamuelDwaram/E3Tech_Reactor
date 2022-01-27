@@ -167,6 +167,7 @@
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding Parameters.Name}" Value="Stirrer">
                                         <Setter Property="Content" Value="Set Point :"/>
+                                        <!--<Setter Property="Content" Value="Equipment :"/>-->
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding Parameters.Name}" Value="Dosing">
                                         <Setter Property="Content" Value="Remaining Dosable Amount :"/>

@@ -81,7 +81,7 @@ namespace E3.ReactorManager.Interfaces.UI.UserControls
 
         private void OnCurrentValueChanged()
         {
-            float cur = Convert.ToSingle(string.IsNullOrWhiteSpace(CurrentValue) ? "0" : CurrentValue);
+            float cur = (float)Convert.ToDouble(string.IsNullOrWhiteSpace(CurrentValue) ? "0" : CurrentValue);
             float neg = Convert.ToSingle(NegativeMaximumValue);
             float pos = Convert.ToSingle(PositiveMaximumValue);
             

@@ -10,7 +10,7 @@
              prism:ViewModelLocator.AutoWireViewModel="True"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TabControl Background="#272e3e" BorderThickness="0" x:Name="MultiRecipeBuilderTabView" ItemsSource="{Binding Recipes}" SelectedIndex="{Binding SelectedTabIndex}">
+        <TabControl Background="#272e3e" BorderThickness="0" x:Name="MultiRecipeBuilderTabView" ItemsSource="{Binding Recipes}" SelectedIndex="{Binding SelectedTabIndex}" SelectionChanged="MultiRecipeBuilderTabView_SelectionChanged">
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="Foreground" Value="White"/>

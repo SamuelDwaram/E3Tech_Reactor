@@ -48,8 +48,60 @@ namespace Anathem.Ui.ViewModels
         private void FieldDevicesCommunicator_FieldPointDataReceived(object sender, FieldPointDataReceivedArgs args)
         {
             AddToParameters(args.FieldPointIdentifier, args.NewFieldPointData);
-        }
+            Test();
 
+        }
+        private void Test()
+        {
+            if (Parameters.ContainsKey("Pressure_1"))
+            {
+                Pressure_1 = Parameters["Pressure_1"];
+            }
+            if (Parameters.ContainsKey("Pressure_2"))
+            {
+                Pressure_2 = Parameters["Pressure_2"];
+            }
+            if (Parameters.ContainsKey("Pressure_3"))
+            {
+                Pressure_3 = Parameters["Pressure_3"];
+            }
+            if (Parameters.ContainsKey("Temperature_1"))
+            {
+                Temperature_1 = Parameters["Temperature_1"];
+            }
+            if (Parameters.ContainsKey("Temperature_2"))
+            {
+                Temperature_2 = Parameters["Temperature_2"];
+            }
+            if (Parameters.ContainsKey("Temperature_3"))
+            {
+                Temperature_3 = Parameters["Temperature_3"];
+            }
+            if (Parameters.ContainsKey("ReactorLevel_1"))
+            {
+                Level_1 = Parameters["ReactorLevel_1"];
+            }
+            if (Parameters.ContainsKey("ReactorLevel_2"))
+            {
+                Level_2 = Parameters["ReactorLevel_2"];
+            }
+            if (Parameters.ContainsKey("ReactorLevel_3"))
+            {
+                Level_3 = Parameters["ReactorLevel_3"];
+            }
+            if (Parameters.ContainsKey("StirrerSetpoint_1"))
+            {
+                StirrerSetpoint_1 = Parameters["StirrerSetpoint_1"];
+            }
+            if (Parameters.ContainsKey("StirrerSetpoint_2"))
+            {
+                StirrerSetpoint_2 = Parameters["StirrerSetpoint_2"];
+            }
+            if (Parameters.ContainsKey("StirrerSetpoint_3"))
+            {
+                StirrerSetpoint_3 = Parameters["StirrerSetpoint_3"];
+            }
+        }
     private void AddToParameters(string fieldPointIdentifier, string newFieldPointData)
     {
         if (Parameters.ContainsKey(fieldPointIdentifier))
@@ -62,6 +114,7 @@ namespace Anathem.Ui.ViewModels
             {
                 Parameters[fieldPointIdentifier] = newFieldPointData;
                 NotifyUi(nameof(Parameters));
+
             }
         }
         else
@@ -87,6 +140,141 @@ namespace Anathem.Ui.ViewModels
     public string DeviceId { get; } = "Reactor_1";
     public ICommand NavigateCommand => new DelegateCommand<string>(page => regionManager.RequestNavigate("SelectedViewPane", page));
     public Dictionary<string, string> Parameters { get; } = new Dictionary<string, string>();
-    
+
+
+
+    private string pressure_1;
+
+    public string Pressure_1
+    {
+        get { return pressure_1; }
+        set 
+        {
+            pressure_1 = value;
+            RaisePropertyChanged();
+        }
+    }
+        private string pressure_2;
+
+        public string Pressure_2
+        {
+            get { return pressure_2; }
+            set
+            {
+                pressure_2 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string pressure_3;
+
+        public string Pressure_3
+        {
+            get { return pressure_3; }
+            set
+            {
+                pressure_3 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string temperature_1;
+
+        public string Temperature_1
+        {
+            get { return temperature_1; }
+            set
+            {
+                temperature_1 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string temperature_2;
+
+        public string Temperature_2
+        {
+            get { return temperature_2; }
+            set
+            {
+                temperature_2 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string temperature_3;
+
+        public string Temperature_3
+        {
+            get { return temperature_3; }
+            set
+            {
+                temperature_3 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string level_1;
+
+        public string Level_1
+        {
+            get { return level_1; }
+            set
+            {
+                level_1 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string level_2;
+
+        public string Level_2
+        {
+            get { return level_2; }
+            set
+            {
+                level_2 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string level_3;
+
+        public string Level_3
+        {
+            get { return level_3; }
+            set
+            {
+                level_3 = value;
+                RaisePropertyChanged();
+            }
+        }
+        
+        private string stirrerSetpoint_1;
+
+        public string StirrerSetpoint_1
+        {
+            get { return stirrerSetpoint_1; }
+            set
+            {
+                stirrerSetpoint_1 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string stirrerSetpoint_2;
+
+        public string StirrerSetpoint_2
+        {
+            get { return stirrerSetpoint_2; }
+            set
+            {
+                stirrerSetpoint_2 = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string stirrerSetpoint_3;
+
+        public string StirrerSetpoint_3
+        {
+            get { return stirrerSetpoint_3; }
+            set
+            {
+                stirrerSetpoint_3 = value;
+                RaisePropertyChanged();
+            }
+        }
     }
 }

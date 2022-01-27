@@ -1,6 +1,7 @@
 ﻿using Anathem.Ui.Helpers;
 using E3.ReactorManager.Interfaces.UI.UserControls;
 using Prism.Commands;
+using System;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -41,6 +42,19 @@ namespace Anathem.Ui.UserControls
             paramInput.PreviewTextInput += (obj, args) => {
                 args.Handled = _regex.IsMatch(args.Text);
             };
+            //paramInput.GotFocus += testForFocus;
+            paramInput.GotFocus += (obj, args) =>
+            {
+                if (IsEditable)
+                {
+                    Binding b = new Binding();
+                    b.Mode = BindingMode.OneWay;
+                    b.Path = new PropertyPath(Tag.ToString());
+                    paramInput.SetBinding(TextBox.TextProperty, b);
+                    paramInput.IsEnabled = true;
+                }
+
+            };
 
             paramInput.KeyDown += (obj, args) => {
                 if (args.Key == Key.Enter)
@@ -52,6 +66,15 @@ namespace Anathem.Ui.UserControls
 
             paramInput.IsReadOnly = !IsEditable;
         }
+
+        //private void testForFocus(object sender, RoutedEventArgs e)
+        //{
+        //    Binding b = new Binding();
+        //    b.Mode = BindingMode.OneWay;
+        //    b.Path = DataContext;
+        //    paramInput.SetBinding(TextBox.TextProperty, b);
+        //    paramInput.IsEnabled = false;
+        //}
 
         #region Command
         public ICommand Command
@@ -120,10 +143,11 @@ namespace Anathem.Ui.UserControls
 
         // Using a DependencyProperty as the backing store for ParamDataType.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ParamDataTypeProperty =
-            DependencyProperty.Register("ParamDataType", typeof(string), typeof(GraphicalParameter), new PropertyMetadata("int"));
+            DependencyProperty.Register("ParamDataType", typeof(string), typeof(GraphicalParameter), new PropertyMetadata("double"));
         #endregion
 
         public bool IsEditable { get; set; } = false;
         public static ICommand DummyCommand => new DelegateCommand(() => { });
+
     }
 }

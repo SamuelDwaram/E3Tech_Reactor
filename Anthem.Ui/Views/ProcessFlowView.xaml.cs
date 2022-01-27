@@ -24,5 +24,25 @@ namespace Anathem.Ui.Views
         {
             InitializeComponent();
         }
+
+        private void BoolParameterProcessFlow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BoolParameterProcessFlow_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BoolParameterProcessFlow_Loaded_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BoolParameterProcessFlow_Loaded_3(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

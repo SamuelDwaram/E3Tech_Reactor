@@ -57,8 +57,8 @@ namespace E3Tech.RecipeBuilding.ViewModels
             {
                 RecipeSteps.Add(new RecipeStepViewModel(containerProvider) { RecipeStep = step });
             }
+            //UpdateRecipeParameters();
         }
-
         private void LoadRegisteredBlocks(IUnityContainer containerProvider)
         {
             AvailableBlocks = new List<IRecipeBlock>();
@@ -89,6 +89,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
 
         private void OnLiveDataReceived(object sender, FieldPointDataReceivedArgs fieldPointDataChangedArgs)
         {
+            UpdateRecipeParameters();
             if (fieldPointDataChangedArgs.FieldDeviceIdentifier == DeviceId)
             {
                 var liveDataEventArgs = new LiveDataEventArgs
@@ -122,6 +123,8 @@ namespace E3Tech.RecipeBuilding.ViewModels
         {
             RecipeStatus = fieldDevicesCommunicator.ReadFieldPointValue<bool>(DeviceId, "RecipeStatus").ToString();
             RecipeEnded = fieldDevicesCommunicator.ReadFieldPointValue<bool>(DeviceId, "RecipeEnded").ToString();
+            RecipePaused = fieldDevicesCommunicator.ReadFieldPointValue<bool>(DeviceId, "PauseRecipe").ToString();
+            DrainStatus = fieldDevicesCommunicator.ReadFieldPointValue<bool>(DeviceId, "DrainStatus").ToString();
         }
 
         public void UpdateNavigationParameters(NavigationParameters NavigationParameters)
@@ -171,6 +174,32 @@ namespace E3Tech.RecipeBuilding.ViewModels
             }
         }
 
+        private void PauseRecipe()
+        {
+            fieldDevicesCommunicator
+               .SendCommandToDevice(DeviceId,
+                                          "PauseRecipe",
+                                          "bool",
+                                          Boolean.TrueString);
+        }
+        
+        private void ResumeRecipe()
+        {
+            fieldDevicesCommunicator
+               .SendCommandToDevice(DeviceId,
+                                          "PauseRecipe",
+                                          "bool",
+                                          Boolean.FalseString);
+        }
+        private void SkipDrain()
+        {
+            fieldDevicesCommunicator
+               .SendCommandToDevice(DeviceId,
+                                          "SkipDrain",
+                                          "bool",
+                                          Boolean.TrueString);
+        }
+
         private bool CanStartRecipe()
         {
             return recipeExecutor != null;
@@ -183,6 +212,11 @@ namespace E3Tech.RecipeBuilding.ViewModels
             recipeBuilder.Clear();
             RecipeSteps.Clear();
             recipeExecutor.ClearRecipe(DeviceId);
+            fieldDevicesCommunicator
+              .SendCommandToDevice(DeviceId,
+                                         "ClearRecipe",
+                                         "bool",
+                                         Boolean.TrueString);
         }
 
         private bool CanClearRecipe()
@@ -496,6 +530,24 @@ namespace E3Tech.RecipeBuilding.ViewModels
             get => startRecipeCommand ?? (startRecipeCommand = new DelegateCommand(new Action(StartRecipe), new Func<bool>(CanStartRecipe)));
             set => SetProperty(ref startRecipeCommand, value);
         }
+        private ICommand pauseRecipeCommand;
+        public ICommand PauseRecipeCommand
+        {
+            get => pauseRecipeCommand ?? (pauseRecipeCommand = new DelegateCommand(new Action(PauseRecipe)));
+            set => SetProperty(ref pauseRecipeCommand, value);
+        }
+        private ICommand skipDrainCommand;
+        public ICommand SkipDrainCommand
+        {
+            get => skipDrainCommand ?? (skipDrainCommand = new DelegateCommand(new Action(SkipDrain)));
+            set => SetProperty(ref skipDrainCommand, value);
+        }
+        private ICommand resumeRecipeCommand;
+        public ICommand ResumeRecipeCommand
+        {
+            get => resumeRecipeCommand ?? (resumeRecipeCommand = new DelegateCommand(new Action(ResumeRecipe)));
+            set => SetProperty(ref resumeRecipeCommand, value);
+        }
 
         private ICommand clearRecipeCommand;
         public ICommand ClearRecipeCommand
@@ -592,6 +644,16 @@ namespace E3Tech.RecipeBuilding.ViewModels
                 RaisePropertyChanged();
             }
         }
+        private string _drainStatus;
+        public string DrainStatus
+        {
+            get => _drainStatus;
+            set
+            {
+                _drainStatus = value;
+                RaisePropertyChanged();
+            }
+        }
 
         private string _recipeEnded;
         public string RecipeEnded
@@ -600,6 +662,16 @@ namespace E3Tech.RecipeBuilding.ViewModels
             set
             {
                 _recipeEnded = value;
+                RaisePropertyChanged();
+            }
+        }
+        private string _recipePaused;
+        public string RecipePaused
+        {
+            get => _recipePaused;
+            set
+            {
+                _recipePaused = value;
                 RaisePropertyChanged();
             }
         }

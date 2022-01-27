@@ -44,6 +44,12 @@ namespace E3Tech.RecipeBuilding.Model.RecipeExecutionInfoProvider
                 case "Transfer":
                     AddTransferBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<TransferBlockParameters>, deviceId);
                     break;
+                case "N2Purge":
+                    AddN2PurgeBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<N2PurgeBlockParameters>, deviceId);
+                    break;
+                case "Drain":
+                    AddDrainBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<DrainBlockParameters>, deviceId);
+                    break;
                 case "End":
                     AddEndBlockExecutionInfo(recipeBlock as ParameterizedRecipeBlock<EndBlockParameters>, deviceId);
                     break;
@@ -65,10 +71,24 @@ namespace E3Tech.RecipeBuilding.Model.RecipeExecutionInfoProvider
             recipeExecutionInfoHandler
                 .AddRecipeExecutionInfo(deviceId, transferRecipeBlock.Parameters.StartedTime, transferRecipeBlock.Parameters.EndedTime, duration, message);
         }
+        private void AddN2PurgeBlockExecutionInfo(ParameterizedRecipeBlock<N2PurgeBlockParameters> transferRecipeBlock, string deviceId)
+        {
+            string message = transferRecipeBlock.UiLabel + " started for " + transferRecipeBlock.Parameters.Source ;
+            string duration = DateTime.Parse(transferRecipeBlock.Parameters.EndedTime).Subtract(DateTime.Parse(transferRecipeBlock.Parameters.StartedTime)).TotalMinutes.ToString();
+            recipeExecutionInfoHandler
+                .AddRecipeExecutionInfo(deviceId, transferRecipeBlock.Parameters.StartedTime, transferRecipeBlock.Parameters.EndedTime, duration, message);
+        }
+        private void AddDrainBlockExecutionInfo(ParameterizedRecipeBlock<DrainBlockParameters> transferRecipeBlock, string deviceId)
+        {
+            string message = transferRecipeBlock.UiLabel + " started for " + transferRecipeBlock.Parameters.Source;
+            string duration = DateTime.Parse(transferRecipeBlock.Parameters.EndedTime).Subtract(DateTime.Parse(transferRecipeBlock.Parameters.StartedTime)).TotalMinutes.ToString();
+            recipeExecutionInfoHandler
+                .AddRecipeExecutionInfo(deviceId, transferRecipeBlock.Parameters.StartedTime, transferRecipeBlock.Parameters.EndedTime, duration, message);
+        }
 
         private void AddWaitBlockExecutionInfo(ParameterizedRecipeBlock<WaitBlockParameters> waitRecipeBlock, string deviceId)
         {
-            string message = "Wait started for duration " + waitRecipeBlock.Parameters.Duration + " minutes";
+            string message = "Wait started for duration " + waitRecipeBlock.Parameters.TimeInterval + waitRecipeBlock.Parameters.IntervalType;
             string duration = DateTime.Parse(waitRecipeBlock.Parameters.EndedTime).Subtract(DateTime.Parse(waitRecipeBlock.Parameters.StartedTime)).TotalMinutes.ToString();
             recipeExecutionInfoHandler
                 .AddRecipeExecutionInfo(deviceId, waitRecipeBlock.Parameters.StartedTime, waitRecipeBlock.Parameters.EndedTime, duration, message);

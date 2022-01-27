@@ -423,7 +423,7 @@ namespace E3.ReactorManager.HardwareAbstractionLayer
 
         internal T ReadAny<T>(string deviceId, int plcHandle)
         {
-            return (T)FieldDevices.First(fd => fd.Identifier == deviceId).RelatedPlc.TwinCATClient.ReadAny(plcHandle, typeof(T));
+                return (T)FieldDevices.First(fd => fd.Identifier == deviceId).RelatedPlc.TwinCATClient.ReadAny(plcHandle, typeof(T));
         }
 
         internal void WriteAny<T>(string deviceId, int plcHandle, T data)

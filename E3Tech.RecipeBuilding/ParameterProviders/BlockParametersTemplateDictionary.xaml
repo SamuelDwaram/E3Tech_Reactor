@@ -14,9 +14,9 @@
         <Grid.Resources>
             <Style TargetType="Label">
                 <Setter Property="Foreground" Value="White"/>
-            </Style>
+            </Style>     
         </Grid.Resources>
-        <Label Content="HC Mode Of Operation" Grid.Column="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center"/>
+        <!--<Label Content="HC Mode Of Operation" Grid.Column="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center"/>
         <CheckBox x:Name="heatCoolModeSelectionCheckBox" Grid.Column="1" HorizontalAlignment="Left" Margin="3" IsChecked="{Binding HeatCoolModeSelection, Mode=TwoWay, FallbackValue=False, TargetNullValue=False}" VerticalAlignment="Center"/>
         <Label Grid.Column="2" HorizontalAlignment="Left" FontWeight="Bold" Margin="3" Foreground="White" VerticalAlignment="Center">
             <Label.Style>
@@ -31,7 +31,7 @@
                     </Style.Triggers>
                 </Style>
             </Label.Style>
-        </Label>
+        </Label>-->
     </Grid>
         
     <Grid DataContext="{Binding Parameters}" x:Key="StirrerBlockParametersTemplate">
@@ -57,8 +57,8 @@
         </StackPanel>
         <Label Content="Reactor" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
         <ComboBox Grid.Row="1" Grid.Column="1" SelectedValue="{Binding Destination}" SelectedValuePath="Content">
-            <ComboBoxItem>RV</ComboBoxItem>
-            <ComboBoxItem>RV SPARE</ComboBoxItem>
+            <ComboBoxItem>RV_50L</ComboBoxItem>
+            <ComboBoxItem>RV_25L</ComboBoxItem>
             <ComboBoxItem>MVA</ComboBoxItem>
         </ComboBox>
     </Grid>
@@ -76,10 +76,24 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Label Content="Wait:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center"/>
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-            <TextBox x:Name="waitDurationTextBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Text="{Binding Duration, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="Minutes" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <!--<Label Content="Wait:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center"/>-->
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+            
+            <!--<TextBox x:Name="waitDurationTextBox" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Text="{Binding Duration, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Minutes" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Time Interval" Foreground="White" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Width="120" VerticalAlignment="Center" Text="{Binding TimeInterval, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Height="23" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Interval Type" Foreground="White" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
+                <ComboBox Grid.Row="3" Grid.Column="1" SelectedValue="{Binding Path=IntervalType}" SelectedValuePath="Tag" Width="200">
+                    <ComboBoxItem Tag="S">Seconds</ComboBoxItem>
+                    <ComboBoxItem Tag="M">Minutes</ComboBoxItem>
+                    <ComboBoxItem Tag="H">Hours</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            
         </StackPanel>
     </Grid>
 
@@ -114,6 +128,8 @@
         </Grid.RowDefinitions>
         <Label Content="Source" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
         <ComboBox Grid.Row="1" Grid.Column="1" SelectedValue="{Binding Path=Source}" SelectedValuePath="Content">
+            <ComboBoxItem>Fill In</ComboBoxItem>
+            <ComboBoxItem>Flush</ComboBoxItem>
             <ComboBoxItem>R1</ComboBoxItem>
             <ComboBoxItem>R2</ComboBoxItem>
             <ComboBoxItem>R3</ComboBoxItem>
@@ -137,6 +153,8 @@
             <ComboBoxItem>MVA</ComboBoxItem>
             <ComboBoxItem>MVB</ComboBoxItem>
             <ComboBoxItem>DCM</ComboBoxItem>
+            <ComboBoxItem>RV_50L</ComboBoxItem>
+            <ComboBoxItem>RV_25L</ComboBoxItem>
         </ComboBox>
         <Label Content="Transfer Mode" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
@@ -207,6 +225,8 @@
                 <ComboBoxItem>MVA</ComboBoxItem>
                 <ComboBoxItem>MVB</ComboBoxItem>
                 <ComboBoxItem>DCM</ComboBoxItem>
+                <ComboBoxItem>RV_50L</ComboBoxItem>
+                <ComboBoxItem>RV_25L</ComboBoxItem>
             </ComboBox>
             <Label Content="Time Interval" Foreground="White" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
             <TextBox Grid.Row="2" Grid.Column="1" Width="120" VerticalAlignment="Center" Text="{Binding TimeInterval, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Height="23" HorizontalAlignment="Left"/>
@@ -260,6 +280,8 @@
                 <ComboBoxItem>MVA</ComboBoxItem>
                 <ComboBoxItem>MVB</ComboBoxItem>
                 <ComboBoxItem>DCM</ComboBoxItem>
+                <ComboBoxItem>RV_50L</ComboBoxItem>
+                <ComboBoxItem>RV_25L</ComboBoxItem>
             </ComboBox>
             <Label Content="Time Interval" Foreground="White" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
             <TextBox Grid.Row="2" Grid.Column="1" Width="120" VerticalAlignment="Center" Text="{Binding TimeInterval, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Height="23" HorizontalAlignment="Left"/>
@@ -313,6 +335,8 @@
                 <ComboBoxItem>MVA</ComboBoxItem>
                 <ComboBoxItem>MVB</ComboBoxItem>
                 <ComboBoxItem>DCM</ComboBoxItem>
+                <ComboBoxItem>RV_50L</ComboBoxItem>
+                <ComboBoxItem>RV_25L</ComboBoxItem>
             </ComboBox>
             <Label Content="Time Interval" Foreground="White" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="3" HorizontalAlignment="Left"/>
             <TextBox Grid.Row="2" Grid.Column="1" Width="120" VerticalAlignment="Center" Text="{Binding TimeInterval, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Height="23" HorizontalAlignment="Left"/>

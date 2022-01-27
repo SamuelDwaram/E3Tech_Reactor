@@ -33,6 +33,7 @@ namespace Anathem.Ui
             //containerRegistry.RegisterForNavigation(typeof(SecondView), "Second");
             regionManager.RegisterViewWithRegion("First", typeof(FirstView));
             regionManager.RegisterViewWithRegion("Second", typeof(SecondView));
+            regionManager.RegisterViewWithRegion("Logo", typeof(Logo));
 
 
         }

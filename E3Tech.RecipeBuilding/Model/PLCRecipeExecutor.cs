@@ -49,34 +49,63 @@ namespace E3Tech.RecipeBuilding
                 }
             };
             pollRecipeTimer.Start();
+
+
+
+           
+
         }
 
         private void Sample()
         {
-            foreach (string deviceId in recipesManager.DevicesRunningRecipe)
+
+            int plcHandle = plcVarHandles.ContainsKey("Reactor_1") ? plcVarHandles["Reactor_1"] : default;
+            if (plcHandle == default)
             {
-                int plcHandle = plcVarHandles.ContainsKey(deviceId) ? plcVarHandles[deviceId] : default;
-                if (plcHandle == default)
-                {
-                    plcHandle = fieldDevicesCommunicator.CreateVariableHandles(deviceId, new List<string> { "RecipeTags.Recipe" }).First();
-                    plcVarHandles.Add(deviceId, plcHandle);
-                }
-                else
-                {
-                    Recipe recipe = fieldDevicesCommunicator.ReadAny<Recipe>(deviceId, plcHandle);
-                    foreach (Block block in recipe.Blocks)
-                    {
-                        if (block.Name == string.Empty)
-                        {
-                            // This is an empty block => Recipe ended with previous block.
-                            // No need to read further steps. It will be time consuming operation.
-                            break;
-                        }
-                        IRecipeBlock recipeBlock = GetRecipeBlock(block);
-                        UpdateRecipe?.BeginInvoke(deviceId, block.StepNo, new RecipeStep { BlockOne = recipeBlock }, null, null);
-                    }
-                }
+                plcHandle = fieldDevicesCommunicator.CreateVariableHandles("Reactor_1", new List<string> { "RecipeTags.Recipe" }).First();
+                plcVarHandles.Add("Reactor_1", plcHandle);
             }
+            Recipe readRecipe = fieldDevicesCommunicator.ReadAny<Recipe>("Reactor_1", plcHandle);
+            foreach (Block block in readRecipe.Blocks)
+            {
+                if (block.Name == string.Empty)
+                {
+                    // This is an empty block => Recipe ended with previous block.
+                    // No need to read further steps. It will be time consuming operation.
+                    break;
+                }
+                IRecipeBlock recipeBlock = GetRecipeBlock(block);
+                UpdateRecipe?.BeginInvoke("Reactor_1", block.StepNo, new RecipeStep { BlockOne = recipeBlock }, null, null);
+
+            }
+
+
+
+
+            //foreach (string deviceId in recipesManager.DevicesRunningRecipe)
+            //{
+            //    int plcHandle = plcVarHandles.ContainsKey(deviceId) ? plcVarHandles[deviceId] : default;
+            //    if (plcHandle == default)
+            //    {
+            //        plcHandle = fieldDevicesCommunicator.CreateVariableHandles(deviceId, new List<string> { "RecipeTags.Recipe" }).First();
+            //        plcVarHandles.Add(deviceId, plcHandle);
+            //    }
+            //    else
+            //    {
+            //        Recipe recipe = fieldDevicesCommunicator.ReadAny<Recipe>(deviceId, plcHandle);
+            //        foreach (Block block in recipe.Blocks)
+            //        {
+            //            if (block.Name == string.Empty)
+            //            {
+            //                // This is an empty block => Recipe ended with previous block.
+            //                // No need to read further steps. It will be time consuming operation.
+            //                break;
+            //            }
+            //            IRecipeBlock recipeBlock = GetRecipeBlock(block);
+            //            UpdateRecipe?.BeginInvoke(deviceId, block.StepNo, new RecipeStep { BlockOne = recipeBlock }, null, null);
+            //        }
+            //    }
+            //}
         }
 
         private async void PollRecipe()
@@ -156,7 +185,9 @@ namespace E3Tech.RecipeBuilding
             waitBlock.Parameters.StartedTime = block.Properties.sStartedTime;
             //waitBlock.Parameters.StartedTime = "00:05";
             waitBlock.Parameters.EndedTime = block.Properties.sEndedTime;
-            waitBlock.Parameters.Duration = block.Properties.nInterval.ToString();
+            waitBlock.Parameters.TimeInterval = block.Properties.nInterval.ToString();
+            waitBlock.Parameters.IntervalType = block.Properties.sIntervalType;
+            //waitBlock.Parameters.TimeInterval = block.Properties.nInterval.ToString();
             return waitBlock;
         }
 
@@ -261,7 +292,7 @@ namespace E3Tech.RecipeBuilding
                 blocks.Add(GetBlockPlcObject(recipeStep.BlockOne, stepIndex));
             }
 
-            for (int index = blocks.Count; index < 200; index++)
+            for (int index = blocks.Count; index < 700; index++)
             {
                 blocks.Add(new Block());
             }
@@ -288,7 +319,8 @@ namespace E3Tech.RecipeBuilding
                     break;
                 case "Wait":
                     ParameterizedRecipeBlock<WaitBlockParameters> waitBlock = blockOne as ParameterizedRecipeBlock<WaitBlockParameters>;
-                    block.Properties.nInterval = Convert.ToInt32(waitBlock.Parameters.Duration);
+                    block.Properties.nInterval = Convert.ToInt32(waitBlock.Parameters.TimeInterval);
+                    block.Properties.sIntervalType = waitBlock.Parameters.IntervalType;
                     break;
                 case "Stirrer":
                     ParameterizedRecipeBlock<StirrerBlockParameters> stirBlock = blockOne as ParameterizedRecipeBlock<StirrerBlockParameters>;

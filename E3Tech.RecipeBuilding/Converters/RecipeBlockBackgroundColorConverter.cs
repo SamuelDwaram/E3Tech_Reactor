@@ -26,8 +26,15 @@ namespace E3Tech.RecipeBuilding.Converters
                         return "LightSteelBlue";
                     case "Transfer":
                         return "LightGoldenrodYellow";
+                    case "N2Purge":
+                        return "LightGoldenrodYellow";
+                    case "Drain":
+                        return "LightSalmon";
+                    case "Flush":
+                        return "LightPink";
+
                     case "End":
-                        return "DarkCyan";
+                        return "LightSlateGray";
                     default:
                         return "Gray";
                 }

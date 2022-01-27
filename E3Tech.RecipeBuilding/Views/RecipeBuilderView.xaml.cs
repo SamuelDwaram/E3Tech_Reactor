@@ -13,5 +13,10 @@ namespace E3Tech.RecipeBuilding.Views
         {
             InitializeComponent();
         }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

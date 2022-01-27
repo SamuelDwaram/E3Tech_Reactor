@@ -1,7 +1,9 @@
-﻿using E3.ReactorManager.Interfaces.UI.UserControls;
+﻿using E3.ReactorManager.Interfaces.HardwareAbstractionLayer.Data;
+using E3.ReactorManager.Interfaces.UI.UserControls;
 using E3.UserManager.Model.Data;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -62,26 +64,89 @@ namespace Anathem.Ui.Helpers
             {
                 return;
             }
+
             if (uiElement.GetType() == typeof(ButtonOnOffAnimation))
             {
-                ButtonOnOffAnimation ba = uiElement as ButtonOnOffAnimation;
-                if (!ba.IsLoaded)
+                (uiElement as ButtonOnOffAnimation).MouseLeftButtonDown += (sender, args) => {
+                    ButtonOnOffAnimation button = sender as ButtonOnOffAnimation;
+                    string parameterInfo = GetParameterInfo(button);
+                    GetCommandToDevice(button).Execute(parameterInfo + '|' + !Convert.ToBoolean(ButtonOnOffAnimation.GetStatus(button) ?? bool.FalseString));
+                };
+            }
+        }
+        #endregion
+
+        #region Parameter Info
+        public static string GetParameterInfo(DependencyObject obj)
+        {
+            return (string)obj.GetValue(ParameterInfoProperty);
+        }
+
+        public static void SetParameterInfo(DependencyObject obj, string value)
+        {
+            obj.SetValue(ParameterInfoProperty, value);
+        }
+
+        public static readonly DependencyProperty ParameterInfoProperty =
+            DependencyProperty.RegisterAttached("ParameterInfo", typeof(string), typeof(UiHelpers), new PropertyMetadata(string.Empty));
+        #endregion
+
+        #region Live Data
+        public static object GetLiveData(DependencyObject obj)
+        {
+            return obj.GetValue(LiveDataProperty);
+        }
+
+        public static void SetLiveData(DependencyObject obj, object value)
+        {
+            obj.SetValue(LiveDataProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for LiveData.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty LiveDataProperty =
+            DependencyProperty.RegisterAttached("LiveData", typeof(object), typeof(UiHelpers), new PropertyMetadata(LiveDataChanged));
+
+        private static void LiveDataChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            StatusIndicatorAnimation statusIndicator = d as StatusIndicatorAnimation;
+            string[] parameterInfo = GetParameterInfo(d).Split('|');
+            string deviceId = parameterInfo[0];
+            string parameter = parameterInfo[1];
+            FieldPointDataReceivedArgs liveData = (FieldPointDataReceivedArgs)e.NewValue;
+            if (liveData.FieldDeviceIdentifier == deviceId && liveData.FieldPointIdentifier == parameter)
+            {
+                statusIndicator.CurrentStatus = liveData.NewFieldPointData;
+            }
+        }
+        #endregion
+
+        #region ValidIntegerInput
+        private static readonly Regex _regex = new Regex("[^0-9.-]+");
+        public static string GetTextInput(DependencyObject obj)
+        {
+            return (string)obj.GetValue(TextInputProperty);
+        }
+
+        public static void SetTextInput(DependencyObject obj, string value)
+        {
+            obj.SetValue(TextInputProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for TextInput.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TextInputProperty =
+            DependencyProperty.RegisterAttached("TextInput", typeof(string), typeof(UiHelpers), new PropertyMetadata(TextInputChanged));
+
+        private static void TextInputChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            if (d is TextBox)
+            {
+                TextBox textBox = d as TextBox;
+                if (!textBox.IsLoaded)
                 {
-                    ba.Loaded += (sender, args) => {
-                        ButtonOnOffAnimation button = sender as ButtonOnOffAnimation;
-                        button.SetBinding(ButtonOnOffAnimation.StatusProperty, new Binding("ParameterDictionary")
-                        {
-                            Source = button.DataContext,
-                            Converter = new ParameterExtractorConverter(),
-                            ConverterParameter = button.Tag.ToString()
-                        });
+                    textBox.PreviewTextInput += (sender, args) => {
+                        args.Handled = _regex.IsMatch(args.Text);
                     };
                 }
-
-                ba.MouseLeftButtonDown += (sender, args) => {
-                    ButtonOnOffAnimation button = sender as ButtonOnOffAnimation;
-                    GetCommandToDevice(button).Execute($"{button.Tag}|bool|{!Convert.ToBoolean(ButtonOnOffAnimation.GetStatus(button) ?? bool.FalseString)}");
-                };
             }
         }
         #endregion

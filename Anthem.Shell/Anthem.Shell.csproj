@@ -105,6 +105,10 @@
       <Project>{3d8e3e62-892d-42b3-8a50-45a05fa4c534}</Project>
       <Name>Anthem.Ui</Name>
     </ProjectReference>
+    <ProjectReference Include="..\E3.ActivityMonitor\E3.ActivityMonitor.csproj">
+      <Project>{d5d8e076-e10b-45df-b7db-e229fd323687}</Project>
+      <Name>E3.ActivityMonitor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\E3.AuditTrailManager\E3.AuditTrailManager.csproj">
       <Project>{6a75f5a4-114d-4763-bf18-c81abc3d7fe5}</Project>
       <Name>E3.AuditTrailManager</Name>

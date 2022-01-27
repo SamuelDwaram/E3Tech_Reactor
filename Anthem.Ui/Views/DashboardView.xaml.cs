@@ -23,6 +23,8 @@ namespace Anathem.Ui.Views
         public DashboardView()
         {
             InitializeComponent();
+            
         }
-    }
+
+       }
 }

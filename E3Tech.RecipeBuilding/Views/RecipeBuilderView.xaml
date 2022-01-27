@@ -97,6 +97,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
         <ListView x:Name="lbOne"                   
                     helpers:MouseButtonBehavior.MouseButtonCommand="{Binding MouseButtonCommand}"
@@ -216,92 +218,130 @@
                                     Binding="{Binding RecipeStep.BlockThree}"/>
                     <controls:DataGridBoundTemplateColumn Width="*" CellTemplate="{StaticResource ResourceKey=GridViewColumnCellTemplate}"
                                     Binding="{Binding RecipeStep.BlockFour}"/>
-                    <controls:DataGridBoundTemplateColumn Width="0.5*" CellTemplate="{StaticResource ResourceKey=AddButtonColumnCellTemplate}"
-                                    Binding="{Binding}"/>
+                    <!--<controls:DataGridBoundTemplateColumn Width="0.5*" CellTemplate="{StaticResource ResourceKey=AddButtonColumnCellTemplate}"
+                                    Binding="{Binding}"/>-->
                 </DataGrid.Columns>
             </DataGrid>
             <Grid Grid.Row="1" HorizontalAlignment="Right" Margin="0,0,20,0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="1*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Content="Save Recipe Execution" Command="{Binding SaveRecipeExecutionCommand}">
+                 <Button Grid.Column="2" Content="Save Recipe Execution" Command="{Binding SaveRecipeExecutionCommand}">
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
                             <Setter Property="IsEnabled" Value="True"/>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
                                     <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Visibility" Value="Hidden"/>
+
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button Grid.Column="1" Content="Export Recipe" Command="{Binding ExportRecipeCommand}">
+                <Button Grid.Column="3" Content="Export Recipe" Command="{Binding ExportRecipeCommand}">
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
                             <Setter Property="IsEnabled" Value="True"/>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
                                     <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Visibility" Value="Hidden"/>
+
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button Grid.Column="2" Content="Import Recipe" Command="{Binding ImportRecipeCommand}">
+                <Button Grid.Column="4" Content="Import Recipe" Command="{Binding ImportRecipeCommand}">
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
                             <Setter Property="IsEnabled" Value="True"/>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
                                     <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Visibility" Value="Hidden"/>
+
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button Grid.Column="3" Content="Clear Recipe" Command="{Binding ClearRecipeCommand}">
+                <Button Grid.Column="5" Content="Clear Recipe" Command="{Binding ClearRecipeCommand}">
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
                             <Setter Property="IsEnabled" Value="True"/>
                             <Style.Triggers>
+                                <DataTrigger Binding="{Binding RecipeStatus}" Value="False">
+                                <Setter Property="IsEnabled" Value="True"/>
+                                <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
                                 <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Grid.Column="5" HorizontalAlignment="Left">
+                    <Button.Style>
+                        <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
+                            <Setter Property="Content" Value="Skip"/>
+                            <Setter Property="Visibility" Value="Hidden"/>
+                            <Setter Property="IsEnabled" Value="False"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding DrainStatus}" Value="True">
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                    <Setter Property="Command" Value="{Binding SkipDrainCommand}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding DrainStatus}" Value="False">
+                                    <Setter Property="Content" Value="Resume"/>
+                                    <Setter Property="Visibility" Value="Hidden"/>
                                     <Setter Property="IsEnabled" Value="False"/>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button Grid.Column="4">
+
+                <Button Grid.Column="6">
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
                             <Setter Property="Content" Value="Pause"/>
-                            <!--<Setter Property="Command" Value="{Binding StartRecipeCommand}"/>-->
-                            <!--
+                            <Setter Property="IsEnabled" Value="False"/>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
-                                    <Setter Property="Content" Value="Stop"/>
-                                    <Setter Property="Command" Value="{Binding AbortRecipeExecutionCommand}"/>
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                    <Setter Property="Command" Value="{Binding PauseRecipeCommand}"/>
                                 </DataTrigger>
-                            <-->
-                            <!--/Style.Triggers>-->
+                                <DataTrigger Binding="{Binding RecipePaused}" Value="True">
+                                    <Setter Property="Content" Value="Resume"/>
+                                    <Setter Property="Command" Value="{Binding ResumeRecipeCommand}"/>
+                                </DataTrigger>
+                            </Style.Triggers>
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button Grid.Column="5">
+                <Button Grid.Column="7">
                         <Button.Style>
                             <Style TargetType="Button" BasedOn="{StaticResource CommandButtonStyle}">
-                                <Setter Property="Content" Value="Start/Stop"/>
+                                <Setter Property="Content" Value="Start"/>
                                 <Setter Property="Command" Value="{Binding StartRecipeCommand}"/>
                                 <Style.Triggers>
                                     <DataTrigger Binding="{Binding RecipeStatus}" Value="True">
-                                        <Setter Property="Content" Value="Stop"/>
+                                    <Setter Property="Background" Value="Red"/>
+                                    <Setter Property="Content" Value="Stop"/>
                                         <Setter Property="Command" Value="{Binding AbortRecipeExecutionCommand}"/>
                                     </DataTrigger>
                                 </Style.Triggers>
