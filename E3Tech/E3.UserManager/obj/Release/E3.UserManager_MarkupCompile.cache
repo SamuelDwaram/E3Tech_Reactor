@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.UserManager\obj\Release\
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\
 E3.UserManager
 none
 false
@@ -13,7 +13,7 @@ TRACE
 72126493646
 22098369155
 28-1346603413
-28-321840661
+281851092501
 Views\LiveDateTimeView.xaml;Views\LoggedInUserDetailsView.xaml;Views\LoginView.xaml;Views\ModifyPasswordView.xaml;Views\ModifyUserView.xaml;Views\RolesAndModulesConfigurationView.xaml;Views\UserManagementView.xaml;
 
 False

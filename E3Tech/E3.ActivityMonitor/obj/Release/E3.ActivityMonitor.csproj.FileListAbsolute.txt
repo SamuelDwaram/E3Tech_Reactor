@@ -91,3 +91,21 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\E3.ActivityMonitor.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\E3.ActivityMonitor.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\CommonServiceLocator.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Prism.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Prism.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Prism.Unity.Wpf.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Prism.Unity.Wpf.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Prism.Wpf.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Prism.Wpf.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\System.Windows.Interactivity.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Unity.Abstractions.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\bin\Release\Unity.Container.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.pdb

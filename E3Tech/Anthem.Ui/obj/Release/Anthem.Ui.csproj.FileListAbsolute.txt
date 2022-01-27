@@ -356,3 +356,41 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Ui.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Ui.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\BoolParameter.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\GraphicalParameter.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\DashboardView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\InitializeView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\BoolParameter.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\GraphicalParameter.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ConfigurationView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\DashboardView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\FirstView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\InitializeView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\Logo.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ParametersHostView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ProcessFlowView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ReactorControlView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ReportView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\SecondView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ConfigurationView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\FirstView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\Logo.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ParametersHostView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ProcessFlowView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ReactorControlView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\ReportView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Views\SecondView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.pdb

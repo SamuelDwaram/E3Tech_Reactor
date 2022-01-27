@@ -256,3 +256,28 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.UserManager\obj\Rel
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.UserManager\obj\Release\E3.UserManager.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.UserManager\obj\Release\E3.UserManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.UserManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.UserManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\E3.UserManager.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\LoginView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\LoginView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\Views\UserManagementView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\E3.UserManager.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\E3.UserManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.UserManager\obj\Release\E3.UserManager.pdb

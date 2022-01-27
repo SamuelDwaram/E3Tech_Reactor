@@ -68,3 +68,9 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Data
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAbstractionLayer\obj\Release\E3.ReactorManager.DataAbstractionLayer.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAbstractionLayer\obj\Release\E3.ReactorManager.DataAbstractionLayer.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAbstractionLayer\obj\Release\E3.ReactorManager.DataAbstractionLayer.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.DataAbstractionLayer.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.DataAbstractionLayer.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAbstractionLayer\obj\Release\E3.ReactorManager.DataAbstractionLayer.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAbstractionLayer\obj\Release\E3.ReactorManager.DataAbstractionLayer.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAbstractionLayer\obj\Release\E3.ReactorManager.DataAbstractionLayer.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAbstractionLayer\obj\Release\E3.ReactorManager.DataAbstractionLayer.pdb

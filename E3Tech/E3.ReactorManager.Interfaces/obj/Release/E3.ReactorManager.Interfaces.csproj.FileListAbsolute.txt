@@ -357,3 +357,38 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Inte
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.Interfaces.dll.config
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.Interfaces.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.Interfaces.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\CircularProgressBar.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\Block.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ButtonOnOffAnimation.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\CircularGuageAnimation.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\CircularProgressBar.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\LoadingAnimation.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\LoadingPanel.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\NavigateButtonType-1.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ProgressBarAnimation.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\StatusIndicatorAnimation.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\StripedAnimation.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ToggleButton.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ToggleButtonUserControl.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\Block.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ButtonOnOffAnimation.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\CircularGuageAnimation.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\LoadingAnimation.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\LoadingPanel.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\NavigateButtonType-1.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ProgressBarAnimation.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\StatusIndicatorAnimation.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\StripedAnimation.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ToggleButton.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ToggleButtonUserControl.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.pdb

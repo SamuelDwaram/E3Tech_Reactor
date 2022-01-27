@@ -138,3 +138,16 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\o
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.AuditTrailManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.AuditTrailManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\Views\AuditTrailView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\Views\AuditTrailView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.pdb

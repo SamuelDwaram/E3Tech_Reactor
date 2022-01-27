@@ -88,3 +88,11 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Hard
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.HardwareAbstractionLayer.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.HardwareAbstractionLayer.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Release\E3.ReactorManager.HardwareAbstractionLayer.pdb

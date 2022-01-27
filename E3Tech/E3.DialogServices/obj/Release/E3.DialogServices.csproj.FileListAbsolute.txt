@@ -218,3 +218,25 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.DialogServices\obj\
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.DialogServices.dll.config
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.DialogServices.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.DialogServices.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.pdb

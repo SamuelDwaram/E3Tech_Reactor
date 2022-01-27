@@ -126,3 +126,15 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.Navigation\obj\
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3Tech.Navigation.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3Tech.Navigation.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\Views\ViewsPane.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\Views\ViewsPane.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.Navigation\obj\Release\E3Tech.Navigation.pdb

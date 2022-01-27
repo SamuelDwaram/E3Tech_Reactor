@@ -188,3 +188,22 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.TrendsManager\obj\R
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.TrendsManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.TrendsManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb

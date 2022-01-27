@@ -413,20 +413,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj",
+      "projectUniqueName": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj",
       "projectName": "E3.ActivityMonitor",
-      "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj",
-      "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\obj\\",
+      "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ActivityMonitor\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Umang Agarwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -434,6 +434,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\TwinCAT\\Functions\\TE2000-HMI-Engineering\\Infrastructure\\Packages": {},
+        "C:\\TwinCAT\\Functions\\TE2000-HMI-Engineering\\References": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
