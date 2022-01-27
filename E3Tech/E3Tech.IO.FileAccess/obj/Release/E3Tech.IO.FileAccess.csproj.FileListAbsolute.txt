@@ -61,3 +61,10 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.pdb
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3Tech.IO.FileAccess.dll
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3Tech.IO.FileAccess.pdb
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.csproj.AssemblyReference.cache
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.csproj.CoreCompileInputs.cache
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.csproj.CopyComplete
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.dll
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.pdb

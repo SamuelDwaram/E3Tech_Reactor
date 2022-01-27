@@ -25,12 +25,3 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Reactor
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ReactorManager.HardwareAbstractionLayer.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ReactorManager.HardwareAbstractionLayer.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.csproj.AssemblyReference.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.Properties.Resources.resources
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.csproj.GenerateResource.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.csproj.CoreCompileInputs.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.csproj.CopyComplete
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.HardwareAbstractionLayer\obj\Debug\E3.ReactorManager.HardwareAbstractionLayer.pdb

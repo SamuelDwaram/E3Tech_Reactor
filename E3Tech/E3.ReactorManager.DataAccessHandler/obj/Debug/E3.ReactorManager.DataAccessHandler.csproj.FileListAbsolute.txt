@@ -19,10 +19,3 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Reactor
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ReactorManager.DataAccessHandler.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ReactorManager.DataAccessHandler.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.AssemblyReference.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.CoreCompileInputs.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.CopyComplete
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.pdb

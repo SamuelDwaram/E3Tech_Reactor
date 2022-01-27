@@ -15,12 +15,3 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Activit
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ActivityMonitor.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ActivityMonitor.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.csproj.AssemblyReference.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.Properties.Resources.resources
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.csproj.GenerateResource.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.csproj.CoreCompileInputs.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.csproj.CopyComplete
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ActivityMonitor\obj\Debug\E3.ActivityMonitor.pdb

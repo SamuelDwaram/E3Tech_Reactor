@@ -22,11 +22,3 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Reactor
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ReactorManager.Framework.dll.config
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ReactorManager.Framework.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.ReactorManager.Framework.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.csproj.AssemblyReference.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.csproj.CoreCompileInputs.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.csproj.CopyComplete
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Framework\obj\Debug\E3.ReactorManager.Framework.pdb

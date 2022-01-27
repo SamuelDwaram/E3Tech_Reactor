@@ -40,17 +40,3 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.AuditTr
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\Images\e3tech_logo.png
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.AuditTrailManager.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Binaries\E3.AuditTrailManager.pdb
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.csproj.AssemblyReference.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\Views\AuditTrailView.g.cs
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager_MarkupCompile.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager_MarkupCompile.lref
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\Views\AuditTrailView.baml
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.g.resources
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.csproj.CoreCompileInputs.cache
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.csproj.CopyComplete
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.dll
-C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\E3.AuditTrailManager.pdb
