@@ -1,0 +1,232 @@
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\Images\e3tech_logo.png
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\E3.UserManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\E3.UserManager.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\LoginView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\LoginView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\Views\UserManagementView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.UserManager\obj\Release\E3.UserManager.pdb
+D:\SAM\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+D:\SAM\E3.ReactorManager-Anthem\Binaries\E3.UserManager.dll
+D:\SAM\E3.ReactorManager-Anthem\Binaries\E3.UserManager.pdb
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.g.resources
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.dll
+D:\SAM\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\E3.UserManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\E3.UserManager.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.g.resources
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\LoginView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\Views\UserManagementView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.g.resources
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.UserManager\obj\Release\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\LoginView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\LoginView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\Views\UserManagementView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.UserManager\obj\Release\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\E3.UserManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoginView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoginView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\UserManagementView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\Images\e3tech_logo.png
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\E3.UserManager.dll
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\E3.UserManager.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.csproj.AssemblyReference.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LiveDateTimeView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoginView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyPasswordView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyUserView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\UserManagementView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager_MarkupCompile.lref
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LiveDateTimeView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoggedInUserDetailsView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\LoginView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyPasswordView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\ModifyUserView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\RolesAndModulesConfigurationView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\Views\UserManagementView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.g.resources
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.csproj.CoreCompileInputs.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.csproj.CopyComplete
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.dll
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.UserManager\obj\Release\E3.UserManager.pdb

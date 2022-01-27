@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "PFVCaMRaA005qQ2rGMpAs2UOFLr97wcvxnLgqIgTZgZeJWvpsyg7mZ/ozyCOvA1n2zuoG9MKLAsDh1/YjaQ1fg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\livecharts.geared\\1.2.9\\livecharts.geared.1.2.9.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.core\\7.1.0.431\\prism.core.7.1.0.431.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.unity\\7.1.0.431\\prism.unity.7.1.0.431.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.wpf\\7.1.0.431\\prism.wpf.7.1.0.431.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\unity.abstractions\\3.3.1\\unity.abstractions.3.3.1.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\unity.container\\5.8.11\\unity.container.5.8.11.nupkg.sha512"
+  ],
+  "logs": []
+}

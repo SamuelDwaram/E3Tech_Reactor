@@ -1,0 +1,198 @@
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\E3.DialogServices.dll.config
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\E3.DialogServices.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\E3.DialogServices.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+D:\SAM\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll.config
+D:\SAM\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll
+D:\SAM\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.pdb
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.dll
+D:\SAM\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll.config
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll.config
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll.config
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll.config
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\E3.DialogServices.dll.config
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\E3.DialogServices.dll.config
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\E3.DialogServices.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\E3.DialogServices.dll.config
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\E3.DialogServices.dll
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\E3.DialogServices.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\Views\DialogServiceView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices_MarkupCompile.lref
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\Views\DialogServiceView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.g.resources
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.Properties.Resources.resources
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.GenerateResource.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CoreCompileInputs.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.CopyComplete
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.dll
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.DialogServices\obj\Release\E3.DialogServices.csproj.AssemblyReference.cache

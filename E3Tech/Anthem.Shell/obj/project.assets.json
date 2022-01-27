@@ -1,0 +1,1830 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "CommonServiceLocator/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        },
+        "runtime": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        }
+      },
+      "Expression.Blend.Sdk/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {}
+        }
+      },
+      "LiveCharts.Geared/1.2.9": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7",
+          "LiveCharts.Wpf": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        }
+      },
+      "Prism.Core/7.1.0.431": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "7.1.0.431",
+          "Unity.Container": "5.8.11"
+        },
+        "compile": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "2.0.4",
+          "Prism.Core": "7.1.0.431"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Core"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Unity.Abstractions/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        }
+      },
+      "Unity.Container/5.8.11": {
+        "type": "package",
+        "dependencies": {
+          "Unity.Abstractions": "3.3.1"
+        },
+        "compile": {
+          "lib/net45/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Container.dll": {}
+        }
+      },
+      "Anthem.Ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.ActivityMonitor": "1.0.0",
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
+          "E3Tech.RecipeBuilding": "1.0.0",
+          "Expression.Blend.Sdk": "1.0.2",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        }
+      },
+      "E3.ActivityMonitor/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        }
+      },
+      "E3.AuditTrailManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.ReactorManager.ReportsManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        }
+      },
+      "E3.DialogServices/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        }
+      },
+      "E3.Mediator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.DataAccessHandler": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAccessHandler/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.Interfaces/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        }
+      },
+      "E3.ReactorManager.ReportsManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        }
+      },
+      "E3.TrendsManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "LiveCharts.Geared": "1.2.9",
+          "LiveCharts.Wpf": "0.9.7",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        }
+      },
+      "E3.UserManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.DialogServices": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        }
+      },
+      "E3Tech.IO.FileAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        }
+      },
+      "E3Tech.Navigation/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        }
+      },
+      "E3Tech.RecipeBuilding/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0",
+          "E3Tech.Navigation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5/win": {
+      "CommonServiceLocator/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        },
+        "runtime": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        }
+      },
+      "Expression.Blend.Sdk/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {}
+        }
+      },
+      "LiveCharts.Geared/1.2.9": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7",
+          "LiveCharts.Wpf": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        }
+      },
+      "Prism.Core/7.1.0.431": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "7.1.0.431",
+          "Unity.Container": "5.8.11"
+        },
+        "compile": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "2.0.4",
+          "Prism.Core": "7.1.0.431"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Core"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Unity.Abstractions/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        }
+      },
+      "Unity.Container/5.8.11": {
+        "type": "package",
+        "dependencies": {
+          "Unity.Abstractions": "3.3.1"
+        },
+        "compile": {
+          "lib/net45/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Container.dll": {}
+        }
+      },
+      "Anthem.Ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.ActivityMonitor": "1.0.0",
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
+          "E3Tech.RecipeBuilding": "1.0.0",
+          "Expression.Blend.Sdk": "1.0.2",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        }
+      },
+      "E3.ActivityMonitor/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        }
+      },
+      "E3.AuditTrailManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.ReactorManager.ReportsManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        }
+      },
+      "E3.DialogServices/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        }
+      },
+      "E3.Mediator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.DataAccessHandler": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAccessHandler/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.Interfaces/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        }
+      },
+      "E3.ReactorManager.ReportsManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        }
+      },
+      "E3.TrendsManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "LiveCharts.Geared": "1.2.9",
+          "LiveCharts.Wpf": "0.9.7",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        }
+      },
+      "E3.UserManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.DialogServices": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        }
+      },
+      "E3Tech.IO.FileAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        }
+      },
+      "E3Tech.Navigation/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        }
+      },
+      "E3Tech.RecipeBuilding/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0",
+          "E3Tech.Navigation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5/win-x64": {
+      "CommonServiceLocator/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        },
+        "runtime": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        }
+      },
+      "Expression.Blend.Sdk/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {}
+        }
+      },
+      "LiveCharts.Geared/1.2.9": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7",
+          "LiveCharts.Wpf": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        }
+      },
+      "Prism.Core/7.1.0.431": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "7.1.0.431",
+          "Unity.Container": "5.8.11"
+        },
+        "compile": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "2.0.4",
+          "Prism.Core": "7.1.0.431"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Core"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Unity.Abstractions/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        }
+      },
+      "Unity.Container/5.8.11": {
+        "type": "package",
+        "dependencies": {
+          "Unity.Abstractions": "3.3.1"
+        },
+        "compile": {
+          "lib/net45/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Container.dll": {}
+        }
+      },
+      "Anthem.Ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.ActivityMonitor": "1.0.0",
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
+          "E3Tech.RecipeBuilding": "1.0.0",
+          "Expression.Blend.Sdk": "1.0.2",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        }
+      },
+      "E3.ActivityMonitor/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        }
+      },
+      "E3.AuditTrailManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.ReactorManager.ReportsManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        }
+      },
+      "E3.DialogServices/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        }
+      },
+      "E3.Mediator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.DataAccessHandler": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAccessHandler/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.Interfaces/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        }
+      },
+      "E3.ReactorManager.ReportsManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        }
+      },
+      "E3.TrendsManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "LiveCharts.Geared": "1.2.9",
+          "LiveCharts.Wpf": "0.9.7",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        }
+      },
+      "E3.UserManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.DialogServices": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        }
+      },
+      "E3Tech.IO.FileAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        }
+      },
+      "E3Tech.Navigation/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        }
+      },
+      "E3Tech.RecipeBuilding/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0",
+          "E3Tech.Navigation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5/win-x86": {
+      "CommonServiceLocator/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        },
+        "runtime": {
+          "lib/net45/CommonServiceLocator.dll": {}
+        }
+      },
+      "Expression.Blend.Sdk/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {}
+        }
+      },
+      "LiveCharts.Geared/1.2.9": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7",
+          "LiveCharts.Wpf": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Geared.dll": {}
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {}
+        }
+      },
+      "Prism.Core/7.1.0.431": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Prism.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.dll": {}
+        }
+      },
+      "Prism.Unity/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "Prism.Wpf": "7.1.0.431",
+          "Unity.Container": "5.8.11"
+        },
+        "compile": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Unity.Wpf.dll": {}
+        }
+      },
+      "Prism.Wpf/7.1.0.431": {
+        "type": "package",
+        "dependencies": {
+          "CommonServiceLocator": "2.0.4",
+          "Prism.Core": "7.1.0.431"
+        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Prism.Wpf.dll": {},
+          "lib/net45/System.Windows.Interactivity.dll": {}
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Core"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Unity.Abstractions/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Abstractions.dll": {}
+        }
+      },
+      "Unity.Container/5.8.11": {
+        "type": "package",
+        "dependencies": {
+          "Unity.Abstractions": "3.3.1"
+        },
+        "compile": {
+          "lib/net45/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Unity.Container.dll": {}
+        }
+      },
+      "Anthem.Ui/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.ActivityMonitor": "1.0.0",
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
+          "E3Tech.RecipeBuilding": "1.0.0",
+          "Expression.Blend.Sdk": "1.0.2",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Anthem.Ui.dll": {}
+        }
+      },
+      "E3.ActivityMonitor/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ActivityMonitor.dll": {}
+        }
+      },
+      "E3.AuditTrailManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.ReactorManager.ReportsManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.AuditTrailManager.dll": {}
+        }
+      },
+      "E3.DialogServices/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.DialogServices.dll": {}
+        }
+      },
+      "E3.Mediator/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.Mediator.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.DataAccessHandler": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.DataAccessHandler/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DataAccessHandler.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
+      "E3.ReactorManager.Interfaces/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Interfaces.dll": {}
+        }
+      },
+      "E3.ReactorManager.ReportsManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.ReportsManager.dll": {}
+        }
+      },
+      "E3.TrendsManager/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "LiveCharts.Geared": "1.2.9",
+          "LiveCharts.Wpf": "0.9.7",
+          "Prism.Unity": "7.1.0.431",
+          "Prism.Wpf": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.TrendsManager.dll": {}
+        }
+      },
+      "E3.UserManager/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.DialogServices": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.UserManager.dll": {}
+        }
+      },
+      "E3Tech.IO.FileAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.IO.FileAccess.dll": {}
+        }
+      },
+      "E3Tech.Navigation/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5",
+        "dependencies": {
+          "Prism.Unity": "7.1.0.431"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.Navigation.dll": {}
+        }
+      },
+      "E3Tech.RecipeBuilding/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3Tech.IO.FileAccess": "1.0.0",
+          "E3Tech.Navigation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3Tech.RecipeBuilding.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CommonServiceLocator/2.0.4": {
+      "sha512": "YpXfV5l6kv1iQRDfhQnN4RxocbnNehU/rAAS62IlaQUTAKN3WoUbtx9MHwE98Pb09mBemSs4xhVqFhXq27rjxw==",
+      "type": "package",
+      "path": "commonservicelocator/2.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "commonservicelocator.2.0.4.nupkg.sha512",
+        "commonservicelocator.nuspec",
+        "lib/net40/CommonServiceLocator.dll",
+        "lib/net45/CommonServiceLocator.dll",
+        "lib/net46/CommonServiceLocator.dll",
+        "lib/net47/CommonServiceLocator.dll",
+        "lib/netcoreapp1.0/CommonServiceLocator.dll",
+        "lib/netcoreapp2.0/CommonServiceLocator.dll",
+        "lib/netstandard1.0/CommonServiceLocator.dll",
+        "lib/netstandard2.0/CommonServiceLocator.dll"
+      ]
+    },
+    "Expression.Blend.Sdk/1.0.2": {
+      "sha512": "2rOHxr7HsJ4gVc75JymaFDS80VvhT/1rpm50LHUKRmsykE1cdM4n2rmcntcTSG08/S1ZedLuSWQpb3yBY3xfUQ==",
+      "type": "package",
+      "path": "expression.blend.sdk/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "expression.blend.sdk.1.0.2.nupkg.sha512",
+        "expression.blend.sdk.nuspec",
+        "lib/net40-client/System.Windows.Interactivity.dll",
+        "lib/net45/System.Windows.Interactivity.dll",
+        "lib/netcore45/Windows.UI.Interactivity.dll",
+        "lib/netcore45/Windows.UI.Interactivity.pri",
+        "lib/netcore45/Windows.UI.Interactivity.xml",
+        "lib/netcore451/Windows.UI.Interactivity.dll",
+        "lib/netcore451/Windows.UI.Interactivity.pri",
+        "lib/netcore451/Windows.UI.Interactivity.xml",
+        "lib/sl4-wp71/System.Windows.Interactivity.dll",
+        "lib/sl40/System.Windows.Interactivity.dll",
+        "lib/sl50/System.Windows.Interactivity.dll",
+        "lib/wp8/System.Windows.Interactivity.dll"
+      ]
+    },
+    "LiveCharts/0.9.7": {
+      "sha512": "p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
+      "type": "package",
+      "path": "livecharts/0.9.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.dll",
+        "lib/net40/LiveCharts.pdb",
+        "lib/net40/LiveCharts.xml",
+        "lib/net45/LiveCharts.dll",
+        "lib/net45/LiveCharts.pdb",
+        "lib/net45/LiveCharts.xml",
+        "lib/portable-net45+win8+wp8/LiveCharts.XML",
+        "lib/portable-net45+win8+wp8/LiveCharts.dll",
+        "lib/portable-net45+win8+wp8/LiveCharts.pdb",
+        "livecharts.0.9.7.nupkg.sha512",
+        "livecharts.nuspec",
+        "readme.txt"
+      ]
+    },
+    "LiveCharts.Geared/1.2.9": {
+      "sha512": "rChzrOJkjJLRdnVYzR9KKYD7TC7TJCmrmVB4jQY3mKajpYQ41qe7xU1g4kufcgx5PBAu90oCcHJ2/Sff23ODNQ==",
+      "type": "package",
+      "path": "livecharts.geared/1.2.9",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.Geared.dll",
+        "lib/net45/LiveCharts.Geared.dll",
+        "livecharts.geared.1.2.9.nupkg.sha512",
+        "livecharts.geared.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "LiveCharts.Wpf/0.9.7": {
+      "sha512": "lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
+      "type": "package",
+      "path": "livecharts.wpf/0.9.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.Wpf.XML",
+        "lib/net40/LiveCharts.Wpf.dll",
+        "lib/net40/LiveCharts.Wpf.pdb",
+        "lib/net45/LiveCharts.Wpf.XML",
+        "lib/net45/LiveCharts.Wpf.dll",
+        "lib/net45/LiveCharts.Wpf.pdb",
+        "livecharts.wpf.0.9.7.nupkg.sha512",
+        "livecharts.wpf.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "Prism.Core/7.1.0.431": {
+      "sha512": "l4sBztXr1d2aJ1Ub5OKcd8dkf18UV7k+DWRbi0uen8y0pqb0tH+OC1/B35ZvaxMNlCtl1VZYbeq6wypdcrt92A==",
+      "type": "package",
+      "path": "prism.core/7.1.0.431",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Prism.dll",
+        "lib/net45/Prism.pdb",
+        "lib/net45/Prism.xml",
+        "lib/netstandard1.0/Prism.dll",
+        "lib/netstandard1.0/Prism.pdb",
+        "lib/netstandard1.0/Prism.xml",
+        "lib/netstandard2.0/Prism.dll",
+        "lib/netstandard2.0/Prism.pdb",
+        "lib/netstandard2.0/Prism.xml",
+        "lib/uap10.0.15063/Prism.dll",
+        "lib/uap10.0.15063/Prism.pdb",
+        "lib/uap10.0.15063/Prism.pri",
+        "lib/uap10.0.15063/Prism.xml",
+        "lib/uap10.0.16299/Prism.dll",
+        "lib/uap10.0.16299/Prism.pdb",
+        "lib/uap10.0.16299/Prism.pri",
+        "lib/uap10.0.16299/Prism.xml",
+        "prism.core.7.1.0.431.nupkg.sha512",
+        "prism.core.nuspec"
+      ]
+    },
+    "Prism.Unity/7.1.0.431": {
+      "sha512": "75yEnHlm85zqmksOP3AJIGL7T+eyeo4zNje3pqJLs3KgeIewVC1ShtyuVF7EOfETqmGPL4wyO7acwOXXKE2ouw==",
+      "type": "package",
+      "path": "prism.unity/7.1.0.431",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Prism.Unity.Wpf.dll",
+        "lib/net45/Prism.Unity.Wpf.pdb",
+        "lib/net45/Prism.Unity.Wpf.xml",
+        "prism.unity.7.1.0.431.nupkg.sha512",
+        "prism.unity.nuspec"
+      ]
+    },
+    "Prism.Wpf/7.1.0.431": {
+      "sha512": "vcSet3jJxN4Ypf4GLPHvIYz3xQJV1E1e+uTJrsw6FkZd0mrjc0vUTZciQ3PoMRzGr5pf3iktMtScmCQhBJZMIw==",
+      "type": "package",
+      "path": "prism.wpf/7.1.0.431",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Prism.Wpf.dll",
+        "lib/net45/Prism.Wpf.pdb",
+        "lib/net45/Prism.Wpf.xml",
+        "lib/net45/System.Windows.Interactivity.dll",
+        "prism.wpf.7.1.0.431.nupkg.sha512",
+        "prism.wpf.nuspec"
+      ]
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "type": "package",
+      "path": "system.threading.tasks/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Threading.Tasks.dll",
+        "ref/netcore50/System.Threading.Tasks.xml",
+        "ref/netcore50/de/System.Threading.Tasks.xml",
+        "ref/netcore50/es/System.Threading.Tasks.xml",
+        "ref/netcore50/fr/System.Threading.Tasks.xml",
+        "ref/netcore50/it/System.Threading.Tasks.xml",
+        "ref/netcore50/ja/System.Threading.Tasks.xml",
+        "ref/netcore50/ko/System.Threading.Tasks.xml",
+        "ref/netcore50/ru/System.Threading.Tasks.xml",
+        "ref/netcore50/zh-hans/System.Threading.Tasks.xml",
+        "ref/netcore50/zh-hant/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/System.Threading.Tasks.dll",
+        "ref/netstandard1.0/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/de/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/es/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/fr/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/it/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/ja/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/ko/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/ru/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/zh-hans/System.Threading.Tasks.xml",
+        "ref/netstandard1.0/zh-hant/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/System.Threading.Tasks.dll",
+        "ref/netstandard1.3/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/de/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/es/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/fr/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/it/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/ja/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/ko/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/ru/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.Tasks.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.Tasks.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.4.3.0.nupkg.sha512",
+        "system.threading.tasks.nuspec"
+      ]
+    },
+    "Unity.Abstractions/3.3.1": {
+      "sha512": "2dFFUnyzSHDgyqVeZBo4X1M3mxh+XCdK66aiuALuPWwXsqmGuGfqD0/sbDNnA5FGYnqby4Fb+4X/JqoN+NjhuA==",
+      "type": "package",
+      "path": "unity.abstractions/3.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Unity.Abstractions.dll",
+        "lib/net45/Unity.Abstractions.dll",
+        "lib/net46/Unity.Abstractions.dll",
+        "lib/net47/Unity.Abstractions.dll",
+        "lib/netcoreapp1.0/Unity.Abstractions.dll",
+        "lib/netcoreapp2.0/Unity.Abstractions.dll",
+        "lib/netstandard1.0/Unity.Abstractions.dll",
+        "lib/netstandard2.0/Unity.Abstractions.dll",
+        "unity.abstractions.3.3.1.nupkg.sha512",
+        "unity.abstractions.nuspec"
+      ]
+    },
+    "Unity.Container/5.8.11": {
+      "sha512": "8XEfzRwoX/9NtHU4WapD3DdCxBQumIoDIIEBbqElhr2Y5HwokaAkiomuIKvVW9znNDtv1az3i1xKM6usiiWjqg==",
+      "type": "package",
+      "path": "unity.container/5.8.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Unity.Container.dll",
+        "lib/net45/Unity.Container.dll",
+        "lib/net46/Unity.Container.dll",
+        "lib/net47/Unity.Container.dll",
+        "lib/netcoreapp1.0/Unity.Container.dll",
+        "lib/netcoreapp2.0/Unity.Container.dll",
+        "lib/netstandard1.0/Unity.Container.dll",
+        "lib/netstandard2.0/Unity.Container.dll",
+        "unity.container.5.8.11.nupkg.sha512",
+        "unity.container.nuspec"
+      ]
+    },
+    "Anthem.Ui/1.0.0": {
+      "type": "project",
+      "path": "../Anthem.Ui/Anthem.Ui.csproj",
+      "msbuildProject": "../Anthem.Ui/Anthem.Ui.csproj"
+    },
+    "E3.ActivityMonitor/1.0.0": {
+      "type": "project",
+      "path": "../E3.ActivityMonitor/E3.ActivityMonitor.csproj",
+      "msbuildProject": "../E3.ActivityMonitor/E3.ActivityMonitor.csproj"
+    },
+    "E3.AuditTrailManager/1.0.0": {
+      "type": "project",
+      "path": "../E3.AuditTrailManager/E3.AuditTrailManager.csproj",
+      "msbuildProject": "../E3.AuditTrailManager/E3.AuditTrailManager.csproj"
+    },
+    "E3.DialogServices/1.0.0": {
+      "type": "project",
+      "path": "../E3.DialogServices/E3.DialogServices.csproj",
+      "msbuildProject": "../E3.DialogServices/E3.DialogServices.csproj"
+    },
+    "E3.Mediator/1.0.0": {
+      "type": "project",
+      "path": "../E3.Mediator/E3.Mediator.csproj",
+      "msbuildProject": "../E3.Mediator/E3.Mediator.csproj"
+    },
+    "E3.ReactorManager.DataAbstractionLayer/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.DataAbstractionLayer/E3.ReactorManager.DataAbstractionLayer.csproj",
+      "msbuildProject": "../E3.ReactorManager.DataAbstractionLayer/E3.ReactorManager.DataAbstractionLayer.csproj"
+    },
+    "E3.ReactorManager.DataAccessHandler/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.DataAccessHandler/E3.ReactorManager.DataAccessHandler.csproj",
+      "msbuildProject": "../E3.ReactorManager.DataAccessHandler/E3.ReactorManager.DataAccessHandler.csproj"
+    },
+    "E3.ReactorManager.Framework/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.Framework/E3.ReactorManager.Framework.csproj",
+      "msbuildProject": "../E3.ReactorManager.Framework/E3.ReactorManager.Framework.csproj"
+    },
+    "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.HardwareAbstractionLayer/E3.ReactorManager.HardwareAbstractionLayer.csproj",
+      "msbuildProject": "../E3.ReactorManager.HardwareAbstractionLayer/E3.ReactorManager.HardwareAbstractionLayer.csproj"
+    },
+    "E3.ReactorManager.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.Interfaces/E3.ReactorManager.Interfaces.csproj",
+      "msbuildProject": "../E3.ReactorManager.Interfaces/E3.ReactorManager.Interfaces.csproj"
+    },
+    "E3.ReactorManager.ReportsManager/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.ReportsManager/E3.ReactorManager.ReportsManager.csproj",
+      "msbuildProject": "../E3.ReactorManager.ReportsManager/E3.ReactorManager.ReportsManager.csproj"
+    },
+    "E3.TrendsManager/1.0.0": {
+      "type": "project",
+      "path": "../E3.TrendsManager/E3.TrendsManager.csproj",
+      "msbuildProject": "../E3.TrendsManager/E3.TrendsManager.csproj"
+    },
+    "E3.UserManager/1.0.0": {
+      "type": "project",
+      "path": "../E3.UserManager/E3.UserManager.csproj",
+      "msbuildProject": "../E3.UserManager/E3.UserManager.csproj"
+    },
+    "E3Tech.IO.FileAccess/1.0.0": {
+      "type": "project",
+      "path": "../E3Tech.IO.FileAccess/E3Tech.IO.FileAccess.csproj",
+      "msbuildProject": "../E3Tech.IO.FileAccess/E3Tech.IO.FileAccess.csproj"
+    },
+    "E3Tech.Navigation/1.0.0": {
+      "type": "project",
+      "path": "../E3Tech.Navigation/E3Tech.Navigation.csproj",
+      "msbuildProject": "../E3Tech.Navigation/E3Tech.Navigation.csproj"
+    },
+    "E3Tech.RecipeBuilding/1.0.0": {
+      "type": "project",
+      "path": "../E3Tech.RecipeBuilding/E3Tech.RecipeBuilding.csproj",
+      "msbuildProject": "../E3Tech.RecipeBuilding/E3Tech.RecipeBuilding.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": [
+      "Anthem.Ui >= 1.0.0",
+      "E3.ActivityMonitor >= 1.0.0",
+      "E3.AuditTrailManager >= 1.0.0",
+      "E3.DialogServices >= 1.0.0",
+      "E3.Mediator >= 1.0.0",
+      "E3.ReactorManager.DataAbstractionLayer >= 1.0.0",
+      "E3.ReactorManager.Framework >= 1.0.0",
+      "E3.ReactorManager.HardwareAbstractionLayer >= 1.0.0",
+      "E3.ReactorManager.Interfaces >= 1.0.0",
+      "E3.ReactorManager.ReportsManager >= 1.0.0",
+      "E3.TrendsManager >= 1.0.0",
+      "E3.UserManager >= 1.0.0",
+      "E3Tech.IO.FileAccess >= 1.0.0",
+      "E3Tech.Navigation >= 1.0.0",
+      "E3Tech.RecipeBuilding >= 1.0.0",
+      "Expression.Blend.Sdk >= 1.0.2",
+      "Prism.Unity >= 7.1.0.431"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Shell\\Anthem.Shell.csproj",
+      "projectName": "Anthem.Shell",
+      "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Shell\\Anthem.Shell.csproj",
+      "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Shell\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Umang Agarwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "projectReferences": {
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Ui\\Anthem.Ui.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Ui\\Anthem.Ui.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.DialogServices\\E3.DialogServices.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.DialogServices\\E3.DialogServices.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.DataAbstractionLayer\\E3.ReactorManager.DataAbstractionLayer.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.DataAbstractionLayer\\E3.ReactorManager.DataAbstractionLayer.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.ReportsManager\\E3.ReactorManager.ReportsManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.ReportsManager\\E3.ReactorManager.ReportsManager.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.UserManager\\E3.UserManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.UserManager\\E3.UserManager.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.Navigation\\E3Tech.Navigation.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.Navigation\\E3Tech.Navigation.csproj"
+            },
+            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net45": {
+        "dependencies": {
+          "Expression.Blend.Sdk": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
+          "Prism.Unity": {
+            "target": "Package",
+            "version": "[7.1.0.431, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

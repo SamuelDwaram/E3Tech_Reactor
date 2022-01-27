@@ -1,0 +1,171 @@
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\E3.TrendsManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\E3.TrendsManager.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+D:\SAM\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.dll
+D:\SAM\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.pdb
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+D:\SAM\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\E3.TrendsManager.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\E3.TrendsManager.dll
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\E3.TrendsManager.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.AssemblyReference.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\LiveTrendsView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\NavigableTrendsView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\TrendsView.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager_MarkupCompile.lref
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\LiveTrendsView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\Views\TrendsView.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.g.resources
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.Properties.Resources.resources
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.GenerateResource.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CoreCompileInputs.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.csproj.CopyComplete
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.dll
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.TrendsManager\obj\Release\E3.TrendsManager.pdb

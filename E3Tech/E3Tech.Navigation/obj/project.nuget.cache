@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ornq/yA5Ix9ilCP6QuLeO1B3hjrjbzFRtk10yoLUpn2Jz30n+meDozCw+Nxeo7cdbTa8N3foog9hqgzHPPV8Ng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.Navigation\\E3Tech.Navigation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.core\\7.1.0.431\\prism.core.7.1.0.431.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.unity\\7.1.0.431\\prism.unity.7.1.0.431.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.wpf\\7.1.0.431\\prism.wpf.7.1.0.431.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\unity.abstractions\\3.3.1\\unity.abstractions.3.3.1.nupkg.sha512",
+    "C:\\Users\\Umang Agarwal\\.nuget\\packages\\unity.container\\5.8.11\\unity.container.5.8.11.nupkg.sha512"
+  ],
+  "logs": []
+}

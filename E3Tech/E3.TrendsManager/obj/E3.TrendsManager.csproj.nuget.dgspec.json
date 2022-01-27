@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj",
+        "projectName": "E3.Mediator",
+        "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj",
+        "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Umang Agarwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[7.1.0.431, )"
+            },
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[7.1.0.431, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj",
+        "projectName": "E3.ReactorManager.Interfaces",
+        "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj",
+        "frameworks": {
+          "net45": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj",
+        "projectName": "E3.TrendsManager",
+        "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj",
+        "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\Umang Agarwal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj": {
+                "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj"
+              },
+              "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "dependencies": {
+            "LiveCharts.Geared": {
+              "target": "Package",
+              "version": "[1.2.9, )"
+            },
+            "LiveCharts.Wpf": {
+              "target": "Package",
+              "version": "[0.9.7, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[7.1.0.431, )"
+            },
+            "Prism.Wpf": {
+              "target": "Package",
+              "version": "[7.1.0.431, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

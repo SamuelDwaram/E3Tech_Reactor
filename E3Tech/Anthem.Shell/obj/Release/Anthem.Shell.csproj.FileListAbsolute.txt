@@ -1,0 +1,162 @@
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\Images\e3tech_logo.png
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\Anathem.Shell.exe.config
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\Anathem.Shell.exe
+H:\BALU\E3TechSolutions\E3.ReactorManager\Binaries\Anathem.Shell.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Views\MainWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\App.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\App.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anathem.Shell.exe
+H:\BALU\E3TechSolutions\E3.ReactorManager\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+D:\SAM\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+D:\SAM\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe.config
+D:\SAM\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe
+D:\SAM\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.pdb
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.baml
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.g.cs
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.baml
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.exe
+D:\SAM\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe.config
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.pdb
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.baml
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.exe
+H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe.config
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.baml
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\BASF\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe.config
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe.config
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Binaries\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\App.baml
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\Anthem\E3.ReactorManager-Anthem\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\Anathem.Shell.exe.config
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Binaries\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Views\MainWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\App.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\App.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_070821\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\Images\e3tech_logo.png
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\Anathem.Shell.exe.config
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Binaries\Anathem.Shell.pdb
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csprojAssemblyReference.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Views\MainWindow.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\App.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\App.baml
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.exe
+C:\Users\E3 Tech\Desktop\An\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\Images\e3tech_logo.png
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\Anathem.Shell.exe.config
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\Anathem.Shell.exe
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Binaries\Anathem.Shell.pdb
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.AssemblyReference.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Views\MainWindow.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\App.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Views\MainWindow.g.cs
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell_MarkupCompile.lref
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\App.baml
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.g.resources
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.Properties.Resources.resources
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.GenerateResource.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CoreCompileInputs.cache
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anthem.Shell.csproj.CopyComplete
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.exe
+C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Release\Anathem.Shell.pdb
