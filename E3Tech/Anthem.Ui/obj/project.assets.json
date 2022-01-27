@@ -1150,11 +1150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Ui\\Anthem.Ui.csproj",
+      "projectUniqueName": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Ui\\Anthem.Ui.csproj",
       "projectName": "Anthem.Ui",
-      "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Ui\\Anthem.Ui.csproj",
+      "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Ui\\Anthem.Ui.csproj",
       "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Ui\\obj\\",
+      "outputPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Ui\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1171,20 +1171,20 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.UserManager\\E3.UserManager.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.UserManager\\E3.UserManager.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.UserManager\\E3.UserManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.UserManager\\E3.UserManager.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj"
             }
           }
         }

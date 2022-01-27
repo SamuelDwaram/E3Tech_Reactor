@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LX8+3GfTb4X9h3Jf4vS23kwWqQmx+Wrqe3nQshF+CAqZLz/rbAswU2P9HpIjBW6MnbxEHofqFBbExJ+ePn+cKA==",
+  "dgSpecHash": "Mk2C/F/Vg8St2ikaFlT/aRq9GSn7gDbvYbZBumL0OpQ1QjLp2eTafGE5BKPHw1sx47RyjkA6Fcpgebm2vjFR2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj",
+  "projectFilePath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.core\\7.1.0.431\\prism.core.7.1.0.431.nupkg.sha512",

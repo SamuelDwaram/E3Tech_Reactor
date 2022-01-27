@@ -4,7 +4,7 @@
 library
 C#
 .cs
-H:\BALU\E3TechSolutions\E3.ReactorManager\E3.TrendsManager\obj\Debug\
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.TrendsManager\obj\Debug\
 E3.TrendsManager
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 3190039121
 
 21-1367742716
-26474510338
+26443759877
 Views\LiveTrendsView.xaml;Views\NavigableTrendsView.xaml;Views\TrendsView.xaml;
 
 True

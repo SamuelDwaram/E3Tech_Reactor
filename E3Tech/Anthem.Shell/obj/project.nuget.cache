@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XidnTkzao/pURg9S6vfe1fymvprZU4RJ7i4VuRGiU8HAvRleLZJVrxaA4WUG8lYqvvzRwWJfdxgmfyHGko35ww==",
+  "dgSpecHash": "dYjBf6CaRaRL1I4nW6dzrGBVIahKbM3G3vr7RwfLgQC2eemCVViC/M4w8wqwRf9EDb4AvuGXWmblK00fnOYEWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Shell\\Anthem.Shell.csproj",
+  "projectFilePath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Shell\\Anthem.Shell.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\expression.blend.sdk\\1.0.2\\expression.blend.sdk.1.0.2.nupkg.sha512",

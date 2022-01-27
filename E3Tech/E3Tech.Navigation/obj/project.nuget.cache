@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ornq/yA5Ix9ilCP6QuLeO1B3hjrjbzFRtk10yoLUpn2Jz30n+meDozCw+Nxeo7cdbTa8N3foog9hqgzHPPV8Ng==",
+  "dgSpecHash": "GqvzeaXrLXzsHY24sKZUPGqksqPfQJPzVNW6Va5aLENaMYr7BpMrhDC6+aj5/KEgPgK2E1INpvM/pWBWCu2J4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.Navigation\\E3Tech.Navigation.csproj",
+  "projectFilePath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.Navigation\\E3Tech.Navigation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.core\\7.1.0.431\\prism.core.7.1.0.431.nupkg.sha512",

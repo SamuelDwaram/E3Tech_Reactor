@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "POHFYPhkvU0dGKRtt31NcZJ4bU/TdZuguV5EPesM6f8EVVYOMmv4JIhva2p1ewFGAMsuev7yFesNNEPGd0trSA==",
+  "dgSpecHash": "Sj25N5ykFllw2PNhbcc7eWpYrHvFAQ7+4lq/6mPdM5z3UpY/kdmCr0Pm5v2oTI9GP3YqXUKSSx8s9rlcsKUB/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj",
+  "projectFilePath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\prism.core\\7.1.0.431\\prism.core.7.1.0.431.nupkg.sha512",

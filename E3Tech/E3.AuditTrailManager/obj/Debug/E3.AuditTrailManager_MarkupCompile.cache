@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\Umang Agarwal\Source\Repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.AuditTrailManager\obj\Debug\
 E3.AuditTrailManager
 none
 false
@@ -13,8 +13,8 @@ DEBUG;TRACE
 1912084486
 2439521939
 101569266496
-24499366062
+24-266568560
 Views\AuditTrailView.xaml;
 
-True
+False
 

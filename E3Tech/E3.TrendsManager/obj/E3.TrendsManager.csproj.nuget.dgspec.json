@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj": {}
+    "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\E3.TrendsManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj": {
+    "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj",
+        "projectUniqueName": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj",
         "projectName": "E3.Mediator",
-        "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj",
+        "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj",
         "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\obj\\",
+        "outputPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -57,11 +57,11 @@
         }
       }
     },
-    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+    "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj",
         "projectName": "E3.ReactorManager.Interfaces",
-        "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj",
+        "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj",
         "frameworks": {
           "net45": {
             "projectReferences": {}
@@ -72,14 +72,14 @@
         "net45": {}
       }
     },
-    "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj": {
+    "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\E3.TrendsManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj",
+        "projectUniqueName": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\E3.TrendsManager.csproj",
         "projectName": "E3.TrendsManager",
-        "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj",
+        "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\E3.TrendsManager.csproj",
         "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\obj\\",
+        "outputPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -96,11 +96,11 @@
         "frameworks": {
           "net45": {
             "projectReferences": {
-              "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj": {
-                "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj"
+              "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj": {
+                "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj"
               },
-              "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+              "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
               }
             }
           }

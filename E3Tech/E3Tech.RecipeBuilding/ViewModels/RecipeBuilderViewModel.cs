@@ -669,7 +669,7 @@ namespace E3Tech.RecipeBuilding.ViewModels
 
         public ObservableCollection<SeqRecipeModel> SeqRecipeModels
         {
-            get { return seqRecipeModels; }
+            get { return seqRecipeModels == null ? seqRecipeModels = new ObservableCollection<SeqRecipeModel>() : seqRecipeModels; }
             set
             {
                 seqRecipeModels = value;

@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Ui\obj\Debug\
+C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Debug\
 Anathem.Ui
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 12-665830597
 5692227194
 281131276050
-261778200221
+26-664217391
 UserControls\BoolParameter.xaml;UserControls\GraphicalParameter.xaml;Views\ConfigurationView.xaml;Views\DashboardView.xaml;Views\FirstView.xaml;Views\InitializeView.xaml;Views\Logo.xaml;Views\ParametersHostView.xaml;Views\ProcessFlowView.xaml;Views\ReactorControlView.xaml;Views\ReportView.xaml;Views\SecondView.xaml;
 
 True

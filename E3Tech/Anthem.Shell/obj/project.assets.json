@@ -1731,11 +1731,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Shell\\Anthem.Shell.csproj",
+      "projectUniqueName": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Shell\\Anthem.Shell.csproj",
       "projectName": "Anthem.Shell",
-      "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Shell\\Anthem.Shell.csproj",
+      "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Shell\\Anthem.Shell.csproj",
       "packagesPath": "C:\\Users\\Umang Agarwal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Shell\\obj\\",
+      "outputPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Shell\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1752,50 +1752,50 @@
       "frameworks": {
         "net45": {
           "projectReferences": {
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Ui\\Anthem.Ui.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\Anthem.Ui\\Anthem.Ui.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Ui\\Anthem.Ui.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\Anthem.Ui\\Anthem.Ui.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ActivityMonitor\\E3.ActivityMonitor.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.DialogServices\\E3.DialogServices.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.DialogServices\\E3.DialogServices.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.DialogServices\\E3.DialogServices.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.DialogServices\\E3.DialogServices.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.Mediator\\E3.Mediator.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.Mediator\\E3.Mediator.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.DataAbstractionLayer\\E3.ReactorManager.DataAbstractionLayer.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.DataAbstractionLayer\\E3.ReactorManager.DataAbstractionLayer.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.DataAbstractionLayer\\E3.ReactorManager.DataAbstractionLayer.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.DataAbstractionLayer\\E3.ReactorManager.DataAbstractionLayer.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.ReportsManager\\E3.ReactorManager.ReportsManager.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.ReactorManager.ReportsManager\\E3.ReactorManager.ReportsManager.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.ReportsManager\\E3.ReactorManager.ReportsManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.ReactorManager.ReportsManager\\E3.ReactorManager.ReportsManager.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\E3.TrendsManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\E3.TrendsManager.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.UserManager\\E3.UserManager.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.UserManager\\E3.UserManager.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.UserManager\\E3.UserManager.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.UserManager\\E3.UserManager.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.Navigation\\E3Tech.Navigation.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.Navigation\\E3Tech.Navigation.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.Navigation\\E3Tech.Navigation.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.Navigation\\E3Tech.Navigation.csproj"
             },
-            "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj": {
-              "projectPath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj"
+            "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj": {
+              "projectPath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3Tech.RecipeBuilding\\E3Tech.RecipeBuilding.csproj"
             }
           }
         }

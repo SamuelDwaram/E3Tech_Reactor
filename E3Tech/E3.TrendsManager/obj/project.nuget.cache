@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PFVCaMRaA005qQ2rGMpAs2UOFLr97wcvxnLgqIgTZgZeJWvpsyg7mZ/ozyCOvA1n2zuoG9MKLAsDh1/YjaQ1fg==",
+  "dgSpecHash": "R7a/H1dKq6RaGGgk/mWHlKdBd+b07Or/Sli0688OgMwNFdHQaxWeEU10QI3ZPFc0ViiEgjrSG6fqxk/N9R0OhA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Umang Agarwal\\Desktop\\e3tech\\E3.ReactorManager-Anthem_140821\\E3.TrendsManager\\E3.TrendsManager.csproj",
+  "projectFilePath": "C:\\Users\\Umang Agarwal\\source\\repos\\E3Tech_Reactor\\E3Tech\\E3.TrendsManager\\E3.TrendsManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\commonservicelocator\\2.0.4\\commonservicelocator.2.0.4.nupkg.sha512",
     "C:\\Users\\Umang Agarwal\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
