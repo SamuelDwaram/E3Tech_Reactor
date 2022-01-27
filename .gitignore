@@ -1,0 +1,6 @@
+lib
+**/bin/**
+**/obj/**
+**/release/**
+/E3Tech.Navigation/obj/Release
+*.suo
