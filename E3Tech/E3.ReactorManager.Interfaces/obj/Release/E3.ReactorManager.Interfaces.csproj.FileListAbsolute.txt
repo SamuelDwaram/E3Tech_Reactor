@@ -360,6 +360,7 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.ReactorManager.Inte
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.Interfaces.dll.config
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.Interfaces.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.Interfaces.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.csproj.AssemblyReference.cache
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\CircularProgressBar.baml
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\Block.g.cs
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\UI\UserControls\ButtonOnOffAnimation.g.cs
@@ -391,4 +392,3 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Rel
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.csproj.CoreCompileInputs.cache
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.pdb
-D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Interfaces\obj\Release\E3.ReactorManager.Interfaces.csproj.CopyComplete

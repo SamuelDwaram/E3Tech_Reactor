@@ -206,6 +206,10 @@
       <Project>{6A75F5A4-114D-4763-BF18-C81ABC3D7FE5}</Project>
       <Name>E3.AuditTrailManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\E3.ReactorManager.DesignExperiment\E3.ReactorManager.DesignExperiment.csproj">
+      <Project>{9079b332-6e6e-412c-9153-895a4db989d3}</Project>
+      <Name>E3.ReactorManager.DesignExperiment</Name>
+    </ProjectReference>
     <ProjectReference Include="..\E3.ReactorManager.Interfaces\E3.ReactorManager.Interfaces.csproj">
       <Project>{620c94fe-d355-4801-92b0-f86d1b08fb02}</Project>
       <Name>E3.ReactorManager.Interfaces</Name>

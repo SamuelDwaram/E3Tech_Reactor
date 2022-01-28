@@ -43,3 +43,18 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Reactor
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.ReportsManager.dll.config
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.ReportsManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.ReportsManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\Views\ReportPreview.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\Views\ReportPreview.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Debug\E3.ReactorManager.ReportsManager.csproj.CopyComplete

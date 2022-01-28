@@ -4,17 +4,17 @@
 library
 C#
 .cs
-H:\BALU\E3TechSolutions\E3.ReactorManager-Anthem\E3Tech.RecipeBuilding\obj\Release\
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Release\
 E3Tech.RecipeBuilding
 none
 false
 TRACE
 
-8-837816062
+9943830162
 22098369155
-81-1851158464
-811662491998
-ParameterProviders\BlockParameterProviderView.xaml;UserControls\RecipeBlockView.xaml;ParameterProviders\BlockParametersTemplateDictionary.xaml;UserControls\ToggleButton.xaml;Views\DesignExperimentView.xaml;Views\MultiRecipeBuilderView.xaml;Views\RecipeBuilderView.xaml;Views\RecipesView.xaml;
+86-1065786801
+84145308027
+ParameterProviders\BlockParameterProviderView.xaml;UserControls\RecipeBlockView.xaml;ParameterProviders\BlockParametersTemplateDictionary.xaml;UserControls\ToggleButton.xaml;Views\DesignExperimentView.xaml;Views\MultiRecipeBuilderView.xaml;Views\RecipeBuilderView.xaml;Views\RecipesView.xaml;Views\SequenceRecipeBuilderView.xaml;
 
-False
+True
 

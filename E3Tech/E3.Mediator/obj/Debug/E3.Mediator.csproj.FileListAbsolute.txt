@@ -15,3 +15,11 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Mediato
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Mediator\obj\Debug\E3.Mediator.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Mediator\obj\Debug\E3.Mediator.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Mediator\obj\Debug\E3.Mediator.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.Mediator.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.Mediator.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Debug\E3.Mediator.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Debug\E3.Mediator.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Debug\E3.Mediator.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Debug\E3.Mediator.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Debug\E3.Mediator.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Debug\E3.Mediator.pdb

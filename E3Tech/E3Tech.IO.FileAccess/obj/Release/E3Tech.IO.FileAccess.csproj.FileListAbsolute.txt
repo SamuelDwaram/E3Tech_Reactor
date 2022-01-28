@@ -74,4 +74,3 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3T
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.pdb
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.csproj.CopyComplete
-D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Release\E3Tech.IO.FileAccess.csproj.AssemblyReference.cache

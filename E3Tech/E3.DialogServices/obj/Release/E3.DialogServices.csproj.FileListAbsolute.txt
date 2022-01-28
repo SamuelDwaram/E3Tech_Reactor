@@ -221,7 +221,6 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\E3.DialogServices\obj\
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.DialogServices.dll.config
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.DialogServices.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.DialogServices.pdb
-D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\E3.DialogServices.csproj.AssemblyReference.cache
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\AlertWindow.baml
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\ConfirmationWindow.baml
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.DialogServices\obj\Release\DialogTypes\DynamicDialogWindow.baml

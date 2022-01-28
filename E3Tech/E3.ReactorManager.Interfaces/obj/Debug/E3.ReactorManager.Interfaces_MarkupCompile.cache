@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 12-2105284675
 
-40-651911900
+39-1204298097
 29-1669805469
 UI\UserControls\Block.xaml;UI\UserControls\ButtonOnOffAnimation.xaml;UI\UserControls\CircularGuageAnimation.xaml;UI\UserControls\CircularProgressBar.xaml;UI\UserControls\LoadingAnimation.xaml;UI\UserControls\LoadingPanel.xaml;UI\UserControls\NavigateButtonType-1.xaml;UI\UserControls\ProgressBarAnimation.xaml;UI\UserControls\StatusIndicatorAnimation.xaml;UI\UserControls\StripedAnimation.xaml;UI\UserControls\ToggleButton.xaml;UI\UserControls\ToggleButtonUserControl.xaml;
 
-True
+False
 

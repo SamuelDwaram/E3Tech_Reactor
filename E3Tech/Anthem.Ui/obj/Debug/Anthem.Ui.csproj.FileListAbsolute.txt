@@ -99,3 +99,44 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Ui\
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Ui\obj\Debug\Anthem.Ui.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Ui\obj\Debug\Anathem.Ui.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Ui\obj\Debug\Anathem.Ui.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Ui.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Ui.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anthem.Ui.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\BoolParameter.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\GraphicalParameter.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\DashboardView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\InitializeView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\BoolParameter.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\BoolParameterProcessFlow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\CircleProcessFlow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\GraphicalParameter.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ConfigurationView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\DashboardView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\FirstView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\InitializeView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\Logo.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ParametersHostView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ProcessFlowView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ReactorControlView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ReportView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\SecondView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\BoolParameterProcessFlow.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\UserControls\CircleProcessFlow.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ConfigurationView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\FirstView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\Logo.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ParametersHostView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ProcessFlowView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ReactorControlView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\ReportView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Views\SecondView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anthem.Ui.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anthem.Ui.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anthem.Ui.csproj.CopyComplete
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui.pdb

@@ -52,3 +52,20 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.She
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Debug\Anthem.Shell.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Debug\Anathem.Shell.exe
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\Anthem.Shell\obj\Debug\Anathem.Shell.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Shell.exe.config
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Shell.exe
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Shell.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anthem.Shell.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Views\MainWindow.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\App.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Views\MainWindow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anathem.Shell_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anathem.Shell_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\App.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anathem.Shell.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anathem.Shell.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anthem.Shell.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anthem.Shell.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anathem.Shell.exe
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Shell\obj\Debug\Anathem.Shell.pdb

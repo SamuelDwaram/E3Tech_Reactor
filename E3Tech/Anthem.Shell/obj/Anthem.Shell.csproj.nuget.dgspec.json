@@ -137,6 +137,9 @@
               "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
                 "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
               },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj"
+              },
               "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
                 "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
               },
@@ -366,6 +369,40 @@
             "projectReferences": {
               "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
                 "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net45": {}
+      }
+    },
+    "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj",
+        "projectName": "E3.ReactorManager.DesignExperiment",
+        "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj",
+        "frameworks": {
+          "net45": {
+            "projectReferences": {
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
+              },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.Mediator\\E3.Mediator.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.Mediator\\E3.Mediator.csproj"
+              },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Framework\\E3.ReactorManager.Framework.csproj"
+              },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.HardwareAbstractionLayer\\E3.ReactorManager.HardwareAbstractionLayer.csproj"
+              },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+              },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.UserManager\\E3.UserManager.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.UserManager\\E3.UserManager.csproj"
               }
             }
           }
@@ -625,8 +662,14 @@
               "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.Mediator\\E3.Mediator.csproj": {
                 "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.Mediator\\E3.Mediator.csproj"
               },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj"
+              },
               "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
                 "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"
+              },
+              "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.UserManager\\E3.UserManager.csproj": {
+                "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.UserManager\\E3.UserManager.csproj"
               },
               "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj": {
                 "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3Tech.IO.FileAccess\\E3Tech.IO.FileAccess.csproj"

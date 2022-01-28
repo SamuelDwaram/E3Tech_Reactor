@@ -144,6 +144,47 @@
           "bin/placeholder/E3.Mediator.dll": {}
         }
       },
+      "E3.ReactorManager.DesignExperiment/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Framework": "1.0.0",
+          "E3.ReactorManager.HardwareAbstractionLayer": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
       "E3.ReactorManager.Interfaces/1.0.0": {
         "type": "project",
         "compile": {
@@ -207,7 +248,9 @@
         "type": "project",
         "dependencies": {
           "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.DesignExperiment": "1.0.0",
           "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
           "E3Tech.IO.FileAccess": "1.0.0",
           "E3Tech.Navigation": "1.0.0"
         },
@@ -362,6 +405,47 @@
           "bin/placeholder/E3.Mediator.dll": {}
         }
       },
+      "E3.ReactorManager.DesignExperiment/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Framework": "1.0.0",
+          "E3.ReactorManager.HardwareAbstractionLayer": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
       "E3.ReactorManager.Interfaces/1.0.0": {
         "type": "project",
         "compile": {
@@ -425,7 +509,9 @@
         "type": "project",
         "dependencies": {
           "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.DesignExperiment": "1.0.0",
           "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
           "E3Tech.IO.FileAccess": "1.0.0",
           "E3Tech.Navigation": "1.0.0"
         },
@@ -580,6 +666,47 @@
           "bin/placeholder/E3.Mediator.dll": {}
         }
       },
+      "E3.ReactorManager.DesignExperiment/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Framework": "1.0.0",
+          "E3.ReactorManager.HardwareAbstractionLayer": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
       "E3.ReactorManager.Interfaces/1.0.0": {
         "type": "project",
         "compile": {
@@ -643,7 +770,9 @@
         "type": "project",
         "dependencies": {
           "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.DesignExperiment": "1.0.0",
           "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
           "E3Tech.IO.FileAccess": "1.0.0",
           "E3Tech.Navigation": "1.0.0"
         },
@@ -798,6 +927,47 @@
           "bin/placeholder/E3.Mediator.dll": {}
         }
       },
+      "E3.ReactorManager.DesignExperiment/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.AuditTrailManager": "1.0.0",
+          "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.Framework": "1.0.0",
+          "E3.ReactorManager.HardwareAbstractionLayer": "1.0.0",
+          "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.DesignExperiment.dll": {}
+        }
+      },
+      "E3.ReactorManager.Framework/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.Framework.dll": {}
+        }
+      },
+      "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "E3.ReactorManager.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/E3.ReactorManager.HardwareAbstractionLayer.dll": {}
+        }
+      },
       "E3.ReactorManager.Interfaces/1.0.0": {
         "type": "project",
         "compile": {
@@ -861,7 +1031,9 @@
         "type": "project",
         "dependencies": {
           "E3.Mediator": "1.0.0",
+          "E3.ReactorManager.DesignExperiment": "1.0.0",
           "E3.ReactorManager.Interfaces": "1.0.0",
+          "E3.UserManager": "1.0.0",
           "E3Tech.IO.FileAccess": "1.0.0",
           "E3Tech.Navigation": "1.0.0"
         },
@@ -1100,6 +1272,21 @@
       "path": "../E3.Mediator/E3.Mediator.csproj",
       "msbuildProject": "../E3.Mediator/E3.Mediator.csproj"
     },
+    "E3.ReactorManager.DesignExperiment/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.DesignExperiment/E3.ReactorManager.DesignExperiment.csproj",
+      "msbuildProject": "../E3.ReactorManager.DesignExperiment/E3.ReactorManager.DesignExperiment.csproj"
+    },
+    "E3.ReactorManager.Framework/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.Framework/E3.ReactorManager.Framework.csproj",
+      "msbuildProject": "../E3.ReactorManager.Framework/E3.ReactorManager.Framework.csproj"
+    },
+    "E3.ReactorManager.HardwareAbstractionLayer/1.0.0": {
+      "type": "project",
+      "path": "../E3.ReactorManager.HardwareAbstractionLayer/E3.ReactorManager.HardwareAbstractionLayer.csproj",
+      "msbuildProject": "../E3.ReactorManager.HardwareAbstractionLayer/E3.ReactorManager.HardwareAbstractionLayer.csproj"
+    },
     "E3.ReactorManager.Interfaces/1.0.0": {
       "type": "project",
       "path": "../E3.ReactorManager.Interfaces/E3.ReactorManager.Interfaces.csproj",
@@ -1135,6 +1322,7 @@
     ".NETFramework,Version=v4.5": [
       "E3.ActivityMonitor >= 1.0.0",
       "E3.AuditTrailManager >= 1.0.0",
+      "E3.ReactorManager.DesignExperiment >= 1.0.0",
       "E3.ReactorManager.Interfaces >= 1.0.0",
       "E3.UserManager >= 1.0.0",
       "E3Tech.RecipeBuilding >= 1.0.0",
@@ -1178,6 +1366,9 @@
             },
             "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj": {
               "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.AuditTrailManager\\E3.AuditTrailManager.csproj"
+            },
+            "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj": {
+              "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.DesignExperiment\\E3.ReactorManager.DesignExperiment.csproj"
             },
             "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj": {
               "projectPath": "D:\\SAM\\Anthem\\ChangesByUmang\\Default\\E3Tech\\E3.ReactorManager.Interfaces\\E3.ReactorManager.Interfaces.csproj"

@@ -85,3 +85,33 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.Rec
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.pdb
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.RecipeBuilding\obj\Debug\Views\SequenceRecipeBuilderView.g.cs
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.RecipeBuilding\obj\Debug\Views\SequenceRecipeBuilderView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3Tech.RecipeBuilding.dll.config
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3Tech.RecipeBuilding.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3Tech.RecipeBuilding.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\DesignExperimentView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\RecipesView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\ParameterProviders\BlockParameterProviderView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\UserControls\RecipeBlockView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\UserControls\ToggleButton.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\DesignExperimentView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\MultiRecipeBuilderView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\RecipeBuilderView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\RecipesView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\SequenceRecipeBuilderView.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding_MarkupCompile.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding_MarkupCompile.lref
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\ParameterProviders\BlockParameterProviderView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\UserControls\RecipeBlockView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\ParameterProviders\BlockParametersTemplateDictionary.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\UserControls\ToggleButton.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\MultiRecipeBuilderView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\RecipeBuilderView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\Views\SequenceRecipeBuilderView.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.g.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.Properties.Resources.resources
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.csproj.GenerateResource.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.RecipeBuilding\obj\Debug\E3Tech.RecipeBuilding.pdb

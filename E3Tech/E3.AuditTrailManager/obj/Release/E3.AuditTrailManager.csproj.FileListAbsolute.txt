@@ -149,6 +149,6 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\Views\AuditTrailView.baml
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.g.resources
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.csproj.CopyComplete
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.pdb
-D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.AuditTrailManager\obj\Release\E3.AuditTrailManager.csproj.CopyComplete

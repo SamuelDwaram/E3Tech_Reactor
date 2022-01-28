@@ -19,3 +19,10 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.Reactor
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.CopyComplete
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.DataAccessHandler.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3.ReactorManager.DataAccessHandler.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.DataAccessHandler\obj\Debug\E3.ReactorManager.DataAccessHandler.csproj.CopyComplete

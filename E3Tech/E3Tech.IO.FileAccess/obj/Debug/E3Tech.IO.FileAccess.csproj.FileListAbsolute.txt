@@ -19,3 +19,9 @@ C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.FileAccess\obj\Debug\E3Tech.IO.FileAccess.dll
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.FileAccess\obj\Debug\E3Tech.IO.FileAccess.pdb
 C:\Users\Umang Agarwal\Desktop\e3tech\E3.ReactorManager-Anthem_140821\E3Tech.IO.FileAccess\obj\Debug\E3Tech.IO.FileAccess.csproj.AssemblyReference.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3Tech.IO.FileAccess.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\E3Tech.IO.FileAccess.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Debug\E3Tech.IO.FileAccess.csproj.CoreCompileInputs.cache
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Debug\E3Tech.IO.FileAccess.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Debug\E3Tech.IO.FileAccess.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3Tech.IO.FileAccess\obj\Debug\E3Tech.IO.FileAccess.csproj.CopyComplete

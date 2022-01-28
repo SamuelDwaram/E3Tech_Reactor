@@ -104,6 +104,7 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\bin\Release\Prism.Wpf.pd
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\bin\Release\System.Windows.Interactivity.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\bin\Release\Unity.Abstractions.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\bin\Release\Unity.Container.dll
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Release\E3.Mediator.csproj.AssemblyReference.cache
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Release\E3.Mediator.Properties.Resources.resources
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Release\E3.Mediator.csproj.GenerateResource.cache
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.Mediator\obj\Release\E3.Mediator.csproj.CoreCompileInputs.cache
