@@ -140,3 +140,4 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anthem.Ui.csproj
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anthem.Ui.csproj.CopyComplete
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Debug\Anathem.Ui.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
