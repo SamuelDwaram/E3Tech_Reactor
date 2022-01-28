@@ -356,7 +356,6 @@ C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.CopyComplete
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.dll
 C:\Users\Umang Agarwal\source\repos\E3Tech_Reactor\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.pdb
-D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Ui.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Anathem.Ui.pdb
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.AssemblyReference.cache
@@ -394,3 +393,8 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.cspr
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anthem.Ui.csproj.CopyComplete
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\Anathem.Ui.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\BoolParameterProcessFlow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\CircleProcessFlow.g.cs
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Binaries\Images\e3tech_logo.png
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\BoolParameterProcessFlow.baml
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\Anthem.Ui\obj\Release\UserControls\CircleProcessFlow.baml

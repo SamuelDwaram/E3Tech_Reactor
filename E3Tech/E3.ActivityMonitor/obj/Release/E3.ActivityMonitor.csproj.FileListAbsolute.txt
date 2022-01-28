@@ -109,3 +109,4 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.Ac
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.csproj.CopyComplete
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ActivityMonitor\obj\Release\E3.ActivityMonitor.csproj.AssemblyReference.cache

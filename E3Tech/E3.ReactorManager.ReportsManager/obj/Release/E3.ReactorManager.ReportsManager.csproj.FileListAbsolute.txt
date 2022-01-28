@@ -160,6 +160,6 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Release\Views\ReportPreview.baml
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Release\E3.ReactorManager.ReportsManager.g.resources
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Release\E3.ReactorManager.ReportsManager.csproj.CoreCompileInputs.cache
-D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Release\E3.ReactorManager.ReportsManager.csproj.CopyComplete
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Release\E3.ReactorManager.ReportsManager.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Release\E3.ReactorManager.ReportsManager.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.ReportsManager\obj\Release\E3.ReactorManager.ReportsManager.csproj.CopyComplete

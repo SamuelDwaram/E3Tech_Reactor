@@ -85,3 +85,4 @@ D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Framework\obj\Rele
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Framework\obj\Release\E3.ReactorManager.Framework.csproj.CoreCompileInputs.cache
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Framework\obj\Release\E3.ReactorManager.Framework.dll
 D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Framework\obj\Release\E3.ReactorManager.Framework.pdb
+D:\SAM\Anthem\ChangesByUmang\Default\E3Tech\E3.ReactorManager.Framework\obj\Release\E3.ReactorManager.Framework.csproj.CopyComplete
